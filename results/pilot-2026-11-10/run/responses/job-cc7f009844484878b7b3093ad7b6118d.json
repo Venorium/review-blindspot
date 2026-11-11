@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1158,
+    "isolation_attested": true,
+    "latency_seconds": 27.909,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 405,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-cc7f009844484878b7b3093ad7b6118d/attempt-1"
+  },
+  "job_id": "job-cc7f009844484878b7b3093ad7b6118d",
+  "packet_sha256": "f0319989b930036196310650181c12c707b2d17105b21932481ae348a0faf2fc",
+  "review": {
+    "findings": [
+      {
+        "description": "active() returns True when now equals expires_at, but the specification requires tokens to be inactive at or after expires_at.",
+        "evidence": "candidate.active(10, 10) returns True, but per spec it should return False because the token is not active strictly before its expiry.",
+        "file": "candidate.py",
+        "finding_id": "f1",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate incorrectly implements active() logic for boundary case where now equals expires_at, violating the contract that requires tokens to be active strictly before expires_at.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "C001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-aff585974cfd4738a134e47ac50dbac1",
+  "method": "external_judge",
+  "rationale": "Finding states that path.startswith(base) without the slash accepts sibling paths sharing the prefix; same mechanism and violated rule. Finding C001: \"Path validation uses `startswith(base)` which accepts any path that begins with the base string, even if the resolved path is not actually a descendant of the base. This allows escapes such as base=\"/\".",
+  "schema_version": 1,
+  "submission_sha256": "4df59c6ad73360ba75dec61c03ad5f8dfd76e3ffc98971a3b53a84cc9189dcfc",
+  "target_detection": "detected"
+}

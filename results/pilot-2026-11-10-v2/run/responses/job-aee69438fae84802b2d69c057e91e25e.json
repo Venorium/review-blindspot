@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1335,
+    "isolation_attested": true,
+    "latency_seconds": 101.702,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1097,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-aee69438fae84802b2d69c057e91e25e/attempt-1"
+  },
+  "job_id": "job-aee69438fae84802b2d69c057e91e25e",
+  "packet_sha256": "09bb7de98b4d00f700b9bfd4c47fc8cb23ffa6379a259661e6faa7f4b5208795",
+  "review": {
+    "findings": [
+      {
+        "description": "The implementation uses a dict comprehension which replaces earlier items with later ones for the same key, violating the contract that the first item for each key should be returned.",
+        "evidence": "For example, unique_by(['a1','a2','b','a3'], lambda x: x[0]) returns ['a3','b'] instead of ['a1','b']",
+        "file": "candidate.py",
+        "finding_id": "F001",
+        "line_end": 2,
+        "line_start": 1,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation fails to preserve the first occurrence of each key and may return wrong items when keys map to different values.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

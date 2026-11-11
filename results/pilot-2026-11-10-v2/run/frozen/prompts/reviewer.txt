@@ -1,0 +1,22 @@
+You are reviewing one proposed Python change. Use only the files in this job.
+Read SPEC.md, before.py, candidate.py, patch.diff and test_public.py. Judge
+candidate.py against the entire supplied contract. The public tests are examples,
+not an exhaustive specification. A candidate may or may not contain a defect.
+
+Report only actionable correctness defects within the stated input domain.
+Do not invent missing requirements or reject code for style alone. For each
+blocking finding, identify candidate.py lines and explain a concrete triggering
+input or state and the contract violation. Return a concise evidence-based review;
+do not provide private internal reasoning. Passing tests is not proof of correctness.
+If the contract is genuinely ambiguous or necessary context is missing, abstain
+and explain what is missing. Do not treat infrastructure failures as approval.
+
+Return the review object defined in review.schema.json. Only request_changes
+may contain findings, and it must have at least one. approve and abstain use an
+empty findings array. Keep commentary outside the JSON out of the response.
+
+No other reviewers' outputs, alternate candidates, answer keys, benchmark source,
+external memory, or project-level context are permitted. For the starter's
+text-only track, do not run tools, browse, execute code or consult other files.
+A separate tool-enabled track must be preregistered and never mixed into this one.
+Any AUTHOR_NOTE.md is additional author commentary, not an authoritative contract.

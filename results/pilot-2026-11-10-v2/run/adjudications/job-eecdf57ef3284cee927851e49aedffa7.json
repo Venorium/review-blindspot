@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "double_consumption_iterator"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-eecdf57ef3284cee927851e49aedffa7",
+  "method": "external_judge",
+  "rationale": "Finding states that records is iterated twice (sum, then the comprehension), so a one-shot iterator yields an empty result; same mechanism. Finding double_consumption_iterator: \"The function calls `sum(weight for _, weight in records)` which iterates over the entire `records` iterable, exhausting it. It then attempts to iterate over `records` again in the dictionary comprehen\".",
+  "schema_version": 1,
+  "submission_sha256": "c82d2fc6d072c5b0a3aedcae9873900d9c0b8e6d0f2d9685b2b87d0ceba0c6b3",
+  "target_detection": "detected"
+}

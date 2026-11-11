@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1117,
+    "isolation_attested": true,
+    "latency_seconds": 35.51,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 377,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-f05cfd4f56994c958dc3cffecdf86612/attempt-1"
+  },
+  "job_id": "job-f05cfd4f56994c958dc3cffecdf86612",
+  "packet_sha256": "118f9076d8b1aebdc759c5b79c9997b75b0492ebad946c5d5cec3d258ea14904",
+  "review": {
+    "findings": [],
+    "summary": "Implementation correctly returns a new list of labels, preserving isolation from the input record as required.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

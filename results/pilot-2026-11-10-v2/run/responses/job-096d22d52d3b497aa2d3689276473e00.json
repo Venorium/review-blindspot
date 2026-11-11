@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1295,
+    "isolation_attested": true,
+    "latency_seconds": 333.397,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 833,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-096d22d52d3b497aa2d3689276473e00/attempt-1"
+  },
+  "job_id": "job-096d22d52d3b497aa2d3689276473e00",
+  "packet_sha256": "ea4c01916f41b6b4db37a17b85513193b9a7b9decadf9f7c181fe72137f701f7",
+  "review": {
+    "findings": [
+      {
+        "description": "Uses str.lower() on the stripped query and on each user name instead of str.casefold(), violating the spec that mandates full Unicode case folding. This causes incorrect behavior for strings where casefolding differs from lowercasing (e.g., 'ß' vs 'ss').",
+        "evidence": "Line 2: `wanted = query.strip().lower()`\nLine 4: `if name.lower() == wanted:`",
+        "file": "candidate.py",
+        "finding_id": "casefold-usage",
+        "line_end": 4,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation incorrectly uses str.lower() instead of the required Unicode case folding via str.casefold(), which fails to correctly match certain Unicode strings.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

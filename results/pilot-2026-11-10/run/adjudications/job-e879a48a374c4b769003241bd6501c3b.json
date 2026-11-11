@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "lexicographical_sort_instead_of_numeric"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-e879a48a374c4b769003241bd6501c3b",
+  "method": "external_judge",
+  "rationale": "Finding states versions are compared as strings, so '10' sorts before '2'; same mechanism (text instead of numeric ordering). Finding lexicographical_sort_instead_of_numeric: \"The sorting key uses string comparison (via `str(e['version'])`), which results in lexicographical order. This fails the requirement to sort by 'ascending numeric version' when versions have different numbers of digits (\".",
+  "schema_version": 1,
+  "submission_sha256": "ea1cbb9da07f1ec02da30055794b891d80a4a56b2620144ea86ac82c219d1f6a",
+  "target_detection": "detected"
+}

@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1172,
+    "isolation_attested": true,
+    "latency_seconds": 56.575,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 834,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-5a45fb682f9f444280dc8ff76fba3ab1/attempt-1"
+  },
+  "job_id": "job-5a45fb682f9f444280dc8ff76fba3ab1",
+  "packet_sha256": "5c960e421630ee532cab7baac93209fa5b087f8dc81eea1c102577f6bbc6221d",
+  "review": {
+    "findings": [
+      {
+        "description": "When limit is zero, recent returns the entire input list instead of an empty list, contrary to the contract.",
+        "evidence": "def recent(items, limit):\n    return list(items[-limit:])\n\n# Example: recent([1, 2, 3], 0) returns [1, 2, 3] because items[-0:] is items[0:]; spec requires [].",
+        "file": "candidate.py",
+        "finding_id": "zero_limit_bug",
+        "line_end": 1,
+        "line_start": 1,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation does not correctly handle the case when limit is zero, violating the contract.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

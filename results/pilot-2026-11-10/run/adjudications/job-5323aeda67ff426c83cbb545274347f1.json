@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "TZ-001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-5323aeda67ff426c83cbb545274347f1",
+  "method": "external_judge",
+  "rationale": "Finding states the date is taken in the input offset without converting to UTC, with an offset that crosses midnight; same mechanism. Finding TZ-001: \"The function extracts the date from the parsed datetime directly, without normalizing to UTC. For timestamps whose offset causes the UTC date to differ from the local date, this returns an incorrect date.\".",
+  "schema_version": 1,
+  "submission_sha256": "02e49126b8979f748a50488d91260aff9135f7e931a31c288d0dda50a5feda6b",
+  "target_detection": "detected"
+}

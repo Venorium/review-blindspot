@@ -1,0 +1,24 @@
+{
+  "adjudications": 150,
+  "computed_with_frozen_code": false,
+  "computing_code_sha256": "6f05805a1405ddd46f15cc13e8514d00f216428e6ac69463a1f78fe2911db7c0",
+  "frozen_run_code_sha256": "c4f6e11e60043cc9e5fca92c9e39f876dba4b4eaf2e4c62a3227cf2df2d26382",
+  "inputs_sha256": "af896dd0d16e7caa667a03ab3c9ee8780a5df6b8d7b88a7219e5f000f104fe8e",
+  "manifest_sha256": "ac2d660ca97b0364e7a4082474d22c2489365ed09d9774b3f67f8c19420d96d4",
+  "modules_differing_from_frozen_code": [
+    "__init__.py",
+    "cli.py",
+    "fixtures.py",
+    "metrics.py",
+    "packets.py",
+    "quickstart.py",
+    "report.py",
+    "status.py",
+    "store.py"
+  ],
+  "note": "Reports are computed by the installed code, not by the frozen copy. Listed module differences may or may not affect metrics; recompute with the frozen code to compare.",
+  "python": "3.14.2",
+  "rbs_version": "0.2.0",
+  "responses": 300,
+  "schema_version": 1
+}

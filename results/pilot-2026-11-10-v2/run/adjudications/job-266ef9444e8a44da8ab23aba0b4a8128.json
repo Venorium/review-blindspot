@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "path-escape-check"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-266ef9444e8a44da8ab23aba0b4a8128",
+  "method": "external_judge",
+  "rationale": "Finding states that path.startswith(base) without the slash accepts sibling paths sharing the prefix; same mechanism and violated rule. Finding path-escape-check: \"The function incorrectly allows paths that escape the upload directory because it only checks path.startswith(base) instead of requiring base followed by a slash or equality.\".",
+  "schema_version": 1,
+  "submission_sha256": "e6787974e7495ca8f8f8fe4c511183474b147db5f0f358836a2d110cd7bda729",
+  "target_detection": "detected"
+}

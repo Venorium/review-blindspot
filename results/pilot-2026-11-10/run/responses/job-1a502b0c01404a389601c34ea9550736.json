@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1313,
+    "isolation_attested": true,
+    "latency_seconds": 164.946,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 2364,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-1a502b0c01404a389601c34ea9550736/attempt-1"
+  },
+  "job_id": "job-1a502b0c01404a389601c34ea9550736",
+  "packet_sha256": "306a9f391c2586505a5662aafac20d2feab2d897d05eea946a7b63c331256b3c",
+  "review": {
+    "findings": [],
+    "summary": "The implementation correctly checks for a non-empty intersection of two half-open intervals by ensuring the maximum of the start points is strictly less than the minimum of the end points, which also correctly handles the requirement that touching endpoints do not overlap.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

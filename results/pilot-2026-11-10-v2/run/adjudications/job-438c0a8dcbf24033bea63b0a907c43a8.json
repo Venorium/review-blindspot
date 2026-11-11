@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "unnecessary_sleep_on_final_failure"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-438c0a8dcbf24033bea63b0a907c43a8",
+  "method": "external_judge",
+  "rationale": "Finding states that sleep runs after the final failed call before re-raising; same mechanism and violated rule. Finding unnecessary_sleep_on_final_failure: \"The sleep call executes without checking if it is the final attempt. This causes an unnecessary delay after the last failed call and violates the negative constraint in the specification.\".",
+  "schema_version": 1,
+  "submission_sha256": "6fbe2a3e1f5743127da617b81f3290f166895f1adf802db6b442902143b32b86",
+  "target_detection": "detected"
+}

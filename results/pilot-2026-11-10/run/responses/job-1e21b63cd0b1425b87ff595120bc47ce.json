@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1179,
+    "isolation_attested": true,
+    "latency_seconds": 360.461,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 2220,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-1e21b63cd0b1425b87ff595120bc47ce/attempt-1"
+  },
+  "job_id": "job-1e21b63cd0b1425b87ff595120bc47ce",
+  "packet_sha256": "9667d1ad82fa16e7ca300efa3b7482243eb299a25b1135f67d0a3f6148848f8f",
+  "review": {
+    "findings": [
+      {
+        "description": "The `//` operator floors toward negative infinity. The spec requires truncation toward zero. When n is negative and not evenly divisible by d, the function returns a value one less than expected.",
+        "evidence": "For input n=-7, d=3, candidate.divide(-7, 3) returns -3 due to floor division, but the contract specifies the quotient truncated toward zero, which should be -2.",
+        "file": "candidate.py",
+        "finding_id": "floor_vs_truncate",
+        "line_end": 2,
+        "line_start": 1,
+        "severity": "high"
+      }
+    ],
+    "summary": "candidate.py uses Python's `//` operator which performs floor division rather than truncation toward zero, causing incorrect results for negative dividends that are not exact multiples of d.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

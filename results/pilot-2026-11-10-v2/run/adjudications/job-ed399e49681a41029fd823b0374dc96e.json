@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "insufficient_prefix_check"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-ed399e49681a41029fd823b0374dc96e",
+  "method": "external_judge",
+  "rationale": "Finding states that path.startswith(base) without the slash accepts sibling paths sharing the prefix; same mechanism and violated rule. Finding insufficient_prefix_check: \"The containment check lacks the required slash separator, allowing paths that share a directory prefix with base to pass incorrectly.\". Its worked example is invalid (the path resolves inside base); the mechanism is stated correctly.",
+  "schema_version": 1,
+  "submission_sha256": "83c7b21a6b01cceeff5337bd764f452af72dcf74878f2c426039b99a274c7d19",
+  "target_detection": "detected"
+}

@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "cache_not_invalidated_on_update"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-0c77b5281b514dac96ba3f9687e71836",
+  "method": "external_judge",
+  "rationale": "Finding states that update_price leaves the cached entry in place, so later price()/quote() return the old price; same mechanism and violated rule. Finding cache_not_invalidated_on_update: \"The `update_price` method does not invalidate or update the `_cache` entry for the SKU being updated. This violates the requirement that every later `price()` or `quote()` call must reflect the new pr\".",
+  "schema_version": 1,
+  "submission_sha256": "809abb4b874335b39bdfcd26395b4e469b6ae54c74b3abb4321f43cecdbdd653",
+  "target_detection": "detected"
+}

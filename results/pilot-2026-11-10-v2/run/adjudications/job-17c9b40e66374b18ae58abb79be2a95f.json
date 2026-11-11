@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "C001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-17c9b40e66374b18ae58abb79be2a95f",
+  "method": "external_judge",
+  "rationale": "Finding states that update_price leaves the cached entry in place, so later price()/quote() return the old price; same mechanism and violated rule. Finding C001: \"Cache entry is not cleared after update_price, so subsequent calls to price() or quote() may return an outdated value.\". Its worked example is invalid (no read precedes the updates, so nothing is cached).",
+  "schema_version": 1,
+  "submission_sha256": "b86a61bf124c343f4d30f385b56a9a61e431a282d0f6406e9d8bb9ebeac95a7d",
+  "target_detection": "detected"
+}

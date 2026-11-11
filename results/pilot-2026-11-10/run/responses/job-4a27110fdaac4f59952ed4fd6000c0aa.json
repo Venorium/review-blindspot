@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1285,
+    "isolation_attested": true,
+    "latency_seconds": 21.614,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 717,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-4a27110fdaac4f59952ed4fd6000c0aa/attempt-1"
+  },
+  "job_id": "job-4a27110fdaac4f59952ed4fd6000c0aa",
+  "packet_sha256": "a57311ac1cf74e3f1142bde6182a5ee8d18a13148ee3f8febfd203c872af25a2",
+  "review": {
+    "findings": [
+      {
+        "description": "The function appends non‑negative values immediately, then raises ValueError on a negative value. If a negative value appears after some positive values, those positive values remain in store, violating the contract that the store must be unchanged when any negative value is present.",
+        "evidence": "Example: store=[1]; append_batch(store, [2, -3]) results in store=[1,2] after exception, whereas the contract requires store to remain [1].",
+        "file": "candidate.py",
+        "finding_id": "atomicity_violation",
+        "line_end": 6,
+        "line_start": 3,
+        "severity": "high"
+      }
+    ],
+    "summary": "append_batch fails to maintain atomicity when encountering a negative value after some non‑negative values have already been appended.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

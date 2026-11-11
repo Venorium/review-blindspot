@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1341,
+    "isolation_attested": true,
+    "latency_seconds": 67.311,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 2181,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-f2719c659fce4d8792fbe06d1ec664f6/attempt-1"
+  },
+  "job_id": "job-f2719c659fce4d8792fbe06d1ec664f6",
+  "packet_sha256": "7a0cbda0bde49a2acb94b28407d05f887f9eea845a9672380b8db0ac6f487d93",
+  "review": {
+    "findings": [],
+    "summary": "The candidate implementation correctly strips leading and trailing whitespace from the query, applies full Unicode case folding to both the query and each user name for comparison, returns the first matching name, and returns None when no match is found. It adheres precisely to the specified contract.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

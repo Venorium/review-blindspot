@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1335,
+    "isolation_attested": true,
+    "latency_seconds": 88.966,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1164,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-6b77b3fcd0c649f39e5e232e8015ee70/attempt-1"
+  },
+  "job_id": "job-6b77b3fcd0c649f39e5e232e8015ee70",
+  "packet_sha256": "09bb7de98b4d00f700b9bfd4c47fc8cb23ffa6379a259661e6faa7f4b5208795",
+  "review": {
+    "findings": [
+      {
+        "description": "The function uses a dictionary comprehension that overwrites earlier items with the same key, resulting in the last occurrence being returned rather than the first.",
+        "evidence": "Example: items = ['a','b','c']; key=lambda x: 1. Expected unique_by(items, key) → ['a'], but candidate returns ['c'] because the dict comprehension ends up with {1: 'c'}.",
+        "file": "candidate.py",
+        "finding_id": "defect-1",
+        "line_end": 1,
+        "line_start": 1,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation of unique_by returns the last item for each key instead of the first, violating the specification for cases where key(item) is not unique across distinct items.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

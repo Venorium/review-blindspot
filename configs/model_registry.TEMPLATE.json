@@ -1,0 +1,31 @@
+{
+  "status": "DRAFT_NOT_RESOLVED",
+  "models": {
+    "model_a": {
+      "resolved_model_id": null,
+      "provider": null,
+      "harness_version": null,
+      "settings": {},
+      "pricing_source": null,
+      "verified_on": null
+    },
+    "model_b": {
+      "resolved_model_id": null,
+      "provider": null,
+      "harness_version": null,
+      "settings": {},
+      "pricing_source": null,
+      "verified_on": null
+    },
+    "model_c": {
+      "resolved_model_id": null,
+      "provider": null,
+      "harness_version": null,
+      "settings": {},
+      "pricing_source": null,
+      "verified_on": null
+    }
+  },
+  "network_allowed": false,
+  "approved_max_cost_usd": 0
+}

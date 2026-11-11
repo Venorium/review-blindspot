@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "c15",
+  "family_id": "c15",
+  "title": "Strict version advancement",
+  "origin": "original_synthetic_starter",
+  "split": "development_only",
+  "spec": "Implement advance(state, version, value). state is a dictionary with integer version, value and writes. Apply the update only when version is strictly greater than state[version]; then increment writes by one and return True. Equal or older versions return False and must leave the entire state unchanged.",
+  "target_defect": "Equal versions are reapplied, changing value and incrementing writes.",
+  "author_rationale": "The change groups state replacement and write accounting behind a version check.",
+  "limitations": "Small synthetic function; not a natural pull request. Correct means conforming to the stated contract and supplied checks, not universally bug-free."
+}

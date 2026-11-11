@@ -1,0 +1,6 @@
+{
+  "name": "review-blindspot",
+  "version": "0.2.0",
+  "description": "Evidence-backed local code reviews: expose coverage gaps and stale conclusions in Codex.",
+  "skills": "./skills/"
+}

@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1361,
+    "isolation_attested": true,
+    "latency_seconds": 47.599,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 1758,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-969dfa122c624845bf5df8f1ac8f91a9/attempt-1"
+  },
+  "job_id": "job-969dfa122c624845bf5df8f1ac8f91a9",
+  "packet_sha256": "a5b22687138337736f06917c17ed33fb275f2c0ae473c709c954120998132f02",
+  "review": {
+    "findings": [],
+    "summary": "The candidate correctly implements the contract. It validates for negative values before any mutation occurs, raising ValueError as specified and leaving the store unchanged on invalid input. For valid inputs, it appends all integers in order using extend, satisfying the functional requirements without introducing defects.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

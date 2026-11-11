@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1416,
+    "isolation_attested": true,
+    "latency_seconds": 153.659,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 1481,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-67e62ff43a774072b0a4e3e7798e2a94/attempt-1"
+  },
+  "job_id": "job-67e62ff43a774072b0a4e3e7798e2a94",
+  "packet_sha256": "b87efc41871d3b7c89ab7b8e9806fd7ecc6b8f22cb0e2e3fc347ee9f910158ba",
+  "review": {
+    "findings": [
+      {
+        "description": "The code uses `.lower()` for comparison, but the specification explicitly requires full Unicode case folding (`name.casefold() == stripped_query.casefold()`). This causes failures for certain Unicode characters like 'ß', which should match 'SS' but do not match using `.lower()`.",
+        "evidence": "find_user(['SS'], 'ß') returns None, but should return 'SS' because 'SS'.casefold() == 'ß'.casefold()",
+        "file": "candidate.py",
+        "finding_id": "unicode_casefold_violation",
+        "line_end": 4,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation uses `.lower()` instead of `.casefold()`, which fails the requirement for full Unicode case folding.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

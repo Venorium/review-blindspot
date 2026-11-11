@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1278,
+    "isolation_attested": true,
+    "latency_seconds": 111.539,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 1685,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-c7ba90f0e7694352bdace4ae17c2d70b/attempt-1"
+  },
+  "job_id": "job-c7ba90f0e7694352bdace4ae17c2d70b",
+  "packet_sha256": "35fff47366a2a2990c9638bed8f3b2acfd2dfa79e9c0d9bf7f7379e3517a2cf0",
+  "review": {
+    "findings": [],
+    "summary": "The implementation correctly implements division truncated toward zero using integer arithmetic, satisfying all requirements in the spec, including the avoidance of floating-point conversion.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

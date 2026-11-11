@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "CANDIDATE-001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-3c435375bf694eeeaa2c9c78261775cc",
+  "method": "external_judge",
+  "rationale": "Finding states that balances are mutated before ledger.record can reject a long memo, leaving accounts changed on failure; same mechanism. Finding CANDIDATE-001: \"Transfer does not rollback account balances if ledger.record raises ValueError, violating the specification that requires both accounts and the ledger to remain unchanged when the ledger rejects the e\".",
+  "schema_version": 1,
+  "submission_sha256": "6b97950d87865ca59d6a17e6b41e3a60f23518f60879de7dd458d9fb8f64aad5",
+  "target_detection": "detected"
+}

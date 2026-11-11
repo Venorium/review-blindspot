@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-9a8e65a5817d4d93994dccc1bb30fb13",
+  "method": "external_judge",
+  "rationale": "Finding states that records is iterated twice (sum, then the comprehension), so a one-shot iterator yields an empty result; same mechanism. Finding F001: \"Candidate consumes the records iterable twice. For one-shot iterators, the second iteration yields nothing, producing an empty dictionary. This violates the contract that the function must return a ma\". Its example passes a tuple, which can be iterated twice; the mechanism is stated correctly.",
+  "schema_version": 1,
+  "submission_sha256": "bfe0e55f91aed98e7508de1ff9eb3055e87db728f9926790e7e86bc5b0f81a52",
+  "target_detection": "detected"
+}

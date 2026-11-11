@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1381,
+    "isolation_attested": true,
+    "latency_seconds": 90.115,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1833,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-cd1f5212f7844ba2a36eb53a167a6fd1/attempt-1"
+  },
+  "job_id": "job-cd1f5212f7844ba2a36eb53a167a6fd1",
+  "packet_sha256": "b479ee1352026ebfd3309b577fbc68365f99db60376bef858c724a1b85c16295",
+  "review": {
+    "findings": [],
+    "summary": "Candidate implementation satisfies the contract, preserving key order and returning a new list without modifying the input.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

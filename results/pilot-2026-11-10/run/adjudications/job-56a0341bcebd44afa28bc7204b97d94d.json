@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "sum_logic_error"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-56a0341bcebd44afa28bc7204b97d94d",
+  "method": "external_judge",
+  "rationale": "Finding states repeated product quantities overwrite instead of summing, with a repeated-product input; same mechanism. Finding sum_logic_error: \"The function returns a dictionary constructed by a dictionary comprehension that only keeps the last quantity for each product, instead of summing all quantities per product.\".",
+  "schema_version": 1,
+  "submission_sha256": "ff6b067bc2765c9359b19028c068a65017e00ebd280bc99f0fc60ee174c0508f",
+  "target_detection": "detected"
+}

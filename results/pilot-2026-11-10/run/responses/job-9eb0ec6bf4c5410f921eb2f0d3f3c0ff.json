@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1117,
+    "isolation_attested": true,
+    "latency_seconds": 31.324,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 587,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-9eb0ec6bf4c5410f921eb2f0d3f3c0ff/attempt-1"
+  },
+  "job_id": "job-9eb0ec6bf4c5410f921eb2f0d3f3c0ff",
+  "packet_sha256": "118f9076d8b1aebdc759c5b79c9997b75b0492ebad946c5d5cec3d258ea14904",
+  "review": {
+    "findings": [],
+    "summary": "The candidate implementation correctly returns a new list containing the same strings as the input record's 'labels' list, ensuring that modifications to the returned list do not affect the original. No violations of the specified contract are detected.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

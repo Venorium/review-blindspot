@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1176,
+    "isolation_attested": true,
+    "latency_seconds": 71.921,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 662,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-0c786a2b94894598b0e77d4482d053ef/attempt-1"
+  },
+  "job_id": "job-0c786a2b94894598b0e77d4482d053ef",
+  "packet_sha256": "3aa757e55595f59ab159c83ca9c3a8cb0c827b71812afbf655704c65f569c793",
+  "review": {
+    "findings": [
+      {
+        "description": "Rounding logic incorrectly rounds half-cent ties down. The spec requires ties (remainder == 5) to round upward, but the implementation uses (remainder > 5).",
+        "evidence": "For input 15 (15 mills = 1.5 cents), candidate.cents(15) returns 1, but should return 2 per the \"exact half-cent ties rounded upward\" rule.",
+        "file": "candidate.py",
+        "finding_id": "R1",
+        "line_end": 3,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation fails to round half-cent ties upward, violating the rounding specification.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

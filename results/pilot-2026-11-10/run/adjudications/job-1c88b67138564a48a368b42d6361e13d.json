@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "FC-001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-1c88b67138564a48a368b42d6361e13d",
+  "method": "external_judge",
+  "rationale": "Finding states the 'or default' fallback replaces stored falsy values such as 0 or False; same mechanism. Finding FC-001: \"The implementation uses truthiness to decide whether to return the stored value or the default. This causes it to return the default when the key exists but its value is falsy (e.g., 0, False, None, or an empty string).\".",
+  "schema_version": 1,
+  "submission_sha256": "6f659fae4fd8659922dc48d271d5da26838b85396607aff1042f494ca92ecbff",
+  "target_detection": "detected"
+}

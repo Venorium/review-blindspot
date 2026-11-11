@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1498,
+    "isolation_attested": true,
+    "latency_seconds": 271.152,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 3925,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-ebedc0ce12084b75b4cfec019b4433c8/attempt-1"
+  },
+  "job_id": "job-ebedc0ce12084b75b4cfec019b4433c8",
+  "packet_sha256": "09bb7de98b4d00f700b9bfd4c47fc8cb23ffa6379a259661e6faa7f4b5208795",
+  "review": {
+    "findings": [
+      {
+        "description": "The dictionary comprehension updates the value for an existing key with the latest item encountered, whereas the specification requires keeping the first item encountered for each key.",
+        "evidence": "unique_by([('a', 1), ('b', 2), ('c', 1)], lambda x: x[1]) returns [('c', 1), ('b', 2)] but should return [('a', 1), ('b', 2)]",
+        "file": "candidate.py",
+        "finding_id": "last_item_instead_of_first",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation incorrectly returns the last occurrence of an item for a given key instead of the first occurrence as required by the specification.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

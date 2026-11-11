@@ -1,0 +1,194 @@
+{
+  "run": "results/pilot-2026-11-10-v2/run",
+  "mode": "EXTERNAL_REVIEWS_UNVERIFIED",
+  "protocol_id": "rbs-local-pilot-v2-2026-11-10",
+  "unit_warning": "Reviewer requests on the same case are not independent samples.",
+  "per_model_requests": {
+    "model_a": {
+      "model": "gpt-oss:20b",
+      "faulty_requests": 80,
+      "control_requests": 80,
+      "faulty": {
+        "detected": 80,
+        "blocked_wrong_reason": 0,
+        "blocked_unresolved": 0,
+        "approved": 0,
+        "abstain": 0,
+        "no_valid_review": 0,
+        "missing": 0
+      },
+      "control": {
+        "control_approved": 63,
+        "control_blocked": 12,
+        "abstain": 0,
+        "no_valid_review": 5,
+        "missing": 0
+      },
+      "output_tokens_median": 1246,
+      "output_tokens_total": 304261
+    },
+    "model_b": {
+      "model": "qwen3.6:35b",
+      "faulty_requests": 10,
+      "control_requests": 10,
+      "faulty": {
+        "detected": 10,
+        "blocked_wrong_reason": 0,
+        "blocked_unresolved": 0,
+        "approved": 0,
+        "abstain": 0,
+        "no_valid_review": 0,
+        "missing": 0
+      },
+      "control": {
+        "control_approved": 7,
+        "control_blocked": 0,
+        "abstain": 0,
+        "no_valid_review": 3,
+        "missing": 0
+      },
+      "output_tokens_median": 4216,
+      "output_tokens_total": 89403
+    },
+    "model_c": {
+      "model": "gemma4:26b",
+      "faulty_requests": 10,
+      "control_requests": 10,
+      "faulty": {
+        "detected": 10,
+        "blocked_wrong_reason": 0,
+        "blocked_unresolved": 0,
+        "approved": 0,
+        "abstain": 0,
+        "no_valid_review": 0,
+        "missing": 0
+      },
+      "control": {
+        "control_approved": 9,
+        "control_blocked": 0,
+        "abstain": 0,
+        "no_valid_review": 1,
+        "missing": 0
+      },
+      "output_tokens_median": 2896,
+      "output_tokens_total": 70352
+    }
+  },
+  "faulty_cases": {
+    "h01": {
+      "requests": 10,
+      "detected": 10,
+      "not_established": 0,
+      "detected_by_models": [
+        "model_a",
+        "model_b",
+        "model_c"
+      ],
+      "missed_by_every_request": false
+    },
+    "h02": {
+      "requests": 10,
+      "detected": 10,
+      "not_established": 0,
+      "detected_by_models": [
+        "model_a",
+        "model_b",
+        "model_c"
+      ],
+      "missed_by_every_request": false
+    },
+    "h03": {
+      "requests": 10,
+      "detected": 10,
+      "not_established": 0,
+      "detected_by_models": [
+        "model_a",
+        "model_b",
+        "model_c"
+      ],
+      "missed_by_every_request": false
+    },
+    "h04": {
+      "requests": 10,
+      "detected": 10,
+      "not_established": 0,
+      "detected_by_models": [
+        "model_a",
+        "model_b",
+        "model_c"
+      ],
+      "missed_by_every_request": false
+    },
+    "h05": {
+      "requests": 10,
+      "detected": 10,
+      "not_established": 0,
+      "detected_by_models": [
+        "model_a",
+        "model_b",
+        "model_c"
+      ],
+      "missed_by_every_request": false
+    },
+    "h06": {
+      "requests": 10,
+      "detected": 10,
+      "not_established": 0,
+      "detected_by_models": [
+        "model_a",
+        "model_b",
+        "model_c"
+      ],
+      "missed_by_every_request": false
+    },
+    "h07": {
+      "requests": 10,
+      "detected": 10,
+      "not_established": 0,
+      "detected_by_models": [
+        "model_a",
+        "model_b",
+        "model_c"
+      ],
+      "missed_by_every_request": false
+    },
+    "h08": {
+      "requests": 10,
+      "detected": 10,
+      "not_established": 0,
+      "detected_by_models": [
+        "model_a",
+        "model_b",
+        "model_c"
+      ],
+      "missed_by_every_request": false
+    },
+    "h09": {
+      "requests": 10,
+      "detected": 10,
+      "not_established": 0,
+      "detected_by_models": [
+        "model_a",
+        "model_b",
+        "model_c"
+      ],
+      "missed_by_every_request": false
+    },
+    "h10": {
+      "requests": 10,
+      "detected": 10,
+      "not_established": 0,
+      "detected_by_models": [
+        "model_a",
+        "model_b",
+        "model_c"
+      ],
+      "missed_by_every_request": false
+    }
+  },
+  "cases_missed_by_every_request": [],
+  "cases_caught_only_by_other_models": [],
+  "majority_model_keys": [
+    "model_a"
+  ]
+}

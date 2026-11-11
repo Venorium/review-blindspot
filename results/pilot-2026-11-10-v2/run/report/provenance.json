@@ -1,0 +1,19 @@
+{
+  "adjudications": 112,
+  "computed_with_frozen_code": false,
+  "computing_code_sha256": "6f05805a1405ddd46f15cc13e8514d00f216428e6ac69463a1f78fe2911db7c0",
+  "frozen_run_code_sha256": "56d5c6b9eb062e5da72ca8fca171475cf26202c1ad7d3d9e4ceb12ab0ca868dc",
+  "inputs_sha256": "bc692a0c3e48e5a5674920b1b2fc3a53494e04850fb18172418053f98c99216a",
+  "manifest_sha256": "90c998427965ff2165178473f5b8348769a0ec2691580472f660c10ae81d053b",
+  "modules_differing_from_frozen_code": [
+    "__init__.py",
+    "metrics.py",
+    "quickstart.py",
+    "status.py"
+  ],
+  "note": "Reports are computed by the installed code, not by the frozen copy. Listed module differences may or may not affect metrics; recompute with the frozen code to compare.",
+  "python": "3.14.2",
+  "rbs_version": "0.2.0",
+  "responses": 200,
+  "schema_version": 1
+}

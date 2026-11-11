@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1362,
+    "isolation_attested": true,
+    "latency_seconds": 76.494,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1110,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-c91e26ee06e644a689a2a8236cc5da11/attempt-1"
+  },
+  "job_id": "job-c91e26ee06e644a689a2a8236cc5da11",
+  "packet_sha256": "b0f5069eca6aa7006fd1d8ef3697c6e66c94d0afb666c8a446d223a73a232475",
+  "review": {
+    "findings": [
+      {
+        "description": "The function returns the last item for each distinct key instead of the first item, violating the contract to keep the first occurrence.",
+        "evidence": "Example: items=[{'id':1,'val':1},{'id':2,'val':2},{'id':1,'val':3}].\nExpected output: [{'id':1,'val':1},{'id':2,'val':2}].\nCandidate output: [{'id':1,'val':3},{'id':2,'val':2}].\nThe last value for key 1 is returned because the dict comprehension overwrites earlier entries, so the contract is not met.",
+        "file": "candidate.py",
+        "finding_id": "F1",
+        "line_end": 1,
+        "line_start": 1,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation does not preserve the first occurrence of items with duplicate keys, violating the contract requirement.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

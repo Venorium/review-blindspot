@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1187,
+    "isolation_attested": true,
+    "latency_seconds": 57.329,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 790,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-540151a80d8245a5b8a54beeb2e33b5b/attempt-1"
+  },
+  "job_id": "job-540151a80d8245a5b8a54beeb2e33b5b",
+  "packet_sha256": "92660d8612ebef729b18aa1f3050e482d701878548ff1efb0c15f2919dd242ef",
+  "review": {
+    "findings": [],
+    "summary": "The candidate implementation correctly performs integer division with truncation toward zero for all signed integers n and positive divisors d, without using floating point conversion.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

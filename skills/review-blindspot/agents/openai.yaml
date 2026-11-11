@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Blind Spot"
+  short_description: "Expose review gaps and stale conclusions"
+  default_prompt: "Use $review-blindspot to review my changes before commit and show evidence, gaps, and stale conclusions."

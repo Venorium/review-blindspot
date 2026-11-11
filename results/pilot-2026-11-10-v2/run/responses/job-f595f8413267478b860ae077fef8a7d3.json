@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1329,
+    "isolation_attested": true,
+    "latency_seconds": 174.768,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 3281,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-f595f8413267478b860ae077fef8a7d3/attempt-1"
+  },
+  "job_id": "job-f595f8413267478b860ae077fef8a7d3",
+  "packet_sha256": "ef7b4435798f71727922fd41c6101e99403b1d7a57975043e3d62835dd8192a7",
+  "review": {
+    "findings": [],
+    "summary": "The implementation correctly performs the required rounding, handles positive and negative amounts symmetrically, and uses only integer arithmetic as specified. No defects were found within the defined contract.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

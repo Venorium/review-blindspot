@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1186,
+    "isolation_attested": true,
+    "latency_seconds": 214.552,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 2634,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-9b21e2039a3443289a3ea688da78ddaf/attempt-1"
+  },
+  "job_id": "job-9b21e2039a3443289a3ea688da78ddaf",
+  "packet_sha256": "f2ae5ca9e383072ff6547b459ac1531eb59f8f516e8498ef56fed8d680cd8eb4",
+  "review": {
+    "findings": [
+      {
+        "description": "Returns True when now equals expires_at, but the spec requires inactivity at or after expiration.",
+        "evidence": "Spec states: 'active strictly before expires_at and inactive at or after it'. candidate.py uses `now <= expires_at`, so active(10, 10) returns True instead of the required False.",
+        "file": "candidate.py",
+        "finding_id": "boundary_condition_violation",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The candidate incorrectly treats equality as active, violating the specification that a token is inactive at or after its expiration timestamp.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

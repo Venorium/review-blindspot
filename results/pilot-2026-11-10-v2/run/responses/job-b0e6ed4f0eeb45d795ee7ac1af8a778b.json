@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1328,
+    "isolation_attested": true,
+    "latency_seconds": 212.678,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 230,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-b0e6ed4f0eeb45d795ee7ac1af8a778b/attempt-1"
+  },
+  "job_id": "job-b0e6ed4f0eeb45d795ee7ac1af8a778b",
+  "packet_sha256": "651c72b8a808b21f25a2e2417e0e65ec3b35a810320639c83d9d62fcad23bf8c",
+  "review": {
+    "findings": [],
+    "summary": "Candidate implementation correctly orders tickets by priority while preserving stability for equal priorities and does not modify the input list.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

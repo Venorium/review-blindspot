@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1802,
+    "isolation_attested": true,
+    "latency_seconds": 154.373,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 4973,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-438c0a8dcbf24033bea63b0a907c43a8/attempt-1"
+  },
+  "job_id": "job-438c0a8dcbf24033bea63b0a907c43a8",
+  "packet_sha256": "0d9b0229fcd2590aaf84f5f99e09cf4a0d4e228709f40054fd1f1be8ef7f3800",
+  "review": {
+    "findings": [
+      {
+        "description": "The sleep call executes without checking if it is the final attempt. This causes an unnecessary delay after the last failed call and violates the negative constraint in the specification.",
+        "evidence": "When operation() raises TransientError on every call (or attempts=1), line 12 executes sleep(base_delay * 2 ** attempt) for the last iteration before the loop ends. SPEC.md states: 'Never sleep after the final failed call: re-raise that last TransientError immediately.'",
+        "file": "candidate.py",
+        "finding_id": "unnecessary_sleep_on_final_failure",
+        "line_end": 12,
+        "line_start": 12,
+        "severity": "high"
+      }
+    ],
+    "summary": "candidate.py unconditionally sleeps after every TransientError, including the final failed attempt, violating the explicit contract to never sleep after the last failure.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

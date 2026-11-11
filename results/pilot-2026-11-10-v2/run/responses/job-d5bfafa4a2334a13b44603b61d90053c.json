@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1830,
+    "isolation_attested": true,
+    "latency_seconds": 72.447,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1012,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-d5bfafa4a2334a13b44603b61d90053c/attempt-1"
+  },
+  "job_id": "job-d5bfafa4a2334a13b44603b61d90053c",
+  "packet_sha256": "007d132edc505ce758f14f4edbd871dc84342ce0aa49030b768a2024a56c99ca",
+  "review": {
+    "findings": [
+      {
+        "description": "update_price fails to invalidate the cache entry for the updated SKU, so subsequent price() or quote() calls may return stale prices and read the table fewer times than required.",
+        "evidence": "The specification states that each SKU must be read from the underlying price table at most once between two updates of that SKU. In candidate.py, update_price only updates self._prices but does not clear or update self._cache, so a stale price remains cached after an update. This violates the caching contract and leads to incorrect behavior when a SKU is updated after an earlier read.",
+        "file": "candidate.py",
+        "finding_id": "C1",
+        "line_end": 19,
+        "line_start": 16,
+        "severity": "high"
+      }
+    ],
+    "summary": "Catalog caching does not invalidate stale entries after an update, violating the contract that each SKU must be read at most once between two updates.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

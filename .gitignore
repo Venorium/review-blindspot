@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+build/
+dist/
+*.egg-info/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Local experiment workspaces (published runs live in results/)
+runs/
+submissions/
+adjudications/
+!results/**/adjudications/
+!results/**/submissions/
+*.log
+
+# Local agent tooling, instructions and working notes: never published
+AGENTS.md
+AGENTS.override.md
+CLAUDE.md
+CLAUDE.local.md
+GEMINI.md
+.agent/
+.agents/*
+!.agents/plugins/
+.claude/
+.codex/
+.cursor/
+.github/copilot-instructions.md
+START_HERE_FR.md
+evidence/
+research/PLAN_GITHUB.md

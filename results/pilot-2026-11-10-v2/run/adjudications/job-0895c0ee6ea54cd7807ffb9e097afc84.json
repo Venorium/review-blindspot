@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "E001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-0895c0ee6ea54cd7807ffb9e097afc84",
+  "method": "external_judge",
+  "rationale": "Finding states that path.startswith(base) without the slash accepts sibling paths sharing the prefix; same mechanism and violated rule. Finding E001: \"The function only checks `path.startswith(base)` to determine if the resolved path is inside the base directory. This condition is insufficient because it also matches paths that share the base prefix\". Its worked example is invalid ('uploads2/file.txt' resolves inside base); the description's sibling path is valid.",
+  "schema_version": 1,
+  "submission_sha256": "32966a9ad347d90cc784362dedc1cde8e1e12477784de8567c761ace88c1ab4d",
+  "target_detection": "detected"
+}

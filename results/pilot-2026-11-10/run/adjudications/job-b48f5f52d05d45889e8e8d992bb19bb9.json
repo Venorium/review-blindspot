@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-b48f5f52d05d45889e8e8d992bb19bb9",
+  "method": "external_judge",
+  "rationale": "Finding states // floors toward negative infinity instead of truncating toward zero for negative non-integral quotients; same mechanism. Finding 001: \"Using Python's // operator performs floor division, which truncates toward negative infinity. The specification requires truncation toward zero for all signed integer dividends.\".",
+  "schema_version": 1,
+  "submission_sha256": "ecf7d2cd443b6f389e31efbd270df492e9e7458620ca9ab615656d2c6c4465bb",
+  "target_detection": "detected"
+}

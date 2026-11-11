@@ -1,0 +1,255 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="568" viewBox="0 0 800 568" role="img" aria-labelledby="t d" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+<title id="t">Who blocked a correct control</title>
+<desc id="d">Exploratory pilot on small synthetic fixtures. Not a benchmark. Rows are cases; columns are individual reviewer requests grouped by protocol.</desc>
+<rect width="800" height="568" rx="14" fill="#f7f8f6"/>
+<text x="24" y="38" font-size="21" font-weight="700" fill="#10232e">Who blocked a correct control</text>
+<text x="24" y="62" font-size="13" fill="#4b5563">Exploratory pilot on small synthetic fixtures. Not a benchmark.</text>
+<text x="345.0" y="84" font-size="12" font-weight="600" text-anchor="middle" fill="#10232e">Solo</text>
+<text x="419.0" y="84" font-size="12" font-weight="600" text-anchor="middle" fill="#10232e">Panel of 3</text>
+<text x="523.0" y="84" font-size="12" font-weight="600" text-anchor="middle" fill="#10232e">Panel + author note</text>
+<text x="627.0" y="84" font-size="12" font-weight="600" text-anchor="middle" fill="#10232e">Mixed panel</text>
+<text x="345.0" y="106" font-size="12" text-anchor="middle" fill="#4b5563">A</text>
+<text x="389.0" y="106" font-size="12" text-anchor="middle" fill="#4b5563">A</text>
+<text x="419.0" y="106" font-size="12" text-anchor="middle" fill="#4b5563">A</text>
+<text x="449.0" y="106" font-size="12" text-anchor="middle" fill="#4b5563">A</text>
+<text x="493.0" y="106" font-size="12" text-anchor="middle" fill="#4b5563">A</text>
+<text x="523.0" y="106" font-size="12" text-anchor="middle" fill="#4b5563">A</text>
+<text x="553.0" y="106" font-size="12" text-anchor="middle" fill="#4b5563">A</text>
+<text x="597.0" y="106" font-size="12" text-anchor="middle" fill="#4b5563">A</text>
+<text x="627.0" y="106" font-size="12" text-anchor="middle" fill="#4b5563">B</text>
+<text x="657.0" y="106" font-size="12" text-anchor="middle" fill="#4b5563">C</text>
+<text x="724" y="106" font-size="11" text-anchor="middle" fill="#4b5563">blocked</text>
+<text x="320" y="138" font-size="12.5" text-anchor="end" fill="#10232e">h01 · Cache invalidation on price update</text>
+<rect x="331" y="119" width="28" height="28" rx="5" fill="#e3a33b" stroke="#d6dbd3"/>
+<text x="345.0" y="138" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">!</text>
+<rect x="375" y="119" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="389.0" y="138" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="405" y="119" width="28" height="28" rx="5" fill="#e3a33b" stroke="#d6dbd3"/>
+<text x="419.0" y="138" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">!</text>
+<rect x="435" y="119" width="28" height="28" rx="5" fill="#e3a33b" stroke="#d6dbd3"/>
+<text x="449.0" y="138" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">!</text>
+<rect x="479" y="119" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="493.0" y="138" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="509" y="119" width="28" height="28" rx="5" fill="#e3a33b" stroke="#d6dbd3"/>
+<text x="523.0" y="138" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">!</text>
+<rect x="539" y="119" width="28" height="28" rx="5" fill="#e3a33b" stroke="#d6dbd3"/>
+<text x="553.0" y="138" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">!</text>
+<rect x="583" y="119" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="597.0" y="138" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="613" y="119" width="28" height="28" rx="5" fill="#4b5563" stroke="#d6dbd3"/>
+<text x="627.0" y="138" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">×</text>
+<rect x="643" y="119" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="657.0" y="138" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<text x="724" y="138" font-size="12.5" text-anchor="middle" fill="#10232e">5/10</text>
+<text x="320" y="168" font-size="12.5" text-anchor="end" fill="#10232e">h02 · One-shot iterator allocation</text>
+<rect x="331" y="149" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="345.0" y="168" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="375" y="149" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="389.0" y="168" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="405" y="149" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="419.0" y="168" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="435" y="149" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="449.0" y="168" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="479" y="149" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="493.0" y="168" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="509" y="149" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="523.0" y="168" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="539" y="149" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="553.0" y="168" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="583" y="149" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="597.0" y="168" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="613" y="149" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="627.0" y="168" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="643" y="149" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="657.0" y="168" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<text x="724" y="168" font-size="12.5" text-anchor="middle" fill="#10232e">0/10</text>
+<text x="320" y="198" font-size="12.5" text-anchor="end" fill="#10232e">h03 · Refund rounding symmetry</text>
+<rect x="331" y="179" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="345.0" y="198" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="375" y="179" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="389.0" y="198" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="405" y="179" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="419.0" y="198" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="435" y="179" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="449.0" y="198" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="479" y="179" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="493.0" y="198" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="509" y="179" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="523.0" y="198" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="539" y="179" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="553.0" y="198" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="583" y="179" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="597.0" y="198" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="613" y="179" width="28" height="28" rx="5" fill="#4b5563" stroke="#d6dbd3"/>
+<text x="627.0" y="198" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">×</text>
+<rect x="643" y="179" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="657.0" y="198" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<text x="724" y="198" font-size="12.5" text-anchor="middle" fill="#10232e">0/10</text>
+<text x="320" y="228" font-size="12.5" text-anchor="end" fill="#10232e">h04 · Ledger validation and atomic transfer</text>
+<rect x="331" y="209" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="345.0" y="228" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="375" y="209" width="28" height="28" rx="5" fill="#e3a33b" stroke="#d6dbd3"/>
+<text x="389.0" y="228" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">!</text>
+<rect x="405" y="209" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="419.0" y="228" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="435" y="209" width="28" height="28" rx="5" fill="#e3a33b" stroke="#d6dbd3"/>
+<text x="449.0" y="228" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">!</text>
+<rect x="479" y="209" width="28" height="28" rx="5" fill="#e3a33b" stroke="#d6dbd3"/>
+<text x="493.0" y="228" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">!</text>
+<rect x="509" y="209" width="28" height="28" rx="5" fill="#e3a33b" stroke="#d6dbd3"/>
+<text x="523.0" y="228" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">!</text>
+<rect x="539" y="209" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="553.0" y="228" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="583" y="209" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="597.0" y="228" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="613" y="209" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="627.0" y="228" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="643" y="209" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="657.0" y="228" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<text x="724" y="228" font-size="12.5" text-anchor="middle" fill="#10232e">4/10</text>
+<text x="320" y="258" font-size="12.5" text-anchor="end" fill="#10232e">h05 · Stable descending priority order</text>
+<rect x="331" y="239" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="345.0" y="258" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="375" y="239" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="389.0" y="258" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="405" y="239" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="419.0" y="258" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="435" y="239" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="449.0" y="258" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="479" y="239" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="493.0" y="258" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="509" y="239" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="523.0" y="258" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="539" y="239" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="553.0" y="258" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="583" y="239" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="597.0" y="258" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="613" y="239" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="627.0" y="258" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="643" y="239" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="657.0" y="258" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<text x="724" y="258" font-size="12.5" text-anchor="middle" fill="#10232e">0/10</text>
+<text x="320" y="288" font-size="12.5" text-anchor="end" fill="#10232e">h06 · Unicode case-insensitive lookup</text>
+<rect x="331" y="269" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="345.0" y="288" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="375" y="269" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="389.0" y="288" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="405" y="269" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="419.0" y="288" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="435" y="269" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="449.0" y="288" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="479" y="269" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="493.0" y="288" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="509" y="269" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="523.0" y="288" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="539" y="269" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="553.0" y="288" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="583" y="269" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="597.0" y="288" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="613" y="269" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="627.0" y="288" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="643" y="269" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="657.0" y="288" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<text x="724" y="288" font-size="12.5" text-anchor="middle" fill="#10232e">0/10</text>
+<text x="320" y="318" font-size="12.5" text-anchor="end" fill="#10232e">h07 · Exponential backoff without trailing sl…</text>
+<rect x="331" y="299" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="345.0" y="318" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="375" y="299" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="389.0" y="318" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="405" y="299" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="419.0" y="318" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="435" y="299" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="449.0" y="318" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="479" y="299" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="493.0" y="318" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="509" y="299" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="523.0" y="318" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="539" y="299" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="553.0" y="318" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="583" y="299" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="597.0" y="318" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="613" y="299" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="627.0" y="318" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="643" y="299" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="657.0" y="318" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<text x="724" y="318" font-size="12.5" text-anchor="middle" fill="#10232e">0/10</text>
+<text x="320" y="348" font-size="12.5" text-anchor="end" fill="#10232e">h08 · Business days from a weekend start</text>
+<rect x="331" y="329" width="28" height="28" rx="5" fill="#4b5563" stroke="#d6dbd3"/>
+<text x="345.0" y="348" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">×</text>
+<rect x="375" y="329" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="389.0" y="348" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="405" y="329" width="28" height="28" rx="5" fill="#e3a33b" stroke="#d6dbd3"/>
+<text x="419.0" y="348" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">!</text>
+<rect x="435" y="329" width="28" height="28" rx="5" fill="#4b5563" stroke="#d6dbd3"/>
+<text x="449.0" y="348" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">×</text>
+<rect x="479" y="329" width="28" height="28" rx="5" fill="#4b5563" stroke="#d6dbd3"/>
+<text x="493.0" y="348" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">×</text>
+<rect x="509" y="329" width="28" height="28" rx="5" fill="#4b5563" stroke="#d6dbd3"/>
+<text x="523.0" y="348" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">×</text>
+<rect x="539" y="329" width="28" height="28" rx="5" fill="#4b5563" stroke="#d6dbd3"/>
+<text x="553.0" y="348" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">×</text>
+<rect x="583" y="329" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="597.0" y="348" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="613" y="329" width="28" height="28" rx="5" fill="#4b5563" stroke="#d6dbd3"/>
+<text x="627.0" y="348" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">×</text>
+<rect x="643" y="329" width="28" height="28" rx="5" fill="#4b5563" stroke="#d6dbd3"/>
+<text x="657.0" y="348" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">×</text>
+<text x="724" y="348" font-size="12.5" text-anchor="middle" fill="#10232e">1/10</text>
+<text x="320" y="378" font-size="12.5" text-anchor="end" fill="#10232e">h09 · Upload path containment</text>
+<rect x="331" y="359" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="345.0" y="378" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="375" y="359" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="389.0" y="378" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="405" y="359" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="419.0" y="378" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="435" y="359" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="449.0" y="378" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="479" y="359" width="28" height="28" rx="5" fill="#e3a33b" stroke="#d6dbd3"/>
+<text x="493.0" y="378" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">!</text>
+<rect x="509" y="359" width="28" height="28" rx="5" fill="#e3a33b" stroke="#d6dbd3"/>
+<text x="523.0" y="378" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">!</text>
+<rect x="539" y="359" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="553.0" y="378" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="583" y="359" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="597.0" y="378" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="613" y="359" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="627.0" y="378" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="643" y="359" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="657.0" y="378" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<text x="724" y="378" font-size="12.5" text-anchor="middle" fill="#10232e">2/10</text>
+<text x="320" y="408" font-size="12.5" text-anchor="end" fill="#10232e">h10 · Keep the first item per key</text>
+<rect x="331" y="389" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="345.0" y="408" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="375" y="389" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="389.0" y="408" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="405" y="389" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="419.0" y="408" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="435" y="389" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="449.0" y="408" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="479" y="389" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="493.0" y="408" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="509" y="389" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="523.0" y="408" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="539" y="389" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="553.0" y="408" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="583" y="389" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="597.0" y="408" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="613" y="389" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="627.0" y="408" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<rect x="643" y="389" width="28" height="28" rx="5" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="657.0" y="408" font-size="14" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<text x="724" y="408" font-size="12.5" text-anchor="middle" fill="#10232e">0/10</text>
+<rect x="24" y="448" width="18" height="18" rx="4" fill="#cfe9dc" stroke="#d6dbd3"/>
+<text x="33" y="462" font-size="11" font-weight="700" text-anchor="middle" fill="#10232e">✓</text>
+<text x="50" y="462" font-size="12" fill="#10232e">control approved</text>
+<rect x="269" y="448" width="18" height="18" rx="4" fill="#e3a33b" stroke="#d6dbd3"/>
+<text x="278" y="462" font-size="11" font-weight="700" text-anchor="middle" fill="#10232e">!</text>
+<text x="295" y="462" font-size="12" fill="#10232e">control blocked</text>
+<rect x="514" y="448" width="18" height="18" rx="4" fill="#9aa5b1" stroke="#d6dbd3"/>
+<text x="523" y="462" font-size="11" font-weight="700" text-anchor="middle" fill="#10232e">–</text>
+<text x="540" y="462" font-size="12" fill="#10232e">abstained</text>
+<rect x="24" y="474" width="18" height="18" rx="4" fill="#4b5563" stroke="#d6dbd3"/>
+<text x="33" y="488" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff">×</text>
+<text x="50" y="488" font-size="12" fill="#10232e">no valid review</text>
+<text x="24" y="548" font-size="12" fill="#4b5563">A = gpt-oss:20b · B = qwen3.6:35b · C = gemma4:26b</text>
+</svg>

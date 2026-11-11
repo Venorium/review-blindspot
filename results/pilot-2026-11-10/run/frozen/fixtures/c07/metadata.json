@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "c07",
+  "family_id": "c07",
+  "title": "Atomic batch validation",
+  "origin": "original_synthetic_starter",
+  "split": "development_only",
+  "spec": "Implement append_batch(store, values). Both arguments are lists of integers. Accept only non-negative values. If any value is negative, raise ValueError and leave store exactly unchanged; otherwise append all values in order. Validation and mutation are single-threaded.",
+  "target_defect": "An invalid later value leaves earlier values already appended.",
+  "author_rationale": "The change validates incoming values while preserving their ordering.",
+  "limitations": "Small synthetic function; not a natural pull request. Correct means conforming to the stated contract and supplied checks, not universally bug-free."
+}

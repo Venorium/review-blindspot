@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "c01",
+  "family_id": "c01",
+  "title": "Expiration boundary",
+  "origin": "original_synthetic_starter",
+  "split": "development_only",
+  "spec": "Implement active(now, expires_at) for integer timestamps. A token is active strictly before expires_at and inactive at or after it. Inputs are integers; no clock access is needed.",
+  "target_defect": "The candidate accepts a token at the exact expiration timestamp.",
+  "author_rationale": "The change expresses the expiration decision directly as a comparison.",
+  "limitations": "Small synthetic function; not a natural pull request. Correct means conforming to the stated contract and supplied checks, not universally bug-free."
+}

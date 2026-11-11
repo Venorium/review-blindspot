@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1158,
+    "isolation_attested": true,
+    "latency_seconds": 21.495,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 251,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-5b41ded6a2d04dd8b4d9deb5f43df4da/attempt-1"
+  },
+  "job_id": "job-5b41ded6a2d04dd8b4d9deb5f43df4da",
+  "packet_sha256": "91a11c8b752a29bc7c976bce011967f93bdb96aa24267dccca44de95f4361b8c",
+  "review": {
+    "findings": [],
+    "summary": "The candidate implementation correctly determines token activity based on the provided integer timestamps, adhering to the contract of being active strictly before the expiration timestamp and inactive at or after it.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

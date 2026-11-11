@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "incorrect_equality_condition"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-f7815813f5b14b3895c06094d4fd695b",
+  "method": "external_judge",
+  "rationale": "Finding states an equal version is accepted (>= instead of >), updating state and writes; same mechanism. Finding incorrect_equality_condition: \"The function performs an update when `version == state['version']`, but the specification requires that the update only occurs when the version is strictly greater than the current version.\".",
+  "schema_version": 1,
+  "submission_sha256": "1e5d7ae958d2db68f715865521cb9c3b2d5af55f7f2eb7732b4f624a489181de",
+  "target_detection": "detected"
+}

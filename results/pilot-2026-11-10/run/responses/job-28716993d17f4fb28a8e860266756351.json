@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1198,
+    "isolation_attested": true,
+    "latency_seconds": 29.688,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 492,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-28716993d17f4fb28a8e860266756351/attempt-1"
+  },
+  "job_id": "job-28716993d17f4fb28a8e860266756351",
+  "packet_sha256": "a6a9cb5c56f5c327f5c619cb4445b027d4b741b2175a8227d03726f35af7787b",
+  "review": {
+    "findings": [
+      {
+        "description": "The function does not accumulate quantities for duplicate product IDs; it overwrites the previous value.",
+        "evidence": "Example: totals([('a', 2), ('a', 3)]) returns {'a': 3} instead of the expected {'a': 5}.",
+        "file": "candidate.py",
+        "finding_id": "duplicate-product-sum",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "critical"
+      }
+    ],
+    "summary": "The implementation fails to correctly sum quantities for repeated products.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

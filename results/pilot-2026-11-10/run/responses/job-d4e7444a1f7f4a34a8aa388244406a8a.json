@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1333,
+    "isolation_attested": true,
+    "latency_seconds": 19.67,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 437,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-d4e7444a1f7f4a34a8aa388244406a8a/attempt-1"
+  },
+  "job_id": "job-d4e7444a1f7f4a34a8aa388244406a8a",
+  "packet_sha256": "5b71ab8662ed21706b8ae50acefb8557a67df78a34d80a68a4d9f90d7f9e16b6",
+  "review": {
+    "findings": [
+      {
+        "description": "Cache key does not incorporate tenant, leading to incorrect sharing of cached values between tenants.",
+        "evidence": "If cache is initially empty, lookup(cache, 'a', '1', load) stores the value under key '1'. A subsequent call lookup(cache, 'b', '1', load) should trigger load again but the current implementation returns the cached value for tenant 'a', violating the requirement to cache separately per (tenant, record_id).",
+        "file": "candidate.py",
+        "finding_id": "F001",
+        "line_end": 4,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation does not correctly cache per (tenant, record_id) as required.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

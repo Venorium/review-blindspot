@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F1"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-2b757fe43f1a4c9d88b512e6d83296fe",
+  "method": "external_judge",
+  "rationale": "Finding states touching intervals are reported as overlapping (<= instead of <), with an endpoint-sharing input; same mechanism. Finding F1: \"The overlaps function uses <= to compare the maximum start with the minimum end, causing it to report overlapping intervals even when they only touch at an endpoint. This violates the contract that half-open intervals sh\".",
+  "schema_version": 1,
+  "submission_sha256": "3aa356509683a414dc66b9486391e5b07ededab7e8834d0f269670b0aac89c12",
+  "target_detection": "detected"
+}

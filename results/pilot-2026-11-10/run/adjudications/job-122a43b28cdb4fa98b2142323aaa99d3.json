@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "zero_limit_returns_full_list"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-122a43b28cdb4fa98b2142323aaa99d3",
+  "method": "external_judge",
+  "rationale": "Finding states that limit 0 returns the whole list (items[-0:] == items[0:]) where the contract requires []; same mechanism. Finding zero_limit_returns_full_list: \"When limit is 0, the expression items[-limit:] evaluates to items[-0:]. In Python, negative zero in slice indexing is treated as positive zero, making it equivalent to items[0:], which returns the entire input list inste\".",
+  "schema_version": 1,
+  "submission_sha256": "e3a0e0803ae12f0779cf93b086f782361e496a264dccde471833995f7d45bdc6",
+  "target_detection": "detected"
+}

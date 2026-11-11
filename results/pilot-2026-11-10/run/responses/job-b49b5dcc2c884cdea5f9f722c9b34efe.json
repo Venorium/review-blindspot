@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1284,
+    "isolation_attested": true,
+    "latency_seconds": 306.865,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 3581,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-b49b5dcc2c884cdea5f9f722c9b34efe/attempt-1"
+  },
+  "job_id": "job-b49b5dcc2c884cdea5f9f722c9b34efe",
+  "packet_sha256": "e52154e6bb6816a7d52829659fb9ce4e343a95f0a60c2f0a378a57cb392fbdaf",
+  "review": {
+    "findings": [
+      {
+        "description": "The implementation uses `options.get(key) or default`, which returns `default` if `options.get(key)` is falsy. This occurs even if the key exists in `options` with a falsy value like `0`, `False`, `''`, or `None`, which contradicts the requirement to return the stored value when the key exists.",
+        "evidence": "setting({'x': 0}, 'x', 9) returns 9 instead of 0",
+        "file": "candidate.py",
+        "finding_id": "falsy_values_incorrectly_trigger_default",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation incorrectly uses the `or` operator, which causes the function to return the `default` value when the key exists in the dictionary but is mapped to a falsy value (such as `0`, `False`, `''`, or `None`). This violates the requirement to return the stored value when the key exists.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

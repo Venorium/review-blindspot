@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1295,
+    "isolation_attested": true,
+    "latency_seconds": 88.974,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 579,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-acf422e18477438ba7e11de99af1f8a8/attempt-1"
+  },
+  "job_id": "job-acf422e18477438ba7e11de99af1f8a8",
+  "packet_sha256": "ea4c01916f41b6b4db37a17b85513193b9a7b9decadf9f7c181fe72137f701f7",
+  "review": {
+    "findings": [
+      {
+        "description": "The function uses .lower() for case-insensitive comparison instead of .casefold(), which does not handle all Unicode case folding rules. This causes incorrect behavior for inputs where casefolding differs from lowercasing, such as German \"ß\" or Greek sigma forms.",
+        "evidence": "For example, find_user([\"Straße\"], \" strasse \") should return \"Straße\" according to the spec, but the current implementation returns None.",
+        "file": "candidate.py",
+        "finding_id": "case-folding-issue",
+        "line_end": 4,
+        "line_start": 2,
+        "severity": "critical"
+      }
+    ],
+    "summary": "Candidate implementation fails to perform full Unicode case folding, violating the contract.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-a0d47e59f0654e8691ba3f963c62cfca",
+  "method": "external_judge",
+  "rationale": "Finding states that now == expires_at is reported active (<= instead of <), with the boundary input; same mechanism and violated rule as the planted defect. Finding F001: \"The condition `now <= expires_at` incorrectly treats a timestamp equal to expires_at as active, whereas the contract requires that a token is active strictly before expires_at and inactive at or after it.\".",
+  "schema_version": 1,
+  "submission_sha256": "fd78c10e6da8711531679b36e2ea1b9cd3ee571a4e960f89ae75146b262ee494",
+  "target_detection": "detected"
+}

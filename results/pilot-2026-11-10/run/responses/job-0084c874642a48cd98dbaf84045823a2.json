@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1314,
+    "isolation_attested": true,
+    "latency_seconds": 26.697,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 403,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-0084c874642a48cd98dbaf84045823a2/attempt-1"
+  },
+  "job_id": "job-0084c874642a48cd98dbaf84045823a2",
+  "packet_sha256": "557aa09b114eb4cfad66a99687f19aab41fa1d10b887b7ae8fb13d42bf8e668d",
+  "review": {
+    "findings": [],
+    "summary": "The candidate implementation correctly caches results per (tenant, record_id), calls load only on a miss, and returns the cached or loaded value as specified.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "ledger_rejection_atomicity"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-a8ecfe8336154ab88c1229785d1d53a6",
+  "method": "external_judge",
+  "rationale": "Finding states that balances are mutated before ledger.record can reject a long memo, leaving accounts changed on failure; same mechanism. Finding ledger_rejection_atomicity: \"When the ledger rejects an entry because the memo is too long, the transfer function has already updated the account balances, violating the spec which requires that both accounts and the ledger remai\".",
+  "schema_version": 1,
+  "submission_sha256": "e5a364c8e47096ddadd46f13f5c4b9d4d73792ec234bec7c9df4fa8d7b93aee0",
+  "target_detection": "detected"
+}

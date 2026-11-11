@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-37a65b2be6234dfaa084761ce18047c5",
+  "method": "external_judge",
+  "rationale": "Finding states // floors toward negative infinity instead of truncating toward zero for negative non-integral quotients; same mechanism. Finding F001: \"Using Python's // operator performs floor division, which truncates toward negative infinity rather than toward zero when the numerator is negative. This contradicts the specification that divide(n, d) must return the qu\".",
+  "schema_version": 1,
+  "submission_sha256": "d256a2f1b474d43701b102e3908310700face67e38b15f9e5137cb3285bd7c11",
+  "target_detection": "detected"
+}

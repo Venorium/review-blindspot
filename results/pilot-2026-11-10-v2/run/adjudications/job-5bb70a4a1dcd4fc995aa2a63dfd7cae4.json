@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "CANDIDATE-001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-5bb70a4a1dcd4fc995aa2a63dfd7cae4",
+  "method": "external_judge",
+  "rationale": "Finding states that update_price leaves the cached entry in place, so later price()/quote() return the old price; same mechanism and violated rule. Finding CANDIDATE-001: \"update_price does not invalidate or update the cache, causing price() to return stale values after a price change.\".",
+  "schema_version": 1,
+  "submission_sha256": "f0ed8e35294bb66f5c09c9bd206c7f65abf994171e1c3260484d9a304464a03d",
+  "target_detection": "detected"
+}

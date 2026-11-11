@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1292,
+    "isolation_attested": true,
+    "latency_seconds": 42.447,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1251,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-1fd66a76a53f41d5986030b3805f4539/attempt-1"
+  },
+  "job_id": "job-1fd66a76a53f41d5986030b3805f4539",
+  "packet_sha256": "136a019dd4e1f6f3c289cabfdee465465356585be2c6deca7f9f7644c06b792d",
+  "review": {
+    "findings": [
+      {
+        "description": "The implementation uses `(amount_cents * percent + 50) // 100`, which rounds negative half values toward zero instead of away from zero, breaking the required symmetry `percent_of(-x, p) == -percent_of(x, p)`.",
+        "evidence": "For example, percent_of(-1, 50) should return -1 because -0.5 rounds away from zero to -1, but the current code computes (-1 * 50 + 50) // 100 = 0. This violates the contract’s rounding rule for negative amounts.",
+        "file": "candidate.py",
+        "finding_id": "F001",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "candidate.py does not correctly round negative amounts with fractional part exactly .5, violating the spec.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

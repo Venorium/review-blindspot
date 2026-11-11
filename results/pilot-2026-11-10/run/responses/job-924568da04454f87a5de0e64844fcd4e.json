@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1279,
+    "isolation_attested": true,
+    "latency_seconds": 51.709,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 482,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-924568da04454f87a5de0e64844fcd4e/attempt-1"
+  },
+  "job_id": "job-924568da04454f87a5de0e64844fcd4e",
+  "packet_sha256": "5f7c7e6d2b5b3820864c0f6a2591e85f7eabd5a7e703f94fab8dfe3aa9b85797",
+  "review": {
+    "findings": [
+      {
+        "description": "The implementation uses the payload to determine duplicates, while the specification requires duplicate detection on request_id. This leads to incorrect behavior when the same request_id is used with a different payload.",
+        "evidence": "Given events = [('r1', 'p1')], calling record(events, 'r1', 'p2') will append the new tuple and return True, but per the spec it should return False and not mutate events.",
+        "file": "candidate.py",
+        "finding_id": "F1",
+        "line_end": 5,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation checks for duplicate payloads instead of duplicate request IDs, violating the contract.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

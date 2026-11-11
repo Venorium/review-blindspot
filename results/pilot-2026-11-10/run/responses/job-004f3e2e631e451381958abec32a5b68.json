@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1176,
+    "isolation_attested": true,
+    "latency_seconds": 74.223,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 1998,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-004f3e2e631e451381958abec32a5b68/attempt-1"
+  },
+  "job_id": "job-004f3e2e631e451381958abec32a5b68",
+  "packet_sha256": "118f9076d8b1aebdc759c5b79c9997b75b0492ebad946c5d5cec3d258ea14904",
+  "review": {
+    "findings": [],
+    "summary": "The candidate correctly implements the specification by using list(record['labels']), which creates a new, separate list object. This ensures that any modifications to the returned list do not affect the original record['labels'], satisfying the contract exactly. No defects found.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

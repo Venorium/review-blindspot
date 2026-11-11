@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1438,
+    "isolation_attested": true,
+    "latency_seconds": 150.031,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1622,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-aacf6d8afed14fc0b7be8616aa0af6d4/attempt-1"
+  },
+  "job_id": "job-aacf6d8afed14fc0b7be8616aa0af6d4",
+  "packet_sha256": "b492ef4ef71e65d20512de055b5072a9ddc9be822be459e218e895a8070048b1",
+  "review": {
+    "findings": [
+      {
+        "description": "The path validation only checks that the resolved path starts with the base directory, which permits paths that share the base prefix but are not actually within the base (e.g., /srv/uploads2).",
+        "evidence": "For base \"/srv/uploads\" and name \"../../uploads2\", the function returns \"/srv/uploads2\" instead of raising ValueError, violating the contract that only paths equal to base or inside base are allowed.",
+        "file": "candidate.py",
+        "finding_id": "path-escape-prefix",
+        "line_end": 9,
+        "line_start": 8,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation incorrectly validates the resolved path, allowing paths that escape the base directory when they share a common prefix but are not actually inside the base.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

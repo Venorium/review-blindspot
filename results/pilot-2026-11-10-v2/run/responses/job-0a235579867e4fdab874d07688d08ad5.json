@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1292,
+    "isolation_attested": true,
+    "latency_seconds": 258.005,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1482,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-0a235579867e4fdab874d07688d08ad5/attempt-1"
+  },
+  "job_id": "job-0a235579867e4fdab874d07688d08ad5",
+  "packet_sha256": "136a019dd4e1f6f3c289cabfdee465465356585be2c6deca7f9f7644c06b792d",
+  "review": {
+    "findings": [
+      {
+        "description": "The function rounds negative amounts with a remainder of 50 (i.e., exact halves) towards zero instead of away from zero, breaking the symmetry requirement percent_of(-x, p) == -percent_of(x, p).",
+        "evidence": "For amount_cents = -3 and percent = 50, the correct result should be -2, but the current implementation returns -1.",
+        "file": "candidate.py",
+        "finding_id": "defect-rounding-negative",
+        "line_end": 2,
+        "line_start": 1,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation incorrectly rounds negative amounts that are exactly half, violating the spec that requires exact halves to round away from zero.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

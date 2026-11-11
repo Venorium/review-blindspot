@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1319,
+    "isolation_attested": true,
+    "latency_seconds": 121.844,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 725,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-3816f3ca8a724bbda05a2462e132d5ed/attempt-1"
+  },
+  "job_id": "job-3816f3ca8a724bbda05a2462e132d5ed",
+  "packet_sha256": "437c7c54661b52303eb324a07cdf6b4092a218ce2bd136fe61bf8b71ba865f3e",
+  "review": {
+    "findings": [
+      {
+        "description": "The expression (amount_cents * percent + 50) // 100 rounds half values toward zero for negative inputs, which contradicts the specification that halves must be rounded away from zero.",
+        "evidence": "For amount_cents = -1 and percent = 50, candidate.percent_of(-1, 50) evaluates to 0, but the correct result per the spec is -1.",
+        "file": "candidate.py",
+        "finding_id": "negative_half_rounding",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation incorrectly rounds negative half values, violating the specification's requirement for rounding away from zero.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

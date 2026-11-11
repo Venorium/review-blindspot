@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "equality_threshold_violation"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-c0e25edc08714f0eabe5d75e7e2a96c0",
+  "method": "external_judge",
+  "rationale": "Finding states an equal version is accepted (>= instead of >), updating state and writes; same mechanism. Finding equality_threshold_violation: \"The condition `version >= state['version']` triggers on equality, but the contract requires updates only when version is strictly greater than state[version].\".",
+  "schema_version": 1,
+  "submission_sha256": "7a2e345fe6518b8ad156f4e196701d24a2ec70f94e385db0f081006682496679",
+  "target_detection": "detected"
+}

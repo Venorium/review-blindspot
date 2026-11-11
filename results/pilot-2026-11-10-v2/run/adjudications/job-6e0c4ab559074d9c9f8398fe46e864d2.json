@@ -1,0 +1,11 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-6e0c4ab559074d9c9f8398fe46e864d2",
+  "method": "external_judge",
+  "rationale": "Control. Triage: false alarm from an incorrect computation. For a Saturday start with n=5 the contract gives the Monday one week later, which the candidate returns; the finding's expected date is wrong.",
+  "schema_version": 1,
+  "submission_sha256": "45bfe0bb84cce899db66eddd05cfcd614b57acbddb167a9e207476dbb6c3bfcb",
+  "target_detection": "not_applicable"
+}

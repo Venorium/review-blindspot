@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "overlap-incorrect-interval-touch"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-f4f2ab11b323478796133f5178e59501",
+  "method": "external_judge",
+  "rationale": "Finding states touching intervals are reported as overlapping (<= instead of <), with an endpoint-sharing input; same mechanism. Finding overlap-incorrect-interval-touch: \"The implementation uses a non-strict inequality (<=) to compare the maximum start and minimum end of the intervals. For half-open intervals [start, end), touching endpoints should not be considered overlapping, but the c\".",
+  "schema_version": 1,
+  "submission_sha256": "80172338c946af6ccc2a312feffeb341e292418cdf54cd50510e6b0fd7e08a90",
+  "target_detection": "detected"
+}

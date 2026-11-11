@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "casefolding_violation"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-21ff9a0931684c7eae6c262ff1e5e12e",
+  "method": "external_judge",
+  "rationale": "Finding states that lower() is used where the contract requires casefold(), so full case-folding matches are missed; same mechanism. Finding casefolding_violation: \"Uses .lower() instead of the spec-mandated .casefold(), which fails to perform full Unicode case folding.\".",
+  "schema_version": 1,
+  "submission_sha256": "17c09c78d0bafdb3358299ad0bda88e07d5e42acd0fb13b416d5a03940bd7d13",
+  "target_detection": "detected"
+}

@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1230,
+    "isolation_attested": true,
+    "latency_seconds": 74.321,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 931,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-c41151da3862455eb12d6357e666640d/attempt-1"
+  },
+  "job_id": "job-c41151da3862455eb12d6357e666640d",
+  "packet_sha256": "e7450222f1a655e39f1f3a4149927ea93a6850b0286c525c359659bca6c66cd7",
+  "review": {
+    "findings": [
+      {
+        "description": "The function directly extracts the date from the parsed datetime without converting to UTC. For timestamps where the UTC date differs from the local date, the returned value is incorrect.",
+        "evidence": "candidate.utc_day('2024-01-01T00:30:00+02:00') returns '2024-01-01' but the correct UTC calendar day should be '2023-12-31'.",
+        "file": "candidate.py",
+        "finding_id": "UTC_OFFSET_CONVERSION",
+        "line_end": 4,
+        "line_start": 4,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate fails to convert timestamps to UTC before extracting the date, leading to incorrect results for times that cross midnight in UTC.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

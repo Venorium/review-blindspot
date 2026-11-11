@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1187,
+    "isolation_attested": true,
+    "latency_seconds": 55.731,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 797,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-3449ea41e54d4352859c9d2f3756a70b/attempt-1"
+  },
+  "job_id": "job-3449ea41e54d4352859c9d2f3756a70b",
+  "packet_sha256": "92660d8612ebef729b18aa1f3050e482d701878548ff1efb0c15f2919dd242ef",
+  "review": {
+    "findings": [],
+    "summary": "Candidate implementation correctly computes division truncated toward zero for signed integers with positive divisor using integer arithmetic, meeting all contract requirements.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

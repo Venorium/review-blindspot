@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1318,
+    "isolation_attested": true,
+    "latency_seconds": 96.637,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 3242,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-d2bc03bb7e554842b685c20287e81551/attempt-1"
+  },
+  "job_id": "job-d2bc03bb7e554842b685c20287e81551",
+  "packet_sha256": "e7450222f1a655e39f1f3a4149927ea93a6850b0286c525c359659bca6c66cd7",
+  "review": {
+    "findings": [
+      {
+        "description": "Fails to convert the parsed datetime to UTC before calling .date(). The contract explicitly requires returning the UTC calendar date, not the local date of the input offset.",
+        "evidence": "For input '2024-01-02T01:00:00+03:00', `datetime.fromisoformat(timestamp).date()` returns 2024-01-02. The corresponding UTC time is 2024-01-01 22:00:00Z, so the correct output should be '2024-01-01'.",
+        "file": "candidate.py",
+        "finding_id": "missing_utc_conversion",
+        "line_end": 4,
+        "line_start": 4,
+        "severity": "high"
+      }
+    ],
+    "summary": "Fails to convert the timestamp to UTC before extracting the date, violating the requirement to return the UTC calendar date.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

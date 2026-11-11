@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1143,
+    "isolation_attested": true,
+    "latency_seconds": 29.06,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 441,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-3a368e951e76410f97ea97f312a54713/attempt-1"
+  },
+  "job_id": "job-3a368e951e76410f97ea97f312a54713",
+  "packet_sha256": "d8f97e65235652bc7ab48ed3158940968cc29dd9d083397031cc3e5ccf88efc8",
+  "review": {
+    "findings": [
+      {
+        "description": "labels() returns the same list from record['labels'] instead of a copy, so mutating the returned list also mutates the original record.",
+        "evidence": "record={'labels':['a','b']}\nr=candidate.labels(record)\nr.append('c')\n# Now record['labels'] == ['a','b','c'] – the original record was altered.",
+        "file": "candidate.py",
+        "finding_id": "1",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The labels function returns the original list object, allowing caller modifications to alter the record, violating the contract that a separate list must be returned.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

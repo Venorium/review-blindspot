@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1645,
+    "isolation_attested": true,
+    "latency_seconds": 170.069,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 2810,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-13f29ac5b8fd48cd840c1a2c8cb042fd/attempt-1"
+  },
+  "job_id": "job-13f29ac5b8fd48cd840c1a2c8cb042fd",
+  "packet_sha256": "b175b98fc1c9700a268ff2c5c19502b13e27320c86c12309b924f99994b10bde",
+  "review": {
+    "findings": [],
+    "summary": "Candidate implementation correctly follows the specification for exponential backoff retry logic, handling TransientError retries, proper delay calculation, and propagating other exceptions without retry. No actionable defects found.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

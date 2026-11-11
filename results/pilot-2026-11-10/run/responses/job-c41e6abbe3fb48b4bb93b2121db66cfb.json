@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1309,
+    "isolation_attested": true,
+    "latency_seconds": 83.885,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 753,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-c41e6abbe3fb48b4bb93b2121db66cfb/attempt-1"
+  },
+  "job_id": "job-c41e6abbe3fb48b4bb93b2121db66cfb",
+  "packet_sha256": "0bfe60ed236e78011f52a724ca2dc309fd42bf8f1453b352e485134f07c08258",
+  "review": {
+    "findings": [
+      {
+        "description": "Function checks for duplicate payloads instead of duplicate request IDs, causing incorrect behavior when a request ID repeats with a new or identical payload.",
+        "evidence": "Example: \\n\\n>>> events = [(\"r1\", \"p1\")]\\n>>> record(events, \"r1\", \"p2\")\\nTrue\\n\\nAccording to the specification, this should return False and not mutate `events` because the request ID \"r1\" already exists. The current implementation returns True, violating the contract.",
+        "file": "candidate.py",
+        "finding_id": "F001",
+        "line_end": 4,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The candidate implementation incorrectly enforces uniqueness on payloads rather than request IDs, violating the contract.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

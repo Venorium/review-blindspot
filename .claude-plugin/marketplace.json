@@ -1,0 +1,15 @@
+{
+  "name": "review-blindspot",
+  "description": "Review Blind Spot: an Agent Skill that keeps local code reviews evidence-backed and flags stale conclusions.",
+  "owner": {
+    "name": "Review Blind Spot contributors"
+  },
+  "plugins": [
+    {
+      "name": "review-blindspot",
+      "source": "./",
+      "description": "Evidence-backed local code reviews: expose unreviewed files, unsupported claims and stale conclusions.",
+      "version": "0.2.0"
+    }
+  ]
+}

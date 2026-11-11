@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1888,
+    "isolation_attested": true,
+    "latency_seconds": 401.46,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 4238,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-b20b70ad8f4f464a89242363d1d7e4bd/attempt-1"
+  },
+  "job_id": "job-b20b70ad8f4f464a89242363d1d7e4bd",
+  "packet_sha256": "dc2c27c8b9abf2049f11bb23130786aedee1ed0ba677cdb4c561e795fd285f73",
+  "review": {
+    "findings": [
+      {
+        "description": "transfer does not validate that the amount is an integer, allowing non-integer amounts such as 3.5 to be transferred, which would result in non-integer balances and violate the contract that accounts map names to integer balances.",
+        "evidence": "If transfer is called with amount=3.5, the function will accept it and modify balances to floats (e.g., 10 → 9.5), violating the \"positive integer amount\" and \"integer balances\" requirements.",
+        "file": "candidate.py",
+        "finding_id": "1",
+        "line_end": 12,
+        "line_start": 12,
+        "severity": "high"
+      }
+    ],
+    "summary": "The candidate implementation fails to enforce that the transfer amount is a positive integer, violating the contract that specifies a positive integer amount and that account balances must remain integers.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

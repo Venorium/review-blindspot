@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1467,
+    "isolation_attested": true,
+    "latency_seconds": 52.331,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 1183,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-dc5b97f2c6764b17acc91db6b70169ec/attempt-1"
+  },
+  "job_id": "job-dc5b97f2c6764b17acc91db6b70169ec",
+  "packet_sha256": "651c72b8a808b21f25a2e2417e0e65ec3b35a810320639c83d9d62fcad23bf8c",
+  "review": {
+    "findings": [],
+    "summary": "The implementation correctly sorts the tickets by priority in descending order while maintaining stability and supporting non-numeric comparable types.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

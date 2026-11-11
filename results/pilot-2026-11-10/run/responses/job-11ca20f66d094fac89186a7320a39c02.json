@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1329,
+    "isolation_attested": true,
+    "latency_seconds": 188.113,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 896,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-11ca20f66d094fac89186a7320a39c02/attempt-1"
+  },
+  "job_id": "job-11ca20f66d094fac89186a7320a39c02",
+  "packet_sha256": "c3bbd74397a332841dfc491ad5cc2c79ef1ccc5a459b69c1b0df88ff81da4ffb",
+  "review": {
+    "findings": [
+      {
+        "description": "The function allows an update when the supplied version is equal to the current state version, but the contract requires updates only when the supplied version is strictly greater.",
+        "evidence": "Line 2 checks `if version >= state['version']` which permits equal versions. This leads to `state.update` being called and `writes` incremented even when the version is unchanged, contradicting the contract.",
+        "file": "candidate.py",
+        "finding_id": "defect-1",
+        "line_end": 4,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate incorrectly updates state when the supplied version equals the current state version, violating the contract’s strict version increase requirement.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

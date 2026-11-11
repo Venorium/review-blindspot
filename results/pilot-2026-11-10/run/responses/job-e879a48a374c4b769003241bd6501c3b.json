@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1274,
+    "isolation_attested": true,
+    "latency_seconds": 64.86,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 1808,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-e879a48a374c4b769003241bd6501c3b/attempt-1"
+  },
+  "job_id": "job-e879a48a374c4b769003241bd6501c3b",
+  "packet_sha256": "05e1cc5382e55ab81cb6324e2f6d0d98e112c70f6675611d9f7f756634b99b4b",
+  "review": {
+    "findings": [
+      {
+        "description": "The sorting key uses string comparison (via `str(e['version'])`), which results in lexicographical order. This fails the requirement to sort by 'ascending numeric version' when versions have different numbers of digits (e.g., '10' will be placed before '2').",
+        "evidence": "events = [{'version': '10'}, {'version': '2'}]",
+        "file": "candidate.py",
+        "finding_id": "lexicographical_sort_instead_of_numeric",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The sorting implementation uses lexicographical string comparison instead of numeric comparison, causing incorrect order for versions with different numbers of digits.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

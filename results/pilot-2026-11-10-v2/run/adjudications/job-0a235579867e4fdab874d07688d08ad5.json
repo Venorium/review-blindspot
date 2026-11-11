@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "defect-rounding-negative"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-0a235579867e4fdab874d07688d08ad5",
+  "method": "external_judge",
+  "rationale": "Finding states that adding 50 before floor division rounds negative halves toward zero, breaking refund/charge symmetry; same mechanism. Finding defect-rounding-negative: \"The function rounds negative amounts with a remainder of 50 (i.e., exact halves) towards zero instead of away from zero, breaking the symmetry requirement percent_of(-x, p) == -percent_of(x, p).\".",
+  "schema_version": 1,
+  "submission_sha256": "8e2356b25284bf84d5aa8b753bd6d90968266ba2051138e1def99f9585a38600",
+  "target_detection": "detected"
+}

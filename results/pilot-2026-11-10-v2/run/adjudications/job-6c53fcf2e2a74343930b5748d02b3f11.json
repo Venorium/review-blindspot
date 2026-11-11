@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "STALE_CACHE_AFTER_UPDATE"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-6c53fcf2e2a74343930b5748d02b3f11",
+  "method": "external_judge",
+  "rationale": "Finding states that update_price leaves the cached entry in place, so later price()/quote() return the old price; same mechanism and violated rule. Finding STALE_CACHE_AFTER_UPDATE: \"update_price does not clear the cached value for the updated SKU, leading to incorrect prices being returned until the cache is manually cleared or expired.\".",
+  "schema_version": 1,
+  "submission_sha256": "4e0399a39d1cfa269b1cabcde7baad2559ef67104d8f7efefc800b7c6e94b471",
+  "target_detection": "detected"
+}

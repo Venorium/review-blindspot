@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this harness, its fixtures or the pilot data, please cite it as below."
+title: "Review Blind Spot: measuring shared misses in AI code review"
+type: software
+authors:
+  - name: "Review Blind Spot contributors"
+version: "0.2.0"
+date-released: "2026-11-10"
+license: MIT
+repository-code: "https://github.com/Venorium/review-blindspot"
+keywords:
+  - code review
+  - LLM evaluation
+  - AI agents
+  - agent skills
+  - reproducibility
+abstract: >-
+  An offline-first harness that measures when AI code-review protocols approve
+  faulty changes or miss the same defects, kept separate from wrong-reason
+  rejections, abstentions, technical failures and resource use. Includes an
+  Agent Skill for Codex and Claude Code that keeps local reviews evidence-backed
+  and flags stale conclusions, and an exploratory pilot with three open-weight
+  models run locally through Ollama.

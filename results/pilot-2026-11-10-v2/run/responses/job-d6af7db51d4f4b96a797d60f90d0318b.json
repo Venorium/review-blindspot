@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1438,
+    "isolation_attested": true,
+    "latency_seconds": 140.274,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1194,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-d6af7db51d4f4b96a797d60f90d0318b/attempt-1"
+  },
+  "job_id": "job-d6af7db51d4f4b96a797d60f90d0318b",
+  "packet_sha256": "b492ef4ef71e65d20512de055b5072a9ddc9be822be459e218e895a8070048b1",
+  "review": {
+    "findings": [
+      {
+        "description": "Path validation uses startswith(base), which accepts any path that begins with the base string, even if it is not truly inside the base directory. For example, with base \"/srv/uploads\" and name \"../uploads2\", the resolved path is \"/srv/uploads2\" which startswith \"/srv/uploads\" but lies outside the intended upload directory. The specification requires that only paths equal to base or starting with base + '/' be accepted.",
+        "evidence": "For base = \"/srv/uploads\" and name = \"../uploads2\", posixpath.normpath(posixpath.join(base, name)) yields \"/srv/uploads2\". The candidate’s check: \"/srv/uploads2\".startswith(\"/srv/uploads\") returns True, so it would incorrectly return \"/srv/uploads2\" instead of raising ValueError. The correct behavior is to raise ValueError because the path escapes the upload directory.",
+        "file": "candidate.py",
+        "finding_id": "E001",
+        "line_end": 9,
+        "line_start": 8,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation incorrectly allows paths that normalize outside the base directory, violating the contract that the resolved path must equal the base or lie inside it (i.e., start with base followed by a slash).",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

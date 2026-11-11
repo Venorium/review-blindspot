@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1528,
+    "isolation_attested": true,
+    "latency_seconds": 113.254,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 1621,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-756b93491a2f499fa0a1ffd45409bbea/attempt-1"
+  },
+  "job_id": "job-756b93491a2f499fa0a1ffd45409bbea",
+  "packet_sha256": "4f0894a2d251cb75a8471389f037d9147a429a33bdff4a3450ab0faa33f0d48c",
+  "review": {
+    "findings": [
+      {
+        "description": "The function iterates over the `records` iterable twice: first to compute the `total` sum (line 2) and second to construct the dictionary (line 3). If `records` is a one-shot iterator (e.g., a generator), the second iteration will find the iterator exhausted, resulting in an empty dictionary being returned regardless of the input content.",
+        "evidence": "allocate(iter([('a', 1)]), 10) returns {}, but should return {'a': 10}",
+        "file": "candidate.py",
+        "finding_id": "iterator_exhaustion",
+        "line_end": 3,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation consumes the `records` iterator when calculating `total`, making it empty for the dictionary comprehension. This violates the requirement to support one-shot iterators.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

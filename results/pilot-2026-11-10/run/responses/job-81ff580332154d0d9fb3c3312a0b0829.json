@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1177,
+    "isolation_attested": true,
+    "latency_seconds": 39.062,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 820,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-81ff580332154d0d9fb3c3312a0b0829/attempt-1"
+  },
+  "job_id": "job-81ff580332154d0d9fb3c3312a0b0829",
+  "packet_sha256": "325b4e60c8f12e047cc8f2ce01b1e7797b0b7331387e27b1964ba7c57d878f21",
+  "review": {
+    "findings": [],
+    "summary": "Candidate implementation correctly handles non-negative integer thousandths up to 100,000,000, performing round-to-nearest-cent with ties up. No defects found.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

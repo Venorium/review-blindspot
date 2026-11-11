@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1115,
+    "isolation_attested": true,
+    "latency_seconds": 22.185,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 507,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-3442b81745ce42be8f2ba7431e688418/attempt-1"
+  },
+  "job_id": "job-3442b81745ce42be8f2ba7431e688418",
+  "packet_sha256": "8a78f8b3f527073342edd4c10bdf3bf5f99c1d0aae16ceb625a2c662fe70b012",
+  "review": {
+    "findings": [
+      {
+        "description": "The function returns the original list object from the record instead of a new list. Consequently, any mutation of the returned list will mutate the record’s labels, violating the specification that caller modifications must not change the record.",
+        "evidence": "def labels(record):\n    return record['labels']",
+        "file": "candidate.py",
+        "finding_id": "1",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate does not return a copy of the labels list, violating the contract that caller modifications should not affect the original record.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

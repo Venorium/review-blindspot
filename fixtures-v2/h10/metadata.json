@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "h10",
+  "family_id": "h10",
+  "title": "Keep the first item per key",
+  "origin": "original_synthetic_v2",
+  "split": "evaluation_v2_2026_11",
+  "spec": "Implement unique_by(items, key). items is a list and key is a function returning hashable values. Return a new list with exactly one item for each distinct key(item): the first item in items having that key, placed in the order in which keys first appear. Do not modify items.",
+  "target_defect": "A dictionary comprehension keeps the first position of each key but the last item with that key.",
+  "author_rationale": "Replace the quadratic membership scan with a dictionary.",
+  "limitations": "Synthetic module written by the repository's AI engineering agent after the November 2026 development pilot saturated corpus v1, before any model reviewed it. Designed around omissions, cross-function effects and edge cases stated in the contract. Not a natural pull request; correct means conforming to the stated contract and supplied checks."
+}

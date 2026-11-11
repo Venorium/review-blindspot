@@ -1,0 +1,11 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-04f38d6a33f64352a7bfe0631bf48788",
+  "method": "external_judge",
+  "rationale": "Control. Triage: false alarm on an out-of-domain input. base is specified as a normalized directory path without a trailing slash; the root '/' falls outside that domain.",
+  "schema_version": 1,
+  "submission_sha256": "83fee9fd66138b01ef82265a43ed0df4b7632f6e4b7890d4a2a2974ab2056b99",
+  "target_detection": "not_applicable"
+}

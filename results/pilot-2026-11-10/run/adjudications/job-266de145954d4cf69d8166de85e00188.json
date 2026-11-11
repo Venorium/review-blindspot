@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-266de145954d4cf69d8166de85e00188",
+  "method": "external_judge",
+  "rationale": "Finding states the function returns the stored list itself, so caller mutation changes the record; same mechanism. Finding F001: \"labels() returns the original list, not a copy, so modifications to the returned list alter the input record.\".",
+  "schema_version": 1,
+  "submission_sha256": "13bd45fdc161c361676772622ab56fa15e058e8983baa62d086736092ea31403",
+  "target_detection": "detected"
+}

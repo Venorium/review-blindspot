@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-937384efb890476c9343b07478b7504c",
+  "method": "external_judge",
+  "rationale": "Finding states that balances are mutated before ledger.record can reject a long memo, leaving accounts changed on failure; same mechanism. Finding F001: \"The transfer function updates the source and destination balances before calling ledger.record, so if ledger.record raises ValueError (e.g., for a memo longer than 40 characters), the account balances\". F002 asks to reject non-integer amounts, which the contract does not require; not counted.",
+  "schema_version": 1,
+  "submission_sha256": "fa869ea4de9fba122c5ebd210cdb590fd8f24d4b240ee98428ecfc0d6fd043fa",
+  "target_detection": "detected"
+}

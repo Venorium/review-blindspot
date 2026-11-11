@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-aee69438fae84802b2d69c057e91e25e",
+  "method": "external_judge",
+  "rationale": "Finding states that the dict comprehension overwrites earlier items so the last item per key is returned; same mechanism. Finding F001: \"The implementation uses a dict comprehension which replaces earlier items with later ones for the same key, violating the contract that the first item for each key should be returned.\".",
+  "schema_version": 1,
+  "submission_sha256": "81f9f9072964f16d40368ad10ab27aad036dbe8bbfc420abd24ac4f57aebc4c9",
+  "target_detection": "detected"
+}

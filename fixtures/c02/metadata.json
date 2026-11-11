@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "c02",
+  "family_id": "c02",
+  "title": "Zero-sized suffix",
+  "origin": "original_synthetic_starter",
+  "split": "development_only",
+  "spec": "Implement recent(items, limit). Return a new list containing at most the last limit items, in input order. limit is a non-negative integer. Zero returns an empty list. Do not modify items.",
+  "target_defect": "A zero limit returns the entire input because -0 is zero in the slice.",
+  "author_rationale": "The change simplifies suffix selection while retaining the input ordering.",
+  "limitations": "Small synthetic function; not a natural pull request. Correct means conforming to the stated contract and supplied checks, not universally bug-free."
+}

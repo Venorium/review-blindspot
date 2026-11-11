@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1186,
+    "isolation_attested": true,
+    "latency_seconds": 93.921,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 1820,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-d532c67329634f259dfb2d66ac63c308/attempt-1"
+  },
+  "job_id": "job-d532c67329634f259dfb2d66ac63c308",
+  "packet_sha256": "819189e25cb4b34d731a45a87386c0e0e6b8b20d6c79b6af373d58f4ec223a30",
+  "review": {
+    "findings": [],
+    "summary": "The candidate correctly implements the contract by using a strict less-than comparison (now < expires_at). This ensures the token evaluates to active strictly before the expiration timestamp and inactive at or after it for all integer inputs, matching the specification exactly.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

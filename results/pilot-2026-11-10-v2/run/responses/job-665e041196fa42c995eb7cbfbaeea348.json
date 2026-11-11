@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1292,
+    "isolation_attested": true,
+    "latency_seconds": 50.732,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1356,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-665e041196fa42c995eb7cbfbaeea348/attempt-1"
+  },
+  "job_id": "job-665e041196fa42c995eb7cbfbaeea348",
+  "packet_sha256": "136a019dd4e1f6f3c289cabfdee465465356585be2c6deca7f9f7644c06b792d",
+  "review": {
+    "findings": [
+      {
+        "description": "The implementation uses (amount_cents * percent + 50) // 100 which does not round halves away from zero for negative amounts. For example, percent_of(-1, 50) returns 0 but should return -1 to satisfy spec that percent_of(-x, p) == -percent_of(x, p).",
+        "evidence": "percent_of(-1, 50) => ( -50 + 50 ) // 100 = 0, expected -1.",
+        "file": "candidate.py",
+        "finding_id": "R001",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Incorrect rounding behavior for negative amounts when product is an exact half.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

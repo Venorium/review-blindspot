@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1240,
+    "isolation_attested": true,
+    "latency_seconds": 85.402,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 2960,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-5aff88f885f3403daa54a7375ff0ac16/attempt-1"
+  },
+  "job_id": "job-5aff88f885f3403daa54a7375ff0ac16",
+  "packet_sha256": "592826f5dbb94a50ab995c667bdfee5ce76f8487be220bc9dcb948c7502a4a12",
+  "review": {
+    "findings": [],
+    "summary": "The candidate correctly implements the specification. It safely handles a zero limit by returning an empty list, relies on Python's negative indexing to gracefully handle limits exceeding the input length (which naturally caps at the full list), preserves original order, and returns a new list without mutating the input.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

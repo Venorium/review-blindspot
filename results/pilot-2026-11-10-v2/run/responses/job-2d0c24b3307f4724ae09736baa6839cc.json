@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 2005,
+    "isolation_attested": true,
+    "latency_seconds": 287.441,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 6731,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-2d0c24b3307f4724ae09736baa6839cc/attempt-1"
+  },
+  "job_id": "job-2d0c24b3307f4724ae09736baa6839cc",
+  "packet_sha256": "dc2c27c8b9abf2049f11bb23130786aedee1ed0ba677cdb4c561e795fd285f73",
+  "review": {
+    "findings": [],
+    "summary": "The candidate correctly implements all requirements specified in SPEC.md. Ledger.record now validates memo length and raises ValueError as required, and transfer has been restructured to call ledger.record before mutating account balances. This ordering guarantees that any ValueError raised during validation or ledger rejection leaves both accounts and the ledger entirely unchanged, satisfying the atomicity constraint. All validation conditions match the contract, and the return value correctly reflects the new src balance after a successful transfer.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

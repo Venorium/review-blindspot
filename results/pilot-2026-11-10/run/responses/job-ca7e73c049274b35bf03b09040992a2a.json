@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1333,
+    "isolation_attested": true,
+    "latency_seconds": 37.605,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 818,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-ca7e73c049274b35bf03b09040992a2a/attempt-1"
+  },
+  "job_id": "job-ca7e73c049274b35bf03b09040992a2a",
+  "packet_sha256": "5b71ab8662ed21706b8ae50acefb8557a67df78a34d80a68a4d9f90d7f9e16b6",
+  "review": {
+    "findings": [
+      {
+        "description": "The cache key uses only record_id, so values are shared across tenants, violating the requirement to cache per (tenant, record_id).",
+        "evidence": "Example:\ncache = {}\ndef load(t, r):\n    return f\"{t}:{r}\"\n# First load for tenant 'a'\nprint(candidate.lookup(cache, 'a', '1', load))  # loads 'a:1'\n# Second load with different tenant 'b' but same record_id\nprint(candidate.lookup(cache, 'b', '1', load))  # expected to load 'b:1', but candidate returns 'a:1' because key ignores tenant",
+        "file": "candidate.py",
+        "finding_id": "cache-key-missing-tenant",
+        "line_end": 4,
+        "line_start": 1,
+        "severity": "high"
+      }
+    ],
+    "summary": "Cache key does not include tenant, causing incorrect caching per (tenant, record_id).",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

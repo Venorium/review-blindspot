@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1824,
+    "isolation_attested": true,
+    "latency_seconds": 177.341,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 5297,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-ae42a701841c4c7e8f19c62d1cde4f6a/attempt-1"
+  },
+  "job_id": "job-ae42a701841c4c7e8f19c62d1cde4f6a",
+  "packet_sha256": "95efe3752efea653ea05f01097ee82f1544252fbda9e25186bf315df9325d9f0",
+  "review": {
+    "findings": [
+      {
+        "description": "Unconditional early return for n == 0 bypasses weekend-to-Monday adjustment.",
+        "evidence": "Per SPEC.md: 'n == 0 returns start itself on a weekday and the following Monday on a weekend'. When called with add_business_days(date(2026, 11, 7), 0) (a Sunday), lines 5-6 return Sunday Nov 7 instead of the required Monday Nov 9. The early return must be conditional or removed so the weekend adjustment logic executes first.",
+        "file": "candidate.py",
+        "finding_id": "DEF-001",
+        "line_end": 6,
+        "line_start": 5,
+        "severity": "high"
+      }
+    ],
+    "summary": "The function incorrectly handles the n == 0 case for weekend start dates by returning the input date directly, violating the specification which requires adjusting to the following Monday.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "UTC_OFFSET_MISMATCH"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-659f1f7552ed440b9fc3157e7d280b3c",
+  "method": "external_judge",
+  "rationale": "Finding states the date is taken in the input offset without converting to UTC, with an offset that crosses midnight; same mechanism. Finding UTC_OFFSET_MISMATCH: \"utc_day returns the date in the input’s local timezone instead of the UTC calendar date, violating the contract.\".",
+  "schema_version": 1,
+  "submission_sha256": "4765b3bdcb2212f93a84b7929b6938508d00f950c611d7b65a1c9c069cbecb32",
+  "target_detection": "detected"
+}

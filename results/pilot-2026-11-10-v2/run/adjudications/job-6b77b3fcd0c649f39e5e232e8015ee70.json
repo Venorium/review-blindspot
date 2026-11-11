@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "defect-1"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-6b77b3fcd0c649f39e5e232e8015ee70",
+  "method": "external_judge",
+  "rationale": "Finding states that the dict comprehension overwrites earlier items so the last item per key is returned; same mechanism. Finding defect-1: \"The function uses a dictionary comprehension that overwrites earlier items with the same key, resulting in the last occurrence being returned rather than the first.\".",
+  "schema_version": 1,
+  "submission_sha256": "6f7bdd86572b53bc12959ef60355a9d21dc5acc90f33ee980b6008b01f5a27a0",
+  "target_detection": "detected"
+}

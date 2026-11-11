@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "falsy-value-handling"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-0724bd32143e4e17a8ac9b57cfd65ebc",
+  "method": "external_judge",
+  "rationale": "Finding states the 'or default' fallback replaces stored falsy values such as 0 or False; same mechanism. Finding falsy-value-handling: \"Incorrect use of ``or`` causes default to be returned when the option value is falsy but present.\".",
+  "schema_version": 1,
+  "submission_sha256": "8628288acb2e7042a4b4058bf8e35b0c7c71a090927a470c4160fd025a47b9cf",
+  "target_detection": "detected"
+}

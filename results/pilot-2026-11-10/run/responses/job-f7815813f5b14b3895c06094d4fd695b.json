@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1468,
+    "isolation_attested": true,
+    "latency_seconds": 268.244,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 3414,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-f7815813f5b14b3895c06094d4fd695b/attempt-1"
+  },
+  "job_id": "job-f7815813f5b14b3895c06094d4fd695b",
+  "packet_sha256": "c3bbd74397a332841dfc491ad5cc2c79ef1ccc5a459b69c1b0df88ff81da4ffb",
+  "review": {
+    "findings": [
+      {
+        "description": "The function performs an update when `version == state['version']`, but the specification requires that the update only occurs when the version is strictly greater than the current version.",
+        "evidence": "Calling `advance({'version': 1, 'value': 'a', 'writes': 0}, 1, 'b')` returns `True` and updates the state (e.g., `writes` becomes 1), whereas the specification requires it to return `False` and leave the state unchanged.",
+        "file": "candidate.py",
+        "finding_id": "incorrect_equality_condition",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation incorrectly allows updates when the new version is equal to the current version, violating the requirement for a strictly greater version.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

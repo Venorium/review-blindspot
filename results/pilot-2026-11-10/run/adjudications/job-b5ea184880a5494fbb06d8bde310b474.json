@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "incorrect_boundary_comparison"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-b5ea184880a5494fbb06d8bde310b474",
+  "method": "external_judge",
+  "rationale": "Finding states touching intervals are reported as overlapping (<= instead of <), with an endpoint-sharing input; same mechanism. Finding incorrect_boundary_comparison: \"The function uses the `<=` operator when comparing the intersection boundaries, which causes it to return True for intervals that touch at an endpoint (e.g., [1, 2) and [2, 3)). The specification states that touching end\".",
+  "schema_version": 1,
+  "submission_sha256": "cb8bd77c889077c05ac4d752895db7696252bba5ce5ae50d92a9857252cd1ea4",
+  "target_detection": "detected"
+}

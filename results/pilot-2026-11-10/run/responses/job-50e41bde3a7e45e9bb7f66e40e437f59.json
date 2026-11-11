@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1247,
+    "isolation_attested": true,
+    "latency_seconds": 88.82,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 2981,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-50e41bde3a7e45e9bb7f66e40e437f59/attempt-1"
+  },
+  "job_id": "job-50e41bde3a7e45e9bb7f66e40e437f59",
+  "packet_sha256": "3aa757e55595f59ab159c83ca9c3a8cb0c827b71812afbf655704c65f569c793",
+  "review": {
+    "findings": [
+      {
+        "description": "The rounding condition fails for exact half-cent ties (remainder equals 5).",
+        "evidence": "The contract requires 'exact half-cent ties rounded upward'. For input mills=25, divmod(25, 10) yields quotient=2 and remainder=5. The expression (remainder > 5) evaluates to False, returning 2 instead of the required 3. The condition should be (remainder >= 5) to satisfy the specification.",
+        "file": "candidate.py",
+        "finding_id": "HALF_CENT_TIE_ROUNDING",
+        "line_end": 3,
+        "line_start": 3,
+        "severity": "high"
+      }
+    ],
+    "summary": "The candidate incorrectly rounds exact half-cent ties downward instead of upward, violating the rounding rule in the specification.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

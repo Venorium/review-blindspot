@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1176,
+    "isolation_attested": true,
+    "latency_seconds": 29.545,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 634,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-cec13ef3139a4c23aef5afe0db4ce41d/attempt-1"
+  },
+  "job_id": "job-cec13ef3139a4c23aef5afe0db4ce41d",
+  "packet_sha256": "3aa757e55595f59ab159c83ca9c3a8cb0c827b71812afbf655704c65f569c793",
+  "review": {
+    "findings": [
+      {
+        "description": "Rounding logic fails for exact half-cent ties. The contract specifies that ties (remainder == 5) must be rounded upward, but the implementation only adds one cent when remainder > 5, leaving remainder == 5 unrounded.",
+        "evidence": "For input mills = 15, quotient = 1 and remainder = 5. Expected output per spec: 2 (rounded up). Candidate returns 1.",
+        "file": "candidate.py",
+        "finding_id": "defect-rounding-half-cent",
+        "line_end": 3,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation does not correctly round half-cent ties upward; when the remainder is exactly 5 mills, it rounds down instead of up, violating the contract.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

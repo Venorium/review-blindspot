@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "cache-key-missing-tenant"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-ca7e73c049274b35bf03b09040992a2a",
+  "method": "external_judge",
+  "rationale": "Finding states the cache is keyed by record_id only, so two tenants with the same record_id share an entry; same mechanism. Finding cache-key-missing-tenant: \"The cache key uses only record_id, so values are shared across tenants, violating the requirement to cache per (tenant, record_id).\".",
+  "schema_version": 1,
+  "submission_sha256": "5692284f0dcc4a50288eacf0334c37a4ced2db9cf5b4d3771c13f8f39da21269",
+  "target_detection": "detected"
+}

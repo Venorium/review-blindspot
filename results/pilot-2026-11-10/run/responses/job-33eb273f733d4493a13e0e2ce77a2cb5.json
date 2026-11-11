@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1178,
+    "isolation_attested": true,
+    "latency_seconds": 38.552,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 442,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-33eb273f733d4493a13e0e2ce77a2cb5/attempt-1"
+  },
+  "job_id": "job-33eb273f733d4493a13e0e2ce77a2cb5",
+  "packet_sha256": "4711e7979d568a3098bbf196f4f1cf73d73aa8051574c1edf414cc174ff3e60f",
+  "review": {
+    "findings": [
+      {
+        "description": "Key uses string comparison instead of numeric comparison, violating ascending numeric version requirement",
+        "evidence": "Input: events=[{'version':'10'},{'version':'2'}] produces candidate.ordered(events) = [{'version':'10'},{'version':'2'}] instead of expected [{'version':'2'},{'version':'10'}]",
+        "file": "candidate.py",
+        "finding_id": "C001",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "medium"
+      }
+    ],
+    "summary": "candidate.py fails to sort by numeric version",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

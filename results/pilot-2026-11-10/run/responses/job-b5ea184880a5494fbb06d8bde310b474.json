@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1313,
+    "isolation_attested": true,
+    "latency_seconds": 380.105,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 2768,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-b5ea184880a5494fbb06d8bde310b474/attempt-1"
+  },
+  "job_id": "job-b5ea184880a5494fbb06d8bde310b474",
+  "packet_sha256": "84def49f4405715f55c2e4da4ebf47b02787edf5cafdc06c03bbb0245f7f2881",
+  "review": {
+    "findings": [
+      {
+        "description": "The function uses the `<=` operator when comparing the intersection boundaries, which causes it to return True for intervals that touch at an endpoint (e.g., [1, 2) and [2, 3)). The specification states that touching endpoints do not overlap.",
+        "evidence": "overlaps((1, 2), (2, 3)) returns True, but should return False according to the specification.",
+        "file": "candidate.py",
+        "finding_id": "incorrect_boundary_comparison",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation incorrectly returns True when the two intervals touch at an endpoint, which violates the specification that 'Touching endpoints do not overlap'.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

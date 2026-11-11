@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "cache-key-mismatch"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-683aa81f8c8b4953b71b5c5a9e9c8e53",
+  "method": "external_judge",
+  "rationale": "Finding states the cache is keyed by record_id only, so two tenants with the same record_id share an entry; same mechanism. Finding cache-key-mismatch: \"Cache key does not include tenant, violating the requirement to cache separately for each (tenant, record_id).\".",
+  "schema_version": 1,
+  "submission_sha256": "83d9f8e4444cece97067bbbac737b90eae2b6084179d948e1e0e323905a3ceeb",
+  "target_detection": "detected"
+}

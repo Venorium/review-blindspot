@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1299,
+    "isolation_attested": true,
+    "latency_seconds": 173.31,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 430,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-3984a5501c964cd58407a114035d951d/attempt-1"
+  },
+  "job_id": "job-3984a5501c964cd58407a114035d951d",
+  "packet_sha256": "a18a7f1b4f8061589a6be82011971e791d1b438f50014ef5f1568d85fc0f64bf",
+  "review": {
+    "findings": [],
+    "summary": "Candidate implements find_user correctly according to specification.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

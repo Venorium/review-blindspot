@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1340,
+    "isolation_attested": true,
+    "latency_seconds": 40.483,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 535,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-b825a589f4fd4ce5962c69abe98eb2ff/attempt-1"
+  },
+  "job_id": "job-b825a589f4fd4ce5962c69abe98eb2ff",
+  "packet_sha256": "bb80736f392a3b71a9091672206a304f7e220fdd77a30837e67f753dce6fbc06",
+  "review": {
+    "findings": [],
+    "summary": "The implementation correctly sums quantities for repeated products and handles empty input as specified.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

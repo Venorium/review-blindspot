@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Review Blind Spot icon">
+  <rect width="512" height="512" fill="#10232e"/>
+  <rect x="96" y="150" width="184" height="212" rx="34" fill="#203a46" stroke="#597480" stroke-width="6"/>
+  <path d="M158 220L128 256L158 292M218 220L248 256L218 292M200 206L176 306" fill="none" stroke="#dbe8eb" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M280 256H330V186H360M330 256V326H360" fill="none" stroke="#597480" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="392" cy="186" r="34" fill="#72dfb6"/>
+  <circle cx="392" cy="326" r="34" fill="#f1bd6c"/>
+</svg>

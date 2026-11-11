@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1149,
+    "isolation_attested": true,
+    "latency_seconds": 76.092,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 765,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-203c83cc527e47a2866abf95d952456f/attempt-1"
+  },
+  "job_id": "job-203c83cc527e47a2866abf95d952456f",
+  "packet_sha256": "0cc7c0c83188912a3f4d75e36d81f6546d186747487948e9a19b024593bede2b",
+  "review": {
+    "findings": [],
+    "summary": "The candidate implementation correctly converts non-negative integer thousandths of a unit to integer hundredths with nearest-cent rounding, handling exact half-cent ties by rounding upward, and respects the input constraints.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

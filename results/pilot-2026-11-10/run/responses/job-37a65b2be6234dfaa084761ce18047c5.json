@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1152,
+    "isolation_attested": true,
+    "latency_seconds": 37.99,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 472,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-37a65b2be6234dfaa084761ce18047c5/attempt-1"
+  },
+  "job_id": "job-37a65b2be6234dfaa084761ce18047c5",
+  "packet_sha256": "9f35ff05f93972add46b6f429f136f6397ee25ebcc011b10cd1e46ced382b93e",
+  "review": {
+    "findings": [
+      {
+        "description": "Using Python's // operator performs floor division, which truncates toward negative infinity rather than toward zero when the numerator is negative. This contradicts the specification that divide(n, d) must return the quotient truncated toward zero for arbitrary-size signed integer n and positive integer d.",
+        "evidence": "For input divide(-1, 3), candidate.py returns -1 because -1 // 3 == -1, but the correct result per the contract is 0, since -1/3 truncated toward zero is 0.",
+        "file": "candidate.py",
+        "finding_id": "F001",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "divide uses floor division which does not truncate toward zero for negative numerators, violating the contract for arbitrary-size signed integers.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

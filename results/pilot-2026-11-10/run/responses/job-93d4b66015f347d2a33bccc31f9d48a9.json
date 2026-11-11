@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1430,
+    "isolation_attested": true,
+    "latency_seconds": 128.183,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 2046,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-93d4b66015f347d2a33bccc31f9d48a9/attempt-1"
+  },
+  "job_id": "job-93d4b66015f347d2a33bccc31f9d48a9",
+  "packet_sha256": "3576f9ee42f995b493c67409be1e9eed137c605988c114a90fcf6d491f5aa305",
+  "review": {
+    "findings": [],
+    "summary": "The candidate correctly implements the requirements. The patch changes the condition from `version < state['version']` to `version <= state['version']`, which ensures that equal versions are rejected as specified, and only strictly greater versions trigger an update.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

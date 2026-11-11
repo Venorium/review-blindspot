@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1361,
+    "isolation_attested": true,
+    "latency_seconds": 82.473,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 546,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-079abbd0f5c64123a02d1e5ea99bd5eb/attempt-1"
+  },
+  "job_id": "job-079abbd0f5c64123a02d1e5ea99bd5eb",
+  "packet_sha256": "5bf0752274369ecc88e76c069deb15adf2cdd912d7a6ec78f9d04b718d6be46f",
+  "review": {
+    "findings": [
+      {
+        "description": "Reversing the sorted list breaks the required stable ordering for tickets with equal priority.",
+        "evidence": "For input [(\"t1\", 5), (\"t2\", 5), (\"t3\", 3)], candidate.queue_order returns [\"t2\", \"t1\", \"t3\"], but the specification requires the output to be [\"t1\", \"t2\", \"t3\"]. The current implementation uses sorted(...)[::-1], which reverses the entire list, thus reversing the relative order of equal‑priority tickets.",
+        "file": "candidate.py",
+        "finding_id": "F001",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation fails to preserve original order for tickets with equal priority, violating the stability requirement of the contract.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

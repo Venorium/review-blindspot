@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "DIV-01"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-56ea9fae267743799fccbe5f69827ea4",
+  "method": "external_judge",
+  "rationale": "Finding states // floors toward negative infinity instead of truncating toward zero for negative non-integral quotients; same mechanism. Finding DIV-01: \"Using Python's // operator truncates toward negative infinity for negative dividends, violating the specification that requires truncation toward zero.\".",
+  "schema_version": 1,
+  "submission_sha256": "9e20fae2e53dcdf2df5c8e12dd92c5652fdeb6404ee5cfc3e8dcd695ce87ea9f",
+  "target_detection": "detected"
+}

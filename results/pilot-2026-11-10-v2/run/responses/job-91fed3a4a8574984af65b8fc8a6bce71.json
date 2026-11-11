@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1860,
+    "isolation_attested": true,
+    "latency_seconds": 91.402,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 928,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-91fed3a4a8574984af65b8fc8a6bce71/attempt-1"
+  },
+  "job_id": "job-91fed3a4a8574984af65b8fc8a6bce71",
+  "packet_sha256": "815bcd124be1b76a7321665f0820e3ee0968b5fe5c69a889a3d1375566b3c8d2",
+  "review": {
+    "findings": [
+      {
+        "description": "Missing cache invalidation in update_price. The cache entry for the updated SKU is never cleared, so subsequent price() calls may return the stale cached value and not reflect the new price set by update_price.",
+        "evidence": "Example: catalog = Catalog({\"a\": 100}); catalog.price(\"a\")  # caches 100\n    catalog.update_price(\"a\", 200);\n    catalog.price(\"a\")  # returns 100 instead of 200, violating the spec.",
+        "file": "candidate.py",
+        "finding_id": "C01",
+        "line_end": 19,
+        "line_start": 16,
+        "severity": "high"
+      }
+    ],
+    "summary": "Catalog caching does not invalidate entries after an update, causing stale prices and violating the contract that every later price or quote call must reflect the new price.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

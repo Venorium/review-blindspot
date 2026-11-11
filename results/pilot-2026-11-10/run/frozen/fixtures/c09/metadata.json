@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "c09",
+  "family_id": "c09",
+  "title": "Return-value isolation",
+  "origin": "original_synthetic_starter",
+  "split": "development_only",
+  "spec": "Implement labels(record). record contains a labels list of strings. Return a separate list with the same strings; caller modifications to the returned list must not change record. Nested objects are out of scope.",
+  "target_defect": "The returned list aliases the stored list and allows mutation of the record.",
+  "author_rationale": "The change makes label retrieval a small direct accessor.",
+  "limitations": "Small synthetic function; not a natural pull request. Correct means conforming to the stated contract and supplied checks, not universally bug-free."
+}

@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1830,
+    "isolation_attested": true,
+    "latency_seconds": 37.337,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1068,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-5bb70a4a1dcd4fc995aa2a63dfd7cae4/attempt-1"
+  },
+  "job_id": "job-5bb70a4a1dcd4fc995aa2a63dfd7cae4",
+  "packet_sha256": "007d132edc505ce758f14f4edbd871dc84342ce0aa49030b768a2024a56c99ca",
+  "review": {
+    "findings": [
+      {
+        "description": "update_price does not invalidate or update the cache, causing price() to return stale values after a price change.",
+        "evidence": "The update_price method (lines 16‑20) sets self._prices[sku] = cents but does not clear or modify self._cache. The price method (lines 12‑14) only reads from the underlying table if the sku is not already in the cache. Consequently, if a sku is read before an update, the cached value will be returned forever, violating the spec that every later price() or quote() call must reflect the new price.",
+        "file": "candidate.py",
+        "finding_id": "CANDIDATE-001",
+        "line_end": 20,
+        "line_start": 16,
+        "severity": "critical"
+      }
+    ],
+    "summary": "Candidate fails to invalidate or update cache after price updates, leading to stale prices and violating the contract that later price() or quote() calls must reflect updated prices.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

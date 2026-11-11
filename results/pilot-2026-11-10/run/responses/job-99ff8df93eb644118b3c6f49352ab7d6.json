@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1204,
+    "isolation_attested": true,
+    "latency_seconds": 40.09,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 750,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-99ff8df93eb644118b3c6f49352ab7d6/attempt-1"
+  },
+  "job_id": "job-99ff8df93eb644118b3c6f49352ab7d6",
+  "packet_sha256": "12e45759377336d83cae8c8b649901c8b4ac0321beeab4865d3bb3c28b63dab3",
+  "review": {
+    "findings": [
+      {
+        "description": "The condition for adding one cent only triggers when the remainder is greater than 5, leaving remainder == 5 (exact half-cent) rounded down. The specification requires ties to round upward.",
+        "evidence": "For example, cents(5) evaluates to 0, but according to the spec it should return 1. Similarly, cents(15) returns 1 instead of 2. The implementation should use remainder >= 5.",
+        "file": "candidate.py",
+        "finding_id": "rounding_ties",
+        "line_end": 3,
+        "line_start": 3,
+        "severity": "high"
+      }
+    ],
+    "summary": "The candidate implementation incorrectly handles rounding ties; remainder == 5 is rounded down instead of up, violating the specification.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

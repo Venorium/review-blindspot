@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1162,
+    "isolation_attested": true,
+    "latency_seconds": 77.99,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 659,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-9b8b7c48569048b799bc675b9b88f5a1/attempt-1"
+  },
+  "job_id": "job-9b8b7c48569048b799bc675b9b88f5a1",
+  "packet_sha256": "e52154e6bb6816a7d52829659fb9ce4e343a95f0a60c2f0a378a57cb392fbdaf",
+  "review": {
+    "findings": [
+      {
+        "description": "When a key exists but its value is falsy (e.g., None, False, 0, or ''), the function returns the default instead of the stored value, violating the contract.",
+        "evidence": "For example, candidate.setting({'x':0}, 'x', 9) returns 9 instead of 0.",
+        "file": "candidate.py",
+        "finding_id": "falsy_value_handling",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "critical"
+      }
+    ],
+    "summary": "Candidate implementation incorrectly handles falsy values for existing keys.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

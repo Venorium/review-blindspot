@@ -1,0 +1,11 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-9a12a4be9c394733b8dd455a5897c99b",
+  "method": "external_judge",
+  "rationale": "Control. Triage: specification ambiguity. Under a literal reading, repeated price() calls for an unknown SKU each count a read; the contract does not say whether failed lookups are reads. Plausible but not the intended rule; no witness tests it.",
+  "schema_version": 1,
+  "submission_sha256": "8f4c03b2da3f483e82f336ffe8a22e1bc887e93c3ee6c4cc5cbcaa41133bc7cd",
+  "target_detection": "not_applicable"
+}

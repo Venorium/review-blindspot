@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "finding_001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-8f6df5371da149d09415e1561fa3ee54",
+  "method": "external_judge",
+  "rationale": "Finding states the 'or default' fallback replaces stored falsy values such as 0 or False; same mechanism. Finding finding_001: \"The implementation uses logical OR to fall back to default, causing falsy values such as 0, False, None, and '' to be incorrectly replaced with the default when the key exists.\".",
+  "schema_version": 1,
+  "submission_sha256": "7d405d9fb0b07c17e372196b53fcf231ba88ffbc32a6d085737c760c6c7fef36",
+  "target_detection": "detected"
+}

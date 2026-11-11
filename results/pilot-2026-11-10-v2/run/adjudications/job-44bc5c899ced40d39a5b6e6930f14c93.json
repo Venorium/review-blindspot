@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "FC001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-44bc5c899ced40d39a5b6e6930f14c93",
+  "method": "external_judge",
+  "rationale": "Finding states that sleep runs after the final failed call before re-raising; same mechanism and violated rule. Finding FC001: \"The implementation calls sleep on every TransientError, including the final attempt. The specification requires that no sleep occur after the last failure; the function should re‑raise the TransientEr\".",
+  "schema_version": 1,
+  "submission_sha256": "be24a45f765ee257501cb9d2a17e0a88014ec7a01474a85209e7ffef52c6e51e",
+  "target_detection": "detected"
+}

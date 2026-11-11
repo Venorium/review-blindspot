@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "1"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-55b565b6f1e94d1495c4c8df6dcc64de",
+  "method": "external_judge",
+  "rationale": "Finding states versions are compared as strings, so '10' sorts before '2'; same mechanism (text instead of numeric ordering). Finding 1: \"Sorting uses string comparison, causing incorrect order for numeric strings of differing length.\".",
+  "schema_version": 1,
+  "submission_sha256": "45c439882aa6610450c3a17c772d4d88bd9832195ec08eba579aa13e9a5f7583",
+  "target_detection": "detected"
+}

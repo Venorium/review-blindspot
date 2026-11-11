@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1403,
+    "isolation_attested": true,
+    "latency_seconds": 121.496,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 2767,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-aa25651d7c864382b0af9898a6264e89/attempt-1"
+  },
+  "job_id": "job-aa25651d7c864382b0af9898a6264e89",
+  "packet_sha256": "e7450222f1a655e39f1f3a4149927ea93a6850b0286c525c359659bca6c66cd7",
+  "review": {
+    "findings": [
+      {
+        "description": "The function returns the date component of the timestamp as it exists in the input offset's timezone. It does not convert the datetime to UTC before calling `.date()`, which violates the requirement to return the UTC calendar date.",
+        "evidence": "utc_day('2024-01-02T01:00:00+02:00') returns '2024-01-02', but the correct UTC date is '2024-01-01'.",
+        "file": "candidate.py",
+        "finding_id": "utc_date_calculation_error",
+        "line_end": 4,
+        "line_start": 4,
+        "severity": "critical"
+      }
+    ],
+    "summary": "The implementation fails to convert the input timestamp to UTC before extracting the date, resulting in the incorrect date when the provided offset causes the time to fall on a different day in UTC.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

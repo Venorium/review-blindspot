@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1115,
+    "isolation_attested": true,
+    "latency_seconds": 18.286,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 336,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-9f8a12d755c54803ba8de9c3fc457cf4/attempt-1"
+  },
+  "job_id": "job-9f8a12d755c54803ba8de9c3fc457cf4",
+  "packet_sha256": "8a78f8b3f527073342edd4c10bdf3bf5f99c1d0aae16ceb625a2c662fe70b012",
+  "review": {
+    "findings": [
+      {
+        "description": "labels() returns the original list from record['labels'] instead of a separate copy, violating the requirement that modifications to the returned list must not change the original record.",
+        "evidence": "The implementation returns record['labels'] directly, which is the same list object stored in record. Any mutation on the returned list will mutate the list inside the record, contradicting the spec that caller modifications should be isolated.",
+        "file": "candidate.py",
+        "finding_id": "F001",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The candidate implementation fails to satisfy the specification by returning the original list rather than a separate copy, allowing caller modifications to affect the input record.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

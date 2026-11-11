@@ -1,0 +1,17 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1699,
+    "isolation_attested": true,
+    "latency_seconds": 432.321,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 8192,
+    "status": "invalid_output",
+    "trace_reference": "transport/raw/job-5357495810d14adaa080ef06bd28f881/attempt-1"
+  },
+  "job_id": "job-5357495810d14adaa080ef06bd28f881",
+  "packet_sha256": "96b5d62501e9fa9edeca3da18fcc1e7fc0701564efcd31d98163cbe0eecb5098",
+  "review": null,
+  "schema_version": 1
+}

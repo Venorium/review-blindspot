@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F1"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-c525a764870b4d1ea42e9e2d32cd830b",
+  "method": "external_judge",
+  "rationale": "Finding states the cache is keyed by record_id only, so two tenants with the same record_id share an entry; same mechanism. Finding F1: \"Cache key ignores tenant, causing collisions for different tenants sharing the same record_id.\".",
+  "schema_version": 1,
+  "submission_sha256": "a6ad54ab39c8fb0b051db29caecf1f4db971c38b6cb74674e617c632b364e0fc",
+  "target_detection": "detected"
+}

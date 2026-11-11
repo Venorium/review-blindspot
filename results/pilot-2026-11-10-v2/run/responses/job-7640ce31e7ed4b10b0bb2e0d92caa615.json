@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1270,
+    "isolation_attested": true,
+    "latency_seconds": 85.571,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 670,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-7640ce31e7ed4b10b0bb2e0d92caa615/attempt-1"
+  },
+  "job_id": "job-7640ce31e7ed4b10b0bb2e0d92caa615",
+  "packet_sha256": "b87efc41871d3b7c89ab7b8e9806fd7ecc6b8f22cb0e2e3fc347ee9f910158ba",
+  "review": {
+    "findings": [
+      {
+        "description": "The implementation uses str.lower() to normalize strings, which does not perform full Unicode case folding. This leads to incorrect matching for characters that differ only by case folding rules beyond simple lowercasing, such as the German sharp S (ß) or Greek sigma (Σ/σ/ς).",
+        "evidence": "Example: \n\nusers = ['Straße']\nquery = 'strasse'\n\ncandidate.find_user(users, query)  # returns None\n\nUsing casefolding: 'Straße'.casefold() == 'strasse', so the spec expects 'Straße' to be returned. The candidate returns None because 'straße' != 'strasse'.",
+        "file": "candidate.py",
+        "finding_id": "casefold-mismatch",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation fails to perform full Unicode case folding as required by the specification, causing incorrect matches for certain Unicode characters.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

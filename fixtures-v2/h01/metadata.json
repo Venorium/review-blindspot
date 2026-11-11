@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "h01",
+  "family_id": "h01",
+  "title": "Cache invalidation on price update",
+  "origin": "original_synthetic_v2",
+  "split": "evaluation_v2_2026_11",
+  "spec": "Catalog(prices) holds non-negative integer prices in cents keyed by SKU strings. price(sku) returns the current price and raises KeyError for an unknown SKU. quote(order) returns the sum of price times quantity for a list of (sku, quantity) pairs. update_price(sku, cents) sets a new price, raising ValueError when cents is negative; every later price() or quote() call must reflect the new price. This change adds caching: the counter reads counts accesses to the underlying price table, and each SKU must be read from the table at most once between two updates of that SKU.",
+  "target_defect": "update_price does not invalidate the cached entry, so later price() and quote() calls return the old price.",
+  "author_rationale": "Cache prices so repeated quotes stop re-reading the price table.",
+  "limitations": "Synthetic module written by the repository's AI engineering agent after the November 2026 development pilot saturated corpus v1, before any model reviewed it. Designed around omissions, cross-function effects and edge cases stated in the contract. Not a natural pull request; correct means conforming to the stated contract and supplied checks."
+}

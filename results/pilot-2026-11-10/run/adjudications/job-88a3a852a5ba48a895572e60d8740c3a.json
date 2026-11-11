@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F1"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-88a3a852a5ba48a895572e60d8740c3a",
+  "method": "external_judge",
+  "rationale": "Finding states duplicates are detected by payload rather than request_id, with a triggering sequence; same mechanism. Finding F1: \"record() checks for duplicate payloads rather than duplicate request IDs, leading to false negatives and duplicate request IDs in events.\".",
+  "schema_version": 1,
+  "submission_sha256": "6ccbebb2fb22d5275174543aa3439ba8bd8a6ed5c6283812e6d8e1f7ee691ebf",
+  "target_detection": "detected"
+}

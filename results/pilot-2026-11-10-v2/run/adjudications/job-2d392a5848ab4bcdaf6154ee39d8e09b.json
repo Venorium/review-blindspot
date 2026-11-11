@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "casefold-mismatch"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-2d392a5848ab4bcdaf6154ee39d8e09b",
+  "method": "external_judge",
+  "rationale": "Finding states that lower() is used where the contract requires casefold(), so full case-folding matches are missed; same mechanism. Finding casefold-mismatch: \"The implementation uses .lower() instead of full Unicode case folding, causing mismatches for characters such as the German ß.\".",
+  "schema_version": 1,
+  "submission_sha256": "01786b21708c8c467cefc052bd829f4cc23f25d868c2189c3d542e55a4d264a5",
+  "target_detection": "detected"
+}

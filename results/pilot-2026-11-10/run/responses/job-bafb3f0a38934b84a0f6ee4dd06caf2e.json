@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1207,
+    "isolation_attested": true,
+    "latency_seconds": 13.537,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 298,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-bafb3f0a38934b84a0f6ee4dd06caf2e/attempt-1"
+  },
+  "job_id": "job-bafb3f0a38934b84a0f6ee4dd06caf2e",
+  "packet_sha256": "7a27ea3b4071c34a89ad5d068e3ddfb86e034b18da4c68eafa94f8e9556b7f45",
+  "review": {
+    "findings": [],
+    "summary": "The candidate implementation satisfies the contract: it returns 10 for 'basic', 100 for 'premium', and raises ValueError for any other string, with exact case-sensitive matching.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

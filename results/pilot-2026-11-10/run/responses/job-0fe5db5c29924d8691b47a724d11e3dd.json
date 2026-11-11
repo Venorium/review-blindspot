@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1285,
+    "isolation_attested": true,
+    "latency_seconds": 44.044,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 642,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-0fe5db5c29924d8691b47a724d11e3dd/attempt-1"
+  },
+  "job_id": "job-0fe5db5c29924d8691b47a724d11e3dd",
+  "packet_sha256": "a57311ac1cf74e3f1142bde6182a5ee8d18a13148ee3f8febfd203c872af25a2",
+  "review": {
+    "findings": [
+      {
+        "description": "append_batch appends elements before detecting a negative value, so a negative value after some positives leaves the store partially mutated, which is disallowed by the contract.",
+        "evidence": "If store = [1] and values = [2, -1], candidate.append_batch will append 2 to store, then raise ValueError, leaving store as [1, 2] instead of [1] as required.",
+        "file": "candidate.py",
+        "finding_id": "defect-001",
+        "line_end": 6,
+        "line_start": 3,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate append_batch does not guarantee atomicity: it appends values before encountering a negative, violating the specification that the store must remain unchanged if any value is negative.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

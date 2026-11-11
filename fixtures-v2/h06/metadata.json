@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "h06",
+  "family_id": "h06",
+  "title": "Unicode case-insensitive lookup",
+  "origin": "original_synthetic_v2",
+  "split": "evaluation_v2_2026_11",
+  "spec": "Implement find_user(users, query). users is a list of display-name strings. Ignore leading and trailing whitespace in query, then return the first name in users that equals the query under full Unicode case folding, that is, name.casefold() == stripped_query.casefold(). Return None when nothing matches. Do not modify users.",
+  "target_defect": "Matching uses str.lower() instead of str.casefold(), so names that differ only under full case folding do not match.",
+  "author_rationale": "Make user lookup case-insensitive.",
+  "limitations": "Synthetic module written by the repository's AI engineering agent after the November 2026 development pilot saturated corpus v1, before any model reviewed it. Designed around omissions, cross-function effects and edge cases stated in the contract. Not a natural pull request; correct means conforming to the stated contract and supplied checks."
+}

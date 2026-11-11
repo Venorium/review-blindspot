@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-bb1b7d673bd441258ef5daf2d52c9b45",
+  "method": "external_judge",
+  "rationale": "Finding states earlier non-negative values are appended before a later negative value raises, leaving store mutated; same mechanism. Finding F001: \"Store is mutated before checking for negative values, causing partial updates when a negative value appears later in the batch.\".",
+  "schema_version": 1,
+  "submission_sha256": "ccf2637ea7b9ce30a3ec9c2d7be87749102b89c6dbe4e128d419ce3e32d2b656",
+  "target_detection": "detected"
+}

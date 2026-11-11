@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1364,
+    "isolation_attested": true,
+    "latency_seconds": 51.766,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 533,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-a7ef23ec517c43a9bec23aaa0a79ab07/attempt-1"
+  },
+  "job_id": "job-a7ef23ec517c43a9bec23aaa0a79ab07",
+  "packet_sha256": "ed268dfa40dbfcc921d6e633431462af419fe6c83148c10a1855848af653c4b0",
+  "review": {
+    "findings": [
+      {
+        "description": "The cache key is the record_id alone, which causes values to be shared across tenants. The specification requires separate caching per (tenant, record_id).",
+        "evidence": "Example: calling lookup(cache, 'a', '1', load) followed by lookup(cache, 'b', '1', load) should trigger load twice, but with the current implementation the second call returns the cached value from the first tenant, violating the contract.",
+        "file": "candidate.py",
+        "finding_id": "cache-key-incorrect",
+        "line_end": 3,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Cache key does not differentiate tenants, violating the requirement to cache results separately for each (tenant, record_id).",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

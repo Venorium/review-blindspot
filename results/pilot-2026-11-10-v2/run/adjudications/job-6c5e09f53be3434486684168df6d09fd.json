@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "STABLE_ORDER_01"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-6c5e09f53be3434486684168df6d09fd",
+  "method": "external_judge",
+  "rationale": "Finding states that reversing the ascending sort with [::-1] inverts the order of equal-priority tickets; same mechanism. Finding STABLE_ORDER_01: \"The implementation sorts tickets by ascending priority and then reverses the list. This reverse operation breaks the stability guarantee required by the specification for tickets with equal priority, \".",
+  "schema_version": 1,
+  "submission_sha256": "f29156d519e8260dc0e3884c2d3c05bc0707bf29e318c870c14604f4c3d262a1",
+  "target_detection": "detected"
+}

@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "C001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-236a85be8328493eb5737b229cab118e",
+  "method": "external_judge",
+  "rationale": "Finding states that sleep runs after the final failed call before re-raising; same mechanism and violated rule. Finding C001: \"Sleeps after the final failed TransientError instead of re-raising immediately.\".",
+  "schema_version": 1,
+  "submission_sha256": "a5c773c854155deb7f52999f772292c1968b20d38df05fe3f2c4f8fc2442d683",
+  "target_detection": "detected"
+}

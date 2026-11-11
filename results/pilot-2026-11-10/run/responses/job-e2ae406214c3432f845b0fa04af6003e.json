@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1219,
+    "isolation_attested": true,
+    "latency_seconds": 29.348,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 457,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-e2ae406214c3432f845b0fa04af6003e/attempt-1"
+  },
+  "job_id": "job-e2ae406214c3432f845b0fa04af6003e",
+  "packet_sha256": "15a0cf8fd029c7890fb3fd8ca906dffe471226e939f8a2278d79259a2d0e277f",
+  "review": {
+    "findings": [
+      {
+        "description": "The condition `max(a[0], b[0]) <= min(a[1], b[1])` returns True when the intervals touch at a boundary, which is contrary to the half‑open interval specification where touching endpoints do not overlap.",
+        "evidence": "For input a=(1,2) and b=(2,3), the function returns True because `max(1,2)=2` and `min(2,3)=2`, but the correct result should be False as the intervals [1,2) and [2,3) are disjoint.",
+        "file": "candidate.py",
+        "finding_id": "f1",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The overlap logic incorrectly treats touching endpoints as overlapping.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

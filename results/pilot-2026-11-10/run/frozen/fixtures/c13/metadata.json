@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "c13",
+  "family_id": "c13",
+  "title": "Signed integer division",
+  "origin": "original_synthetic_starter",
+  "split": "development_only",
+  "spec": "Implement divide(n, d) for arbitrary-size signed integer n and positive integer d. Return the quotient truncated toward zero. Do not use floating point conversion.",
+  "target_defect": "Floor division rounds negative non-integral quotients away from zero.",
+  "author_rationale": "The change keeps quotient calculation entirely in integer arithmetic.",
+  "limitations": "Small synthetic function; not a natural pull request. Correct means conforming to the stated contract and supplied checks, not universally bug-free."
+}

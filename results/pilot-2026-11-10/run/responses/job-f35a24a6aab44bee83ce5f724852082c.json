@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1208,
+    "isolation_attested": true,
+    "latency_seconds": 123.01,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 2200,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-f35a24a6aab44bee83ce5f724852082c/attempt-1"
+  },
+  "job_id": "job-f35a24a6aab44bee83ce5f724852082c",
+  "packet_sha256": "05e1cc5382e55ab81cb6324e2f6d0d98e112c70f6675611d9f7f756634b99b4b",
+  "review": {
+    "findings": [
+      {
+        "description": "Using `str(e['version'])` as the sort key causes lexicographical sorting. The spec requires ascending numeric order for version strings.",
+        "evidence": "Input `[{'version': '2'}, {'version': '10'}]` will be sorted by the candidate to `[{'version': '10'}, {'version': '2'}]` because string comparison `'1' < '2'`. The correct behavior per spec is `[{'version': '2'}, {'version': '10'}]`. The key should convert to `int(e['version'])`.",
+        "file": "candidate.py",
+        "finding_id": "numeric_sort_lexicographical_violation",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The candidate sorts version strings lexicographically instead of numerically, violating the spec requirement to sort by ascending numeric version.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

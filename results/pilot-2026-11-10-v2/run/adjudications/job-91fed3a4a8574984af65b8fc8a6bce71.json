@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "C01"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-91fed3a4a8574984af65b8fc8a6bce71",
+  "method": "external_judge",
+  "rationale": "Finding states that update_price leaves the cached entry in place, so later price()/quote() return the old price; same mechanism and violated rule. Finding C01: \"Missing cache invalidation in update_price. The cache entry for the updated SKU is never cleared, so subsequent price() calls may return the stale cached value and not reflect the new price set by upd\".",
+  "schema_version": 1,
+  "submission_sha256": "a4b752f68768a4751d4705c6a28c19dce8ccc235346123dd2df626995b62a3e9",
+  "target_detection": "detected"
+}

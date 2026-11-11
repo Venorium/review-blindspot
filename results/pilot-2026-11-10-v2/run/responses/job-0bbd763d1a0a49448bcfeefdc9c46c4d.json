@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1917,
+    "isolation_attested": true,
+    "latency_seconds": 282.846,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 3769,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-0bbd763d1a0a49448bcfeefdc9c46c4d/attempt-1"
+  },
+  "job_id": "job-0bbd763d1a0a49448bcfeefdc9c46c4d",
+  "packet_sha256": "0cf8a162afbaf6a3e4b38d6c23b1fd82d3b92d6af5ba45caab1678db532f15da",
+  "review": {
+    "findings": [
+      {
+        "description": "Account balances are modified before ledger.record() is invoked. If ledger.record raises ValueError, the function propagates the exception without rolling back the account changes, violating the contract.",
+        "evidence": "When transfer is called with memo length > 40, lines 18-19 decrement accounts[src] and increment accounts[dst], then line 20 calls ledger.record which raises ValueError at line 7. The spec explicitly requires that any raised ValueError leaves both accounts and the ledger entirely unchanged.",
+        "file": "candidate.py",
+        "finding_id": "ATOMICITY_VIOLATION",
+        "line_end": 20,
+        "line_start": 18,
+        "severity": "high"
+      }
+    ],
+    "summary": "The transfer function violates the contract's atomicity requirement by mutating account balances before calling ledger.record(). If ledger.record raises ValueError (e.g., for a memo longer than 40 characters), accounts will already be modified, contradicting the requirement that a raised ValueError must leave both accounts and the ledger entirely unchanged.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

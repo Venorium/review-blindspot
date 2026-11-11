@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1364,
+    "isolation_attested": true,
+    "latency_seconds": 24.37,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 453,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-8318f04194e74f2a9f6455cf6ab10ff5/attempt-1"
+  },
+  "job_id": "job-8318f04194e74f2a9f6455cf6ab10ff5",
+  "packet_sha256": "ed268dfa40dbfcc921d6e633431462af419fe6c83148c10a1855848af653c4b0",
+  "review": {
+    "findings": [
+      {
+        "description": "The cache key ignores the tenant, causing cache collisions between different tenants that use the same record_id.",
+        "evidence": "Calling lookup(cache, 'a', '1', load) and then lookup(cache, 'b', '1', load) will return the same value and only invoke load once, despite the tenant being different.",
+        "file": "candidate.py",
+        "finding_id": "missing tenant in cache key",
+        "line_end": 4,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation does not cache results separately per (tenant, record_id) pair, violating the contract.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

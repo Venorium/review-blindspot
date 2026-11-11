@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1300,
+    "isolation_attested": true,
+    "latency_seconds": 46.377,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 586,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-e9c534fede2a4588b10d32ca709a141a/attempt-1"
+  },
+  "job_id": "job-e9c534fede2a4588b10d32ca709a141a",
+  "packet_sha256": "559ff14e2f8cc7a428f34233fbb5f9c1dbac49e8a2d707d8ead8f701be437b78",
+  "review": {
+    "findings": [],
+    "summary": "Candidate implementation satisfies the contract: it appends new events only when the request_id is not already present and returns the correct boolean values without mutating the list on duplicate request_ids.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

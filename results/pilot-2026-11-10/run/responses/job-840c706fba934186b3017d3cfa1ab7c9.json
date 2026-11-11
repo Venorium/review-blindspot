@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1172,
+    "isolation_attested": true,
+    "latency_seconds": 132.026,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 614,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-840c706fba934186b3017d3cfa1ab7c9/attempt-1"
+  },
+  "job_id": "job-840c706fba934186b3017d3cfa1ab7c9",
+  "packet_sha256": "5c960e421630ee532cab7baac93209fa5b087f8dc81eea1c102577f6bbc6221d",
+  "review": {
+    "findings": [
+      {
+        "description": "When limit is zero, recent returns the entire list instead of an empty list, contradicting the specification that a zero limit should produce an empty list.",
+        "evidence": "candidate.recent([1, 2, 3], 0) evaluates to [1, 2, 3] but the contract requires [].",
+        "file": "candidate.py",
+        "finding_id": "limit-zero-returns-full-list",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "candidate.recent fails to handle limit=0 correctly, violating the contract that specifies an empty list should be returned.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

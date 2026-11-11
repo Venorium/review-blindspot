@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1394,
+    "isolation_attested": true,
+    "latency_seconds": 87.043,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 2939,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-fcc23a71aba249d191f31f2bf958fef8/attempt-1"
+  },
+  "job_id": "job-fcc23a71aba249d191f31f2bf958fef8",
+  "packet_sha256": "95976b3da6542b5ecd6d98f3915d1938c7e095397110db938548b0f0ffc288da",
+  "review": {
+    "findings": [
+      {
+        "description": "Reversing a stable ascending sort flips the relative order of elements with equal keys, breaking the contract's explicit requirement that tickets with equal priority must retain their original FIFO order.",
+        "evidence": "Input: [('t1', 5), ('t2', 5)]. sorted(..., key=lambda t: t[1]) preserves order as [('t1', 5), ('t2', 5)], but [::-1] reverses it to [('t2', 5), ('t1', 5)]. The contract requires ['t1', 't2'] for equal priorities.",
+        "file": "candidate.py",
+        "finding_id": "stability_violation_reversal",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The candidate violates the stability requirement for equal priorities by reversing the sorted list, which flips the relative order of tickets with the same priority.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1260,
+    "isolation_attested": true,
+    "latency_seconds": 49.396,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1113,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-659f1f7552ed440b9fc3157e7d280b3c/attempt-1"
+  },
+  "job_id": "job-659f1f7552ed440b9fc3157e7d280b3c",
+  "packet_sha256": "69c17652917f383d739e3ccc0265eb8a1fcc6096f2f4ba29f3ad4acfae306fc7",
+  "review": {
+    "findings": [
+      {
+        "description": "utc_day returns the date in the input’s local timezone instead of the UTC calendar date, violating the contract.",
+        "evidence": "candidate.py line 4: datetime.fromisoformat(timestamp).date().isoformat()\nFor input '2024-01-01T00:30:00+02:00' this returns '2024-01-01', but the correct UTC date is '2023-12-31'. The function should convert the datetime to UTC before extracting the date.",
+        "file": "candidate.py",
+        "finding_id": "UTC_OFFSET_MISMATCH",
+        "line_end": 4,
+        "line_start": 4,
+        "severity": "critical"
+      }
+    ],
+    "summary": "The implementation does not convert the parsed datetime to UTC before extracting the date, causing incorrect results for timestamps whose UTC date differs from the local date provided by the offset. This violates the contract.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1274,
+    "isolation_attested": true,
+    "latency_seconds": 138.406,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 1151,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-9037ff6851a648be81770522065e43eb/attempt-1"
+  },
+  "job_id": "job-9037ff6851a648be81770522065e43eb",
+  "packet_sha256": "ea72a2cdc1af213ef6316e4878ca20bd1210b076ffe44e7bb162da0a9ff1a165",
+  "review": {
+    "findings": [],
+    "summary": "The implementation correctly uses integer conversion to ensure numeric sorting as required by the specification and utilizes Python's stable sorted function to maintain input order for equal versions.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

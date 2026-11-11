@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1314,
+    "isolation_attested": true,
+    "latency_seconds": 42.346,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 532,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-c73ec0b90bb34f689c22f159afb53ff3/attempt-1"
+  },
+  "job_id": "job-c73ec0b90bb34f689c22f159afb53ff3",
+  "packet_sha256": "557aa09b114eb4cfad66a99687f19aab41fa1d10b887b7ae8fb13d42bf8e668d",
+  "review": {
+    "findings": [],
+    "summary": "Candidate implementation satisfies the specification for caching by tenant and record_id, calling load only on cache miss and returning the correct value.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

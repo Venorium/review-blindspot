@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1360,
+    "isolation_attested": true,
+    "latency_seconds": 142.189,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 2572,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-a1742c19d5a04d3ea5a17561a29f005f/attempt-1"
+  },
+  "job_id": "job-a1742c19d5a04d3ea5a17561a29f005f",
+  "packet_sha256": "a57311ac1cf74e3f1142bde6182a5ee8d18a13148ee3f8febfd203c872af25a2",
+  "review": {
+    "findings": [
+      {
+        "description": "Fails to leave `store` exactly unchanged when a negative value is encountered after processing valid values.",
+        "evidence": "For input store=[], values=[1, -1], line 4 appends 1 to store. Line 6 raises ValueError for -1, but store is already mutated to [1] instead of remaining []. This violates the contract's requirement that if any value is negative, the function must raise ValueError and leave store exactly unchanged.",
+        "file": "candidate.py",
+        "finding_id": "PREMATURE_MUTATION_ON_FAILURE",
+        "line_end": 6,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The candidate violates the contract requirement to leave `store` unchanged when validation fails. It mutates `store` during iteration before confirming all values are valid.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

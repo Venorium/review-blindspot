@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1174,
+    "isolation_attested": true,
+    "latency_seconds": 122.42,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 2340,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-fcc67d219206416681002b3c25bcc32a/attempt-1"
+  },
+  "job_id": "job-fcc67d219206416681002b3c25bcc32a",
+  "packet_sha256": "8a78f8b3f527073342edd4c10bdf3bf5f99c1d0aae16ceb625a2c662fe70b012",
+  "review": {
+    "findings": [
+      {
+        "description": "Returns the original list reference rather than a separate copy. Modifying the returned list will mutate the input record's labels list.",
+        "evidence": "Calling candidate.labels({'labels': ['a']}) returns the same object as the input. Appending to the result, e.g., result.append('b'), causes record['labels'] to become ['a', 'b'], violating the contract.",
+        "file": "candidate.py",
+        "finding_id": "1",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The candidate returns a reference to the original list instead of a copy, violating the requirement that caller modifications to the returned list must not change the input record.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

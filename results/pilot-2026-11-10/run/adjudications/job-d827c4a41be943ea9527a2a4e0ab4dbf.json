@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "sum_of_repeated_products"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-d827c4a41be943ea9527a2a4e0ab4dbf",
+  "method": "external_judge",
+  "rationale": "Finding states repeated product quantities overwrite instead of summing, with a repeated-product input; same mechanism. Finding sum_of_repeated_products: \"The function returns a dictionary that maps each product ID to the last quantity encountered in the input list, rather than summing all quantities for each product.\".",
+  "schema_version": 1,
+  "submission_sha256": "82c65dd4449e3fb22360fe72bb52c6b54c4e3d2c15b0cc5df5af057f9bc9b3e7",
+  "target_detection": "detected"
+}

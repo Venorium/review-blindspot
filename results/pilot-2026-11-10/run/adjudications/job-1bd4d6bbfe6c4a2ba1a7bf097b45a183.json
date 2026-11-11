@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "DIVIDE_NEGATIVE_TRUNC"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-1bd4d6bbfe6c4a2ba1a7bf097b45a183",
+  "method": "external_judge",
+  "rationale": "Finding states // floors toward negative infinity instead of truncating toward zero for negative non-integral quotients; same mechanism. Finding DIVIDE_NEGATIVE_TRUNC: \"Using Python's floor division (//) returns the floor of the quotient, which for negative dividends truncates toward negative infinity. The specification requires truncation toward zero for all signed integer n and positi\".",
+  "schema_version": 1,
+  "submission_sha256": "a154a14bebca9b13ffd523248312302daddd17181a0081ca15d2b8803f626cc6",
+  "target_detection": "detected"
+}

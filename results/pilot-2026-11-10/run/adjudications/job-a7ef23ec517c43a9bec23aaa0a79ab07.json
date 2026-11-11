@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "cache-key-incorrect"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-a7ef23ec517c43a9bec23aaa0a79ab07",
+  "method": "external_judge",
+  "rationale": "Finding states the cache is keyed by record_id only, so two tenants with the same record_id share an entry; same mechanism. Finding cache-key-incorrect: \"The cache key is the record_id alone, which causes values to be shared across tenants. The specification requires separate caching per (tenant, record_id).\".",
+  "schema_version": 1,
+  "submission_sha256": "2b475169d8186e11e2fa4e7bb7c6a69a30b2d9bb4949eaaa93e25761841dcf4a",
+  "target_detection": "detected"
+}

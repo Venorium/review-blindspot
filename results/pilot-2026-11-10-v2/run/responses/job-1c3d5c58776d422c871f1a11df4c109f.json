@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1466,
+    "isolation_attested": true,
+    "latency_seconds": 113.772,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 3234,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-1c3d5c58776d422c871f1a11df4c109f/attempt-1"
+  },
+  "job_id": "job-1c3d5c58776d422c871f1a11df4c109f",
+  "packet_sha256": "e0046fc1c5f6f492daf1d79725ba6a6777fb04c2dd8ea2edf1d12da50b846853",
+  "review": {
+    "findings": [],
+    "summary": "The candidate correctly implements the specification. It materializes the input iterable, computes the total weight, and returns a dictionary mapping each name to the correct integer division result. The zero-total case is handled exactly as specified. The change from an explicit loop to a dict comprehension preserves all semantics without introducing correctness defects.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

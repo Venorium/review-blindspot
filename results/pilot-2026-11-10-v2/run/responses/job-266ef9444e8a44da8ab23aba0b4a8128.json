@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1438,
+    "isolation_attested": true,
+    "latency_seconds": 122.214,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 2057,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-266ef9444e8a44da8ab23aba0b4a8128/attempt-1"
+  },
+  "job_id": "job-266ef9444e8a44da8ab23aba0b4a8128",
+  "packet_sha256": "b492ef4ef71e65d20512de055b5072a9ddc9be822be459e218e895a8070048b1",
+  "review": {
+    "findings": [
+      {
+        "description": "The function incorrectly allows paths that escape the upload directory because it only checks path.startswith(base) instead of requiring base followed by a slash or equality.",
+        "evidence": "For base \"/srv/uploads\" and name \"../uploadsXYZ/file\", candidate.resolve_upload returns \"/srv/uploadsXYZ/file\" instead of raising ValueError, violating the requirement that only paths equal to base or inside base are accepted.",
+        "file": "candidate.py",
+        "finding_id": "path-escape-check",
+        "line_end": 9,
+        "line_start": 8,
+        "severity": "critical"
+      }
+    ],
+    "summary": "The resolve_upload function fails to enforce that the resolved path must be inside the base directory, allowing path traversal to escape the base. This violates the contract.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

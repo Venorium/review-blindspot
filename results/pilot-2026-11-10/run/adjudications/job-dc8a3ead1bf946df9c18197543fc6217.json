@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "SPEC-001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-dc8a3ead1bf946df9c18197543fc6217",
+  "method": "external_judge",
+  "rationale": "Finding states an equal version is accepted (>= instead of >), updating state and writes; same mechanism. Finding SPEC-001: \"The function allows updates when the supplied version is equal to the current state version. The specification requires updates only when the supplied version is strictly greater than the current state version.\".",
+  "schema_version": 1,
+  "submission_sha256": "e2708810e3fe8ad80c99951e5552fdaf545b522897bb99586fb8749758c15898",
+  "target_detection": "detected"
+}

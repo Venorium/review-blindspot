@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1230,
+    "isolation_attested": true,
+    "latency_seconds": 39.602,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 757,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-a84fd1a477db4871af9177cdb9339d48/attempt-1"
+  },
+  "job_id": "job-a84fd1a477db4871af9177cdb9339d48",
+  "packet_sha256": "e7450222f1a655e39f1f3a4149927ea93a6850b0286c525c359659bca6c66cd7",
+  "review": {
+    "findings": [
+      {
+        "description": "utc_day does not convert to UTC before extracting the date, returning the local date instead of the UTC calendar date.",
+        "evidence": "For input '2024-01-01T01:00:00+02:00', datetime.fromisoformat returns a datetime with UTC offset +02:00. .date() then yields 2024-01-01, but the equivalent UTC time is 2023-12-31T23:00:00Z, so the correct UTC date is 2023-12-31. The function incorrectly returns 2024-01-01, demonstrating a contract violation.",
+        "file": "candidate.py",
+        "finding_id": "FC001",
+        "line_end": 4,
+        "line_start": 4,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation fails to convert timestamps to UTC before extracting the date, violating the contract when the offset causes the UTC date to differ from the local date.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

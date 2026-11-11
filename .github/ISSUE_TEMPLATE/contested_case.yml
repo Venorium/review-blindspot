@@ -1,0 +1,32 @@
+name: Contested case or adjudication
+description: A fixture contract, witness test or target judgment looks wrong.
+labels: [corpus]
+body:
+  - type: input
+    id: case
+    attributes:
+      label: Case and version
+      placeholder: "c07, fixtures as of commit abc1234 (or a pilot job ID)"
+    validations:
+      required: true
+  - type: textarea
+    id: rule
+    attributes:
+      label: Disputed rule or judgment
+      description: Quote the contract text and explain the concrete input or state that shows the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: A witness, counterexample or rubric reference. Do not paste code you have not reviewed; maintainers will not run it outside a sandbox.
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - label: I understand published runs are never edited; a fix produces a new corpus version and a documented sensitivity analysis.
+          required: true

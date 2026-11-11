@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1313,
+    "isolation_attested": true,
+    "latency_seconds": 103.975,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 1398,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-d23b74b2c81a42e49cd558cd783fd776/attempt-1"
+  },
+  "job_id": "job-d23b74b2c81a42e49cd558cd783fd776",
+  "packet_sha256": "3d06dbac4c9d1554c755d8882aea8e7790010e4f83c3c5637285b07aab6d45d3",
+  "review": {
+    "findings": [
+      {
+        "description": "The implementation returns 100 for any tier that is not 'basic' or 'premium', but the specification requires it to raise a ValueError for any other string.",
+        "evidence": "Calling quota('unexpected') returns 100 instead of raising ValueError.",
+        "file": "candidate.py",
+        "finding_id": "invalid_tier_handling",
+        "line_end": 3,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation returns 100 for unknown tiers instead of raising a ValueError as required by the specification.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "h07",
+  "family_id": "h07",
+  "title": "Exponential backoff without trailing sleep",
+  "origin": "original_synthetic_v2",
+  "split": "evaluation_v2_2026_11",
+  "spec": "Implement call_with_retry(operation, attempts, sleep, base_delay). attempts is an integer of at least 1: the total number of calls to operation, including the first. When a call raises TransientError, wait by calling sleep(base_delay * 2 ** k), where k is the number of failed calls so far minus one, so the delays are base_delay, 2 * base_delay, 4 * base_delay and so on; then call again. Never sleep after the final failed call: re-raise that last TransientError immediately. Any other exception propagates immediately without retry. Return the result of the first successful call.",
+  "target_defect": "After the final failed attempt the function still sleeps once before re-raising.",
+  "author_rationale": "Switch the retry delay from constant to exponential backoff.",
+  "limitations": "Synthetic module written by the repository's AI engineering agent after the November 2026 development pilot saturated corpus v1, before any model reviewed it. Designed around omissions, cross-function effects and edge cases stated in the contract. Not a natural pull request; correct means conforming to the stated contract and supplied checks."
+}

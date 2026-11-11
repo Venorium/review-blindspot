@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1837,
+    "isolation_attested": true,
+    "latency_seconds": 36.004,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1005,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-d4ab20b9fe2f4523ab83f677bfb87370/attempt-1"
+  },
+  "job_id": "job-d4ab20b9fe2f4523ab83f677bfb87370",
+  "packet_sha256": "1d0b54f1adaa451556943d36730b24306092acfa5056d23dc5a5ccb827ebde57",
+  "review": {
+    "findings": [
+      {
+        "description": "If ledger.record raises ValueError (e.g., due to a memo longer than 40 characters), the transfer function has already modified the accounts dictionary, leaving it inconsistent with the ledger state. The specification requires that on ledger rejection, both accounts and ledger remain entirely unchanged.",
+        "evidence": "Transfer subtracts from accounts[src] and adds to accounts[dst] before calling ledger.record. If ledger.record raises ValueError (for a memo > 40 chars), the function does not revert these changes. This violates the contract that on ledger rejection, accounts must remain unchanged.",
+        "file": "candidate.py",
+        "finding_id": "001",
+        "line_end": 21,
+        "line_start": 18,
+        "severity": "high"
+      }
+    ],
+    "summary": "Transfer does not roll back account changes if ledger.record fails, violating the contract that both accounts and ledger must remain unchanged on ledger rejection.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

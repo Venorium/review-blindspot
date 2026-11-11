@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1936,
+    "isolation_attested": true,
+    "latency_seconds": 612.575,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 6538,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-54081795ec92485d861451bc192037de/attempt-1"
+  },
+  "job_id": "job-54081795ec92485d861451bc192037de",
+  "packet_sha256": "95efe3752efea653ea05f01097ee82f1544252fbda9e25186bf315df9325d9f0",
+  "review": {
+    "findings": [
+      {
+        "description": "When n is 0 and the start date falls on a Saturday or Sunday, the function returns the start date itself instead of moving to the following Monday, which violates the requirement that n == 0 should return the following Monday on a weekend.",
+        "evidence": "add_business_days(date(2024, 5, 25), 0) where 2024-05-25 is a Saturday, returns 2024-05-25 instead of 2024-05-27.",
+        "file": "candidate.py",
+        "finding_id": "weekend_n_zero_handling",
+        "line_end": 6,
+        "line_start": 5,
+        "severity": "high"
+      }
+    ],
+    "summary": "The function fails to correctly handle the case where n=0 and the start date falls on a weekend, as it returns the weekend date instead of the following Monday.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

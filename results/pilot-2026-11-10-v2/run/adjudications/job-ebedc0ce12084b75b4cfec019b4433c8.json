@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "last_item_instead_of_first"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-ebedc0ce12084b75b4cfec019b4433c8",
+  "method": "external_judge",
+  "rationale": "Finding states that the dict comprehension overwrites earlier items so the last item per key is returned; same mechanism. Finding last_item_instead_of_first: \"The dictionary comprehension updates the value for an existing key with the latest item encountered, whereas the specification requires keeping the first item encountered for each key.\".",
+  "schema_version": 1,
+  "submission_sha256": "78f9898c494429e41fcf87a28dc91bb05c6ab1bc814591ed770f522766387e28",
+  "target_detection": "detected"
+}

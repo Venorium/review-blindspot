@@ -1,0 +1,22 @@
+{
+  "name": "review-blindspot",
+  "interface": {
+    "displayName": "Review Blind Spot"
+  },
+  "plugins": [
+    {
+      "name": "review-blindspot",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "interface": {
+        "displayName": "Review Blind Spot"
+      }
+    }
+  ]
+}

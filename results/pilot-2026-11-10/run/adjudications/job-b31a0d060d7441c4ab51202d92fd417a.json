@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-b31a0d060d7441c4ab51202d92fd417a",
+  "method": "external_judge",
+  "rationale": "Finding states the 'or default' fallback replaces stored falsy values such as 0 or False; same mechanism. Finding F001: \"The function returns options.get(key) or default, which substitutes default when the stored value is falsy (e.g., 0, False, '', None). According to the contract, default should only be used when the key is absent.\".",
+  "schema_version": 1,
+  "submission_sha256": "fab9586719a189bf3a0cca1930e891ca6cc05d789d9e16303de0f3b4b378c39d",
+  "target_detection": "detected"
+}

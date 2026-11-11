@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-69fbb55233de4b48b913fd1c2f9429f4",
+  "method": "external_judge",
+  "rationale": "Finding states // floors toward negative infinity instead of truncating toward zero for negative non-integral quotients; same mechanism. Finding F001: \"Using Python's // operator performs floor division, which for negative n and non‑divisible d returns a result less than the true truncation toward zero. This violates the contract for divide(n, d).\".",
+  "schema_version": 1,
+  "submission_sha256": "d8b154ad1c49f6da79d60430ab9bdb8ba96e0002b0935d96ac73c2b0544a6c6d",
+  "target_detection": "detected"
+}

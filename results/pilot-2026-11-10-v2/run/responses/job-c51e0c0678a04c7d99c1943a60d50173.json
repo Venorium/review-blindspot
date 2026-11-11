@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1806,
+    "isolation_attested": true,
+    "latency_seconds": 46.199,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1385,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-c51e0c0678a04c7d99c1943a60d50173/attempt-1"
+  },
+  "job_id": "job-c51e0c0678a04c7d99c1943a60d50173",
+  "packet_sha256": "0cf8a162afbaf6a3e4b38d6c23b1fd82d3b92d6af5ba45caab1678db532f15da",
+  "review": {
+    "findings": [
+      {
+        "description": "transfer modifies account balances before calling ledger.record, so if ledger.record raises ValueError (e.g., memo too long), the accounts are left altered and the ledger unchanged, violating the spec that requires no side effects on error.",
+        "evidence": "Calling transfer(accounts, ledger, 'a', 'b', 4, memo='x'*41) will deduct 4 from 'a' and add 4 to 'b' before ledger.record fails; accounts will be {'a':6,'b':4} but ledger.entries remains empty.",
+        "file": "candidate.py",
+        "finding_id": "atomicity-issue",
+        "line_end": 20,
+        "line_start": 20,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate fails to leave accounts and ledger unchanged when ledger rejects an entry (e.g., memo too long), violating the atomicity requirement of the transfer function.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

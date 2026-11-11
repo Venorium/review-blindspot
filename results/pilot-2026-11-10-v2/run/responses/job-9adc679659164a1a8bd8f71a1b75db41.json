@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1687,
+    "isolation_attested": true,
+    "latency_seconds": 61.368,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1664,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-9adc679659164a1a8bd8f71a1b75db41/attempt-1"
+  },
+  "job_id": "job-9adc679659164a1a8bd8f71a1b75db41",
+  "packet_sha256": "0d9b0229fcd2590aaf84f5f99e09cf4a0d4e228709f40054fd1f1be8ef7f3800",
+  "review": {
+    "findings": [
+      {
+        "description": "Unconditional sleep after the last TransientError retry.",
+        "evidence": "Line 12: sleep(base_delay * 2 ** attempt) is executed even on the final failure; the specification explicitly requires no sleep after the final failed call.",
+        "file": "candidate.py",
+        "finding_id": "FC001",
+        "line_end": 13,
+        "line_start": 12,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation sleeps after the final failed attempt, violating the contract that no sleep should occur after the last failure.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

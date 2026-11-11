@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "weekend_start_zero_days"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-1961d619eef9495993e74a0e99a4a2fa",
+  "method": "external_judge",
+  "rationale": "Finding states that the n == 0 early return skips the weekend-to-Monday adjustment; same mechanism and violated rule. Finding weekend_start_zero_days: \"When n is zero, the function always returns the start date regardless of whether it falls on a weekend, violating the specification that requires moving to the following Monday.\". Dates are mislabeled (2026-11-05 is a Thursday). Second finding claims a wrong result for a weekend start with n=1 that does not occur; not counted.",
+  "schema_version": 1,
+  "submission_sha256": "837906f1c24923133038e83999ceb920a35b45077a378e9f709c0ba879e17bfd",
+  "target_detection": "detected"
+}

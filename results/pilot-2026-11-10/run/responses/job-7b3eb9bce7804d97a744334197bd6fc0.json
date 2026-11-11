@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1332,
+    "isolation_attested": true,
+    "latency_seconds": 84.242,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 2218,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-7b3eb9bce7804d97a744334197bd6fc0/attempt-1"
+  },
+  "job_id": "job-7b3eb9bce7804d97a744334197bd6fc0",
+  "packet_sha256": "87a51500ce7234add61a1e56b8fe70ab5380fa6220c5abb3ad9fd91ab599c183",
+  "review": {
+    "findings": [],
+    "summary": "The candidate correctly implements the contract by checking for existing request IDs rather than payloads, preventing duplicate entries and ensuring no mutation occurs on repeated IDs. The logic aligns precisely with the specified behavior.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

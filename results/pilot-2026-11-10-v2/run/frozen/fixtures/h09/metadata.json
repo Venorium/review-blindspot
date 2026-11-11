@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "h09",
+  "family_id": "h09",
+  "title": "Upload path containment",
+  "origin": "original_synthetic_v2",
+  "split": "evaluation_v2_2026_11",
+  "spec": "Implement resolve_upload(base, name) for POSIX-style path strings, without touching the filesystem. base is an absolute, normalized directory path without a trailing slash, such as /srv/uploads. name is a relative path supplied by a user; an absolute name raises ValueError. Join base and name, normalize the result with posixpath.normpath, and return it only when it equals base or lies inside base, meaning it starts with base followed by a slash. Any other result raises ValueError.",
+  "target_defect": "The containment check is a plain string prefix test, so a sibling directory such as /srv/uploads-old is accepted.",
+  "author_rationale": "Reject user paths that escape the upload directory.",
+  "limitations": "Synthetic module written by the repository's AI engineering agent after the November 2026 development pilot saturated corpus v1, before any model reviewed it. Designed around omissions, cross-function effects and edge cases stated in the contract. Not a natural pull request; correct means conforming to the stated contract and supplied checks."
+}

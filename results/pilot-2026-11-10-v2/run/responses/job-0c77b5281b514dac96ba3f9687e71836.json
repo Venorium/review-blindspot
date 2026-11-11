@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 2077,
+    "isolation_attested": true,
+    "latency_seconds": 367.651,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 5304,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-0c77b5281b514dac96ba3f9687e71836/attempt-1"
+  },
+  "job_id": "job-0c77b5281b514dac96ba3f9687e71836",
+  "packet_sha256": "007d132edc505ce758f14f4edbd871dc84342ce0aa49030b768a2024a56c99ca",
+  "review": {
+    "findings": [
+      {
+        "description": "The `update_price` method does not invalidate or update the `_cache` entry for the SKU being updated. This violates the requirement that every later `price()` or `quote()` call must reflect the new price, as the method will continue to return the old, cached value from `self._cache` as long as the SKU remains in the cache.",
+        "evidence": "catalog = Catalog({'a': 100}); catalog.price('a'); catalog.update_price('a', 200); assert catalog.price('a') == 200",
+        "file": "candidate.py",
+        "finding_id": "cache_not_invalidated_on_update",
+        "line_end": 20,
+        "line_start": 16,
+        "severity": "critical"
+      }
+    ],
+    "summary": "The `update_price` method fails to invalidate the cache for the updated SKU, causing subsequent `price` or `quote` calls to return a stale price.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

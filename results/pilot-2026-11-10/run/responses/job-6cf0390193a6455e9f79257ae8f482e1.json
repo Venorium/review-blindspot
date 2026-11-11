@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1176,
+    "isolation_attested": true,
+    "latency_seconds": 59.104,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 413,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-6cf0390193a6455e9f79257ae8f482e1/attempt-1"
+  },
+  "job_id": "job-6cf0390193a6455e9f79257ae8f482e1",
+  "packet_sha256": "3aa757e55595f59ab159c83ca9c3a8cb0c827b71812afbf655704c65f569c793",
+  "review": {
+    "findings": [
+      {
+        "description": "The implementation rounds up only when the remainder after division by 10 is greater than 5, but the specification requires ties (remainder exactly 5) to be rounded upward.",
+        "evidence": "For example, cents(15) should return 2 (since 1.5 cents rounds up to 2), but the current code returns 1 because (15 % 10) == 5 is not greater than 5.",
+        "file": "candidate.py",
+        "finding_id": "rounding_ties",
+        "line_end": 3,
+        "line_start": 3,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation incorrectly handles rounding ties, causing incorrect cent conversion for mill values with a remainder of exactly 5.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

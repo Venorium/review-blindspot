@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1270,
+    "isolation_attested": true,
+    "latency_seconds": 75.853,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 549,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-d213c2d23da0410081a402aa18196323/attempt-1"
+  },
+  "job_id": "job-d213c2d23da0410081a402aa18196323",
+  "packet_sha256": "b87efc41871d3b7c89ab7b8e9806fd7ecc6b8f22cb0e2e3fc347ee9f910158ba",
+  "review": {
+    "findings": [
+      {
+        "description": "The implementation incorrectly uses str.lower() for case-insensitive comparison. The specification requires full Unicode case folding via str.casefold(), which handles many characters that lower() does not. As a result, the function may fail to match names that differ only in casefolding, e.g., \"straße\" vs. \"strasse\".",
+        "evidence": "Given users = [\"straße\"], query = \"  strasse  \", the expected result is \"straße\" according to the spec, but the candidate returns None because lower() on \"straße\" yields \"straße\", not \"strasse\".",
+        "file": "candidate.py",
+        "finding_id": "F001",
+        "line_end": 4,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation uses lower() instead of casefold(), causing incorrect matching for certain Unicode characters.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,11 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-bae505984eeb42029027b4654051702d",
+  "method": "external_judge",
+  "rationale": "Control. Triage: specification ambiguity. The finding reads 'Catalog(prices) holds non-negative integer prices' as a constructor validation requirement; the contract only specifies ValueError for update_price and no witness checks the constructor. Not a defect of the candidate under the author's intent; the sentence should be tightened in a later corpus version.",
+  "schema_version": 1,
+  "submission_sha256": "f68d1db98f3ed8a60028ac9da46322a9c1f5d18ffd6aa272003d6477e6939b50",
+  "target_detection": "not_applicable"
+}

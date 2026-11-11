@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-91551da8b3554f63a2cb155b2202bf8f",
+  "method": "external_judge",
+  "rationale": "Finding states remainder == 5 is not rounded up (> 5 instead of >= 5), with a tie input; same mechanism. Finding F001: \"The function does not round up when the mill value is exactly halfway between cents (i.e., remainder == 5).\".",
+  "schema_version": 1,
+  "submission_sha256": "83d899f59aeafded9f5c6ccc26841404546955d6b543d2d5feebe899fe8359e3",
+  "target_detection": "detected"
+}

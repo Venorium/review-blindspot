@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "iterator_exhaustion"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-756b93491a2f499fa0a1ffd45409bbea",
+  "method": "external_judge",
+  "rationale": "Finding states that records is iterated twice (sum, then the comprehension), so a one-shot iterator yields an empty result; same mechanism. Finding iterator_exhaustion: \"The function iterates over the `records` iterable twice: first to compute the `total` sum (line 2) and second to construct the dictionary (line 3). If `records` is a one-shot iterator (e.g., a generat\".",
+  "schema_version": 1,
+  "submission_sha256": "8288a407e4d964aec0c6061c63d7923428184f259e4097e87d0fbd09d2e00783",
+  "target_detection": "detected"
+}

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="title desc">
+  <title id="title">Review Blind Spot — do AI reviewers miss the same bug?</title>
+  <desc id="desc">An offline-first Python toolkit and agent skill measuring faulty approvals, target detection, control rejection and shared misses. A diagram separates the review verdict from evidence of detection.</desc>
+  <rect width="1200" height="340" rx="22" fill="#10232e"/>
+  <path d="M0 292H1200" stroke="#2b4550"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="40" y="34" width="8" height="22" rx="4" fill="#72dfb6"/>
+    <text x="62" y="52" fill="#b8cfda" font-size="19" font-weight="600" letter-spacing="2.6">REVIEW BLIND SPOT</text>
+    <text x="40" y="130" fill="#f6f8f5" font-size="57" font-weight="700" letter-spacing="-1.8">Do AI reviewers miss</text>
+    <text x="40" y="193" fill="#72dfb6" font-size="57" font-weight="700" letter-spacing="-1.8">the same bug?</text>
+    <text x="43" y="247" fill="#b8cfda" font-size="23">Measure it. Then keep every review claim tied to evidence.</text>
+    <text x="40" y="322" fill="#dbe8eb" font-size="17" letter-spacing="1.5">OFFLINE FIRST</text>
+    <text x="232" y="322" fill="#dbe8eb" font-size="17" letter-spacing="1.5">OLLAMA</text>
+    <text x="358" y="322" fill="#dbe8eb" font-size="17" letter-spacing="1.5">CODEX</text>
+    <text x="474" y="322" fill="#dbe8eb" font-size="17" letter-spacing="1.5">CLAUDE CODE</text>
+    <text x="922" y="322" fill="#9eb9c6" font-size="16">Python · zero dependencies</text>
+    <g transform="translate(760 40)">
+      <path d="M74 92H150V46H201M150 92V174H201" fill="none" stroke="#597480" stroke-width="3"/>
+      <rect x="0" y="53" width="108" height="92" rx="15" fill="#203a46" stroke="#597480"/>
+      <path d="M31 88L20 99L31 110M75 88L86 99L75 110M60 79L48 120" fill="none" stroke="#dbe8eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="201" y="7" width="195" height="81" rx="14" fill="#1b3e3d" stroke="#72dfb6"/>
+      <circle cx="226" cy="31" r="4" fill="#72dfb6"/>
+      <text x="241" y="37" fill="#72dfb6" font-size="14" letter-spacing="1.3">DECISION</text>
+      <text x="220" y="68" fill="#f6f8f5" font-size="23" font-weight="600">Review verdict</text>
+      <rect x="201" y="135" width="195" height="81" rx="14" fill="#40382a" stroke="#f1bd6c"/>
+      <circle cx="226" cy="160" r="4" fill="#f1bd6c"/>
+      <text x="241" y="166" fill="#f1bd6c" font-size="14" letter-spacing="1.3">EVIDENCE</text>
+      <text x="218" y="197" fill="#f6f8f5" font-size="21" font-weight="600">Defect detected?</text>
+      <path d="M299 93V129" stroke="#6e8791" stroke-dasharray="3 6" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-1c84f58d48ea4fc7b75683c6ceb31028",
+  "method": "external_judge",
+  "rationale": "Finding states that path.startswith(base) without the slash accepts sibling paths sharing the prefix; same mechanism and violated rule. Finding F001: \"The condition checks only that the resolved path starts with the base string, which allows paths that are not inside the base directory to be accepted. This violates the contract that the returned pat\".",
+  "schema_version": 1,
+  "submission_sha256": "8a8edd772e0e998cb6ed86a485f05970e17232374351e894a5eee211fdf441f9",
+  "target_detection": "detected"
+}

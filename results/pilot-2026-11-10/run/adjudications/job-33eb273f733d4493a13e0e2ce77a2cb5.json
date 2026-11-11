@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "C001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-33eb273f733d4493a13e0e2ce77a2cb5",
+  "method": "external_judge",
+  "rationale": "Finding states versions are compared as strings, so '10' sorts before '2'; same mechanism (text instead of numeric ordering). Finding C001: \"Key uses string comparison instead of numeric comparison, violating ascending numeric version requirement\".",
+  "schema_version": 1,
+  "submission_sha256": "330073352c9d7ac4e75d3b9505c6a85db310d61f960a07b63acc0b28de55fe16",
+  "target_detection": "detected"
+}

@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-4ba0f317331540b2825a857aafed0ce2",
+  "method": "external_judge",
+  "rationale": "Finding states the date is taken in the input offset without converting to UTC, with an offset that crosses midnight; same mechanism. Finding F001: \"utc_day does not adjust the parsed datetime to UTC; it returns the date in the input offset timezone.\".",
+  "schema_version": 1,
+  "submission_sha256": "4fd584d125c18ed7dd7e27f4736090ba0ff130ed6171a8766758ffcec0939efc",
+  "target_detection": "detected"
+}

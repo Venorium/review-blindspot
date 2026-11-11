@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1152,
+    "isolation_attested": true,
+    "latency_seconds": 23.532,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 542,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-1bd4d6bbfe6c4a2ba1a7bf097b45a183/attempt-1"
+  },
+  "job_id": "job-1bd4d6bbfe6c4a2ba1a7bf097b45a183",
+  "packet_sha256": "9f35ff05f93972add46b6f429f136f6397ee25ebcc011b10cd1e46ced382b93e",
+  "review": {
+    "findings": [
+      {
+        "description": "Using Python's floor division (//) returns the floor of the quotient, which for negative dividends truncates toward negative infinity. The specification requires truncation toward zero for all signed integer n and positive divisor d.",
+        "evidence": "divide(-7, 3) returns -3 with //, but the correct result truncating toward zero is -2.",
+        "file": "candidate.py",
+        "finding_id": "DIVIDE_NEGATIVE_TRUNC",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation incorrectly handles negative dividends; Python's // truncates toward negative infinity rather than zero, violating the contract.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

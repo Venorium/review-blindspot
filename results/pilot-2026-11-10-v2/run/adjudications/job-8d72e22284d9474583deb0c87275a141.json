@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "FC001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-8d72e22284d9474583deb0c87275a141",
+  "method": "external_judge",
+  "rationale": "Finding states that sleep runs after the final failed call before re-raising; same mechanism and violated rule. Finding FC001: \"Sleeps even on the last retry attempt, contrary to specification that requires no sleep after the final failed call.\".",
+  "schema_version": 1,
+  "submission_sha256": "e9c19079b7a05c1f64e52f88245d39d50ae35d95bac8a3a3594363318441f343",
+  "target_detection": "detected"
+}

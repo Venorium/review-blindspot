@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 2117,
+    "isolation_attested": true,
+    "latency_seconds": 480.524,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 5070,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-c6ce6e9f1e404949908c424099f02ac4/attempt-1"
+  },
+  "job_id": "job-c6ce6e9f1e404949908c424099f02ac4",
+  "packet_sha256": "dc2c27c8b9abf2049f11bb23130786aedee1ed0ba677cdb4c561e795fd285f73",
+  "review": {
+    "findings": [],
+    "summary": "The candidate correctly implements the new requirement to raise a ValueError for memos longer than 40 characters in `Ledger.record`. It also correctly reorders the operations in `transfer` to ensure that if `ledger.record` raises a `ValueError`, the account balances remain unchanged, satisfying the requirement that the accounts and ledger must remain entirely unchanged if the ledger rejects the entry.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

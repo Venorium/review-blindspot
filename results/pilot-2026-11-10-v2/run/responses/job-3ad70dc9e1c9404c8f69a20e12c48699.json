@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1806,
+    "isolation_attested": true,
+    "latency_seconds": 99.487,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1227,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-3ad70dc9e1c9404c8f69a20e12c48699/attempt-1"
+  },
+  "job_id": "job-3ad70dc9e1c9404c8f69a20e12c48699",
+  "packet_sha256": "0cf8a162afbaf6a3e4b38d6c23b1fd82d3b92d6af5ba45caab1678db532f15da",
+  "review": {
+    "findings": [
+      {
+        "description": "transfer applies the balance change before attempting to record the ledger entry, so if ledger.record raises a ValueError (e.g., memo too long) the accounts are already mutated, breaking the contract that all changes must be rolled back on failure.",
+        "evidence": "Example: accounts={\"a\":10,\"b\":0}, ledger=Ledger(), memo='x'*41, amount=5. transfer(accounts, ledger, \"a\", \"b\", 5, memo) raises ValueError, but accounts become {\"a\":5,\"b\":5} and ledger.entries remains empty, instead of leaving accounts unchanged.",
+        "file": "candidate.py",
+        "finding_id": "defect-1",
+        "line_end": 20,
+        "line_start": 18,
+        "severity": "high"
+      }
+    ],
+    "summary": "transfer modifies accounts before ledger.record, so a ValueError from the ledger leaves accounts altered, violating the contract requirement that state remains unchanged on failure.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

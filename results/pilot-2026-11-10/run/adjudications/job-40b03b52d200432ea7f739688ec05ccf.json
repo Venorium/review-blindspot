@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "equality_case_violation"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-40b03b52d200432ea7f739688ec05ccf",
+  "method": "external_judge",
+  "rationale": "Finding states that now == expires_at is reported active (<= instead of <), with the boundary input; same mechanism and violated rule as the planted defect. Finding equality_case_violation: \"The function returns True when 'now' equals 'expires_at', but the specification states that the token is inactive at or after 'expires_at'.\".",
+  "schema_version": 1,
+  "submission_sha256": "79cae82793789d768ec2f2d99dd8ecff016a851d1efcb41906a0c5aeebaf5e12",
+  "target_detection": "detected"
+}

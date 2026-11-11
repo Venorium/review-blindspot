@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1162,
+    "isolation_attested": true,
+    "latency_seconds": 26.193,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 541,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-8f6df5371da149d09415e1561fa3ee54/attempt-1"
+  },
+  "job_id": "job-8f6df5371da149d09415e1561fa3ee54",
+  "packet_sha256": "e52154e6bb6816a7d52829659fb9ce4e343a95f0a60c2f0a378a57cb392fbdaf",
+  "review": {
+    "findings": [
+      {
+        "description": "The implementation uses logical OR to fall back to default, causing falsy values such as 0, False, None, and '' to be incorrectly replaced with the default when the key exists.",
+        "evidence": "Input: candidate.setting({'x': 0}, 'x', 9) returns 9, but per spec the stored value 0 should be returned.",
+        "file": "candidate.py",
+        "finding_id": "finding_001",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation incorrectly handles falsy values for existing keys, violating the spec.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

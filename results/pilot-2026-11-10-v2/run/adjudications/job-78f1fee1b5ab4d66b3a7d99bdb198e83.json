@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-78f1fee1b5ab4d66b3a7d99bdb198e83",
+  "method": "external_judge",
+  "rationale": "Finding states that path.startswith(base) without the slash accepts sibling paths sharing the prefix; same mechanism and violated rule. Finding F001: \"Path escape not correctly detected; using path.startswith(base) accepts paths that share the base prefix but are not actually inside the base directory, e.g., base \"/srv/uploads\" with name \"../uploads\".",
+  "schema_version": 1,
+  "submission_sha256": "f4ca503ab0fd87a662cbadcafcd5a64f86eb6fae1c74b671d2b827467065c2a8",
+  "target_detection": "detected"
+}

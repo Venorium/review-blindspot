@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "strict-inequality-violation"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-d3949b0bceb44b0191d8054f2adc3681",
+  "method": "external_judge",
+  "rationale": "Finding states that now == expires_at is reported active (<= instead of <), with the boundary input; same mechanism and violated rule as the planted defect. Finding strict-inequality-violation: \"Function returns True when now equals expires_at, but the specification requires inactivity at or after expires_at.\".",
+  "schema_version": 1,
+  "submission_sha256": "e3e96c51ff6c2b5ea7f72ca76d265cc4685d5e170cb3e6217c030f18903d362b",
+  "target_detection": "detected"
+}

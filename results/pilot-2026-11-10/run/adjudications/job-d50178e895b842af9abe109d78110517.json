@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F1"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-d50178e895b842af9abe109d78110517",
+  "method": "external_judge",
+  "rationale": "Finding states unknown tiers return the default 100 via dict.get instead of raising ValueError; same mechanism. Finding F1: \"The function returns 100 for any tier not explicitly defined in the limits dictionary, rather than raising a ValueError as required by the specification.\".",
+  "schema_version": 1,
+  "submission_sha256": "ccd6793a0a39526a1152684142ef85c7094d119591f99195e3c482548f42b059",
+  "target_detection": "detected"
+}

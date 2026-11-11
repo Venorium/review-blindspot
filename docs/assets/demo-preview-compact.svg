@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="704" viewBox="0 0 600 704" role="img" aria-labelledby="title desc">
+<title id="title">Scripted demo outcomes, not model results</title>
+<desc id="desc">Approval, detection and control rejection are separate measures. Counts are available as text in the linked example report.</desc>
+<rect width="600" height="704" rx="22" fill="#f2f5f3"/>
+<g font-family="Segoe UI, Arial, sans-serif">
+<rect x="24" y="24" width="242" height="38" rx="19" fill="#eadbbf"/>
+<text x="44" y="51" font-size="22" font-weight="700" fill="#5d431e">SCRIPTED DEMO</text>
+<text x="24" y="98" font-size="25" fill="#465f6b">No model was evaluated.</text>
+<rect x="18" y="127" width="564" height="231" rx="14" fill="#fff"/>
+<text x="40" y="170" font-size="31" font-weight="700" fill="#10232e">One reviewer</text>
+<text x="40" y="223" font-size="27" fill="#465f6b">Faulty approvals</text>
+<text x="537" y="223" text-anchor="end" font-size="33" font-weight="600" fill="#173e49">1 / 2</text>
+<text x="40" y="274" font-size="27" fill="#465f6b">Target detections</text>
+<text x="537" y="274" text-anchor="end" font-size="33" font-weight="600" fill="#173e49">0 / 2</text>
+<text x="40" y="325" font-size="27" fill="#465f6b">Controls rejected</text>
+<text x="537" y="325" text-anchor="end" font-size="33" font-weight="600" fill="#173e49">1 / 2</text>
+<rect x="18" y="376" width="564" height="231" rx="14" fill="#fff"/>
+<text x="40" y="419" font-size="31" font-weight="700" fill="#10232e">Three reviewers</text>
+<text x="40" y="472" font-size="27" fill="#465f6b">Faulty approvals</text>
+<text x="537" y="472" text-anchor="end" font-size="33" font-weight="600" fill="#173e49">0 / 2</text>
+<text x="40" y="523" font-size="27" fill="#465f6b">Target detections</text>
+<text x="537" y="523" text-anchor="end" font-size="33" font-weight="600" fill="#173e49">1 / 2</text>
+<text x="40" y="574" font-size="27" fill="#465f6b">Controls rejected</text>
+<text x="537" y="574" text-anchor="end" font-size="33" font-weight="600" fill="#173e49">1 / 2</text>
+<text x="24" y="661" font-size="24" fill="#465f6b">A blocked candidate is not necessarily</text>
+<text x="24" y="691" font-size="24" fill="#465f6b">a detected defect.</text>
+</g></svg>

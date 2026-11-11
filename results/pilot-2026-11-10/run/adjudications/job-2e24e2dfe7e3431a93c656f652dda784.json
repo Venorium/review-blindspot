@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "DEF-001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-2e24e2dfe7e3431a93c656f652dda784",
+  "method": "external_judge",
+  "rationale": "Finding states repeated product quantities overwrite instead of summing, with a repeated-product input; same mechanism. Finding DEF-001: \"Fails to sum quantities for repeated product IDs as required by the specification.\".",
+  "schema_version": 1,
+  "submission_sha256": "ab989628143301b000e3430ddac881852cd724478025d41bb9c9c927b98140d4",
+  "target_detection": "detected"
+}

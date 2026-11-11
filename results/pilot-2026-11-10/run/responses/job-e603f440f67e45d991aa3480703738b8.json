@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1287,
+    "isolation_attested": true,
+    "latency_seconds": 166.226,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 1764,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-e603f440f67e45d991aa3480703738b8/attempt-1"
+  },
+  "job_id": "job-e603f440f67e45d991aa3480703738b8",
+  "packet_sha256": "7a27ea3b4071c34a89ad5d068e3ddfb86e034b18da4c68eafa94f8e9556b7f45",
+  "review": {
+    "findings": [],
+    "summary": "candidate.py correctly implements quota(tier) per SPEC.md. It returns 10 for 'basic', 100 for 'premium', and raises ValueError for all other inputs. The dictionary-based lookup guarantees exact, case-sensitive matching without relying on fall-through logic that could cause defects. No correctness issues found.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

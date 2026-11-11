@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1899,
+    "isolation_attested": true,
+    "latency_seconds": 174.646,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 3373,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-9a12a4be9c394733b8dd455a5897c99b/attempt-1"
+  },
+  "job_id": "job-9a12a4be9c394733b8dd455a5897c99b",
+  "packet_sha256": "8ba487e3aaf861c2f1591659086565555129ec8d624a751b2e9735493a1010ca",
+  "review": {
+    "findings": [
+      {
+        "description": "price() does not cache the result of a missing SKU lookup. Consecutive calls to price(\"missing\") will each invoke _read and increment reads, violating the contract that each SKU must be read at most once between two updates of that SKU.",
+        "evidence": "```python\n# Catalog initialization\ncatalog = candidate.Catalog({\"a\": 1})\n# First missing SKU lookup\ncatalog.price(\"missing\")  # _read called, reads += 1\n# Second missing SKU lookup\ncatalog.price(\"missing\")  # _read called again, reads += 1\n# After these two calls, reads == 2, which violates the caching requirement.\n```",
+        "file": "candidate.py",
+        "finding_id": "missing_sku_cache",
+        "line_end": 14,
+        "line_start": 11,
+        "severity": "medium"
+      }
+    ],
+    "summary": "Candidate fails to cache missing SKU lookups, violating the caching requirement that each SKU must be read from the table at most once between updates.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

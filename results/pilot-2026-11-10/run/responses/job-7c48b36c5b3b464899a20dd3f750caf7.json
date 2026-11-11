@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1442,
+    "isolation_attested": true,
+    "latency_seconds": 70.89,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 1766,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-7c48b36c5b3b464899a20dd3f750caf7/attempt-1"
+  },
+  "job_id": "job-7c48b36c5b3b464899a20dd3f750caf7",
+  "packet_sha256": "a5b22687138337736f06917c17ed33fb275f2c0ae473c709c954120998132f02",
+  "review": {
+    "findings": [],
+    "summary": "The implementation correctly adheres to the specification. It validates that all values in the batch are non-negative using `any()` before performing any mutation on the `store`, ensuring that if a `ValueError` is raised, the `store` remains unchanged.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

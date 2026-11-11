@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "ATOMICITY_VIOLATION"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-0bbd763d1a0a49448bcfeefdc9c46c4d",
+  "method": "external_judge",
+  "rationale": "Finding states that balances are mutated before ledger.record can reject a long memo, leaving accounts changed on failure; same mechanism. Finding ATOMICITY_VIOLATION: \"Account balances are modified before ledger.record() is invoked. If ledger.record raises ValueError, the function propagates the exception without rolling back the account changes, violating the contr\".",
+  "schema_version": 1,
+  "submission_sha256": "9c110ce28a82d8d7a42d23798e862b6990a9b34fd8f87df1c2f15e5e7ccd5ccd",
+  "target_detection": "detected"
+}

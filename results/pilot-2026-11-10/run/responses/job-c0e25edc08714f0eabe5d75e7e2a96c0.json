@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1393,
+    "isolation_attested": true,
+    "latency_seconds": 99.368,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 3282,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-c0e25edc08714f0eabe5d75e7e2a96c0/attempt-1"
+  },
+  "job_id": "job-c0e25edc08714f0eabe5d75e7e2a96c0",
+  "packet_sha256": "c3bbd74397a332841dfc491ad5cc2c79ef1ccc5a459b69c1b0df88ff81da4ffb",
+  "review": {
+    "findings": [
+      {
+        "description": "The condition `version >= state['version']` triggers on equality, but the contract requires updates only when version is strictly greater than state[version].",
+        "evidence": "SPEC.md mandates: 'Apply the update only when version is strictly greater than state[version]... Equal or older versions return False and must leave the entire state unchanged.' candidate.py line 2 uses `>=`, causing state mutation and True return for equal versions, e.g., advance({'version': 2, 'value': 'a', 'writes': 0}, 2, 'b').",
+        "file": "candidate.py",
+        "finding_id": "equality_threshold_violation",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "candidate.py incorrectly updates the state when version equals the current state version, violating the strict greater-than requirement.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

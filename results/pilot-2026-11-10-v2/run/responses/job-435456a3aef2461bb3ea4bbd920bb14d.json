@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1860,
+    "isolation_attested": true,
+    "latency_seconds": 271.862,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 599,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-435456a3aef2461bb3ea4bbd920bb14d/attempt-1"
+  },
+  "job_id": "job-435456a3aef2461bb3ea4bbd920bb14d",
+  "packet_sha256": "815bcd124be1b76a7321665f0820e3ee0968b5fe5c69a889a3d1375566b3c8d2",
+  "review": {
+    "findings": [
+      {
+        "description": "update_price does not clear or update the cached value for the SKU, so subsequent price() calls return the old cached price instead of the new value.",
+        "evidence": "catalog = candidate.Catalog({\"a\": 100})\ncatalog.price(\"a\")  # caches 100\ncatalog.update_price(\"a\", 200)\nprint(catalog.price(\"a\"))  # still outputs 100, not 200, violating the contract.",
+        "file": "candidate.py",
+        "finding_id": "C001",
+        "line_end": 19,
+        "line_start": 16,
+        "severity": "high"
+      }
+    ],
+    "summary": "The candidate implementation fails to invalidate the cache when a SKU price is updated, leading to stale data and violating the specification.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

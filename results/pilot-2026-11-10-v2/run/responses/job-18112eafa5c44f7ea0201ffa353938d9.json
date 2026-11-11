@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1670,
+    "isolation_attested": true,
+    "latency_seconds": 273.887,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 6048,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-18112eafa5c44f7ea0201ffa353938d9/attempt-1"
+  },
+  "job_id": "job-18112eafa5c44f7ea0201ffa353938d9",
+  "packet_sha256": "6342295d0ba33f9b3dfd87287c4f0f37fc642f47b9fec3b1c112dc160c47c78a",
+  "review": {
+    "findings": [],
+    "summary": "Candidate implementation correctly follows the specification for adding business days.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

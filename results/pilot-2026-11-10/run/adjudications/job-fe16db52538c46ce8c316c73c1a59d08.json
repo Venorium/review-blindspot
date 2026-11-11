@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "UTC_DATE_NOT_CONVERTED"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-fe16db52538c46ce8c316c73c1a59d08",
+  "method": "external_judge",
+  "rationale": "Finding states the date is taken in the input offset without converting to UTC, with an offset that crosses midnight; same mechanism. Finding UTC_DATE_NOT_CONVERTED: \"The function returns the date component of the parsed datetime in its original timezone instead of converting to UTC first.\".",
+  "schema_version": 1,
+  "submission_sha256": "ae6c28bd20aad3dd94c59173d1296cbd5ccbec52ab834fed32f0cc42ca54ed02",
+  "target_detection": "detected"
+}

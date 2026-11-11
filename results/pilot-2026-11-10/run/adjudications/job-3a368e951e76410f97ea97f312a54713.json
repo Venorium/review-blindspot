@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "1"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-3a368e951e76410f97ea97f312a54713",
+  "method": "external_judge",
+  "rationale": "Finding states the function returns the stored list itself, so caller mutation changes the record; same mechanism. Finding 1: \"labels() returns the same list from record['labels'] instead of a copy, so mutating the returned list also mutates the original record.\".",
+  "schema_version": 1,
+  "submission_sha256": "17bb783a44fe2b4999fa0c6ac0db54dc4b86d21edde6c061dd510b6ab67c614d",
+  "target_detection": "detected"
+}

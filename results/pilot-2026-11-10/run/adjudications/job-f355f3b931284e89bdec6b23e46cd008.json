@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "DIVIDE_TRUNCATION_ERROR"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-f355f3b931284e89bdec6b23e46cd008",
+  "method": "external_judge",
+  "rationale": "Finding states // floors toward negative infinity instead of truncating toward zero for negative non-integral quotients; same mechanism. Finding DIVIDE_TRUNCATION_ERROR: \"Using Python's floor division (//) truncates toward negative infinity, leading to an incorrect quotient for negative dividends that are not evenly divisible by d. The specification requires truncation toward zero.\".",
+  "schema_version": 1,
+  "submission_sha256": "e02e66306412f64d7d2a793012b44aa6743ba42d0e672da0c2f70a2fe5e890e8",
+  "target_detection": "detected"
+}

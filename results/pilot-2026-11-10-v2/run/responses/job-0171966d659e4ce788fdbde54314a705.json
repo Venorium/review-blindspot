@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1919,
+    "isolation_attested": true,
+    "latency_seconds": 230.181,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 2806,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-0171966d659e4ce788fdbde54314a705/attempt-1"
+  },
+  "job_id": "job-0171966d659e4ce788fdbde54314a705",
+  "packet_sha256": "2d8164c11be9687a44421589445598e840fb33a34f8c6cf97930a2b69586694c",
+  "review": {
+    "findings": [
+      {
+        "description": "transfer accepts non-integer amounts, violating the spec that amount must be a positive integer.",
+        "evidence": "The function only checks if amount <= 0 but does not verify that amount is an instance of int, allowing floats or other types to be used as the transfer amount.",
+        "file": "candidate.py",
+        "finding_id": "NON_INTEGER_AMOUNT",
+        "line_end": 13,
+        "line_start": 12,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate transfer function does not enforce that amount is an integer, violating the specification that amount must be a positive integer.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

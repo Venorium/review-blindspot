@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1124,
+    "isolation_attested": true,
+    "latency_seconds": 70.55,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 418,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-a7bfe6a004234ae5af6eeb352f4fdc87/attempt-1"
+  },
+  "job_id": "job-a7bfe6a004234ae5af6eeb352f4fdc87",
+  "packet_sha256": "9667d1ad82fa16e7ca300efa3b7482243eb299a25b1135f67d0a3f6148848f8f",
+  "review": {
+    "findings": [
+      {
+        "description": "Using the // operator truncates toward negative infinity, violating the contract that division should truncate toward zero for arbitrary-size signed integers.",
+        "evidence": "For example, divide(-7, 3) currently returns -3 (Python floor division) but should return -2.",
+        "file": "candidate.py",
+        "finding_id": "DIV001",
+        "line_end": 1,
+        "line_start": 1,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation incorrectly handles truncation toward zero for negative numerators, using Python's floor division which rounds toward negative infinity.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

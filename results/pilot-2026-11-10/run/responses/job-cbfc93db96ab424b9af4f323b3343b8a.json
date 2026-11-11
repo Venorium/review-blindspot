@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1413,
+    "isolation_attested": true,
+    "latency_seconds": 191.494,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 2000,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-cbfc93db96ab424b9af4f323b3343b8a/attempt-1"
+  },
+  "job_id": "job-cbfc93db96ab424b9af4f323b3343b8a",
+  "packet_sha256": "87a51500ce7234add61a1e56b8fe70ab5380fa6220c5abb3ad9fd91ab599c183",
+  "review": {
+    "findings": [],
+    "summary": "The candidate correctly implements the required behavior, fixing the defect in the original code where identical payloads were being incorrectly blocked from being recorded.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

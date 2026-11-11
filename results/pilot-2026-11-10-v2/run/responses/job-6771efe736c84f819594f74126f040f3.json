@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1328,
+    "isolation_attested": true,
+    "latency_seconds": 51.062,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 979,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-6771efe736c84f819594f74126f040f3/attempt-1"
+  },
+  "job_id": "job-6771efe736c84f819594f74126f040f3",
+  "packet_sha256": "95976b3da6542b5ecd6d98f3915d1938c7e095397110db938548b0f0ffc288da",
+  "review": {
+    "findings": [
+      {
+        "description": "The implementation reverses the sorted list after sorting by priority, which breaks the required stability for tickets with equal priority. Equal priority tickets must preserve their original relative order, but reversing the list inverts that order.",
+        "evidence": "Example: queue_order([('t1',5),('t2',5),('t3',3)]) returns ['t2','t1','t3'] but should be ['t1','t2','t3'].",
+        "file": "candidate.py",
+        "finding_id": "queue_order_stability",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation reverses the sorted list, breaking stability for tickets with equal priority.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

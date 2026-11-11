@@ -1,0 +1,48 @@
+{
+  "verified_on": "2026-10-04",
+  "scope": "targeted primary-source lookup, not exhaustive or replicated",
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Martian Code Review Bench",
+      "url": "https://github.com/withmartian/code-review-benchmark",
+      "status": "repository; mutable README; no commit pinned"
+    },
+    {
+      "id": "S2",
+      "title": "The Specification as Quality Gate",
+      "url": "https://arxiv.org/abs/2603.25773",
+      "status": "arXiv:2603.25773v1; preprint; 2026-03-26"
+    },
+    {
+      "id": "S3",
+      "title": "Demystifying evals for AI agents",
+      "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "status": "engineering guide; 2026-01-09"
+    },
+    {
+      "id": "S4",
+      "title": "Introducing upgrades to Codex",
+      "url": "https://openai.com/index/introducing-upgrades-to-codex/",
+      "status": "official product announcement"
+    },
+    {
+      "id": "S5",
+      "title": "Agent Review Panel",
+      "url": "https://github.com/wan-huiyan/agent-review-panel",
+      "status": "repository; mutable README"
+    },
+    {
+      "id": "S6",
+      "title": "actions/checkout",
+      "url": "https://github.com/actions/checkout",
+      "status": "official action documentation; v7 documented"
+    },
+    {
+      "id": "S7",
+      "title": "actions/setup-python",
+      "url": "https://github.com/actions/setup-python",
+      "status": "official action documentation; v7 documented"
+    }
+  ]
+}

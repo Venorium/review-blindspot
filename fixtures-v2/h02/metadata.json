@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "h02",
+  "family_id": "h02",
+  "title": "One-shot iterator allocation",
+  "origin": "original_synthetic_v2",
+  "split": "evaluation_v2_2026_11",
+  "spec": "Implement allocate(records, budget). records is any iterable of (name, weight) pairs with unique string names and non-negative integer weights; it may be a one-shot iterator such as a generator and must be consumed only once. budget is a non-negative integer. Return a dictionary mapping every name to budget * weight // total, where total is the sum of all weights. When total is zero, every name maps to 0.",
+  "target_defect": "records is iterated twice, so a generator input yields an empty result after the total is computed.",
+  "author_rationale": "Simplify the allocation into one comprehension and avoid copying the input.",
+  "limitations": "Synthetic module written by the repository's AI engineering agent after the November 2026 development pilot saturated corpus v1, before any model reviewed it. Designed around omissions, cross-function effects and edge cases stated in the contract. Not a natural pull request; correct means conforming to the stated contract and supplied checks."
+}

@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "E001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-d6af7db51d4f4b96a797d60f90d0318b",
+  "method": "external_judge",
+  "rationale": "Finding states that path.startswith(base) without the slash accepts sibling paths sharing the prefix; same mechanism and violated rule. Finding E001: \"Path validation uses startswith(base), which accepts any path that begins with the base string, even if it is not truly inside the base directory. For example, with base \"/srv/uploads\" and name \"../up\".",
+  "schema_version": 1,
+  "submission_sha256": "b9ce8c018f60f3e08ea37688a17d41c89981785ecc4171d34f1b891307980546",
+  "target_detection": "detected"
+}

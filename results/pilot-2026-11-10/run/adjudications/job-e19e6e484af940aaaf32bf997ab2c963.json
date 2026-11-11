@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "f1"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-e19e6e484af940aaaf32bf997ab2c963",
+  "method": "external_judge",
+  "rationale": "Finding states that now == expires_at is reported active (<= instead of <), with the boundary input; same mechanism and violated rule as the planted defect. Finding f1: \"Incorrect comparison: uses <= instead of <, causing active(10,10) to return True instead of False.\".",
+  "schema_version": 1,
+  "submission_sha256": "c805b2bcc39e3af2895d602a8117826acadcb08c03e706a5c4c1774398f3b938",
+  "target_detection": "detected"
+}

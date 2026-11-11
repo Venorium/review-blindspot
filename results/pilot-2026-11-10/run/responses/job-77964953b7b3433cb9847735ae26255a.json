@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1229,
+    "isolation_attested": true,
+    "latency_seconds": 32.007,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 359,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-77964953b7b3433cb9847735ae26255a/attempt-1"
+  },
+  "job_id": "job-77964953b7b3433cb9847735ae26255a",
+  "packet_sha256": "6540ae03a23a83aa7158362e1611a2989ee836a995a1d3b5b04627f61cb45a58",
+  "review": {
+    "findings": [
+      {
+        "description": "The implementation returns a dictionary with each product mapped to its last encountered quantity instead of summing all quantities for repeated products.",
+        "evidence": "For input [('a', 1), ('a', 2)], the expected output is {'a': 3} but the candidate returns {'a': 2}.",
+        "file": "candidate.py",
+        "finding_id": "duplicate_quantities_not_summed",
+        "line_end": 2,
+        "line_start": 1,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation fails to sum duplicate product quantities, violating the contract.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "h05",
+  "family_id": "h05",
+  "title": "Stable descending priority order",
+  "origin": "original_synthetic_v2",
+  "split": "evaluation_v2_2026_11",
+  "spec": "Implement queue_order(tickets). tickets is a list of (ticket_id, priority) pairs. Priorities are mutually comparable values, for example integers or tuples, and need not be numeric. Return the list of ticket IDs ordered from highest to lowest priority; tickets with equal priority keep their original relative order (earlier submissions first). Do not modify tickets.",
+  "target_defect": "Reversing an ascending sort also reverses the order of tickets with equal priority.",
+  "author_rationale": "Support non-numeric priorities such as tuples, which cannot be negated.",
+  "limitations": "Synthetic module written by the repository's AI engineering agent after the November 2026 development pilot saturated corpus v1, before any model reviewed it. Designed around omissions, cross-function effects and edge cases stated in the contract. Not a natural pull request; correct means conforming to the stated contract and supplied checks."
+}

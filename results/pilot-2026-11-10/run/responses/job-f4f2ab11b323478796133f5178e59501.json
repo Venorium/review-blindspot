@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1219,
+    "isolation_attested": true,
+    "latency_seconds": 38.52,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 555,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-f4f2ab11b323478796133f5178e59501/attempt-1"
+  },
+  "job_id": "job-f4f2ab11b323478796133f5178e59501",
+  "packet_sha256": "15a0cf8fd029c7890fb3fd8ca906dffe471226e939f8a2278d79259a2d0e277f",
+  "review": {
+    "findings": [
+      {
+        "description": "The implementation uses a non-strict inequality (<=) to compare the maximum start and minimum end of the intervals. For half-open intervals [start, end), touching endpoints should not be considered overlapping, but the current logic returns True when intervals only share an endpoint. This violates the contract.",
+        "evidence": ">>> candidate.overlaps((1, 3), (3, 5))  # Expected: False, Actual: True",
+        "file": "candidate.py",
+        "finding_id": "overlap-incorrect-interval-touch",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation incorrectly handles touching endpoints in half-open intervals.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1919,
+    "isolation_attested": true,
+    "latency_seconds": 85.554,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 2371,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-7e12cb3bf352450aa8dd82a56a1eea67/attempt-1"
+  },
+  "job_id": "job-7e12cb3bf352450aa8dd82a56a1eea67",
+  "packet_sha256": "2d8164c11be9687a44421589445598e840fb33a34f8c6cf97930a2b69586694c",
+  "review": {
+    "findings": [
+      {
+        "description": "transfer does not verify that the amount is an integer. The check \"if amount <= 0\" only enforces positivity but allows non‑integer types (e.g., floats), violating the contract that the amount must be a positive integer. This can result in accounts storing non‑integer balances and ledger entries with non‑integer amounts.",
+        "evidence": "Calling transfer(accounts, ledger, 'a', 'b', 4.5, 'test') will not raise an error, will deduct 4.5 from account 'a', add 4.5 to account 'b', and record a ledger entry with amount 4.5, contrary to the specification that balances and amounts must remain integers.",
+        "file": "candidate.py",
+        "finding_id": "F001",
+        "line_end": 17,
+        "line_start": 12,
+        "severity": "high"
+      }
+    ],
+    "summary": "The candidate implementation fails to enforce the contract that the transfer amount must be a positive integer, leading to potential non‑integer balances and ledger entries.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

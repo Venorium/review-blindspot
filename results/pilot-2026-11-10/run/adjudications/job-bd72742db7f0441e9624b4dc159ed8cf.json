@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-bd72742db7f0441e9624b4dc159ed8cf",
+  "method": "external_judge",
+  "rationale": "Finding states repeated product quantities overwrite instead of summing, with a repeated-product input; same mechanism. Finding F001: \"The function fails to aggregate quantities for duplicate product identifiers; it overwrites earlier values instead of summing them.\".",
+  "schema_version": 1,
+  "submission_sha256": "035dc714b2a05620d7046806b03e7f7b00a114e587c12472d3d7da8e250af8bf",
+  "target_detection": "detected"
+}

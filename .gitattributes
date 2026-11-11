@@ -1,0 +1,14 @@
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.txt text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.toml text eol=lf
+*.cff text eol=lf
+*.svg text eol=lf
+# Experiment runs and their published copies are hashed byte for byte.
+# Never normalize their line endings.
+results/** -text
+docs/examples/** -text

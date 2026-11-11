@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F1"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-189c26d748484a93ae6f5e0398ee9242",
+  "method": "external_judge",
+  "rationale": "Finding states the date is taken in the input offset without converting to UTC, with an offset that crosses midnight; same mechanism. Finding F1: \"The function returns the date part of the parsed datetime without converting it to UTC. For timestamps with a non-zero offset, this yields the local date rather than the correct UTC date, violating the contract.\".",
+  "schema_version": 1,
+  "submission_sha256": "21c2b1f1d5528a93baf207fdae482a5caebe20da2a5493adc42044f63a051901",
+  "target_detection": "detected"
+}

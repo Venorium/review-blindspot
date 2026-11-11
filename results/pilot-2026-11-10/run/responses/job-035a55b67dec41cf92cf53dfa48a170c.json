@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1254,
+    "isolation_attested": true,
+    "latency_seconds": 58.339,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 983,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-035a55b67dec41cf92cf53dfa48a170c/attempt-1"
+  },
+  "job_id": "job-035a55b67dec41cf92cf53dfa48a170c",
+  "packet_sha256": "eab97c299da050cc545d72192ec9c89e368442cebf38b6cfdcb24362af2c2731",
+  "review": {
+    "findings": [],
+    "summary": "Candidate implementation correctly parses ISO 8601 timestamps with explicit UTC offsets, converts them to UTC, extracts the date, and returns it in YYYY-MM-DD format as required by the contract. No contractual violations or defects were found.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

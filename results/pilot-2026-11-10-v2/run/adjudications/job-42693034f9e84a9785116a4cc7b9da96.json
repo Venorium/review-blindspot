@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-42693034f9e84a9785116a4cc7b9da96",
+  "method": "external_judge",
+  "rationale": "Finding states that records is iterated twice (sum, then the comprehension), so a one-shot iterator yields an empty result; same mechanism. Finding F001: \"The function consumes the records iterable twice: once to compute the total weight and again to build the result dictionary. If records is a one‑shot iterator (e.g., a generator), the second iteration\".",
+  "schema_version": 1,
+  "submission_sha256": "670e5c20f82d176b3506df7d956802bb862368f6a821a1f8a9731cd8b43e3c9a",
+  "target_detection": "detected"
+}

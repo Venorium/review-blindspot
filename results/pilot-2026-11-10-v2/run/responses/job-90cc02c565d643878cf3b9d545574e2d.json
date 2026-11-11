@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1385,
+    "isolation_attested": true,
+    "latency_seconds": 125.287,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 821,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-90cc02c565d643878cf3b9d545574e2d/attempt-1"
+  },
+  "job_id": "job-90cc02c565d643878cf3b9d545574e2d",
+  "packet_sha256": "4f0894a2d251cb75a8471389f037d9147a429a33bdff4a3450ab0faa33f0d48c",
+  "review": {
+    "findings": [
+      {
+        "description": "The function computes the total weight by iterating over the records iterable and then immediately iterates over it again to build the result dictionary. This double iteration exhausts a one-shot iterator (e.g., a generator), leading to an empty result dictionary. The specification requires that records may be any iterable, including generators, and that the iterator must be consumed only once.",
+        "evidence": "When called with records = (x for x in [(\"a\",1),(\"b\",3)]), allocate(records, 100) returns {} instead of {\"a\":25,\"b\":75}.",
+        "file": "candidate.py",
+        "finding_id": "F1",
+        "line_end": 3,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation consumes the input records iterator twice, causing incorrect allocations for one-shot iterators such as generators.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

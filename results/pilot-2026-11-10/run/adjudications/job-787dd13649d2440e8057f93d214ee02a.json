@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "incorrect_comparison_operator"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-787dd13649d2440e8057f93d214ee02a",
+  "method": "external_judge",
+  "rationale": "Finding states touching intervals are reported as overlapping (<= instead of <), with an endpoint-sharing input; same mechanism. Finding incorrect_comparison_operator: \"Uses <= instead of < when comparing bounds, which incorrectly classifies touching intervals as overlapping.\".",
+  "schema_version": 1,
+  "submission_sha256": "34f42bf6d4488d8473f7cb02aeb8221a24f2b720f8cbba9d9712e4e96ba1ace3",
+  "target_detection": "detected"
+}

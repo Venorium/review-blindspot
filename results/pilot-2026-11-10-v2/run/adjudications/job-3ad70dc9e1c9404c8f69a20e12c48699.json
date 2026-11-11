@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "defect-1"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-3ad70dc9e1c9404c8f69a20e12c48699",
+  "method": "external_judge",
+  "rationale": "Finding states that balances are mutated before ledger.record can reject a long memo, leaving accounts changed on failure; same mechanism. Finding defect-1: \"transfer applies the balance change before attempting to record the ledger entry, so if ledger.record raises a ValueError (e.g., memo too long) the accounts are already mutated, breaking the contract \".",
+  "schema_version": 1,
+  "submission_sha256": "49449cec30708666722554838035755d1ad681f21d03ba27aad0eed462f2c726",
+  "target_detection": "detected"
+}

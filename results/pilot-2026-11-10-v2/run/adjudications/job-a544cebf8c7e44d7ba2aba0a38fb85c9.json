@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "casefold_vs_lower"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-a544cebf8c7e44d7ba2aba0a38fb85c9",
+  "method": "external_judge",
+  "rationale": "Finding states that lower() is used where the contract requires casefold(), so full case-folding matches are missed; same mechanism. Finding casefold_vs_lower: \"find_user uses lower() to compare names, but the specification requires full Unicode case folding via casefold() on both the query and the user names.\".",
+  "schema_version": 1,
+  "submission_sha256": "3bd701654fc5c07f665032b1c817fc0badf76440a0a490d3b69717c8e4ccbc2a",
+  "target_detection": "detected"
+}

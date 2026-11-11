@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "TENANT_SCOPE_VIOLATION"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-f1abf51e5843481887b749594f638181",
+  "method": "external_judge",
+  "rationale": "Finding states the cache is keyed by record_id only, so two tenants with the same record_id share an entry; same mechanism. Finding TENANT_SCOPE_VIOLATION: \"Cache key omits the tenant identifier, causing different tenants to incorrectly share entries for the same record_id.\".",
+  "schema_version": 1,
+  "submission_sha256": "df683b37e16334a069dba04bf7f24485d88fe6b2db36a6895f19da4f79f5cfae",
+  "target_detection": "detected"
+}

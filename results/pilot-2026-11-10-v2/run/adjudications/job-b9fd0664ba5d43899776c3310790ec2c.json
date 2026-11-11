@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-b9fd0664ba5d43899776c3310790ec2c",
+  "method": "external_judge",
+  "rationale": "Finding states that balances are mutated before ledger.record can reject a long memo, leaving accounts changed on failure; same mechanism. Finding 001: \"The transfer function updates account balances before calling ledger.record, so if ledger.record raises ValueError (e.g., memo too long), the balances are already altered. The spec requires that any l\".",
+  "schema_version": 1,
+  "submission_sha256": "91e124215814dc1b8e9f982eef9a278c545ce55de6d50de1f25a23452b46c6b1",
+  "target_detection": "detected"
+}

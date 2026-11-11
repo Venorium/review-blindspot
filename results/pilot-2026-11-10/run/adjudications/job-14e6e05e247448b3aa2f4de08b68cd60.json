@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "spec_violation_unknown_tier"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-14e6e05e247448b3aa2f4de08b68cd60",
+  "method": "external_judge",
+  "rationale": "Finding states unknown tiers return the default 100 via dict.get instead of raising ValueError; same mechanism. Finding spec_violation_unknown_tier: \"The specification mandates raising ValueError for any input that is not exactly 'basic' or 'premium'. The current implementation uses dict.get with a fallback default of 100, causing it to silently return 100 for invalid\".",
+  "schema_version": 1,
+  "submission_sha256": "d833f7f52302a35cfae90d93415bebee3e40690fc7201214c6085f51c18338c5",
+  "target_detection": "detected"
+}

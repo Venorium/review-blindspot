@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-5151984c14574d15a540a4507fd9953e",
+  "method": "external_judge",
+  "rationale": "Finding states an equal version is accepted (>= instead of >), updating state and writes; same mechanism. Finding F001: \"The function incorrectly accepts updates when the provided version is equal to the current state version. The specification requires that updates are applied only when the new version is strictly greater than the current\".",
+  "schema_version": 1,
+  "submission_sha256": "05f049ed9d9920573463b1820017c230b7976756c343be3875c9d379e916b987",
+  "target_detection": "detected"
+}

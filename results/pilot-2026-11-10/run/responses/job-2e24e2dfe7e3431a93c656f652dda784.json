@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1258,
+    "isolation_attested": true,
+    "latency_seconds": 88.194,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 2125,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-2e24e2dfe7e3431a93c656f652dda784/attempt-1"
+  },
+  "job_id": "job-2e24e2dfe7e3431a93c656f652dda784",
+  "packet_sha256": "a6a9cb5c56f5c327f5c619cb4445b027d4b741b2175a8227d03726f35af7787b",
+  "review": {
+    "findings": [
+      {
+        "description": "Fails to sum quantities for repeated product IDs as required by the specification.",
+        "evidence": "The spec requires 'summing all quantities per product, including repeated products'. Given input `[('a', 2), ('a', 3)]`, candidate.py returns `{'a': 3}` instead of `{'a': 5}` because the dictionary comprehension overwrites previous values rather than accumulating them.",
+        "file": "candidate.py",
+        "finding_id": "DEF-001",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "critical"
+      }
+    ],
+    "summary": "candidate.py does not sum quantities for repeated products; it simply overwrites them, violating the spec's requirement to return a dictionary summing all quantities per product.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

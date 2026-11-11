@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "c04",
+  "family_id": "c04",
+  "title": "Integer half-up rounding",
+  "origin": "original_synthetic_starter",
+  "split": "development_only",
+  "spec": "Implement cents(mills) converting non-negative integer thousandths of a unit to integer hundredths. Round to nearest cent, with exact half-cent ties rounded upward. Inputs are at most 100000000.",
+  "target_defect": "Exact half-cent ties are rounded downward rather than upward.",
+  "author_rationale": "The change uses integer arithmetic for conversion and rounding.",
+  "limitations": "Small synthetic function; not a natural pull request. Correct means conforming to the stated contract and supplied checks, not universally bug-free."
+}

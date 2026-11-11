@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "duplicate_sum_missing"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-600ebdced7984094bc0b0a28cd29a076",
+  "method": "external_judge",
+  "rationale": "Finding states repeated product quantities overwrite instead of summing, with a repeated-product input; same mechanism. Finding duplicate_sum_missing: \"The implementation does not sum quantities for repeated products; it overwrites previous values instead.\".",
+  "schema_version": 1,
+  "submission_sha256": "9ffb70fed69e3b2f0a7c855960662ff9d066e66fec99686659792e2b28b66828",
+  "target_detection": "detected"
+}

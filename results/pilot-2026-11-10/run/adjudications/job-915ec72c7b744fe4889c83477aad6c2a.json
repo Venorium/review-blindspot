@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "overlap_touch_bug"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-915ec72c7b744fe4889c83477aad6c2a",
+  "method": "external_judge",
+  "rationale": "Finding states touching intervals are reported as overlapping (<= instead of <), with an endpoint-sharing input; same mechanism. Finding overlap_touch_bug: \"The overlaps function returns True when two half‑open intervals touch at an endpoint. For half‑open intervals [start, end), touching endpoints should not overlap. The implementation uses <= instead of <, causing false po\".",
+  "schema_version": 1,
+  "submission_sha256": "68780d3af14ce6dad2e58580c0d990a8244a1fc05aba5081b636b916485d164c",
+  "target_detection": "detected"
+}

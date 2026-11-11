@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "DEFECT-001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-2876127f082548a89dc25b9fea50b13c",
+  "method": "external_judge",
+  "rationale": "Finding states that the dict comprehension overwrites earlier items so the last item per key is returned; same mechanism. Finding DEFECT-001: \"unique_by returns the last item per key due to dict override behavior, but the contract demands the first item for each distinct key.\".",
+  "schema_version": 1,
+  "submission_sha256": "2b4dc1c3f2e714a01ebbbc983174c84021a8626d737c33cc27eb8d8dbf08f658",
+  "target_detection": "detected"
+}

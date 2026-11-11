@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1386,
+    "isolation_attested": true,
+    "latency_seconds": 97.007,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 1479,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-1a5d538888fd48ffb9b8eb00b1ffde8a/attempt-1"
+  },
+  "job_id": "job-1a5d538888fd48ffb9b8eb00b1ffde8a",
+  "packet_sha256": "557aa09b114eb4cfad66a99687f19aab41fa1d10b887b7ae8fb13d42bf8e668d",
+  "review": {
+    "findings": [],
+    "summary": "The candidate correctly implements the specification. Using (tenant, record_id) as the cache key ensures that results are cached separately per tenant and record combination, exactly as required. The load function is called only on a cache miss, and the correct value is returned.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

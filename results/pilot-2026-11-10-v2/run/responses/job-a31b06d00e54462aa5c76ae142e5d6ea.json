@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1438,
+    "isolation_attested": true,
+    "latency_seconds": 36.472,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1060,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-a31b06d00e54462aa5c76ae142e5d6ea/attempt-1"
+  },
+  "job_id": "job-a31b06d00e54462aa5c76ae142e5d6ea",
+  "packet_sha256": "b492ef4ef71e65d20512de055b5072a9ddc9be822be459e218e895a8070048b1",
+  "review": {
+    "findings": [
+      {
+        "description": "Path validation uses `startswith(base)` which accepts any path that begins with the base string, including paths like `/srv/uploads_foo`. The contract requires that the returned path be the base itself or a path that starts with `base + '/'`. The current check fails to enforce this rule.",
+        "evidence": "Given `base = '/srv/uploads'` and `name = 'uploads_foo'`, the function returns `/srv/uploads_foo`. `path.startswith(base)` is True, so no exception is raised. However, `/srv/uploads_foo` is not inside `/srv/uploads`, violating the contract.",
+        "file": "candidate.py",
+        "finding_id": "F1",
+        "line_end": 9,
+        "line_start": 8,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation incorrectly validates that a normalized path lies inside the base directory, allowing paths that are not inside but merely share the base prefix. This violates the contract which requires the result to equal the base or start with the base followed by a slash.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

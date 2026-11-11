@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1929,
+    "isolation_attested": true,
+    "latency_seconds": 261.701,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 3026,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-5daabfc679384752b4a510a7812a2c53/attempt-1"
+  },
+  "job_id": "job-5daabfc679384752b4a510a7812a2c53",
+  "packet_sha256": "d6de3b4136082fd331accdfb173bf7809f11964bf3a09c9358a0a5e5d4a9ae21",
+  "review": {
+    "findings": [
+      {
+        "description": "The Catalog constructor accepts any dictionary of prices without validating that each price is a non-negative integer. The contract specifies that Catalog must hold non-negative integer prices, but the code does not enforce this constraint during initialization. This allows creation of a Catalog with negative price values, which is a contract violation.",
+        "evidence": "Line 3: self._prices = dict(prices)",
+        "file": "candidate.py",
+        "finding_id": "CANDIDATE-1",
+        "line_end": 3,
+        "line_start": 3,
+        "severity": "medium"
+      }
+    ],
+    "summary": "Candidate fails to enforce non-negative price values during initialization, violating the contract that Catalog must hold non-negative integer prices.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1333,
+    "isolation_attested": true,
+    "latency_seconds": 49.398,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 819,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-683aa81f8c8b4953b71b5c5a9e9c8e53/attempt-1"
+  },
+  "job_id": "job-683aa81f8c8b4953b71b5c5a9e9c8e53",
+  "packet_sha256": "5b71ab8662ed21706b8ae50acefb8557a67df78a34d80a68a4d9f90d7f9e16b6",
+  "review": {
+    "findings": [
+      {
+        "description": "Cache key does not include tenant, violating the requirement to cache separately for each (tenant, record_id).",
+        "evidence": "If lookup is called with tenant='a', record_id='1', and then with tenant='b', record_id='1', the second call incorrectly returns the cached value for tenant 'a' instead of reloading for tenant 'b'.",
+        "file": "candidate.py",
+        "finding_id": "cache-key-mismatch",
+        "line_end": 4,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate fails to cache per tenant, causing incorrect behavior when different tenants use the same record_id.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1162,
+    "isolation_attested": true,
+    "latency_seconds": 31.645,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 520,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-f296fa691af64b5eaf6acce8c920b257/attempt-1"
+  },
+  "job_id": "job-f296fa691af64b5eaf6acce8c920b257",
+  "packet_sha256": "e52154e6bb6816a7d52829659fb9ce4e343a95f0a60c2f0a378a57cb392fbdaf",
+  "review": {
+    "findings": [
+      {
+        "description": "`options.get(key) or default` returns the default when the stored value is falsy (e.g., 0, False, '', None), violating the contract that requires returning the stored value for any existing key.",
+        "evidence": "For example, `setting({'x': 0}, 'x', 9)` incorrectly returns 9 instead of 0. The spec requires that when a key exists, its value—regardless of truthiness—be returned, with default used only when the key is absent.",
+        "file": "candidate.py",
+        "finding_id": "F001",
+        "line_end": 1,
+        "line_start": 1,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation incorrectly discards falsy values when retrieving settings.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

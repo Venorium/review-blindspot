@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1129,
+    "isolation_attested": true,
+    "latency_seconds": 21.399,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 253,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-e19e6e484af940aaaf32bf997ab2c963/attempt-1"
+  },
+  "job_id": "job-e19e6e484af940aaaf32bf997ab2c963",
+  "packet_sha256": "f2ae5ca9e383072ff6547b459ac1531eb59f8f516e8498ef56fed8d680cd8eb4",
+  "review": {
+    "findings": [
+      {
+        "description": "Incorrect comparison: uses <= instead of <, causing active(10,10) to return True instead of False.",
+        "evidence": "active(10,10) should be inactive per spec, but candidate returns True.",
+        "file": "candidate.py",
+        "finding_id": "f1",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The candidate implementation incorrectly treats a token as active when the current time equals the expiry timestamp, violating the contract that a token is active strictly before expires_at and inactive at or after it.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

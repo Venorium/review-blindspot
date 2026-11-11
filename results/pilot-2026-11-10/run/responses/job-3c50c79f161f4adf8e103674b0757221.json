@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1192,
+    "isolation_attested": true,
+    "latency_seconds": 54.774,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 561,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-3c50c79f161f4adf8e103674b0757221/attempt-1"
+  },
+  "job_id": "job-3c50c79f161f4adf8e103674b0757221",
+  "packet_sha256": "306a9f391c2586505a5662aafac20d2feab2d897d05eea946a7b63c331256b3c",
+  "review": {
+    "findings": [],
+    "summary": "The implementation correctly determines overlap for non-empty half-open integer intervals as specified.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

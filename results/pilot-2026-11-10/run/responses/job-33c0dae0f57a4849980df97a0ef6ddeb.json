@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1285,
+    "isolation_attested": true,
+    "latency_seconds": 26.939,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 434,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-33c0dae0f57a4849980df97a0ef6ddeb/attempt-1"
+  },
+  "job_id": "job-33c0dae0f57a4849980df97a0ef6ddeb",
+  "packet_sha256": "a57311ac1cf74e3f1142bde6182a5ee8d18a13148ee3f8febfd203c872af25a2",
+  "review": {
+    "findings": [
+      {
+        "description": "Store is mutated before a negative value is detected. According to the contract, if any value in the batch is negative, a ValueError must be raised and the store must remain exactly unchanged. The current implementation appends non-negative values as it iterates and only raises after encountering a negative, leaving the store partially updated.",
+        "evidence": "If called with store=[0] and values=[5,-1,3], the current function appends 5 to the store and then raises ValueError, resulting in store=[0,5] instead of the required [0].",
+        "file": "candidate.py",
+        "finding_id": "F001",
+        "line_end": 6,
+        "line_start": 3,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation mutates store before detecting a negative value, violating the atomic failure requirement.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

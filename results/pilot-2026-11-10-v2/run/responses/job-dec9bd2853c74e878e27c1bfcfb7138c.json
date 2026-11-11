@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1385,
+    "isolation_attested": true,
+    "latency_seconds": 124.066,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 637,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-dec9bd2853c74e878e27c1bfcfb7138c/attempt-1"
+  },
+  "job_id": "job-dec9bd2853c74e878e27c1bfcfb7138c",
+  "packet_sha256": "4f0894a2d251cb75a8471389f037d9147a429a33bdff4a3450ab0faa33f0d48c",
+  "review": {
+    "findings": [
+      {
+        "description": "allocate consumes the records iterable twice: once for computing total and again for building the result dictionary. This exhausts one-shot iterators, causing incorrect empty results.",
+        "evidence": "For example, passing records=iter([(\"a\",1),(\"b\",2)]) to allocate(records, 100) results in an empty dictionary {} instead of {\"a\":33,\"b\":66}.",
+        "file": "candidate.py",
+        "finding_id": "F1",
+        "line_end": 3,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation fails to support consuming an iterator only once, violating the contract when records is a generator or other one-shot iterable.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

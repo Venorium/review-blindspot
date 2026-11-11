@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1195,
+    "isolation_attested": true,
+    "latency_seconds": 25.038,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 533,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-8b62c884449746d9a80f3e09b25cd2f2/attempt-1"
+  },
+  "job_id": "job-8b62c884449746d9a80f3e09b25cd2f2",
+  "packet_sha256": "063f1ad3464bc25195dc32f2826e260409c629028282eed5a4051962b5b523ed",
+  "review": {
+    "findings": [],
+    "summary": "The candidate implementation correctly handles all specified cases: it returns the stored value when the key exists—including None, False, zero, and empty strings—and falls back to the default only when the key is absent.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1124,
+    "isolation_attested": true,
+    "latency_seconds": 55.281,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 486,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-adb5625bd0264982bb57053f28f66970/attempt-1"
+  },
+  "job_id": "job-adb5625bd0264982bb57053f28f66970",
+  "packet_sha256": "9667d1ad82fa16e7ca300efa3b7482243eb299a25b1135f67d0a3f6148848f8f",
+  "review": {
+    "findings": [
+      {
+        "description": "Using Python's // operator truncates toward negative infinity, not toward zero, causing incorrect results for negative dividends that are not exact multiples of the divisor.",
+        "evidence": "candidate.divide(-7, 3) returns -3, but expected -2 per specification.",
+        "file": "candidate.py",
+        "finding_id": "defect-001",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation fails to truncate division toward zero for negative dividends, violating specification.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

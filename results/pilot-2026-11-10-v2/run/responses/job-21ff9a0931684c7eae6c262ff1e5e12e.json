@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1337,
+    "isolation_attested": true,
+    "latency_seconds": 185.492,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 2956,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-21ff9a0931684c7eae6c262ff1e5e12e/attempt-1"
+  },
+  "job_id": "job-21ff9a0931684c7eae6c262ff1e5e12e",
+  "packet_sha256": "b87efc41871d3b7c89ab7b8e9806fd7ecc6b8f22cb0e2e3fc347ee9f910158ba",
+  "review": {
+    "findings": [
+      {
+        "description": "Uses .lower() instead of the spec-mandated .casefold(), which fails to perform full Unicode case folding.",
+        "evidence": "SPEC.md requires 'name.casefold() == stripped_query.casefold()'. candidate.py lines 2 and 4 apply .lower() instead. For instance, with users=['ß'] and query='ss', the spec expects a match because 'ß'.casefold() == 'ss'. The candidate computes 'ß'.lower() == 'ß' and query.strip().lower() == 'ss', causing a false negative.",
+        "file": "candidate.py",
+        "finding_id": "casefolding_violation",
+        "line_end": 4,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The candidate uses .lower() for case-insensitive matching instead of the required .casefold(), violating the full Unicode case folding specification.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

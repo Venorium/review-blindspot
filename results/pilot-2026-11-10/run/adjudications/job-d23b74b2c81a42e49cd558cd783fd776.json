@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "invalid_tier_handling"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-d23b74b2c81a42e49cd558cd783fd776",
+  "method": "external_judge",
+  "rationale": "Finding states unknown tiers return the default 100 via dict.get instead of raising ValueError; same mechanism. Finding invalid_tier_handling: \"The implementation returns 100 for any tier that is not 'basic' or 'premium', but the specification requires it to raise a ValueError for any other string.\".",
+  "schema_version": 1,
+  "submission_sha256": "2f786f1dafd815d11c4baf2400b3befacfec46f8f9651089f41c9ff9a58613a8",
+  "target_detection": "detected"
+}

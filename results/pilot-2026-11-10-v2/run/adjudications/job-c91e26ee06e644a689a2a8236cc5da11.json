@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F1"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-c91e26ee06e644a689a2a8236cc5da11",
+  "method": "external_judge",
+  "rationale": "Finding states that the dict comprehension overwrites earlier items so the last item per key is returned; same mechanism. Finding F1: \"The function returns the last item for each distinct key instead of the first item, violating the contract to keep the first occurrence.\".",
+  "schema_version": 1,
+  "submission_sha256": "c2c87354dee04e9c427864e5dde4be1d38a407a9b025785a2736f485d8791eaa",
+  "target_detection": "detected"
+}

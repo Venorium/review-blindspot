@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "c08",
+  "family_id": "c08",
+  "title": "Missing versus explicit value",
+  "origin": "original_synthetic_starter",
+  "split": "development_only",
+  "spec": "Implement setting(options, key, default). Return the stored value when key exists, including None, False, zero and empty strings. Use default only when key is absent. options is a dictionary with string keys.",
+  "target_defect": "Explicit falsey values are replaced by the default despite key presence.",
+  "author_rationale": "The change simplifies configuration lookup with fallback handling.",
+  "limitations": "Small synthetic function; not a natural pull request. Correct means conforming to the stated contract and supplied checks, not universally bug-free."
+}

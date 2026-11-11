@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1413,
+    "isolation_attested": true,
+    "latency_seconds": 111.887,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 3679,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-c513c3f82db64dfcbe0b96934c26c15f/attempt-1"
+  },
+  "job_id": "job-c513c3f82db64dfcbe0b96934c26c15f",
+  "packet_sha256": "09bb7de98b4d00f700b9bfd4c47fc8cb23ffa6379a259661e6faa7f4b5208795",
+  "review": {
+    "findings": [
+      {
+        "description": "Returns the last item for each distinct key rather than the first.",
+        "evidence": "The dict comprehension `{key(item): item for item in items}` assigns `item` to `key(item)` sequentially. When a key is encountered again, the new `item` overwrites the previous one. For input `items=[0, 1, 0]` with `key=lambda x: x % 2`, the contract requires returning the first item for each key (`[0, 1]`). This candidate instead returns `[1, 0]` because it keeps the last mapped value.",
+        "file": "candidate.py",
+        "finding_id": "keeps-last-occurrence-instead-of-first",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation incorrectly retains the last occurrence of each key instead of the first, violating the contract's item-selection requirement.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

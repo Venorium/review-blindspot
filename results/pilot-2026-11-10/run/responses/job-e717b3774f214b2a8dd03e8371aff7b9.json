@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1343,
+    "isolation_attested": true,
+    "latency_seconds": 234.114,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 2925,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-e717b3774f214b2a8dd03e8371aff7b9/attempt-1"
+  },
+  "job_id": "job-e717b3774f214b2a8dd03e8371aff7b9",
+  "packet_sha256": "5f7c7e6d2b5b3820864c0f6a2591e85f7eabd5a7e703f94fab8dfe3aa9b85797",
+  "review": {
+    "findings": [
+      {
+        "description": "Checks for duplicate payloads rather than duplicate request_ids. The spec explicitly states that events must have unique request IDs and that different IDs may have identical payloads.",
+        "evidence": "Input: events=[('r1', 'p1')], request_id='r2', payload='p1'. Per spec, request_id 'r2' is new, so the function should append the tuple and return True. Instead, lines 2-4 detect the existing payload 'p1' in the set, incorrectly return False, and fail to mutate events.",
+        "file": "candidate.py",
+        "finding_id": "defect_01",
+        "line_end": 4,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The candidate incorrectly enforces unique payloads instead of unique request_ids, directly contradicting the spec's requirement that only request_id must be unique and different IDs may share payloads.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

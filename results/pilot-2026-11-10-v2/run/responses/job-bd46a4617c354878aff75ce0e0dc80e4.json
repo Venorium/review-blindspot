@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1899,
+    "isolation_attested": true,
+    "latency_seconds": 203.571,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 6322,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-bd46a4617c354878aff75ce0e0dc80e4/attempt-1"
+  },
+  "job_id": "job-bd46a4617c354878aff75ce0e0dc80e4",
+  "packet_sha256": "8ba487e3aaf861c2f1591659086565555129ec8d624a751b2e9735493a1010ca",
+  "review": {
+    "findings": [],
+    "summary": "Candidate satisfies all contract requirements.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

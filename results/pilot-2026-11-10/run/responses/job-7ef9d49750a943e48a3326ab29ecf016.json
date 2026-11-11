@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1306,
+    "isolation_attested": true,
+    "latency_seconds": 150.398,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 2273,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-7ef9d49750a943e48a3326ab29ecf016/attempt-1"
+  },
+  "job_id": "job-7ef9d49750a943e48a3326ab29ecf016",
+  "packet_sha256": "592826f5dbb94a50ab995c667bdfee5ce76f8487be220bc9dcb948c7502a4a12",
+  "review": {
+    "findings": [],
+    "summary": "The implementation correctly handles the requirement to return the last `limit` items, including the edge case where `limit` is zero, and handles cases where `limit` exceeds the number of items in the input list.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

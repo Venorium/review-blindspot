@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "atomicity_violation"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-4a27110fdaac4f59952ed4fd6000c0aa",
+  "method": "external_judge",
+  "rationale": "Finding states earlier non-negative values are appended before a later negative value raises, leaving store mutated; same mechanism. Finding atomicity_violation: \"The function appends non‑negative values immediately, then raises ValueError on a negative value. If a negative value appears after some positive values, those positive values remain in store, violating the contract that\".",
+  "schema_version": 1,
+  "submission_sha256": "373334ba8e4a7a41a55b48fc409928e8eeb3f7e5ab88ac0ccd1c68cb49c3b558",
+  "target_detection": "detected"
+}

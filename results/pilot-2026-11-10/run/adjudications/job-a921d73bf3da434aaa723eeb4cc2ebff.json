@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "defect-1"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-a921d73bf3da434aaa723eeb4cc2ebff",
+  "method": "external_judge",
+  "rationale": "Finding states an equal version is accepted (>= instead of >), updating state and writes; same mechanism. Finding defect-1: \"The function updates the state for equal versions due to a >= comparison, violating the contract that only strictly greater versions should trigger an update.\".",
+  "schema_version": 1,
+  "submission_sha256": "d5273025d15fa83ba6c946eaeec5af14c4ef4b5b6b75737914a6c041b1e77aeb",
+  "target_detection": "detected"
+}

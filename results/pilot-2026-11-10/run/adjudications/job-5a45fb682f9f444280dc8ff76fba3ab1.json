@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "zero_limit_bug"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-5a45fb682f9f444280dc8ff76fba3ab1",
+  "method": "external_judge",
+  "rationale": "Finding states that limit 0 returns the whole list (items[-0:] == items[0:]) where the contract requires []; same mechanism. Finding zero_limit_bug: \"When limit is zero, recent returns the entire input list instead of an empty list, contrary to the contract.\".",
+  "schema_version": 1,
+  "submission_sha256": "9f2d87c8a225eaf297de8d3fb9286ee79c593a27e5112a39709ec0468c413556",
+  "target_detection": "detected"
+}

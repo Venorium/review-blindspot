@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1466,
+    "isolation_attested": true,
+    "latency_seconds": 231.757,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 3351,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-af95ee97f7a64a0da44e4d06a6dc601f/attempt-1"
+  },
+  "job_id": "job-af95ee97f7a64a0da44e4d06a6dc601f",
+  "packet_sha256": "136a019dd4e1f6f3c289cabfdee465465356585be2c6deca7f9f7644c06b792d",
+  "review": {
+    "findings": [
+      {
+        "description": "The rounding logic `(amount_cents * percent + 50) // 100` only implements 'round half up' for positive numbers. For negative numbers, it fails to round halves away from zero, violating the requirement that `percent_of(-x, p) == -percent_of(x, p)`.",
+        "evidence": "For `amount_cents = -5` and `percent = 10`, the expected result is `-1` (rounding -0.5 away from zero), but the candidate returns `0`.",
+        "file": "candidate.py",
+        "finding_id": "rounding_error_negative_values",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation of `percent_of` fails to correctly round halves away from zero for negative values (refunds), violating both the rounding requirement and the symmetry requirement.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

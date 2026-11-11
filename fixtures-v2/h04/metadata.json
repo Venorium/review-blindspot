@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "h04",
+  "family_id": "h04",
+  "title": "Ledger validation and atomic transfer",
+  "origin": "original_synthetic_v2",
+  "split": "evaluation_v2_2026_11",
+  "spec": "accounts maps account names to integer balances. Ledger.record(src, dst, amount, memo) appends one (src, dst, amount, memo) entry to Ledger.entries; this change makes it raise ValueError for memos longer than 40 characters. transfer(accounts, ledger, src, dst, amount, memo='') moves a positive integer amount from src to dst and returns the new src balance. It raises ValueError, leaving both accounts and the ledger entirely unchanged, when amount is not positive, src equals dst, either account is unknown, src has insufficient funds, or the ledger rejects the entry. On success it records exactly one ledger entry.",
+  "target_defect": "Balances are changed before the ledger rejects a long memo, so a failed transfer leaves accounts modified.",
+  "author_rationale": "Reject ledger memos that exceed the 40-character storage limit.",
+  "limitations": "Synthetic module written by the repository's AI engineering agent after the November 2026 development pilot saturated corpus v1, before any model reviewed it. Designed around omissions, cross-function effects and edge cases stated in the contract. Not a natural pull request; correct means conforming to the stated contract and supplied checks."
+}

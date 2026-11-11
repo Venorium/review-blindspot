@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1386,
+    "isolation_attested": true,
+    "latency_seconds": 115.532,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 4216,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-cac3b36968ae44e393b29e8ca645647d/attempt-1"
+  },
+  "job_id": "job-cac3b36968ae44e393b29e8ca645647d",
+  "packet_sha256": "136a019dd4e1f6f3c289cabfdee465465356585be2c6deca7f9f7644c06b792d",
+  "review": {
+    "findings": [
+      {
+        "description": "Unconditional addition of 50 before floor division causes incorrect rounding for negative products. The contract requires exact halves to be rounded away from zero and mandates percent_of(-x, p) == -percent_of(x, p).",
+        "evidence": "For amount_cents=-1, percent=50, the product is -50. The candidate computes (-50 + 50) // 100 = 0, but the contract requires -1 (rounding -0.5 away from zero). This violates symmetry with percent_of(1, 50) == 1.",
+        "file": "candidate.py",
+        "finding_id": "round_neg_defect",
+        "line_end": 2,
+        "line_start": 1,
+        "severity": "high"
+      }
+    ],
+    "summary": "The formula incorrectly adds 50 to the product before floor division, breaking symmetry and failing to round exact halves away from zero for negative amounts.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

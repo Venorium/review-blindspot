@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F1"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-e1a4b81040ee466cb2a714cccdd825e7",
+  "method": "external_judge",
+  "rationale": "Finding states an equal version is accepted (>= instead of >), updating state and writes; same mechanism. Finding F1: \"Uses a non-strict comparison (>=) instead of the required strict greater-than (>), causing state updates even when the version is unchanged.\".",
+  "schema_version": 1,
+  "submission_sha256": "f04888937a155db43c896167cdf7540fc78f0b27b4f2423fdb345b521d1f5ffa",
+  "target_detection": "detected"
+}

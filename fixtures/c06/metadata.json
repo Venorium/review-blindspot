@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "c06",
+  "family_id": "c06",
+  "title": "Idempotency identity",
+  "origin": "original_synthetic_starter",
+  "split": "development_only",
+  "spec": "Implement record(events, request_id, payload). request_id and payload are strings. events is a list of (request_id, payload) tuples with unique request IDs. Append and return True only when request_id is new. Existing IDs return False without mutation even if payload differs. Different IDs may have identical payloads.",
+  "target_defect": "Idempotency is keyed by payload instead of request identity.",
+  "author_rationale": "The change centralizes duplicate detection before appending an event.",
+  "limitations": "Small synthetic function; not a natural pull request. Correct means conforming to the stated contract and supplied checks, not universally bug-free."
+}

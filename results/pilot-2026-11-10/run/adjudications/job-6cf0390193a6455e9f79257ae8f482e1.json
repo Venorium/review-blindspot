@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "rounding_ties"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-6cf0390193a6455e9f79257ae8f482e1",
+  "method": "external_judge",
+  "rationale": "Finding states remainder == 5 is not rounded up (> 5 instead of >= 5), with a tie input; same mechanism. Finding rounding_ties: \"The implementation rounds up only when the remainder after division by 10 is greater than 5, but the specification requires ties (remainder exactly 5) to be rounded upward.\".",
+  "schema_version": 1,
+  "submission_sha256": "be7bccdad15ed0638964d37f6154d15005c80a7e6cd9121bc72443eb9deb98e2",
+  "target_detection": "detected"
+}

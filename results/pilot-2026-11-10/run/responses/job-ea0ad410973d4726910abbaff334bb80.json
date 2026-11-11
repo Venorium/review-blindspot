@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1129,
+    "isolation_attested": true,
+    "latency_seconds": 55.928,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 509,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-ea0ad410973d4726910abbaff334bb80/attempt-1"
+  },
+  "job_id": "job-ea0ad410973d4726910abbaff334bb80",
+  "packet_sha256": "f2ae5ca9e383072ff6547b459ac1531eb59f8f516e8498ef56fed8d680cd8eb4",
+  "review": {
+    "findings": [
+      {
+        "description": "active() returns True when now == expires_at, but the spec requires the token to be inactive at or after expires_at.",
+        "evidence": "active(10, 10) evaluates to True, whereas it should be False per the spec, which defines activity strictly before expires_at.",
+        "file": "candidate.py",
+        "finding_id": "f1",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implements active() using a non-strict inequality, incorrectly marking tokens as active at the expiry timestamp, which violates the contract.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1837,
+    "isolation_attested": true,
+    "latency_seconds": 89.018,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 819,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-3c435375bf694eeeaa2c9c78261775cc/attempt-1"
+  },
+  "job_id": "job-3c435375bf694eeeaa2c9c78261775cc",
+  "packet_sha256": "1d0b54f1adaa451556943d36730b24306092acfa5056d23dc5a5ccb827ebde57",
+  "review": {
+    "findings": [
+      {
+        "description": "Transfer does not rollback account balances if ledger.record raises ValueError, violating the specification that requires both accounts and the ledger to remain unchanged when the ledger rejects the entry.",
+        "evidence": "Example: accounts={\"a\":10,\"b\":0}, memo=\"x\"*41 (41 chars). Calling transfer(accounts, ledger, \"a\", \"b\", 5, memo) will cause ledger.record to raise ValueError, but accounts become {\"a\":5,\"b\":5} and ledger.entries stays []. This violates the required atomicity and leaves state inconsistent.",
+        "file": "candidate.py",
+        "finding_id": "CANDIDATE-001",
+        "line_end": 20,
+        "line_start": 18,
+        "severity": "critical"
+      }
+    ],
+    "summary": "Candidate implementation fails to maintain atomicity when ledger rejects the entry; account balances are modified before ledger.record and are not rolled back, violating the contract that requires the ledger and accounts to remain unchanged if ledger.record raises ValueError.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

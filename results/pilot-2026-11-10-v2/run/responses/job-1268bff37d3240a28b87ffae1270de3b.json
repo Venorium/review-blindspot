@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1328,
+    "isolation_attested": true,
+    "latency_seconds": 244.694,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 267,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-1268bff37d3240a28b87ffae1270de3b/attempt-1"
+  },
+  "job_id": "job-1268bff37d3240a28b87ffae1270de3b",
+  "packet_sha256": "651c72b8a808b21f25a2e2417e0e65ec3b35a810320639c83d9d62fcad23bf8c",
+  "review": {
+    "findings": [],
+    "summary": "The candidate implementation satisfies the contract: it returns ticket IDs sorted from highest to lowest priority while preserving original relative order for equal priorities and does not modify the input list.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1115,
+    "isolation_attested": true,
+    "latency_seconds": 70.092,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 430,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-3a53937bed63445899b62b8b8e07d052/attempt-1"
+  },
+  "job_id": "job-3a53937bed63445899b62b8b8e07d052",
+  "packet_sha256": "8a78f8b3f527073342edd4c10bdf3bf5f99c1d0aae16ceb625a2c662fe70b012",
+  "review": {
+    "findings": [
+      {
+        "description": "labels(record) returns the original list from record, which means callers can modify the returned list and inadvertently modify record['labels'], breaking the contract that the returned list must be separate.",
+        "evidence": "labels({'labels': ['a', 'b']}) returns a reference; mutating that list changes the original record.",
+        "file": "candidate.py",
+        "finding_id": "labels-1",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "critical"
+      }
+    ],
+    "summary": "Candidate returns the original labels list instead of a copy, so modifications to the result mutate the input record, violating the contract.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

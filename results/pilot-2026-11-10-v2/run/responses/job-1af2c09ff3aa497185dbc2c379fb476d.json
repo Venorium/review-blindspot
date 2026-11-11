@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1616,
+    "isolation_attested": true,
+    "latency_seconds": 469.844,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1696,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-1af2c09ff3aa497185dbc2c379fb476d/attempt-1"
+  },
+  "job_id": "job-1af2c09ff3aa497185dbc2c379fb476d",
+  "packet_sha256": "5e8678b6038b1bf399c972ac6d67df1891f2db1242960c6f2c417af3e86d70ba",
+  "review": {
+    "findings": [],
+    "summary": "The implementation adheres to all specified requirements for retrying TransientError exceptions with exponential backoff, correct sleep calculation, and appropriate exception handling.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

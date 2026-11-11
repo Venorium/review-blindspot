@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "c12",
+  "family_id": "c12",
+  "title": "Repeated order lines",
+  "origin": "original_synthetic_starter",
+  "split": "development_only",
+  "spec": "Implement totals(lines), where lines is a list of (product_id, quantity), product_id is a string and quantity is a non-negative integer. Return a dictionary summing all quantities per product, including repeated products. Empty input returns an empty dictionary.",
+  "target_defect": "Repeated product quantities overwrite one another instead of being added.",
+  "author_rationale": "The change constructs a product-to-quantity result from order lines.",
+  "limitations": "Small synthetic function; not a natural pull request. Correct means conforming to the stated contract and supplied checks, not universally bug-free."
+}

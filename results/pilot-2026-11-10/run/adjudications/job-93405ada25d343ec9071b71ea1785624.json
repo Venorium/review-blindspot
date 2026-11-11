@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-93405ada25d343ec9071b71ea1785624",
+  "method": "external_judge",
+  "rationale": "Finding states the date is taken in the input offset without converting to UTC, with an offset that crosses midnight; same mechanism. Finding F001: \"The function does not adjust the parsed datetime to UTC before extracting the date. For timestamps with non-zero offsets, the returned date corresponds to the local time zone, violating the contract requirement to return\". Additional finding F002 claims naive datetimes must be rejected; the contract places them outside the input domain rather than requiring rejection, so F002 is not a valid defect and is not counted.",
+  "schema_version": 1,
+  "submission_sha256": "12ab83149fa2c9e0ad7b145eeaaef8c0d74ed9e082314429c4ffbf792ba9df45",
+  "target_detection": "detected"
+}

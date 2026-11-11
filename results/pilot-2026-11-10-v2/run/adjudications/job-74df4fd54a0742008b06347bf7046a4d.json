@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "E001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-74df4fd54a0742008b06347bf7046a4d",
+  "method": "external_judge",
+  "rationale": "Finding states that the n == 0 early return skips the weekend-to-Monday adjustment; same mechanism and violated rule. Finding E001: \"n==0 path returns start unconditionally, ignoring weekend adjustment required by spec.\". Dates mislabeled (2026-11-05 is a Thursday, not a Saturday).",
+  "schema_version": 1,
+  "submission_sha256": "706bedde8c1a4d7caecc3b4d08045aa354da1c649b1cc0fbb1ec0d81371ba9b6",
+  "target_detection": "detected"
+}

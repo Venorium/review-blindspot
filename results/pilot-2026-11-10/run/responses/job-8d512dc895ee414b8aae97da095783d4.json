@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1149,
+    "isolation_attested": true,
+    "latency_seconds": 22.861,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 669,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-8d512dc895ee414b8aae97da095783d4/attempt-1"
+  },
+  "job_id": "job-8d512dc895ee414b8aae97da095783d4",
+  "packet_sha256": "0cc7c0c83188912a3f4d75e36d81f6546d186747487948e9a19b024593bede2b",
+  "review": {
+    "findings": [],
+    "summary": "The candidate implementation correctly implements the required rounding behavior for non-negative integer thousandths to cent conversion, matching the specification.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

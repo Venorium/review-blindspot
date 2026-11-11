@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1319,
+    "isolation_attested": true,
+    "latency_seconds": 169.363,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1322,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-5053e4236c4f405bbd8df0a5fe40a3e4/attempt-1"
+  },
+  "job_id": "job-5053e4236c4f405bbd8df0a5fe40a3e4",
+  "packet_sha256": "437c7c54661b52303eb324a07cdf6b4092a218ce2bd136fe61bf8b71ba865f3e",
+  "review": {
+    "findings": [
+      {
+        "description": "Incorrect rounding for negative half values (e.g., percent_of(-1, 50) returns 0 instead of -1).",
+        "evidence": "For amount_cents=-1 and percent=50: product = -50; product + 50 = 0; 0 // 100 = 0. Correct result should be -1 because -0.5 rounded away from zero is -1.",
+        "file": "candidate.py",
+        "finding_id": "F001",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The candidate implementation fails to round negative half values correctly, violating the contract that requires exact halves rounded away from zero.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

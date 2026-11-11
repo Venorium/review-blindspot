@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1477,
+    "isolation_attested": true,
+    "latency_seconds": 277.645,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 3061,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-6f05d0b5f38643ddaf2bff4a8aa15a2e/attempt-1"
+  },
+  "job_id": "job-6f05d0b5f38643ddaf2bff4a8aa15a2e",
+  "packet_sha256": "665621a35a8e04dd41931efa82855e6a31d727acebae46c883a4b8b86e7c8255",
+  "review": {
+    "findings": [],
+    "summary": "Candidate implements resolve_upload correctly per specification.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

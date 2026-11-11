@@ -1,0 +1,17 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1792,
+    "isolation_attested": true,
+    "latency_seconds": 239.179,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 8192,
+    "status": "invalid_output",
+    "trace_reference": "transport/raw/job-775c0fc0343947ba9c321a59c9e383ed/attempt-1"
+  },
+  "job_id": "job-775c0fc0343947ba9c321a59c9e383ed",
+  "packet_sha256": "6342295d0ba33f9b3dfd87287c4f0f37fc642f47b9fec3b1c112dc160c47c78a",
+  "review": null,
+  "schema_version": 1
+}

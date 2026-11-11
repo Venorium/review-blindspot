@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1616,
+    "isolation_attested": true,
+    "latency_seconds": 343.768,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 4969,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-e39cc405eb8f4be5b10eeb9fa17fa1d0/attempt-1"
+  },
+  "job_id": "job-e39cc405eb8f4be5b10eeb9fa17fa1d0",
+  "packet_sha256": "5e8678b6038b1bf399c972ac6d67df1891f2db1242960c6f2c417af3e86d70ba",
+  "review": {
+    "findings": [],
+    "summary": "The candidate implementation correctly follows the specified retry logic, handling TransientError retries with exponential backoff, respecting the maximum attempts, and propagating other exceptions as required.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

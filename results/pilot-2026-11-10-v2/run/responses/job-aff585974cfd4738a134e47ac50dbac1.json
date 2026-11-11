@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1465,
+    "isolation_attested": true,
+    "latency_seconds": 320.04,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 2695,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-aff585974cfd4738a134e47ac50dbac1/attempt-1"
+  },
+  "job_id": "job-aff585974cfd4738a134e47ac50dbac1",
+  "packet_sha256": "8c7b6cf5173dc5ebcce4f6f77ec13a72e4ecb644f080c0219eff5be26f8796fa",
+  "review": {
+    "findings": [
+      {
+        "description": "Path validation uses `startswith(base)` which accepts any path that begins with the base string, even if the resolved path is not actually a descendant of the base. This allows escapes such as base=\"/srv/uploads\" and name=\"subdir/../../uploads2\" which normalizes to \"/srv/uploads2\". The result starts with the base string but is not inside the base directory, violating the requirement that only the base or its strict subpaths be returned.",
+        "evidence": "Example: resolve_upload('/srv/uploads', 'subdir/../../uploads2') -> '/srv/uploads2'. The candidate returns this path because it startswith '/srv/uploads', but it is outside the intended upload directory.",
+        "file": "candidate.py",
+        "finding_id": "C001",
+        "line_end": 9,
+        "line_start": 8,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate allows escape paths that normalize to a sibling of the base directory, violating the contract that the result must be the base or a strict subpath.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

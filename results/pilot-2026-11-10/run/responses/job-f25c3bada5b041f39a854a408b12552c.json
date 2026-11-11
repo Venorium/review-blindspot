@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1225,
+    "isolation_attested": true,
+    "latency_seconds": 89.44,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 1905,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-f25c3bada5b041f39a854a408b12552c/attempt-1"
+  },
+  "job_id": "job-f25c3bada5b041f39a854a408b12552c",
+  "packet_sha256": "13b9ba9afa3bb36bdc3299f8e968ff62011334638c6c8a2b177b2d2a3fb48ec7",
+  "review": {
+    "findings": [],
+    "summary": "candidate.py correctly implements the contract. Replacing the truthiness check with a key membership check fixes the bug in before.py that incorrectly returned defaults for stored falsy values. The implementation now strictly returns the stored value when the key exists and uses the default only when absent, fully satisfying the specification.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

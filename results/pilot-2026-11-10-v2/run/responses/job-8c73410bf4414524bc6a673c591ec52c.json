@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1270,
+    "isolation_attested": true,
+    "latency_seconds": 61.988,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 636,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-8c73410bf4414524bc6a673c591ec52c/attempt-1"
+  },
+  "job_id": "job-8c73410bf4414524bc6a673c591ec52c",
+  "packet_sha256": "b87efc41871d3b7c89ab7b8e9806fd7ecc6b8f22cb0e2e3fc347ee9f910158ba",
+  "review": {
+    "findings": [
+      {
+        "description": "The implementation uses str.lower() for case-insensitive comparison, but the contract requires full Unicode case folding (name.casefold() == stripped_query.casefold()). This will produce incorrect results for certain Unicode characters that have special casefold mappings.",
+        "evidence": "candidate.py lines 2-5 show use of .lower() on both query and names, which does not satisfy the full Unicode case folding requirement.",
+        "file": "candidate.py",
+        "finding_id": "C001",
+        "line_end": 5,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate uses str.lower() instead of Unicode casefold, violating the contract for full case-insensitive matching.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

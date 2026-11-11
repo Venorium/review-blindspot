@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1335,
+    "isolation_attested": true,
+    "latency_seconds": 111.132,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 725,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-d82dcea95aa34fc68769dad04dc92004/attempt-1"
+  },
+  "job_id": "job-d82dcea95aa34fc68769dad04dc92004",
+  "packet_sha256": "09bb7de98b4d00f700b9bfd4c47fc8cb23ffa6379a259661e6faa7f4b5208795",
+  "review": {
+    "findings": [
+      {
+        "description": "The implementation uses a dict comprehension which replaces earlier items with later ones for duplicate keys, resulting in the last item being returned for each key. The specification requires returning the first item for each distinct key.",
+        "evidence": ">>> unique_by([{'id':1,'v':'a'},{'id':1,'v':'b'}], lambda x: x['id'])\n# Current implementation returns [{'id':1,'v':'b'}], but the correct result should be [{'id':1,'v':'a'}].",
+        "file": "candidate.py",
+        "finding_id": "CAND-001",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "candidate.unique_by returns the last item for each key instead of the first, violating the specification.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F1"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-a31b06d00e54462aa5c76ae142e5d6ea",
+  "method": "external_judge",
+  "rationale": "Finding states that path.startswith(base) without the slash accepts sibling paths sharing the prefix; same mechanism and violated rule. Finding F1: \"Path validation uses `startswith(base)` which accepts any path that begins with the base string, including paths like `/srv/uploads_foo`. The contract requires that the returned path be the base itsel\". Its worked example is invalid ('uploads_foo' resolves to /srv/uploads/uploads_foo, inside base).",
+  "schema_version": 1,
+  "submission_sha256": "d8aa052696e74629c8865fe7d95717799542e1e7233be99a72841d8754262169",
+  "target_detection": "detected"
+}

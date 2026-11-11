@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-2ca695d022f0472882343b50a6cd0b33",
+  "method": "external_judge",
+  "rationale": "Finding states that the n == 0 early return skips the weekend-to-Monday adjustment; same mechanism and violated rule. Finding F001: \"When n == 0, the function returns the original start date without moving a weekend start to the following Monday, contradicting the requirement that n == 0 returns the following Monday on a weekend.\". Dates mislabeled (2026-11-05 is a Thursday, not a Saturday).",
+  "schema_version": 1,
+  "submission_sha256": "8a026f7ed7a7bcbe6baf1fed13a468a0375e955c01ca593d12e4850cfee94548",
+  "target_detection": "detected"
+}

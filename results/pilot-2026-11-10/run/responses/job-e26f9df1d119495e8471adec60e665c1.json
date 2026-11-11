@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1313,
+    "isolation_attested": true,
+    "latency_seconds": 49.479,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 549,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-e26f9df1d119495e8471adec60e665c1/attempt-1"
+  },
+  "job_id": "job-e26f9df1d119495e8471adec60e665c1",
+  "packet_sha256": "590d3505861ae4f2ecbf28c8d8e09cfcfe8882825094a8682371193e3eb1068a",
+  "review": {
+    "findings": [
+      {
+        "description": "Store is mutated with earlier positive values before a negative value triggers an exception, leaving the store partially updated.",
+        "evidence": "For example, calling append_batch([1], [2, -1]) results in store == [1, 2] after the exception, but the contract requires store to remain exactly unchanged when any negative value is present.",
+        "file": "candidate.py",
+        "finding_id": "C001",
+        "line_end": 5,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The candidate implementation fails to satisfy the contract: it mutates the store before detecting a negative value, violating the requirement that the store must remain unchanged when any negative value is present.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

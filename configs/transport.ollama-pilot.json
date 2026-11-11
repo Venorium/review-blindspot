@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "description": "Local Ollama transport for the 2026-11 development pilot. Text only, no tools, one stateless request per job. Sampling uses each model's Modelfile defaults; the harness sets num_predict (output cap) and a per-job seed.",
+  "models": {
+    "model_a": {
+      "backend": "ollama",
+      "model": "gpt-oss:20b",
+      "think": "medium",
+      "timeout_seconds": 900,
+      "keep_alive": "60m"
+    },
+    "model_b": {
+      "backend": "ollama",
+      "model": "qwen3.6:35b",
+      "think": true,
+      "timeout_seconds": 900,
+      "keep_alive": "60m"
+    },
+    "model_c": {
+      "backend": "ollama",
+      "model": "gemma4:26b",
+      "think": true,
+      "timeout_seconds": 900,
+      "keep_alive": "60m"
+    }
+  }
+}

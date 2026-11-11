@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1670,
+    "isolation_attested": true,
+    "latency_seconds": 353.083,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 6500,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-3d17a05cd9d74d3eb5b8e5b09ed59a38/attempt-1"
+  },
+  "job_id": "job-3d17a05cd9d74d3eb5b8e5b09ed59a38",
+  "packet_sha256": "6342295d0ba33f9b3dfd87287c4f0f37fc642f47b9fec3b1c112dc160c47c78a",
+  "review": {
+    "findings": [],
+    "summary": "The implementation correctly handles all required business‑day calculations, including weekend adjustment and zero‑day cases, and satisfies the specified contract.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

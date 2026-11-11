@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1214,
+    "isolation_attested": true,
+    "latency_seconds": 165.856,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 4817,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-9493ce5e669f46228c1e54ec3bed2c41/attempt-1"
+  },
+  "job_id": "job-9493ce5e669f46228c1e54ec3bed2c41",
+  "packet_sha256": "35fff47366a2a2990c9638bed8f3b2acfd2dfa79e9c0d9bf7f7379e3517a2cf0",
+  "review": {
+    "findings": [],
+    "summary": "The candidate correctly implements truncating division toward zero for arbitrary-size signed integers n and positive integer d without using floating-point conversion. By computing the quotient magnitude via abs(n) // d and conditionally applying the negative sign, it accurately compensates for Python's floor division behavior on negative operands. The implementation satisfies all contract requirements.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

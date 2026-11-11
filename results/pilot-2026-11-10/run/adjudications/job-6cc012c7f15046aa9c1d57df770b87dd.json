@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "falsy-key-value"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-6cc012c7f15046aa9c1d57df770b87dd",
+  "method": "external_judge",
+  "rationale": "Finding states the 'or default' fallback replaces stored falsy values such as 0 or False; same mechanism. Finding falsy-key-value: \"The implementation returns `default` whenever `options.get(key)` evaluates to False, which incorrectly handles valid stored values such as 0, False, \"\", or None.\".",
+  "schema_version": 1,
+  "submission_sha256": "7bf820571d9110ee0af99c902006c3b5a631cee4b091a1c1a22a7c748c440a9f",
+  "target_detection": "detected"
+}

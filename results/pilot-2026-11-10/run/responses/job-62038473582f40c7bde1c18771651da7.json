@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1192,
+    "isolation_attested": true,
+    "latency_seconds": 59.354,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 625,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-62038473582f40c7bde1c18771651da7/attempt-1"
+  },
+  "job_id": "job-62038473582f40c7bde1c18771651da7",
+  "packet_sha256": "84def49f4405715f55c2e4da4ebf47b02787edf5cafdc06c03bbb0245f7f2881",
+  "review": {
+    "findings": [
+      {
+        "description": "Incorrect overlap condition: uses <= instead of <, causing touching intervals to be reported as overlapping.",
+        "evidence": "candidate.overlaps((1, 4), (4, 6)) returns True, but according to the contract the intervals (1,4) and (4,6) share no common integer points and should return False.",
+        "file": "candidate.py",
+        "finding_id": "F001",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The candidate implementation incorrectly treats intervals that touch at an endpoint as overlapping. This violates the contract, which requires half‑open intervals — “[a, b)” “[c, d)” — to overlap only when their intersection contains at least one integer point. The condition should use a strict less‑than comparison, not less‑than‑or‑equal.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

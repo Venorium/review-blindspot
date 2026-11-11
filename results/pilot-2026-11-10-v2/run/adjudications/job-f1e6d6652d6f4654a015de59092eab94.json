@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "atomicity_violation_on_ledger_failure"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-f1e6d6652d6f4654a015de59092eab94",
+  "method": "external_judge",
+  "rationale": "Finding states that balances are mutated before ledger.record can reject a long memo, leaving accounts changed on failure; same mechanism. Finding atomicity_violation_on_ledger_failure: \"The transfer function modifies the accounts balances (lines 18-19) before calling ledger.record (line 20). If ledger.record raises a ValueError (e.g., when the memo exceeds 40 characters), the account\".",
+  "schema_version": 1,
+  "submission_sha256": "1a7d69761a9e610a7b1955e99ad638a58ca594b3cb78531a791023f15858912a",
+  "target_detection": "detected"
+}

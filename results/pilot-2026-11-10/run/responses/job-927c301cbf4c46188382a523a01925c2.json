@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1227,
+    "isolation_attested": true,
+    "latency_seconds": 79.009,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 918,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-927c301cbf4c46188382a523a01925c2/attempt-1"
+  },
+  "job_id": "job-927c301cbf4c46188382a523a01925c2",
+  "packet_sha256": "8a78f8b3f527073342edd4c10bdf3bf5f99c1d0aae16ceb625a2c662fe70b012",
+  "review": {
+    "findings": [
+      {
+        "description": "The function returns a reference to the 'labels' list within the record. Any modification to the returned list (e.g., via .append() or .pop()) will directly mutate the original record, violating the requirement that 'caller modifications to the returned list must not change record'.",
+        "evidence": "record = {'labels': ['a']}; result = labels(record); result.append('b'); assert 'b' not in record['labels']",
+        "file": "candidate.py",
+        "finding_id": "mutation_side_effect",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The function returns a reference to the original list instead of a copy, allowing modifications to the returned list to mutate the input record.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

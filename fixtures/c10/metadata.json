@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "c10",
+  "family_id": "c10",
+  "title": "UTC calendar date",
+  "origin": "original_synthetic_starter",
+  "split": "development_only",
+  "spec": "Implement utc_day(timestamp). timestamp is an ISO 8601 datetime string with an explicit numeric UTC offset, accepted by datetime.fromisoformat. Return the UTC calendar date as YYYY-MM-DD, not the date in the input offset. Naive datetimes are outside the contract.",
+  "target_defect": "The function extracts the local-offset date before converting to UTC.",
+  "author_rationale": "The change uses the standard datetime parser and ISO date formatting.",
+  "limitations": "Small synthetic function; not a natural pull request. Correct means conforming to the stated contract and supplied checks, not universally bug-free."
+}

@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1192,
+    "isolation_attested": true,
+    "latency_seconds": 25.79,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 625,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-915ec72c7b744fe4889c83477aad6c2a/attempt-1"
+  },
+  "job_id": "job-915ec72c7b744fe4889c83477aad6c2a",
+  "packet_sha256": "84def49f4405715f55c2e4da4ebf47b02787edf5cafdc06c03bbb0245f7f2881",
+  "review": {
+    "findings": [
+      {
+        "description": "The overlaps function returns True when two half‑open intervals touch at an endpoint. For half‑open intervals [start, end), touching endpoints should not overlap. The implementation uses <= instead of <, causing false positives.",
+        "evidence": "overlaps((1, 3), (3, 5)) returns True, but the correct result is False.",
+        "file": "candidate.py",
+        "finding_id": "overlap_touch_bug",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation incorrectly treats touching half-open intervals as overlapping, violating the contract.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

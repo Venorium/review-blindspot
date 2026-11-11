@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1439,
+    "isolation_attested": true,
+    "latency_seconds": 269.876,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 3016,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-40efc35008de4032a4f580b69c3c0209/attempt-1"
+  },
+  "job_id": "job-40efc35008de4032a4f580b69c3c0209",
+  "packet_sha256": "a57311ac1cf74e3f1142bde6182a5ee8d18a13148ee3f8febfd203c872af25a2",
+  "review": {
+    "findings": [
+      {
+        "description": "The function appends values to `store` during the iteration of `values`. If a negative value is encountered after some non-negative values in the same batch, the `store` will have been modified with those non-negative values before the `ValueError` is raised, violating the requirement that `store` must remain exactly unchanged if a `ValueError` is raised.",
+        "evidence": "Calling `append_batch([0], [1, -1])` results in `store` being `[0, 1]` and a `ValueError` being raised, instead of `store` remaining `[0]`.",
+        "file": "candidate.py",
+        "finding_id": "atomicity_violation",
+        "line_end": 6,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation fails to ensure the atomicity of the append operation; if a negative value is encountered mid-batch, the preceding non-negative values from that batch are already appended to the store.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

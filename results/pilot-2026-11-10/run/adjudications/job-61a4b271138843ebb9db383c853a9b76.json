@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "incorrect_cache_key_scope"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-61a4b271138843ebb9db383c853a9b76",
+  "method": "external_judge",
+  "rationale": "Finding states the cache is keyed by record_id only, so two tenants with the same record_id share an entry; same mechanism. Finding incorrect_cache_key_scope: \"The cache key used is only `record_id`. This violates the requirement to 'Cache results separately for each (tenant, record_id)'. If the same `record_id` is requested under a different `tenant`, the function will incorre\".",
+  "schema_version": 1,
+  "submission_sha256": "7d201ec407e8895cd0e92766037ffd1e2e2b5e5430fb0ee067da388198a6af19",
+  "target_detection": "detected"
+}

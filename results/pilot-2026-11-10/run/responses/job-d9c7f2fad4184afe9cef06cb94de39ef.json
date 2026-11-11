@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1430,
+    "isolation_attested": true,
+    "latency_seconds": 153.744,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 1437,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-d9c7f2fad4184afe9cef06cb94de39ef/attempt-1"
+  },
+  "job_id": "job-d9c7f2fad4184afe9cef06cb94de39ef",
+  "packet_sha256": "eab97c299da050cc545d72192ec9c89e368442cebf38b6cfdcb24362af2c2731",
+  "review": {
+    "findings": [],
+    "summary": "The implementation correctly parses the ISO 8601 timestamp with an explicit offset, converts it to UTC, and returns the date in the required YYYY-MM-DD format.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

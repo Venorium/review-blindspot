@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "floor_division_vs_truncation"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-57602305bdab421e92bbd87587818f75",
+  "method": "external_judge",
+  "rationale": "Finding states // floors toward negative infinity instead of truncating toward zero for negative non-integral quotients; same mechanism. Finding floor_division_vs_truncation: \"The `//` operator performs floor division (rounding towards negative infinity), but the specification requires truncation towards zero. For negative results, floor division and truncation towards zero yield different val\".",
+  "schema_version": 1,
+  "submission_sha256": "4bd3ae9a54d9f531d42d30c082381178a3a6d4158cb6bed67d433cacb3165ac3",
+  "target_detection": "detected"
+}

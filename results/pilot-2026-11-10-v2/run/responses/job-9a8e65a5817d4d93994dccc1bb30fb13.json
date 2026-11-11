@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1416,
+    "isolation_attested": true,
+    "latency_seconds": 94.891,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 918,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-9a8e65a5817d4d93994dccc1bb30fb13/attempt-1"
+  },
+  "job_id": "job-9a8e65a5817d4d93994dccc1bb30fb13",
+  "packet_sha256": "70fca3c67e11cbccc8e578dd658822ecafd2f34fc137b274a2e4fed95b68d746",
+  "review": {
+    "findings": [
+      {
+        "description": "Candidate consumes the records iterable twice. For one-shot iterators, the second iteration yields nothing, producing an empty dictionary. This violates the contract that the function must return a mapping for all names.",
+        "evidence": "The function calls sum(...) over records, which exhausts the iterator. It then iterates over records again in the comprehension. If records is an iterator (e.g., a generator), the second loop sees no items, returning an empty dict. Example: candidate.allocate(((\"a\",1), (\"b\",2)), 100) returns {} instead of the expected mapping. This behavior violates the requirement that the function must handle any iterable, including one-shot iterators, and return a mapping for every name.",
+        "file": "candidate.py",
+        "finding_id": "F001",
+        "line_end": 3,
+        "line_start": 2,
+        "severity": "critical"
+      }
+    ],
+    "summary": "The implementation incorrectly consumes the records iterator twice, breaking the contract for one-shot iterators.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

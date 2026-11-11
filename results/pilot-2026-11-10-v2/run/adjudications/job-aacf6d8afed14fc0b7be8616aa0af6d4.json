@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "path-escape-prefix"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-aacf6d8afed14fc0b7be8616aa0af6d4",
+  "method": "external_judge",
+  "rationale": "Finding states that path.startswith(base) without the slash accepts sibling paths sharing the prefix; same mechanism and violated rule. Finding path-escape-prefix: \"The path validation only checks that the resolved path starts with the base directory, which permits paths that share the base prefix but are not actually within the base (e.g., /srv/uploads2).\". Its worked example is invalid ('../../uploads2' resolves to /uploads2, which the candidate rejects).",
+  "schema_version": 1,
+  "submission_sha256": "6aa6080b18243b551920e7ed9125617557808c94fd4079495f5753256d2fbfd3",
+  "target_detection": "detected"
+}

@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-d7addf85f5054066b1b3175611c67fb2",
+  "method": "external_judge",
+  "rationale": "Finding states remainder == 5 is not rounded up (> 5 instead of >= 5), with a tie input; same mechanism. Finding F001: \"Half-cent ties are not rounded upward as required.\".",
+  "schema_version": 1,
+  "submission_sha256": "216352a4eb3cff81f79fad6a194638d6dd857dc5d45d792d7a9c7b7f9dffe2d0",
+  "target_detection": "detected"
+}

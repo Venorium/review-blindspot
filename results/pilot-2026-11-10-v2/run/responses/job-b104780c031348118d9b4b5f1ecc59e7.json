@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1295,
+    "isolation_attested": true,
+    "latency_seconds": 138.661,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 629,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-b104780c031348118d9b4b5f1ecc59e7/attempt-1"
+  },
+  "job_id": "job-b104780c031348118d9b4b5f1ecc59e7",
+  "packet_sha256": "ea4c01916f41b6b4db37a17b85513193b9a7b9decadf9f7c181fe72137f701f7",
+  "review": {
+    "findings": [
+      {
+        "description": "Uses str.lower() instead of str.casefold(), failing for Unicode characters that fold differently than lowercasing.",
+        "evidence": "For users=['ß'] and query='ss', candidate.find_user returns None while the contract requires it to return 'ß'.",
+        "file": "candidate.py",
+        "finding_id": "casefold_mismatch",
+        "line_end": 5,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation does not use full Unicode case folding as required by the contract.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

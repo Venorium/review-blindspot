@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1232,
+    "isolation_attested": true,
+    "latency_seconds": 149.953,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 1919,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-122a43b28cdb4fa98b2142323aaa99d3/attempt-1"
+  },
+  "job_id": "job-122a43b28cdb4fa98b2142323aaa99d3",
+  "packet_sha256": "5c960e421630ee532cab7baac93209fa5b087f8dc81eea1c102577f6bbc6221d",
+  "review": {
+    "findings": [
+      {
+        "description": "When limit is 0, the expression items[-limit:] evaluates to items[-0:]. In Python, negative zero in slice indexing is treated as positive zero, making it equivalent to items[0:], which returns the entire input list instead of an empty list.",
+        "evidence": "SPEC.md explicitly states: 'limit is a non-negative integer. Zero returns an empty list.' For the triggering input recent([1, 2, 3], 0), the candidate returns [1, 2, 3] rather than [], directly violating the contract.",
+        "file": "candidate.py",
+        "finding_id": "zero_limit_returns_full_list",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Fails to return an empty list when limit is 0, violating the explicit contract requirement.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

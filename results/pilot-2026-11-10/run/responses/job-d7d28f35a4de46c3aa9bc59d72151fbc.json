@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1219,
+    "isolation_attested": true,
+    "latency_seconds": 119.69,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 2129,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-d7d28f35a4de46c3aa9bc59d72151fbc/attempt-1"
+  },
+  "job_id": "job-d7d28f35a4de46c3aa9bc59d72151fbc",
+  "packet_sha256": "e52154e6bb6816a7d52829659fb9ce4e343a95f0a60c2f0a378a57cb392fbdaf",
+  "review": {
+    "findings": [
+      {
+        "description": "Uses `or` to fall back to default, which short-circuits on any falsy stored value and returns default instead.",
+        "evidence": "SPEC.md states: 'Return the stored value when key exists, including None, False, zero and empty strings.' For input options={'x': 0}, key='x', default=9, candidate.py returns 9 instead of 0 because `0 or 9` evaluates to 9.",
+        "file": "candidate.py",
+        "finding_id": "falsy_value_return",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "candidate.py incorrectly treats stored falsy values as missing keys due to the use of the `or` operator, violating the requirement to return zero, False, empty strings, and None when present.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

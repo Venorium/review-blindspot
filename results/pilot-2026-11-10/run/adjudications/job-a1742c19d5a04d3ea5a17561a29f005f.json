@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "PREMATURE_MUTATION_ON_FAILURE"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-a1742c19d5a04d3ea5a17561a29f005f",
+  "method": "external_judge",
+  "rationale": "Finding states earlier non-negative values are appended before a later negative value raises, leaving store mutated; same mechanism. Finding PREMATURE_MUTATION_ON_FAILURE: \"Fails to leave `store` exactly unchanged when a negative value is encountered after processing valid values.\".",
+  "schema_version": 1,
+  "submission_sha256": "34300e0bf48faaa2e40f44417221ec29be089cb613a0aeac3639ede70616eef1",
+  "target_detection": "detected"
+}

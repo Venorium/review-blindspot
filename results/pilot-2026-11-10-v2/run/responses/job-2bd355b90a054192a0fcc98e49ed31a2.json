@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1394,
+    "isolation_attested": true,
+    "latency_seconds": 87.79,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 1858,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-2bd355b90a054192a0fcc98e49ed31a2/attempt-1"
+  },
+  "job_id": "job-2bd355b90a054192a0fcc98e49ed31a2",
+  "packet_sha256": "651c72b8a808b21f25a2e2417e0e65ec3b35a810320639c83d9d62fcad23bf8c",
+  "review": {
+    "findings": [],
+    "summary": "candidate.py correctly implements the specification. Using reverse=True with sorted safely handles non-numeric comparable priorities (e.g., tuples or strings) that would fail with arithmetic negation. Python's sorted algorithm is stable, ensuring tickets with equal priority retain their original relative order. The function creates new lists for output and does not mutate the input. No correctness defects are present.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

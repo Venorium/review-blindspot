@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "ITERATOR_CONSUMPTION"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-2ebc95e62c774c65b187577a5ae2f756",
+  "method": "external_judge",
+  "rationale": "Finding states that records is iterated twice (sum, then the comprehension), so a one-shot iterator yields an empty result; same mechanism. Finding ITERATOR_CONSUMPTION: \"The implementation consumes the iterator twice – once in the sum() call and again in the dict comprehension – which results in an empty dictionary when records is a single-pass iterator such as a gene\".",
+  "schema_version": 1,
+  "submission_sha256": "f4f32bbc463ba567f4bdec1a0b246afaacc46ead78f5428a30c99a9684b8c1bb",
+  "target_detection": "detected"
+}

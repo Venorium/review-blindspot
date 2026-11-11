@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1129,
+    "isolation_attested": true,
+    "latency_seconds": 21.606,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 588,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-d3949b0bceb44b0191d8054f2adc3681/attempt-1"
+  },
+  "job_id": "job-d3949b0bceb44b0191d8054f2adc3681",
+  "packet_sha256": "f2ae5ca9e383072ff6547b459ac1531eb59f8f516e8498ef56fed8d680cd8eb4",
+  "review": {
+    "findings": [
+      {
+        "description": "Function returns True when now equals expires_at, but the specification requires inactivity at or after expires_at.",
+        "evidence": "active(10,10) evaluates to True because the implementation uses now <= expires_at, but the spec states the token should be inactive when now >= expires_at.",
+        "file": "candidate.py",
+        "finding_id": "strict-inequality-violation",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "critical"
+      }
+    ],
+    "summary": "The implementation incorrectly treats the equality case as active, violating the contract that a token is active only strictly before the expiration timestamp.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

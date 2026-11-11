@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1687,
+    "isolation_attested": true,
+    "latency_seconds": 128.236,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1183,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-80316e7b7e6b4898bc62579735c65022/attempt-1"
+  },
+  "job_id": "job-80316e7b7e6b4898bc62579735c65022",
+  "packet_sha256": "0d9b0229fcd2590aaf84f5f99e09cf4a0d4e228709f40054fd1f1be8ef7f3800",
+  "review": {
+    "findings": [
+      {
+        "description": "Sleeps after the final failed attempt, violating the contract that no sleep should occur after the last TransientError.",
+        "evidence": "Line 12: sleep(base_delay * 2 ** attempt) is executed even when attempt == attempts - 1, causing an unnecessary delay before re‑raising the error. The spec requires re‑raising immediately without sleeping on the final failure.",
+        "file": "candidate.py",
+        "finding_id": "C001",
+        "line_end": 13,
+        "line_start": 10,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate code sleeps after the final failed attempt, violating the contract that no sleep should occur after the last TransientError. The retry logic also lacks a guard against attempts < 1, but the primary issue is the unnecessary final sleep.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

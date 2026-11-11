@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1437,
+    "isolation_attested": true,
+    "latency_seconds": 71.823,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 2324,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-91a983cf99c24fe3abc9534e1fd16282/attempt-1"
+  },
+  "job_id": "job-91a983cf99c24fe3abc9534e1fd16282",
+  "packet_sha256": "62ca4d6c73e6ae522c4769f42a503c7a0711e32473fd4a9afa4c7d5c78a6b553",
+  "review": {
+    "findings": [],
+    "summary": "The candidate correctly implements unique_by per the specification. It uses dict.setdefault to retain only the first occurrence of each key and relies on Python's guaranteed dictionary insertion order (3.7+) to preserve the required sequence. It returns a new list via list(first.values()), never mutates items, and handles empty inputs without error. The implementation is functionally correct, idiomatic, and more efficient than the starter code.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

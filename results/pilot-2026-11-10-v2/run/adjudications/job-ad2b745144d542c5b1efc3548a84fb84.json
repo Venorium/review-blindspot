@@ -1,0 +1,11 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-ad2b745144d542c5b1efc3548a84fb84",
+  "method": "external_judge",
+  "rationale": "Control. Triage: false alarm. The finding requires rejecting non-integer amounts; the contract describes amounts as positive integers and lists the ValueError cases exhaustively, without a type check.",
+  "schema_version": 1,
+  "submission_sha256": "18cd166d967cd2f264e129e61337beafe12065e54b2da77af4b94c472b9f5bb8",
+  "target_detection": "not_applicable"
+}

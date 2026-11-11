@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1465,
+    "isolation_attested": true,
+    "latency_seconds": 315.331,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 1987,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-dafedd8f4b8f41ea999f00222d70adac/attempt-1"
+  },
+  "job_id": "job-dafedd8f4b8f41ea999f00222d70adac",
+  "packet_sha256": "95976b3da6542b5ecd6d98f3915d1938c7e095397110db938548b0f0ffc288da",
+  "review": {
+    "findings": [
+      {
+        "description": "The use of `[::-1]` to reverse the result of `sorted()` breaks the stability requirement. Python's `sorted()` is stable, but reversing the resulting list after the sort swaps the relative order of elements that have the same priority.",
+        "evidence": "For input `[('t1', 5), ('t2', 5)]`, the expected output is `['t1', 't2']` to preserve original relative order. However, `sorted(..., key=lambda ticket: ticket[1])` produces `[('t1', 5), ('t2', 5)]`, and applying `[::-1]` results in `[('t2', 5), ('t1', 5)]`, returning `['t2', 't1']`.",
+        "file": "candidate.py",
+        "finding_id": "stability_violation",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation fails to maintain the stable order of tickets with equal priorities because it reverses the entire sorted list using slicing instead of using the `reverse=True` parameter in `sorted()`.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

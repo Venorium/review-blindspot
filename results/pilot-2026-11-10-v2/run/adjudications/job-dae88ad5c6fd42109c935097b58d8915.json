@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "sleep_after_final_attempt"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-dae88ad5c6fd42109c935097b58d8915",
+  "method": "external_judge",
+  "rationale": "Finding states that sleep runs after the final failed call before re-raising; same mechanism and violated rule. Finding sleep_after_final_attempt: \"The function calls `sleep` even on the last attempt when a `TransientError` occurs, which violates the specification that the function should never sleep after the final failed call.\".",
+  "schema_version": 1,
+  "submission_sha256": "3b128295a6758ea30ffa99f9a9d09c86eb14afd4d7de3fbbe1bfc01a9ff9fb2a",
+  "target_detection": "detected"
+}

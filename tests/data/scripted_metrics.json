@@ -1,0 +1,293 @@
+{
+  "arms": [
+    {
+      "arm_id": "panel_blind",
+      "common_target_miss_bounds": [
+        0.5,
+        0.5
+      ],
+      "complete_faulty_groups": 2,
+      "control_groups": 2,
+      "control_rejected_groups": 1,
+      "control_rejection_bounds_all_scheduled": [
+        0.5,
+        0.5
+      ],
+      "execution_status_counts": {
+        "ok": 12
+      },
+      "faulty_approved_groups": 0,
+      "faulty_groups": 2,
+      "faulty_unresolved_gate_groups": 0,
+      "review_jobs": 12,
+      "target_detected_groups": 1,
+      "target_missed_by_all_groups": 1,
+      "target_recall_bounds": [
+        0.5,
+        0.5
+      ],
+      "target_unresolved_groups": 0,
+      "unattested_or_missing_isolation_jobs": 12,
+      "unique_cases_with_target_detected": 1,
+      "unsafe_approval_bounds_all_scheduled": [
+        0.0,
+        0.0
+      ],
+      "unsafe_approval_rate_complete": 0.0,
+      "usage": {
+        "cost_usd": {
+          "known_jobs": 12,
+          "known_sum": 0,
+          "unknown_jobs": 0
+        },
+        "input_tokens": {
+          "known_jobs": 12,
+          "known_sum": 0,
+          "unknown_jobs": 0
+        },
+        "latency_seconds": {
+          "known_jobs": 12,
+          "known_sum": 0,
+          "unknown_jobs": 0
+        },
+        "output_tokens": {
+          "known_jobs": 12,
+          "known_sum": 0,
+          "unknown_jobs": 0
+        }
+      }
+    },
+    {
+      "arm_id": "solo_blind",
+      "common_target_miss_bounds": [
+        1.0,
+        1.0
+      ],
+      "complete_faulty_groups": 2,
+      "control_groups": 2,
+      "control_rejected_groups": 1,
+      "control_rejection_bounds_all_scheduled": [
+        0.5,
+        0.5
+      ],
+      "execution_status_counts": {
+        "ok": 4
+      },
+      "faulty_approved_groups": 1,
+      "faulty_groups": 2,
+      "faulty_unresolved_gate_groups": 0,
+      "review_jobs": 4,
+      "target_detected_groups": 0,
+      "target_missed_by_all_groups": 2,
+      "target_recall_bounds": [
+        0.0,
+        0.0
+      ],
+      "target_unresolved_groups": 0,
+      "unattested_or_missing_isolation_jobs": 4,
+      "unique_cases_with_target_detected": 0,
+      "unsafe_approval_bounds_all_scheduled": [
+        0.5,
+        0.5
+      ],
+      "unsafe_approval_rate_complete": 0.5,
+      "usage": {
+        "cost_usd": {
+          "known_jobs": 4,
+          "known_sum": 0,
+          "unknown_jobs": 0
+        },
+        "input_tokens": {
+          "known_jobs": 4,
+          "known_sum": 0,
+          "unknown_jobs": 0
+        },
+        "latency_seconds": {
+          "known_jobs": 4,
+          "known_sum": 0,
+          "unknown_jobs": 0
+        },
+        "output_tokens": {
+          "known_jobs": 4,
+          "known_sum": 0,
+          "unknown_jobs": 0
+        }
+      }
+    }
+  ],
+  "groups": [
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c01",
+      "complete_decisive": true,
+      "family_id": "c01",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c01",
+      "complete_decisive": true,
+      "family_id": "c01",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c07",
+      "complete_decisive": true,
+      "family_id": "c07",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c07",
+      "complete_decisive": true,
+      "family_id": "c07",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "missed",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c01",
+      "complete_decisive": true,
+      "family_id": "c01",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c01",
+      "complete_decisive": true,
+      "family_id": "c01",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "missed",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c07",
+      "complete_decisive": true,
+      "family_id": "c07",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c07",
+      "complete_decisive": true,
+      "family_id": "c07",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "missed",
+      "variant": "faulty"
+    }
+  ],
+  "identity_audit": [
+    {
+      "model_key": "model_a",
+      "multiple_identities": false,
+      "observed_model_and_harness_ids": [
+        [
+          "mock-truth-aware-simulator",
+          "rbs-scripted-demo-0.1"
+        ]
+      ]
+    }
+  ],
+  "mode": "SYNTHETIC_DEMO_NOT_MODEL_RESULTS",
+  "observed_output_cap_exceeded_jobs": [],
+  "paired_comparisons": [
+    {
+      "bootstrap_percentile_95": [
+        -1.0,
+        0.0
+      ],
+      "eligible_case_repeat_pairs": 2,
+      "excluded_case_repeat_pairs": 0,
+      "family_count": 2,
+      "mean_delta": -0.5,
+      "metric": "unsafe approval; positive means treatment worse",
+      "treatment_minus_baseline": "panel_blind - solo_blind",
+      "unit": "family; repeats averaged within family; paired arms retained",
+      "warning": "Exploratory percentile interval; small family counts and selected complete cases limit inference."
+    }
+  ],
+  "pairwise_joint_misses": [
+    {
+      "arm_id": "panel_blind",
+      "excess_joint_miss": 0.0,
+      "joint_miss_rate": 0.5,
+      "miss_rate_a": 1.0,
+      "miss_rate_b": 0.5,
+      "missing_or_ungraded_pairs": 0,
+      "paired_known_trials": 2,
+      "product_of_pooled_marginals": 0.5,
+      "slots": [
+        "r1",
+        "r2"
+      ],
+      "warning": "Shared item difficulty alone can produce positive pooled excess; no causal correlation claim."
+    },
+    {
+      "arm_id": "panel_blind",
+      "excess_joint_miss": 0.0,
+      "joint_miss_rate": 0.5,
+      "miss_rate_a": 1.0,
+      "miss_rate_b": 0.5,
+      "missing_or_ungraded_pairs": 0,
+      "paired_known_trials": 2,
+      "product_of_pooled_marginals": 0.5,
+      "slots": [
+        "r1",
+        "r3"
+      ],
+      "warning": "Shared item difficulty alone can produce positive pooled excess; no causal correlation claim."
+    },
+    {
+      "arm_id": "panel_blind",
+      "excess_joint_miss": 0.25,
+      "joint_miss_rate": 0.5,
+      "miss_rate_a": 0.5,
+      "miss_rate_b": 0.5,
+      "missing_or_ungraded_pairs": 0,
+      "paired_known_trials": 2,
+      "product_of_pooled_marginals": 0.25,
+      "slots": [
+        "r2",
+        "r3"
+      ],
+      "warning": "Shared item difficulty alone can produce positive pooled excess; no causal correlation claim."
+    }
+  ],
+  "results_are_model_evidence": false,
+  "warnings": [
+    "Bundled cases are synthetic development fixtures, not a held-out natural benchmark.",
+    "Operational rejection is not target-defect detection. Control rejection is not fully adjudicated false-positive precision.",
+    "Unknown/error/abstain outcomes are never approval; bounds expose their effect.",
+    "Pair/family, not reviewer invocation, is the independent sampling unit.",
+    "No assertion of model superiority or equal actual cost follows from output caps."
+  ]
+}

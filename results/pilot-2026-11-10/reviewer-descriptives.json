@@ -1,0 +1,249 @@
+{
+  "run": "results/pilot-2026-11-10/run",
+  "mode": "EXTERNAL_REVIEWS_UNVERIFIED",
+  "protocol_id": "rbs-local-pilot-2026-11-10",
+  "unit_warning": "Reviewer requests on the same case are not independent samples.",
+  "per_model_requests": {
+    "model_a": {
+      "model": "gpt-oss:20b",
+      "faulty_requests": 120,
+      "control_requests": 120,
+      "faulty": {
+        "detected": 120,
+        "blocked_wrong_reason": 0,
+        "blocked_unresolved": 0,
+        "approved": 0,
+        "abstain": 0,
+        "no_valid_review": 0,
+        "missing": 0
+      },
+      "control": {
+        "control_approved": 120,
+        "control_blocked": 0,
+        "abstain": 0,
+        "no_valid_review": 0,
+        "missing": 0
+      },
+      "output_tokens_median": 546,
+      "output_tokens_total": 146067
+    },
+    "model_b": {
+      "model": "qwen3.6:35b",
+      "faulty_requests": 15,
+      "control_requests": 15,
+      "faulty": {
+        "detected": 15,
+        "blocked_wrong_reason": 0,
+        "blocked_unresolved": 0,
+        "approved": 0,
+        "abstain": 0,
+        "no_valid_review": 0,
+        "missing": 0
+      },
+      "control": {
+        "control_approved": 15,
+        "control_blocked": 0,
+        "abstain": 0,
+        "no_valid_review": 0,
+        "missing": 0
+      },
+      "output_tokens_median": 2340,
+      "output_tokens_total": 76742
+    },
+    "model_c": {
+      "model": "gemma4:26b",
+      "faulty_requests": 15,
+      "control_requests": 15,
+      "faulty": {
+        "detected": 15,
+        "blocked_wrong_reason": 0,
+        "blocked_unresolved": 0,
+        "approved": 0,
+        "abstain": 0,
+        "no_valid_review": 0,
+        "missing": 0
+      },
+      "control": {
+        "control_approved": 15,
+        "control_blocked": 0,
+        "abstain": 0,
+        "no_valid_review": 0,
+        "missing": 0
+      },
+      "output_tokens_median": 1906,
+      "output_tokens_total": 59016
+    }
+  },
+  "faulty_cases": {
+    "c01": {
+      "requests": 10,
+      "detected": 10,
+      "not_established": 0,
+      "detected_by_models": [
+        "model_a",
+        "model_b",
+        "model_c"
+      ],
+      "missed_by_every_request": false
+    },
+    "c02": {
+      "requests": 10,
+      "detected": 10,
+      "not_established": 0,
+      "detected_by_models": [
+        "model_a",
+        "model_b",
+        "model_c"
+      ],
+      "missed_by_every_request": false
+    },
+    "c03": {
+      "requests": 10,
+      "detected": 10,
+      "not_established": 0,
+      "detected_by_models": [
+        "model_a",
+        "model_b",
+        "model_c"
+      ],
+      "missed_by_every_request": false
+    },
+    "c04": {
+      "requests": 10,
+      "detected": 10,
+      "not_established": 0,
+      "detected_by_models": [
+        "model_a",
+        "model_b",
+        "model_c"
+      ],
+      "missed_by_every_request": false
+    },
+    "c05": {
+      "requests": 10,
+      "detected": 10,
+      "not_established": 0,
+      "detected_by_models": [
+        "model_a",
+        "model_b",
+        "model_c"
+      ],
+      "missed_by_every_request": false
+    },
+    "c06": {
+      "requests": 10,
+      "detected": 10,
+      "not_established": 0,
+      "detected_by_models": [
+        "model_a",
+        "model_b",
+        "model_c"
+      ],
+      "missed_by_every_request": false
+    },
+    "c07": {
+      "requests": 10,
+      "detected": 10,
+      "not_established": 0,
+      "detected_by_models": [
+        "model_a",
+        "model_b",
+        "model_c"
+      ],
+      "missed_by_every_request": false
+    },
+    "c08": {
+      "requests": 10,
+      "detected": 10,
+      "not_established": 0,
+      "detected_by_models": [
+        "model_a",
+        "model_b",
+        "model_c"
+      ],
+      "missed_by_every_request": false
+    },
+    "c09": {
+      "requests": 10,
+      "detected": 10,
+      "not_established": 0,
+      "detected_by_models": [
+        "model_a",
+        "model_b",
+        "model_c"
+      ],
+      "missed_by_every_request": false
+    },
+    "c10": {
+      "requests": 10,
+      "detected": 10,
+      "not_established": 0,
+      "detected_by_models": [
+        "model_a",
+        "model_b",
+        "model_c"
+      ],
+      "missed_by_every_request": false
+    },
+    "c11": {
+      "requests": 10,
+      "detected": 10,
+      "not_established": 0,
+      "detected_by_models": [
+        "model_a",
+        "model_b",
+        "model_c"
+      ],
+      "missed_by_every_request": false
+    },
+    "c12": {
+      "requests": 10,
+      "detected": 10,
+      "not_established": 0,
+      "detected_by_models": [
+        "model_a",
+        "model_b",
+        "model_c"
+      ],
+      "missed_by_every_request": false
+    },
+    "c13": {
+      "requests": 10,
+      "detected": 10,
+      "not_established": 0,
+      "detected_by_models": [
+        "model_a",
+        "model_b",
+        "model_c"
+      ],
+      "missed_by_every_request": false
+    },
+    "c14": {
+      "requests": 10,
+      "detected": 10,
+      "not_established": 0,
+      "detected_by_models": [
+        "model_a",
+        "model_b",
+        "model_c"
+      ],
+      "missed_by_every_request": false
+    },
+    "c15": {
+      "requests": 10,
+      "detected": 10,
+      "not_established": 0,
+      "detected_by_models": [
+        "model_a",
+        "model_b",
+        "model_c"
+      ],
+      "missed_by_every_request": false
+    }
+  },
+  "cases_missed_by_every_request": [],
+  "cases_caught_only_by_other_models": [],
+  "majority_model_keys": [
+    "model_a"
+  ]
+}

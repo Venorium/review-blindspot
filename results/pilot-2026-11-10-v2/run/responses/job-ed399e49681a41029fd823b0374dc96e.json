@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1499,
+    "isolation_attested": true,
+    "latency_seconds": 133.011,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 4319,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-ed399e49681a41029fd823b0374dc96e/attempt-1"
+  },
+  "job_id": "job-ed399e49681a41029fd823b0374dc96e",
+  "packet_sha256": "b492ef4ef71e65d20512de055b5072a9ddc9be822be459e218e895a8070048b1",
+  "review": {
+    "findings": [
+      {
+        "description": "The containment check lacks the required slash separator, allowing paths that share a directory prefix with base to pass incorrectly.",
+        "evidence": "Spec mandates valid results must equal base or start with 'base + /'. For inputs base='/srv/upload' and name='s/../uploads/file.txt', path resolves to '/srv/uploads/file.txt'. candidate.py's check path.startswith('/srv/upload') evaluates to True, incorrectly allowing an escaped path.",
+        "file": "candidate.py",
+        "finding_id": "insufficient_prefix_check",
+        "line_end": 8,
+        "line_start": 8,
+        "severity": "high"
+      }
+    ],
+    "summary": "The candidate implements directory containment incorrectly by using path.startswith(base), which permits paths that share a parent prefix but lie outside the target directory, violating the explicit requirement to check for a trailing slash separator.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

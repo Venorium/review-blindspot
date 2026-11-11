@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F1"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-bfe638a1d5c9467f9dfeca0e5acfab22",
+  "method": "external_judge",
+  "rationale": "Finding states that the n == 0 early return skips the weekend-to-Monday adjustment; same mechanism and violated rule. Finding F1: \"The early return when n==0 ignores the contract rule that if the start date is on a weekend, the function should advance to the following Monday.\". F1 gives no concrete input but names the rule. F2 asks to validate n, outside the stated domain; not counted.",
+  "schema_version": 1,
+  "submission_sha256": "e879b2bdcfdccc9b8420ad0e5383d0a9e536c3303065de60c2e837a040918dc1",
+  "target_detection": "detected"
+}

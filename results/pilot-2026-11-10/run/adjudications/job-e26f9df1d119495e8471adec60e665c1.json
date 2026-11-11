@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "C001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-e26f9df1d119495e8471adec60e665c1",
+  "method": "external_judge",
+  "rationale": "Finding states earlier non-negative values are appended before a later negative value raises, leaving store mutated; same mechanism. Finding C001: \"Store is mutated with earlier positive values before a negative value triggers an exception, leaving the store partially updated.\".",
+  "schema_version": 1,
+  "submission_sha256": "35dd32d9e6e88888f2659caeffc7186b1b354ca3f2ae2274a026f3385714dab1",
+  "target_detection": "detected"
+}

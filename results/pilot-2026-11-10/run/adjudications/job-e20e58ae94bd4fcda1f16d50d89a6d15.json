@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "f1"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-e20e58ae94bd4fcda1f16d50d89a6d15",
+  "method": "external_judge",
+  "rationale": "Finding states earlier non-negative values are appended before a later negative value raises, leaving store mutated; same mechanism. Finding f1: \"The function appends values to the store before checking for a negative value. If a negative value occurs later in the batch, the store has already been modified, which violates the contract that the store must remain un\".",
+  "schema_version": 1,
+  "submission_sha256": "9b42c5fb0da2ecf42b7034e893907ff324fc4001710cdb1ccb320a9fc84d3bd7",
+  "target_detection": "detected"
+}

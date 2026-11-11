@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1360,
+    "isolation_attested": true,
+    "latency_seconds": 28.728,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 924,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-a921d73bf3da434aaa723eeb4cc2ebff/attempt-1"
+  },
+  "job_id": "job-a921d73bf3da434aaa723eeb4cc2ebff",
+  "packet_sha256": "965fcdbe6bf8130ef087aef3142404ee1c2c1e5c8bfba3ed2692a3230482dad3",
+  "review": {
+    "findings": [
+      {
+        "description": "The function updates the state for equal versions due to a >= comparison, violating the contract that only strictly greater versions should trigger an update.",
+        "evidence": "state = {'version': 1, 'value': 'x', 'writes': 0}\\nresult = candidate.advance(state, 1, 'y')\\n# Expected: result == False and state unchanged\\n# Actual: result == True and state becomes {'version': 1, 'value': 'y', 'writes': 1}",
+        "file": "candidate.py",
+        "finding_id": "defect-1",
+        "line_end": 4,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation updates the state when the provided version is equal to the current version, which violates the contract that requires a strictly greater version. This causes unintended state mutations for equal versions.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

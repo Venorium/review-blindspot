@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1337,
+    "isolation_attested": true,
+    "latency_seconds": 26.949,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 540,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-7c2dd4e889e54b98b86224e7a6c53ce7/attempt-1"
+  },
+  "job_id": "job-7c2dd4e889e54b98b86224e7a6c53ce7",
+  "packet_sha256": "7a27ea3b4071c34a89ad5d068e3ddfb86e034b18da4c68eafa94f8e9556b7f45",
+  "review": {
+    "findings": [],
+    "summary": "The implementation correctly maps 'basic' to 10 and 'premium' to 100, and raises a ValueError for any other input, adhering to the case-sensitivity and exact matching requirements specified.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

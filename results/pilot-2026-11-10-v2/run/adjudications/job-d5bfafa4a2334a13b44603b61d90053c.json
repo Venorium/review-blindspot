@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "C1"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-d5bfafa4a2334a13b44603b61d90053c",
+  "method": "external_judge",
+  "rationale": "Finding states that update_price leaves the cached entry in place, so later price()/quote() return the old price; same mechanism and violated rule. Finding C1: \"update_price fails to invalidate the cache entry for the updated SKU, so subsequent price() or quote() calls may return stale prices and read the table fewer times than required.\".",
+  "schema_version": 1,
+  "submission_sha256": "64ef97085e59ab86b7524d3833036e068d794328190c10223da12268928166ed",
+  "target_detection": "detected"
+}

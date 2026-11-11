@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1198,
+    "isolation_attested": true,
+    "latency_seconds": 15.127,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 340,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-56a0341bcebd44afa28bc7204b97d94d/attempt-1"
+  },
+  "job_id": "job-56a0341bcebd44afa28bc7204b97d94d",
+  "packet_sha256": "a6a9cb5c56f5c327f5c619cb4445b027d4b741b2175a8227d03726f35af7787b",
+  "review": {
+    "findings": [
+      {
+        "description": "The function returns a dictionary constructed by a dictionary comprehension that only keeps the last quantity for each product, instead of summing all quantities per product.",
+        "evidence": "For input [('a', 1), ('a', 2)], the expected result is {'a': 3} but the implementation returns {'a': 2}.",
+        "file": "candidate.py",
+        "finding_id": "sum_logic_error",
+        "line_end": 2,
+        "line_start": 1,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation does not correctly sum quantities for repeated products.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

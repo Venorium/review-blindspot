@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1255,
+    "isolation_attested": true,
+    "latency_seconds": 184.848,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 1906,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-9f8d737f28fa4db5ab8620e5717ad63a/attempt-1"
+  },
+  "job_id": "job-9f8d737f28fa4db5ab8620e5717ad63a",
+  "packet_sha256": "819189e25cb4b34d731a45a87386c0e0e6b8b20d6c79b6af373d58f4ec223a30",
+  "review": {
+    "findings": [],
+    "summary": "The implementation correctly follows the specification, ensuring the token is active only strictly before the expiry timestamp and inactive when the current timestamp is equal to or greater than the expiry timestamp.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

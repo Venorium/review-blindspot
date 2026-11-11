@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1725,
+    "isolation_attested": true,
+    "latency_seconds": 205.843,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 3547,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-af5029ed887b4f41bfdfbe626ed6a12c/attempt-1"
+  },
+  "job_id": "job-af5029ed887b4f41bfdfbe626ed6a12c",
+  "packet_sha256": "5e8678b6038b1bf399c972ac6d67df1891f2db1242960c6f2c417af3e86d70ba",
+  "review": {
+    "findings": [],
+    "summary": "The candidate correctly implements the specified exponential backoff logic. The sleep delay calculation `base_delay * 2 ** attempt` accurately reflects the required sequence of delays for each retry, and the final failure correctly re-raises without sleeping. No contract violations to the stated input domain were identified.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F1"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-d5292611aff64b9db360fbb4797b13c8",
+  "method": "external_judge",
+  "rationale": "Finding states that balances are mutated before ledger.record can reject a long memo, leaving accounts changed on failure; same mechanism. Finding F1: \"When ledger.record raises ValueError (e.g., due to a memo longer than 40 characters), the transfer function has already modified the account balances. The contract requires that in this case, both the\".",
+  "schema_version": 1,
+  "submission_sha256": "5c4dc3babf0d3363f50a23448f635252ccd826832154cb67ec05d4e3b94a4526",
+  "target_detection": "detected"
+}

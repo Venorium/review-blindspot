@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "missing tenant in cache key"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-8318f04194e74f2a9f6455cf6ab10ff5",
+  "method": "external_judge",
+  "rationale": "Finding states the cache is keyed by record_id only, so two tenants with the same record_id share an entry; same mechanism. Finding missing tenant in cache key: \"The cache key ignores the tenant, causing cache collisions between different tenants that use the same record_id.\".",
+  "schema_version": 1,
+  "submission_sha256": "cfb05d48738f742b76a3d989fb9e83dc9e5660be214815858724167f36dbb551",
+  "target_detection": "detected"
+}

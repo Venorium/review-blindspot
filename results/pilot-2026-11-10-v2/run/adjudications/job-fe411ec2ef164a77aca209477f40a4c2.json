@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "two-pass-iterator"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-fe411ec2ef164a77aca209477f40a4c2",
+  "method": "external_judge",
+  "rationale": "Finding states that records is iterated twice (sum, then the comprehension), so a one-shot iterator yields an empty result; same mechanism. Finding two-pass-iterator: \"allocate iterates over the records iterable twice – once to compute total and once to build the result dictionary. This fails for one-shot iterators such as generators, resulting in an empty dictionar\".",
+  "schema_version": 1,
+  "submission_sha256": "43289376ee1b4f86e9a20a580d6e02728a580b2066bcaceee6ceb4e5bf5fc5e2",
+  "target_detection": "detected"
+}

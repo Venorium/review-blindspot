@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1311,
+    "isolation_attested": true,
+    "latency_seconds": 104.915,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 1601,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-6ad9da3f668943ae8d4c0b06622d6f13/attempt-1"
+  },
+  "job_id": "job-6ad9da3f668943ae8d4c0b06622d6f13",
+  "packet_sha256": "a6a9cb5c56f5c327f5c619cb4445b027d4b741b2175a8227d03726f35af7787b",
+  "review": {
+    "findings": [
+      {
+        "description": "The dictionary comprehension does not aggregate quantities for duplicate keys; it overwrites the value with the last encountered quantity for that key. The specification requires summing all quantities per product.",
+        "evidence": "Input [('a', 1), ('a', 2)] produces {'a': 2} instead of the required {'a': 3}.",
+        "file": "candidate.py",
+        "finding_id": "summation_error",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation fails to sum quantities for repeated product IDs.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

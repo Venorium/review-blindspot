@@ -1,0 +1,94 @@
+{
+  "config": {
+    "description": "Local Ollama transport for the 2026-11 development pilot. Text only, no tools, one stateless request per job. Sampling uses each model's Modelfile defaults; the harness sets num_predict (output cap) and a per-job seed.",
+    "models": {
+      "model_a": {
+        "backend": "ollama",
+        "keep_alive": "60m",
+        "model": "gpt-oss:20b",
+        "think": "medium",
+        "timeout_seconds": 900
+      },
+      "model_b": {
+        "backend": "ollama",
+        "keep_alive": "60m",
+        "model": "qwen3.6:35b",
+        "think": true,
+        "timeout_seconds": 900
+      },
+      "model_c": {
+        "backend": "ollama",
+        "keep_alive": "60m",
+        "model": "gemma4:26b",
+        "think": true,
+        "timeout_seconds": 900
+      }
+    },
+    "schema_version": 1
+  },
+  "config_sha256": "c6e03045b3e317a5d04418fb43770359bf07a8ad87379f40308f1091e56e1fef",
+  "frozen_at": "2026-11-10T22:47:13.958572+00:00",
+  "identities": {
+    "model_a": {
+      "backend": "ollama",
+      "details": {
+        "context_length": 131072,
+        "embedding_length": 2880,
+        "families": [
+          "gptoss"
+        ],
+        "family": "gptoss",
+        "format": "gguf",
+        "parameter_size": "20.9B",
+        "parent_model": "",
+        "quantization_level": "MXFP4",
+        "runner": "ggml"
+      },
+      "digest": "17052f91a42e97930aa6e28a6c6c06a983e6a58dbb00434885a0cf5313e376f7",
+      "endpoint": "http://127.0.0.1:11434",
+      "model": "gpt-oss:20b",
+      "server_version": "0.40.14"
+    },
+    "model_b": {
+      "backend": "ollama",
+      "details": {
+        "context_length": 262144,
+        "embedding_length": 2048,
+        "families": [
+          "qwen35moe"
+        ],
+        "family": "qwen35moe",
+        "format": "gguf",
+        "parameter_size": "36.0B",
+        "parent_model": "",
+        "quantization_level": "Q4_K_M",
+        "runner": "ggml"
+      },
+      "digest": "07d35212591fc27746f0a317c975a6d68754fb38e9053d82e25f06057af28522",
+      "endpoint": "http://127.0.0.1:11434",
+      "model": "qwen3.6:35b",
+      "server_version": "0.40.14"
+    },
+    "model_c": {
+      "backend": "ollama",
+      "details": {
+        "context_length": 262144,
+        "embedding_length": 2816,
+        "families": [
+          "gemma4"
+        ],
+        "family": "gemma4",
+        "format": "gguf",
+        "parameter_size": "25.8B",
+        "parent_model": "",
+        "quantization_level": "Q4_K_M",
+        "runner": "ggml"
+      },
+      "digest": "5571076f3d70050487b26b341705799e0ab29b808164f90d20d4cf84f699d251",
+      "endpoint": "http://127.0.0.1:11434",
+      "model": "gemma4:26b",
+      "server_version": "0.40.14"
+    }
+  },
+  "rbs_version": "0.1.0"
+}

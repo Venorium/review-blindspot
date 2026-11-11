@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "c05",
+  "family_id": "c05",
+  "title": "Numeric event versions",
+  "origin": "original_synthetic_starter",
+  "split": "development_only",
+  "spec": "Implement ordered(events) returning a new list sorted by ascending numeric version. Each event is a dictionary with version as a non-negative base-10 integer string. Equal numeric versions retain input order. Do not modify input.",
+  "target_defect": "Text ordering is used instead of numeric ordering, including numeric ties.",
+  "author_rationale": "The change keeps sorting non-mutating and specifies an explicit key.",
+  "limitations": "Small synthetic function; not a natural pull request. Correct means conforming to the stated contract and supplied checks, not universally bug-free."
+}

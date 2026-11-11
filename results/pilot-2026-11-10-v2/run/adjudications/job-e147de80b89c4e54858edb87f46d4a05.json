@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "prefix_vulnerability"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-e147de80b89c4e54858edb87f46d4a05",
+  "method": "external_judge",
+  "rationale": "Finding states that path.startswith(base) without the slash accepts sibling paths sharing the prefix; same mechanism and violated rule. Finding prefix_vulnerability: \"The `startswith(base)` check is insufficient to ensure the path is inside the base directory. It allows paths that are not inside `base` but share the same prefix (e.g., `/srv/uploads_secret` when `ba\".",
+  "schema_version": 1,
+  "submission_sha256": "c2c3a17e2c37565b2e766cb9a95b833c6fcad7a81bfe9a852c5b0cb17002b6ec",
+  "target_detection": "detected"
+}

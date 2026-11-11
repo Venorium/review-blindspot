@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1530,
+    "isolation_attested": true,
+    "latency_seconds": 154.194,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 2324,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-a59b78c59bd041ad934d2cc492b08f0b/attempt-1"
+  },
+  "job_id": "job-a59b78c59bd041ad934d2cc492b08f0b",
+  "packet_sha256": "62ca4d6c73e6ae522c4769f42a503c7a0711e32473fd4a9afa4c7d5c78a6b553",
+  "review": {
+    "findings": [],
+    "summary": "The implementation correctly follows the specification, ensuring that only the first occurrence of each key is preserved and that the resulting list maintains the order of the keys' first appearance. The use of `dict.setdefault` is an efficient way to achieve this in Python 3.7+.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

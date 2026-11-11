@@ -1,0 +1,17 @@
+{
+  "name": "review-blindspot",
+  "version": "0.2.0",
+  "description": "Evidence-backed local code reviews: expose unreviewed files, unsupported claims and stale conclusions.",
+  "author": {
+    "name": "Review Blind Spot contributors"
+  },
+  "homepage": "https://github.com/Venorium/review-blindspot",
+  "repository": "https://github.com/Venorium/review-blindspot",
+  "license": "MIT",
+  "keywords": [
+    "code-review",
+    "agent-skills",
+    "evidence",
+    "git"
+  ]
+}

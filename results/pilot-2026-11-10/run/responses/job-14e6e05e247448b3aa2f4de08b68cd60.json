@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1261,
+    "isolation_attested": true,
+    "latency_seconds": 60.655,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 2045,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-14e6e05e247448b3aa2f4de08b68cd60/attempt-1"
+  },
+  "job_id": "job-14e6e05e247448b3aa2f4de08b68cd60",
+  "packet_sha256": "3d06dbac4c9d1554c755d8882aea8e7790010e4f83c3c5637285b07aab6d45d3",
+  "review": {
+    "findings": [
+      {
+        "description": "The specification mandates raising ValueError for any input that is not exactly 'basic' or 'premium'. The current implementation uses dict.get with a fallback default of 100, causing it to silently return 100 for invalid inputs instead of raising the required exception.",
+        "evidence": "SPEC.md states: 'For every other string, raise ValueError.' candidate.py line 3 `return limits.get(tier, 100)` returns 100 when called with `quota('gold')`, violating the contract.",
+        "file": "candidate.py",
+        "finding_id": "spec_violation_unknown_tier",
+        "line_end": 3,
+        "line_start": 3,
+        "severity": "high"
+      }
+    ],
+    "summary": "candidate.py fails to raise ValueError for unknown tier strings, instead returning a default of 100.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

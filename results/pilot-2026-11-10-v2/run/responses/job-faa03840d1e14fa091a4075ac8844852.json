@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1292,
+    "isolation_attested": true,
+    "latency_seconds": 160.195,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1173,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-faa03840d1e14fa091a4075ac8844852/attempt-1"
+  },
+  "job_id": "job-faa03840d1e14fa091a4075ac8844852",
+  "packet_sha256": "136a019dd4e1f6f3c289cabfdee465465356585be2c6deca7f9f7644c06b792d",
+  "review": {
+    "findings": [
+      {
+        "description": "Incorrect rounding for negative amounts when the fractional part is exactly -0.5.",
+        "evidence": "percent_of(-1, 50) returns 0 but should return -1 according to the spec, which requires rounding halves away from zero.",
+        "file": "candidate.py",
+        "finding_id": "rounding_negative_half",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation fails to round negative half-values away from zero, violating the specification that percent_of(-x,p) == -percent_of(x,p).",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

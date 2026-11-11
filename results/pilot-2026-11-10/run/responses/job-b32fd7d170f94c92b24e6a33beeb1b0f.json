@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1158,
+    "isolation_attested": true,
+    "latency_seconds": 13.431,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 292,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-b32fd7d170f94c92b24e6a33beeb1b0f/attempt-1"
+  },
+  "job_id": "job-b32fd7d170f94c92b24e6a33beeb1b0f",
+  "packet_sha256": "91a11c8b752a29bc7c976bce011967f93bdb96aa24267dccca44de95f4361b8c",
+  "review": {
+    "findings": [],
+    "summary": "Candidate implementation meets the contract for active() as defined in SPEC.md.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

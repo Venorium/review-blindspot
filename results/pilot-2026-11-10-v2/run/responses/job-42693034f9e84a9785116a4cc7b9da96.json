@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1416,
+    "isolation_attested": true,
+    "latency_seconds": 78.393,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 608,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-42693034f9e84a9785116a4cc7b9da96/attempt-1"
+  },
+  "job_id": "job-42693034f9e84a9785116a4cc7b9da96",
+  "packet_sha256": "70fca3c67e11cbccc8e578dd658822ecafd2f34fc137b274a2e4fed95b68d746",
+  "review": {
+    "findings": [
+      {
+        "description": "The function consumes the records iterable twice: once to compute the total weight and again to build the result dictionary. If records is a one‑shot iterator (e.g., a generator), the second iteration yields no items, producing an empty dictionary and violating the contract that every name must be allocated. The implementation must consume the iterable only once, e.g., by converting it to a list or storing its elements in a temporary list before computing the total and constructing the result.",
+        "evidence": "records = ((n,w) for n,w in [(\"a\",1),(\"b\",3)])\nprint(candidate.allocate(records,100))  # currently prints {}, but should print {\"a\":25, \"b\":75} per contract.",
+        "file": "candidate.py",
+        "finding_id": "F001",
+        "line_end": 3,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation fails to handle iterator inputs per contract, leading to incorrect empty results when records is a one‑shot iterator.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

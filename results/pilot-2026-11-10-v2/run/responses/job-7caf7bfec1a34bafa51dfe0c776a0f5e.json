@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1450,
+    "isolation_attested": true,
+    "latency_seconds": 125.82,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 3643,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-7caf7bfec1a34bafa51dfe0c776a0f5e/attempt-1"
+  },
+  "job_id": "job-7caf7bfec1a34bafa51dfe0c776a0f5e",
+  "packet_sha256": "b789142a9ffeae8e22c94472cee0ecd6d70c412c5d42d1c55fc1de7b1ad97f63",
+  "review": {
+    "findings": [],
+    "summary": "Candidate implementation correctly satisfies the specification for resolving upload paths, handling absolute names, normalizing paths, and ensuring returned paths are within the base directory.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

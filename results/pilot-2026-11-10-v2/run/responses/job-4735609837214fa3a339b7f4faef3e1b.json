@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1698,
+    "isolation_attested": true,
+    "latency_seconds": 143.203,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 5286,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-4735609837214fa3a339b7f4faef3e1b/attempt-1"
+  },
+  "job_id": "job-4735609837214fa3a339b7f4faef3e1b",
+  "packet_sha256": "95efe3752efea653ea05f01097ee82f1544252fbda9e25186bf315df9325d9f0",
+  "review": {
+    "findings": [
+      {
+        "description": "When n == 0, the function returns the original start date regardless of whether it falls on a weekend. The contract requires that for a weekend start the result should be the following Monday.",
+        "evidence": "For example, add_business_days(date(2026, 11, 5), 0) should return date(2026, 11, 7), but the current implementation returns date(2026, 11, 5).",
+        "file": "candidate.py",
+        "finding_id": "F001",
+        "line_end": 6,
+        "line_start": 5,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation fails to handle n==0 correctly for weekend start dates, violating the contract.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

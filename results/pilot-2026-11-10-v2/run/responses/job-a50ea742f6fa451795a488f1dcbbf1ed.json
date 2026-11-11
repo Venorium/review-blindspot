@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1716,
+    "isolation_attested": true,
+    "latency_seconds": 191.066,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1203,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-a50ea742f6fa451795a488f1dcbbf1ed/attempt-1"
+  },
+  "job_id": "job-a50ea742f6fa451795a488f1dcbbf1ed",
+  "packet_sha256": "f731e5dceb88fa75500261b678935732dc478c07cef9fffa5f1eeb77ec105be5",
+  "review": {
+    "findings": [
+      {
+        "description": "The implementation calls sleep(base_delay * 2 ** attempt) unconditionally on every TransientError, including the last attempt. According to the specification, no sleep should occur after the final failed call; the last TransientError must be re-raised immediately. This causes an unnecessary delay and does not conform to the required exponential backoff behavior.",
+        "evidence": "Line 12: sleep(base_delay * 2 ** attempt) is executed even when attempt == attempts - 1.",
+        "file": "candidate.py",
+        "finding_id": "c1",
+        "line_end": 12,
+        "line_start": 10,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate sleeps after the final TransientError, violating the contract that no sleep should occur after the last failed attempt.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

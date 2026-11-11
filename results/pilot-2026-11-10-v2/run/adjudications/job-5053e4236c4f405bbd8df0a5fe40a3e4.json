@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-5053e4236c4f405bbd8df0a5fe40a3e4",
+  "method": "external_judge",
+  "rationale": "Finding states that adding 50 before floor division rounds negative halves toward zero, breaking refund/charge symmetry; same mechanism. Finding F001: \"Incorrect rounding for negative half values (e.g., percent_of(-1, 50) returns 0 instead of -1).\".",
+  "schema_version": 1,
+  "submission_sha256": "82da0fbf2c19c8c1e3b88cd43d3bdfae3069a7cc1c68b766ab0e605bf3372cef",
+  "target_detection": "detected"
+}

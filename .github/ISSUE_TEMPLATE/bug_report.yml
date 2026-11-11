@@ -1,0 +1,30 @@
+name: Bug report
+description: The harness, the skill helper or a report behaves unexpectedly.
+labels: [bug]
+body:
+  - type: textarea
+    id: command
+    attributes:
+      label: Command and output
+      description: Exact command, full output, exit code. Remove secrets and private paths.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: "OS, Python version, Git version, Ollama/Codex version if relevant"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Synthetic, non-sensitive files only. Never attach professional code or credentials.

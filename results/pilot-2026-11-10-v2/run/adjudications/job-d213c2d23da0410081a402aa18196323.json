@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-d213c2d23da0410081a402aa18196323",
+  "method": "external_judge",
+  "rationale": "Finding states that lower() is used where the contract requires casefold(), so full case-folding matches are missed; same mechanism. Finding F001: \"The implementation incorrectly uses str.lower() for case-insensitive comparison. The specification requires full Unicode case folding via str.casefold(), which handles many characters that lower() doe\".",
+  "schema_version": 1,
+  "submission_sha256": "01f1a687f48eec22aa0919278bd988306c153623051cf72c7e059fb15b9f7539",
+  "target_detection": "detected"
+}

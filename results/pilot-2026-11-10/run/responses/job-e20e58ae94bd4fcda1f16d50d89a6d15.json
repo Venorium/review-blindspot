@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1313,
+    "isolation_attested": true,
+    "latency_seconds": 57.688,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 902,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-e20e58ae94bd4fcda1f16d50d89a6d15/attempt-1"
+  },
+  "job_id": "job-e20e58ae94bd4fcda1f16d50d89a6d15",
+  "packet_sha256": "590d3505861ae4f2ecbf28c8d8e09cfcfe8882825094a8682371193e3eb1068a",
+  "review": {
+    "findings": [
+      {
+        "description": "The function appends values to the store before checking for a negative value. If a negative value occurs later in the batch, the store has already been modified, which violates the contract that the store must remain unchanged if any value is negative.",
+        "evidence": "Example: store = [1], values = [2, -3, 4]. Candidate appends 2, then raises ValueError on -3, leaving store as [1, 2] instead of unchanged [1].",
+        "file": "candidate.py",
+        "finding_id": "f1",
+        "line_end": 6,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "append_batch modifies the store before raising on a negative value, violating the contract that the store must remain unchanged if any value is negative.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

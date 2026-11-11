@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "utc_date_calculation_error"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-aa25651d7c864382b0af9898a6264e89",
+  "method": "external_judge",
+  "rationale": "Finding states the date is taken in the input offset without converting to UTC, with an offset that crosses midnight; same mechanism. Finding utc_date_calculation_error: \"The function returns the date component of the timestamp as it exists in the input offset's timezone. It does not convert the datetime to UTC before calling `.date()`, which violates the requirement to return the UTC cal\".",
+  "schema_version": 1,
+  "submission_sha256": "ee89b460c37f70e53ea02fc928b8a1146016c135bf90197facbcf2125cd86b76",
+  "target_detection": "detected"
+}

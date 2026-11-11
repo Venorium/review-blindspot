@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "DEF-001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-ae42a701841c4c7e8f19c62d1cde4f6a",
+  "method": "external_judge",
+  "rationale": "Finding states that the n == 0 early return skips the weekend-to-Monday adjustment; same mechanism and violated rule. Finding DEF-001: \"Unconditional early return for n == 0 bypasses weekend-to-Monday adjustment.\". Weekday mislabeled (2026-11-07 is a Saturday, not a Sunday); expected Monday is correct.",
+  "schema_version": 1,
+  "submission_sha256": "11427c17db576ea7125eeab9a62c7705de7e4078af7016b75fe76412b6a57f4a",
+  "target_detection": "detected"
+}

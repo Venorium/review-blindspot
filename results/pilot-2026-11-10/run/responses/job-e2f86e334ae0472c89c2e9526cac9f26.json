@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1289,
+    "isolation_attested": true,
+    "latency_seconds": 54.467,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 704,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-e2f86e334ae0472c89c2e9526cac9f26/attempt-1"
+  },
+  "job_id": "job-e2f86e334ae0472c89c2e9526cac9f26",
+  "packet_sha256": "a5b22687138337736f06917c17ed33fb275f2c0ae473c709c954120998132f02",
+  "review": {
+    "findings": [],
+    "summary": "The candidate implementation correctly validates non-negative values, raises ValueError for any negative input, and appends all values in order while leaving the store unchanged on error, meeting the specified contract.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

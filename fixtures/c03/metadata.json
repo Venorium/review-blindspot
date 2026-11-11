@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "c03",
+  "family_id": "c03",
+  "title": "Tenant-scoped cache",
+  "origin": "original_synthetic_starter",
+  "split": "development_only",
+  "spec": "Implement lookup(cache, tenant, record_id, load). Cache results separately for each (tenant, record_id). Call load(tenant, record_id) only on a miss. The cache is a mutable dictionary initially empty; both identifiers are strings. Return the cached or loaded value.",
+  "target_defect": "The cache key omits tenant, so equal record identifiers collide across tenants.",
+  "author_rationale": "The change keeps a single cache lookup path and avoids repeated loads.",
+  "limitations": "Small synthetic function; not a natural pull request. Correct means conforming to the stated contract and supplied checks, not universally bug-free."
+}

@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1198,
+    "isolation_attested": true,
+    "latency_seconds": 25.093,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 331,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-443a066af5cd46ce9b3243efcf427b3c/attempt-1"
+  },
+  "job_id": "job-443a066af5cd46ce9b3243efcf427b3c",
+  "packet_sha256": "a6a9cb5c56f5c327f5c619cb4445b027d4b741b2175a8227d03726f35af7787b",
+  "review": {
+    "findings": [
+      {
+        "description": "The implementation does not sum quantities for the same product. It overwrites the value for each product key, leaving only the last quantity in the list.",
+        "evidence": "For input [('a', 2), ('a', 3)] the expected output is {'a': 5} but the candidate returns {'a': 3}.",
+        "file": "candidate.py",
+        "finding_id": "sum-repeated-products",
+        "line_end": 2,
+        "line_start": 1,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate fails to sum quantities for repeated product identifiers.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

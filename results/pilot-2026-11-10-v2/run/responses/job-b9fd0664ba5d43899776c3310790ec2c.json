@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1806,
+    "isolation_attested": true,
+    "latency_seconds": 109.403,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1380,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-b9fd0664ba5d43899776c3310790ec2c/attempt-1"
+  },
+  "job_id": "job-b9fd0664ba5d43899776c3310790ec2c",
+  "packet_sha256": "0cf8a162afbaf6a3e4b38d6c23b1fd82d3b92d6af5ba45caab1678db532f15da",
+  "review": {
+    "findings": [
+      {
+        "description": "The transfer function updates account balances before calling ledger.record, so if ledger.record raises ValueError (e.g., memo too long), the balances are already altered. The spec requires that any ledger rejection causes transfer to raise ValueError and leave both accounts and the ledger unchanged.",
+        "evidence": "Given accounts={\"a\":10,\"b\":0}, ledger=Ledger(), calling transfer(accounts, ledger, \"a\", \"b\", 5, memo=\"x\"*41) will subtract 5 from a and add 5 to b, then ledger.record raises ValueError(\"memo too long\"). After the exception, accounts == {\"a\":5,\"b\":5} and ledger.entries == [], violating the requirement that state remain unchanged on ledger rejection.",
+        "file": "candidate.py",
+        "finding_id": "001",
+        "line_end": 20,
+        "line_start": 16,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate violates the contract by not preserving account and ledger state when ledger.record fails due to an overlong memo. This leads to inconsistent state and does not satisfy the specification that a failed ledger entry must leave everything unchanged.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

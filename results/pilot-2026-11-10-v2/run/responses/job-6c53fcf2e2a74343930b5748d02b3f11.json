@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1970,
+    "isolation_attested": true,
+    "latency_seconds": 136.366,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 4302,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-6c53fcf2e2a74343930b5748d02b3f11/attempt-1"
+  },
+  "job_id": "job-6c53fcf2e2a74343930b5748d02b3f11",
+  "packet_sha256": "007d132edc505ce758f14f4edbd871dc84342ce0aa49030b768a2024a56c99ca",
+  "review": {
+    "findings": [
+      {
+        "description": "update_price does not clear the cached value for the updated SKU, leading to incorrect prices being returned until the cache is manually cleared or expired.",
+        "evidence": "The contract requires that 'every later price() or quote() call must reflect the new price.' candidate.py's update_price method (lines 16-19) only updates self._prices[sku] = cents and leaves self._cache untouched. Triggering sequence: c = Catalog({'a': 100}); c.price('a') reads _prices and caches 100; c.update_price('a', 200) updates _prices['a'] to 200 but leaves _cache['a'] at 100; subsequent c.price('a') returns 100 instead of the contract-mandated 200. The fix is to invalidate self._cache[sku] in update_price so that the next read counts as the 'at most once' allowed access between updates and correctly reflects the new value.",
+        "file": "candidate.py",
+        "finding_id": "STALE_CACHE_AFTER_UPDATE",
+        "line_end": 19,
+        "line_start": 16,
+        "severity": "high"
+      }
+    ],
+    "summary": "candidate.py implements caching for price reads, but fails to invalidate the cache when update_price is called. This causes subsequent lookups to return stale values, violating the explicit correctness requirement that every later price() or quote() call must reflect the new price.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

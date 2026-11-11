@@ -1,0 +1,1777 @@
+{
+  "arms": [
+    {
+      "arm_id": "panel_blind",
+      "common_target_miss_bounds": [
+        0.0,
+        0.0
+      ],
+      "complete_faulty_groups": 15,
+      "control_groups": 15,
+      "control_rejected_groups": 0,
+      "control_rejection_bounds_all_scheduled": [
+        0.0,
+        0.0
+      ],
+      "execution_status_counts": {
+        "ok": 90
+      },
+      "faulty_approved_groups": 0,
+      "faulty_groups": 15,
+      "faulty_unresolved_gate_groups": 0,
+      "review_jobs": 90,
+      "target_detected_groups": 15,
+      "target_missed_by_all_groups": 0,
+      "target_recall_bounds": [
+        1.0,
+        1.0
+      ],
+      "target_unresolved_groups": 0,
+      "unattested_or_missing_isolation_jobs": 0,
+      "unique_cases_with_target_detected": 15,
+      "unsafe_approval_bounds_all_scheduled": [
+        0.0,
+        0.0
+      ],
+      "unsafe_approval_rate_complete": 0.0,
+      "usage": {
+        "cost_usd": {
+          "known_jobs": 0,
+          "known_sum": null,
+          "unknown_jobs": 90
+        },
+        "input_tokens": {
+          "known_jobs": 90,
+          "known_sum": 108435,
+          "unknown_jobs": 0
+        },
+        "latency_seconds": {
+          "known_jobs": 90,
+          "known_sum": 4362.046,
+          "unknown_jobs": 0
+        },
+        "output_tokens": {
+          "known_jobs": 90,
+          "known_sum": 55094,
+          "unknown_jobs": 0
+        }
+      }
+    },
+    {
+      "arm_id": "panel_informed",
+      "common_target_miss_bounds": [
+        0.0,
+        0.0
+      ],
+      "complete_faulty_groups": 15,
+      "control_groups": 15,
+      "control_rejected_groups": 0,
+      "control_rejection_bounds_all_scheduled": [
+        0.0,
+        0.0
+      ],
+      "execution_status_counts": {
+        "ok": 90
+      },
+      "faulty_approved_groups": 0,
+      "faulty_groups": 15,
+      "faulty_unresolved_gate_groups": 0,
+      "review_jobs": 90,
+      "target_detected_groups": 15,
+      "target_missed_by_all_groups": 0,
+      "target_recall_bounds": [
+        1.0,
+        1.0
+      ],
+      "target_unresolved_groups": 0,
+      "unattested_or_missing_isolation_jobs": 0,
+      "unique_cases_with_target_detected": 15,
+      "unsafe_approval_bounds_all_scheduled": [
+        0.0,
+        0.0
+      ],
+      "unsafe_approval_rate_complete": 0.0,
+      "usage": {
+        "cost_usd": {
+          "known_jobs": 0,
+          "known_sum": null,
+          "unknown_jobs": 90
+        },
+        "input_tokens": {
+          "known_jobs": 90,
+          "known_sum": 111057,
+          "unknown_jobs": 0
+        },
+        "latency_seconds": {
+          "known_jobs": 90,
+          "known_sum": 3836.688,
+          "unknown_jobs": 0
+        },
+        "output_tokens": {
+          "known_jobs": 90,
+          "known_sum": 53750,
+          "unknown_jobs": 0
+        }
+      }
+    },
+    {
+      "arm_id": "panel_mixed",
+      "common_target_miss_bounds": [
+        0.0,
+        0.0
+      ],
+      "complete_faulty_groups": 15,
+      "control_groups": 15,
+      "control_rejected_groups": 0,
+      "control_rejection_bounds_all_scheduled": [
+        0.0,
+        0.0
+      ],
+      "execution_status_counts": {
+        "ok": 90
+      },
+      "faulty_approved_groups": 0,
+      "faulty_groups": 15,
+      "faulty_unresolved_gate_groups": 0,
+      "review_jobs": 90,
+      "target_detected_groups": 15,
+      "target_missed_by_all_groups": 0,
+      "target_recall_bounds": [
+        1.0,
+        1.0
+      ],
+      "target_unresolved_groups": 0,
+      "unattested_or_missing_isolation_jobs": 0,
+      "unique_cases_with_target_detected": 15,
+      "unsafe_approval_bounds_all_scheduled": [
+        0.0,
+        0.0
+      ],
+      "unsafe_approval_rate_complete": 0.0,
+      "usage": {
+        "cost_usd": {
+          "known_jobs": 0,
+          "known_sum": null,
+          "unknown_jobs": 90
+        },
+        "input_tokens": {
+          "known_jobs": 90,
+          "known_sum": 114364,
+          "unknown_jobs": 0
+        },
+        "latency_seconds": {
+          "known_jobs": 90,
+          "known_sum": 9761.789,
+          "unknown_jobs": 0
+        },
+        "output_tokens": {
+          "known_jobs": 90,
+          "known_sum": 153125,
+          "unknown_jobs": 0
+        }
+      }
+    },
+    {
+      "arm_id": "solo_blind",
+      "common_target_miss_bounds": [
+        0.0,
+        0.0
+      ],
+      "complete_faulty_groups": 15,
+      "control_groups": 15,
+      "control_rejected_groups": 0,
+      "control_rejection_bounds_all_scheduled": [
+        0.0,
+        0.0
+      ],
+      "execution_status_counts": {
+        "ok": 30
+      },
+      "faulty_approved_groups": 0,
+      "faulty_groups": 15,
+      "faulty_unresolved_gate_groups": 0,
+      "review_jobs": 30,
+      "target_detected_groups": 15,
+      "target_missed_by_all_groups": 0,
+      "target_recall_bounds": [
+        1.0,
+        1.0
+      ],
+      "target_unresolved_groups": 0,
+      "unattested_or_missing_isolation_jobs": 0,
+      "unique_cases_with_target_detected": 15,
+      "unsafe_approval_bounds_all_scheduled": [
+        0.0,
+        0.0
+      ],
+      "unsafe_approval_rate_complete": 0.0,
+      "usage": {
+        "cost_usd": {
+          "known_jobs": 0,
+          "known_sum": null,
+          "unknown_jobs": 30
+        },
+        "input_tokens": {
+          "known_jobs": 30,
+          "known_sum": 36145,
+          "unknown_jobs": 0
+        },
+        "latency_seconds": {
+          "known_jobs": 30,
+          "known_sum": 1412.388,
+          "unknown_jobs": 0
+        },
+        "output_tokens": {
+          "known_jobs": 30,
+          "known_sum": 19856,
+          "unknown_jobs": 0
+        }
+      }
+    }
+  ],
+  "groups": [
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c01",
+      "complete_decisive": true,
+      "family_id": "c01",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c01",
+      "complete_decisive": true,
+      "family_id": "c01",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c02",
+      "complete_decisive": true,
+      "family_id": "c02",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c02",
+      "complete_decisive": true,
+      "family_id": "c02",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c03",
+      "complete_decisive": true,
+      "family_id": "c03",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c03",
+      "complete_decisive": true,
+      "family_id": "c03",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c04",
+      "complete_decisive": true,
+      "family_id": "c04",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c04",
+      "complete_decisive": true,
+      "family_id": "c04",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c05",
+      "complete_decisive": true,
+      "family_id": "c05",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c05",
+      "complete_decisive": true,
+      "family_id": "c05",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c06",
+      "complete_decisive": true,
+      "family_id": "c06",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c06",
+      "complete_decisive": true,
+      "family_id": "c06",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c07",
+      "complete_decisive": true,
+      "family_id": "c07",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c07",
+      "complete_decisive": true,
+      "family_id": "c07",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c08",
+      "complete_decisive": true,
+      "family_id": "c08",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c08",
+      "complete_decisive": true,
+      "family_id": "c08",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c09",
+      "complete_decisive": true,
+      "family_id": "c09",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c09",
+      "complete_decisive": true,
+      "family_id": "c09",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c10",
+      "complete_decisive": true,
+      "family_id": "c10",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c10",
+      "complete_decisive": true,
+      "family_id": "c10",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c11",
+      "complete_decisive": true,
+      "family_id": "c11",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c11",
+      "complete_decisive": true,
+      "family_id": "c11",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c12",
+      "complete_decisive": true,
+      "family_id": "c12",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c12",
+      "complete_decisive": true,
+      "family_id": "c12",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c13",
+      "complete_decisive": true,
+      "family_id": "c13",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c13",
+      "complete_decisive": true,
+      "family_id": "c13",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c14",
+      "complete_decisive": true,
+      "family_id": "c14",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c14",
+      "complete_decisive": true,
+      "family_id": "c14",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c15",
+      "complete_decisive": true,
+      "family_id": "c15",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_blind",
+      "case_id": "c15",
+      "complete_decisive": true,
+      "family_id": "c15",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c01",
+      "complete_decisive": true,
+      "family_id": "c01",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c01",
+      "complete_decisive": true,
+      "family_id": "c01",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c02",
+      "complete_decisive": true,
+      "family_id": "c02",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c02",
+      "complete_decisive": true,
+      "family_id": "c02",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c03",
+      "complete_decisive": true,
+      "family_id": "c03",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c03",
+      "complete_decisive": true,
+      "family_id": "c03",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c04",
+      "complete_decisive": true,
+      "family_id": "c04",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c04",
+      "complete_decisive": true,
+      "family_id": "c04",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c05",
+      "complete_decisive": true,
+      "family_id": "c05",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c05",
+      "complete_decisive": true,
+      "family_id": "c05",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c06",
+      "complete_decisive": true,
+      "family_id": "c06",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c06",
+      "complete_decisive": true,
+      "family_id": "c06",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c07",
+      "complete_decisive": true,
+      "family_id": "c07",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c07",
+      "complete_decisive": true,
+      "family_id": "c07",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c08",
+      "complete_decisive": true,
+      "family_id": "c08",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c08",
+      "complete_decisive": true,
+      "family_id": "c08",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c09",
+      "complete_decisive": true,
+      "family_id": "c09",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c09",
+      "complete_decisive": true,
+      "family_id": "c09",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c10",
+      "complete_decisive": true,
+      "family_id": "c10",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c10",
+      "complete_decisive": true,
+      "family_id": "c10",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c11",
+      "complete_decisive": true,
+      "family_id": "c11",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c11",
+      "complete_decisive": true,
+      "family_id": "c11",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c12",
+      "complete_decisive": true,
+      "family_id": "c12",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c12",
+      "complete_decisive": true,
+      "family_id": "c12",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c13",
+      "complete_decisive": true,
+      "family_id": "c13",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c13",
+      "complete_decisive": true,
+      "family_id": "c13",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c14",
+      "complete_decisive": true,
+      "family_id": "c14",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c14",
+      "complete_decisive": true,
+      "family_id": "c14",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c15",
+      "complete_decisive": true,
+      "family_id": "c15",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_informed",
+      "case_id": "c15",
+      "complete_decisive": true,
+      "family_id": "c15",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c01",
+      "complete_decisive": true,
+      "family_id": "c01",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c01",
+      "complete_decisive": true,
+      "family_id": "c01",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c02",
+      "complete_decisive": true,
+      "family_id": "c02",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c02",
+      "complete_decisive": true,
+      "family_id": "c02",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c03",
+      "complete_decisive": true,
+      "family_id": "c03",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c03",
+      "complete_decisive": true,
+      "family_id": "c03",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c04",
+      "complete_decisive": true,
+      "family_id": "c04",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c04",
+      "complete_decisive": true,
+      "family_id": "c04",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c05",
+      "complete_decisive": true,
+      "family_id": "c05",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c05",
+      "complete_decisive": true,
+      "family_id": "c05",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c06",
+      "complete_decisive": true,
+      "family_id": "c06",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c06",
+      "complete_decisive": true,
+      "family_id": "c06",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c07",
+      "complete_decisive": true,
+      "family_id": "c07",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c07",
+      "complete_decisive": true,
+      "family_id": "c07",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c08",
+      "complete_decisive": true,
+      "family_id": "c08",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c08",
+      "complete_decisive": true,
+      "family_id": "c08",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c09",
+      "complete_decisive": true,
+      "family_id": "c09",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c09",
+      "complete_decisive": true,
+      "family_id": "c09",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c10",
+      "complete_decisive": true,
+      "family_id": "c10",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c10",
+      "complete_decisive": true,
+      "family_id": "c10",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c11",
+      "complete_decisive": true,
+      "family_id": "c11",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c11",
+      "complete_decisive": true,
+      "family_id": "c11",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c12",
+      "complete_decisive": true,
+      "family_id": "c12",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c12",
+      "complete_decisive": true,
+      "family_id": "c12",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c13",
+      "complete_decisive": true,
+      "family_id": "c13",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c13",
+      "complete_decisive": true,
+      "family_id": "c13",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c14",
+      "complete_decisive": true,
+      "family_id": "c14",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c14",
+      "complete_decisive": true,
+      "family_id": "c14",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c15",
+      "complete_decisive": true,
+      "family_id": "c15",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "panel_mixed",
+      "case_id": "c15",
+      "complete_decisive": true,
+      "family_id": "c15",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 3,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c01",
+      "complete_decisive": true,
+      "family_id": "c01",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c01",
+      "complete_decisive": true,
+      "family_id": "c01",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c02",
+      "complete_decisive": true,
+      "family_id": "c02",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c02",
+      "complete_decisive": true,
+      "family_id": "c02",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c03",
+      "complete_decisive": true,
+      "family_id": "c03",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c03",
+      "complete_decisive": true,
+      "family_id": "c03",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c04",
+      "complete_decisive": true,
+      "family_id": "c04",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c04",
+      "complete_decisive": true,
+      "family_id": "c04",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c05",
+      "complete_decisive": true,
+      "family_id": "c05",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c05",
+      "complete_decisive": true,
+      "family_id": "c05",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c06",
+      "complete_decisive": true,
+      "family_id": "c06",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c06",
+      "complete_decisive": true,
+      "family_id": "c06",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c07",
+      "complete_decisive": true,
+      "family_id": "c07",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c07",
+      "complete_decisive": true,
+      "family_id": "c07",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c08",
+      "complete_decisive": true,
+      "family_id": "c08",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c08",
+      "complete_decisive": true,
+      "family_id": "c08",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c09",
+      "complete_decisive": true,
+      "family_id": "c09",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c09",
+      "complete_decisive": true,
+      "family_id": "c09",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c10",
+      "complete_decisive": true,
+      "family_id": "c10",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c10",
+      "complete_decisive": true,
+      "family_id": "c10",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c11",
+      "complete_decisive": true,
+      "family_id": "c11",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c11",
+      "complete_decisive": true,
+      "family_id": "c11",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c12",
+      "complete_decisive": true,
+      "family_id": "c12",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c12",
+      "complete_decisive": true,
+      "family_id": "c12",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c13",
+      "complete_decisive": true,
+      "family_id": "c13",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c13",
+      "complete_decisive": true,
+      "family_id": "c13",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c14",
+      "complete_decisive": true,
+      "family_id": "c14",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c14",
+      "complete_decisive": true,
+      "family_id": "c14",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "detected",
+      "variant": "faulty"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c15",
+      "complete_decisive": true,
+      "family_id": "c15",
+      "gate": "approve",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "not_applicable",
+      "variant": "correct"
+    },
+    {
+      "arm_id": "solo_blind",
+      "case_id": "c15",
+      "complete_decisive": true,
+      "family_id": "c15",
+      "gate": "reject",
+      "repeat": 0,
+      "reviewer_count": 1,
+      "target": "detected",
+      "variant": "faulty"
+    }
+  ],
+  "identity_audit": [
+    {
+      "model_key": "model_a",
+      "multiple_identities": false,
+      "observed_model_and_harness_ids": [
+        [
+          "ollama:gpt-oss:20b@17052f91a42e",
+          "rbs-transport/0.1.0 ollama/0.40.14"
+        ]
+      ]
+    },
+    {
+      "model_key": "model_b",
+      "multiple_identities": false,
+      "observed_model_and_harness_ids": [
+        [
+          "ollama:qwen3.6:35b@07d35212591f",
+          "rbs-transport/0.1.0 ollama/0.40.14"
+        ]
+      ]
+    },
+    {
+      "model_key": "model_c",
+      "multiple_identities": false,
+      "observed_model_and_harness_ids": [
+        [
+          "ollama:gemma4:26b@5571076f3d70",
+          "rbs-transport/0.1.0 ollama/0.40.14"
+        ]
+      ]
+    }
+  ],
+  "mode": "EXTERNAL_REVIEWS_UNVERIFIED",
+  "observed_output_cap_exceeded_jobs": [],
+  "paired_comparisons": [
+    {
+      "bootstrap_percentile_95": [
+        0.0,
+        0.0
+      ],
+      "eligible_case_repeat_pairs": 15,
+      "excluded_case_repeat_pairs": 0,
+      "family_count": 15,
+      "mean_delta": 0.0,
+      "metric": "unsafe approval; positive means treatment worse",
+      "treatment_minus_baseline": "panel_informed - panel_blind",
+      "unit": "family; repeats averaged within family; paired arms retained",
+      "warning": "Exploratory percentile interval; small family counts and selected complete cases limit inference."
+    },
+    {
+      "bootstrap_percentile_95": [
+        0.0,
+        0.0
+      ],
+      "eligible_case_repeat_pairs": 15,
+      "excluded_case_repeat_pairs": 0,
+      "family_count": 15,
+      "mean_delta": 0.0,
+      "metric": "unsafe approval; positive means treatment worse",
+      "treatment_minus_baseline": "panel_blind - solo_blind",
+      "unit": "family; repeats averaged within family; paired arms retained",
+      "warning": "Exploratory percentile interval; small family counts and selected complete cases limit inference."
+    },
+    {
+      "bootstrap_percentile_95": [
+        0.0,
+        0.0
+      ],
+      "eligible_case_repeat_pairs": 15,
+      "excluded_case_repeat_pairs": 0,
+      "family_count": 15,
+      "mean_delta": 0.0,
+      "metric": "unsafe approval; positive means treatment worse",
+      "treatment_minus_baseline": "panel_mixed - panel_blind",
+      "unit": "family; repeats averaged within family; paired arms retained",
+      "warning": "Exploratory percentile interval; small family counts and selected complete cases limit inference."
+    }
+  ],
+  "pairwise_joint_misses": [
+    {
+      "arm_id": "panel_blind",
+      "excess_joint_miss": 0.0,
+      "joint_miss_rate": 0.0,
+      "miss_rate_a": 0.0,
+      "miss_rate_b": 0.0,
+      "missing_or_ungraded_pairs": 0,
+      "paired_known_trials": 15,
+      "product_of_pooled_marginals": 0.0,
+      "slots": [
+        "r1",
+        "r2"
+      ],
+      "warning": "Shared item difficulty alone can produce positive pooled excess; no causal correlation claim."
+    },
+    {
+      "arm_id": "panel_blind",
+      "excess_joint_miss": 0.0,
+      "joint_miss_rate": 0.0,
+      "miss_rate_a": 0.0,
+      "miss_rate_b": 0.0,
+      "missing_or_ungraded_pairs": 0,
+      "paired_known_trials": 15,
+      "product_of_pooled_marginals": 0.0,
+      "slots": [
+        "r1",
+        "r3"
+      ],
+      "warning": "Shared item difficulty alone can produce positive pooled excess; no causal correlation claim."
+    },
+    {
+      "arm_id": "panel_blind",
+      "excess_joint_miss": 0.0,
+      "joint_miss_rate": 0.0,
+      "miss_rate_a": 0.0,
+      "miss_rate_b": 0.0,
+      "missing_or_ungraded_pairs": 0,
+      "paired_known_trials": 15,
+      "product_of_pooled_marginals": 0.0,
+      "slots": [
+        "r2",
+        "r3"
+      ],
+      "warning": "Shared item difficulty alone can produce positive pooled excess; no causal correlation claim."
+    },
+    {
+      "arm_id": "panel_informed",
+      "excess_joint_miss": 0.0,
+      "joint_miss_rate": 0.0,
+      "miss_rate_a": 0.0,
+      "miss_rate_b": 0.0,
+      "missing_or_ungraded_pairs": 0,
+      "paired_known_trials": 15,
+      "product_of_pooled_marginals": 0.0,
+      "slots": [
+        "r1",
+        "r2"
+      ],
+      "warning": "Shared item difficulty alone can produce positive pooled excess; no causal correlation claim."
+    },
+    {
+      "arm_id": "panel_informed",
+      "excess_joint_miss": 0.0,
+      "joint_miss_rate": 0.0,
+      "miss_rate_a": 0.0,
+      "miss_rate_b": 0.0,
+      "missing_or_ungraded_pairs": 0,
+      "paired_known_trials": 15,
+      "product_of_pooled_marginals": 0.0,
+      "slots": [
+        "r1",
+        "r3"
+      ],
+      "warning": "Shared item difficulty alone can produce positive pooled excess; no causal correlation claim."
+    },
+    {
+      "arm_id": "panel_informed",
+      "excess_joint_miss": 0.0,
+      "joint_miss_rate": 0.0,
+      "miss_rate_a": 0.0,
+      "miss_rate_b": 0.0,
+      "missing_or_ungraded_pairs": 0,
+      "paired_known_trials": 15,
+      "product_of_pooled_marginals": 0.0,
+      "slots": [
+        "r2",
+        "r3"
+      ],
+      "warning": "Shared item difficulty alone can produce positive pooled excess; no causal correlation claim."
+    },
+    {
+      "arm_id": "panel_mixed",
+      "excess_joint_miss": 0.0,
+      "joint_miss_rate": 0.0,
+      "miss_rate_a": 0.0,
+      "miss_rate_b": 0.0,
+      "missing_or_ungraded_pairs": 0,
+      "paired_known_trials": 15,
+      "product_of_pooled_marginals": 0.0,
+      "slots": [
+        "r1",
+        "r2"
+      ],
+      "warning": "Shared item difficulty alone can produce positive pooled excess; no causal correlation claim."
+    },
+    {
+      "arm_id": "panel_mixed",
+      "excess_joint_miss": 0.0,
+      "joint_miss_rate": 0.0,
+      "miss_rate_a": 0.0,
+      "miss_rate_b": 0.0,
+      "missing_or_ungraded_pairs": 0,
+      "paired_known_trials": 15,
+      "product_of_pooled_marginals": 0.0,
+      "slots": [
+        "r1",
+        "r3"
+      ],
+      "warning": "Shared item difficulty alone can produce positive pooled excess; no causal correlation claim."
+    },
+    {
+      "arm_id": "panel_mixed",
+      "excess_joint_miss": 0.0,
+      "joint_miss_rate": 0.0,
+      "miss_rate_a": 0.0,
+      "miss_rate_b": 0.0,
+      "missing_or_ungraded_pairs": 0,
+      "paired_known_trials": 15,
+      "product_of_pooled_marginals": 0.0,
+      "slots": [
+        "r2",
+        "r3"
+      ],
+      "warning": "Shared item difficulty alone can produce positive pooled excess; no causal correlation claim."
+    }
+  ],
+  "results_are_model_evidence": "NOT_AUTOMATICALLY_VALIDATED",
+  "warnings": [
+    "Bundled cases are synthetic development fixtures, not a held-out natural benchmark.",
+    "Operational rejection is not target-defect detection. Control rejection is not fully adjudicated false-positive precision.",
+    "Unknown/error/abstain outcomes are never approval; bounds expose their effect.",
+    "Pair/family, not reviewer invocation, is the independent sampling unit.",
+    "No assertion of model superiority or equal actual cost follows from output caps."
+  ]
+}

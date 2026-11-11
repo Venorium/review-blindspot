@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1179,
+    "isolation_attested": true,
+    "latency_seconds": 62.223,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 428,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-f878e052bb444ecfa66c4cd7967d7fc9/attempt-1"
+  },
+  "job_id": "job-f878e052bb444ecfa66c4cd7967d7fc9",
+  "packet_sha256": "3d06dbac4c9d1554c755d8882aea8e7790010e4f83c3c5637285b07aab6d45d3",
+  "review": {
+    "findings": [
+      {
+        "description": "Function returns 100 for unknown tiers instead of raising ValueError.",
+        "evidence": "quota('standard') returns 100, but contract requires ValueError for any tier other than 'basic' or 'premium'.",
+        "file": "candidate.py",
+        "finding_id": "001",
+        "line_end": 3,
+        "line_start": 1,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate does not raise ValueError for unknown tiers, violating the contract.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

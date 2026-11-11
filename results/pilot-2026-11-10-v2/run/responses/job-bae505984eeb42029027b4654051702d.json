@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1929,
+    "isolation_attested": true,
+    "latency_seconds": 135.936,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1241,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-bae505984eeb42029027b4654051702d/attempt-1"
+  },
+  "job_id": "job-bae505984eeb42029027b4654051702d",
+  "packet_sha256": "d6de3b4136082fd331accdfb173bf7809f11964bf3a09c9358a0a5e5d4a9ae21",
+  "review": {
+    "findings": [
+      {
+        "description": "Constructor accepts any dictionary of prices without checking that each value is a non-negative integer, violating the specification that Catalog must hold non-negative integer prices.",
+        "evidence": "Line 2-4: __init__ initializes self._prices = dict(prices) with no validation; negative or non-integer values are silently stored.",
+        "file": "candidate.py",
+        "finding_id": "F001",
+        "line_end": 4,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation fails to enforce non-negative integer price values on construction, violating the contract that Catalog must hold non-negative integer prices.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "c11",
+  "family_id": "c11",
+  "title": "Half-open intervals",
+  "origin": "original_synthetic_starter",
+  "split": "development_only",
+  "spec": "Implement overlaps(a, b), where a and b are non-empty half-open integer intervals [start, end) with start < end. Return True exactly when their intersection is non-empty. Touching endpoints do not overlap.",
+  "target_defect": "Touching half-open endpoints are incorrectly treated as an intersection.",
+  "author_rationale": "The change expresses overlap through the intersection bounds.",
+  "limitations": "Small synthetic function; not a natural pull request. Correct means conforming to the stated contract and supplied checks, not universally bug-free."
+}

@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "keeps-last-occurrence-instead-of-first"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-c513c3f82db64dfcbe0b96934c26c15f",
+  "method": "external_judge",
+  "rationale": "Finding states that the dict comprehension overwrites earlier items so the last item per key is returned; same mechanism. Finding keeps-last-occurrence-instead-of-first: \"Returns the last item for each distinct key rather than the first.\".",
+  "schema_version": 1,
+  "submission_sha256": "da7f95ded79168e5d59175f94e98741513ac83465182a3b974d6389252eb0d17",
+  "target_detection": "detected"
+}

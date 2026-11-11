@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "tie_rounding_error"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-cc7da5d8edb343d2b0c9de8b6b632da3",
+  "method": "external_judge",
+  "rationale": "Finding states remainder == 5 is not rounded up (> 5 instead of >= 5), with a tie input; same mechanism. Finding tie_rounding_error: \"The implementation uses `remainder > 5` instead of `remainder >= 5`, which causes it to round down instead of up for exact half-cent ties (where the remainder is 5).\".",
+  "schema_version": 1,
+  "submission_sha256": "4973cf9400ddda4a6151abb13868eadb90bb5800b8889ebc54f29b2f63b728a7",
+  "target_detection": "detected"
+}

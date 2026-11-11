@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1208,
+    "isolation_attested": true,
+    "latency_seconds": 56.211,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 459,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-3586f77094b74e10abd0a86503a1eb40/attempt-1"
+  },
+  "job_id": "job-3586f77094b74e10abd0a86503a1eb40",
+  "packet_sha256": "010982aed977e6d91d0e6630196623c0a798659ed55c979e7e50b376913207e9",
+  "review": {
+    "findings": [
+      {
+        "description": "Unknown tier strings are not raising ValueError as required",
+        "evidence": "candidate.quota('gold') returns 100 instead of raising ValueError",
+        "file": "candidate.py",
+        "finding_id": "f1",
+        "line_end": 3,
+        "line_start": 3,
+        "severity": "high"
+      }
+    ],
+    "summary": "quota returns 100 for unknown tiers instead of raising ValueError",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

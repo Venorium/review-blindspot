@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1230,
+    "isolation_attested": true,
+    "latency_seconds": 54.413,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 685,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-fe16db52538c46ce8c316c73c1a59d08/attempt-1"
+  },
+  "job_id": "job-fe16db52538c46ce8c316c73c1a59d08",
+  "packet_sha256": "e7450222f1a655e39f1f3a4149927ea93a6850b0286c525c359659bca6c66cd7",
+  "review": {
+    "findings": [
+      {
+        "description": "The function returns the date component of the parsed datetime in its original timezone instead of converting to UTC first.",
+        "evidence": "For input '2024-01-01T01:00:00+02:00', candidate.utc_day returns '2024-01-01' but the correct UTC date should be '2023-12-31'.",
+        "file": "candidate.py",
+        "finding_id": "UTC_DATE_NOT_CONVERTED",
+        "line_end": 4,
+        "line_start": 4,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation does not convert the parsed datetime to UTC before extracting the date, violating the contract for offsets that change the calendar date.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

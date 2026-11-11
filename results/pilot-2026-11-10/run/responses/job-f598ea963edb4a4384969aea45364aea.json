@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1143,
+    "isolation_attested": true,
+    "latency_seconds": 29.272,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 434,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-f598ea963edb4a4384969aea45364aea/attempt-1"
+  },
+  "job_id": "job-f598ea963edb4a4384969aea45364aea",
+  "packet_sha256": "d8f97e65235652bc7ab48ed3158940968cc29dd9d083397031cc3e5ccf88efc8",
+  "review": {
+    "findings": [
+      {
+        "description": "The function returns the original list stored in record['labels'], causing external modifications to affect the original record.",
+        "evidence": "record = {'labels': ['a', 'b']}; lst = candidate.labels(record); lst[0] = 'x'; assert record['labels'][0] == 'x'",
+        "file": "candidate.py",
+        "finding_id": "f1",
+        "line_end": 1,
+        "line_start": 1,
+        "severity": "high"
+      }
+    ],
+    "summary": "labels returns the same list object; it must return a separate copy per the contract.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

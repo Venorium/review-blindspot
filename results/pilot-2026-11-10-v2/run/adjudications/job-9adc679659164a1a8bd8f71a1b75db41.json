@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "FC001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-9adc679659164a1a8bd8f71a1b75db41",
+  "method": "external_judge",
+  "rationale": "Finding states that sleep runs after the final failed call before re-raising; same mechanism and violated rule. Finding FC001: \"Unconditional sleep after the last TransientError retry.\".",
+  "schema_version": 1,
+  "submission_sha256": "2aef333a2d152056f839cd8f444ca2b433547a5e7929b23c93c37c5eb912b6f8",
+  "target_detection": "detected"
+}

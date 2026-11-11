@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1147,
+    "isolation_attested": true,
+    "latency_seconds": 35.429,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 460,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-55b565b6f1e94d1495c4c8df6dcc64de/attempt-1"
+  },
+  "job_id": "job-55b565b6f1e94d1495c4c8df6dcc64de",
+  "packet_sha256": "05e1cc5382e55ab81cb6324e2f6d0d98e112c70f6675611d9f7f756634b99b4b",
+  "review": {
+    "findings": [
+      {
+        "description": "Sorting uses string comparison, causing incorrect order for numeric strings of differing length.",
+        "evidence": "Example: events = [{'version':'10'}, {'version':'2'}]. Expected numeric order: [{'version':'2'}, {'version':'10'}]. Candidate returns [{'version':'10'}, {'version':'2'}].",
+        "file": "candidate.py",
+        "finding_id": "1",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "candidate.py incorrectly sorts version strings lexicographically instead of numerically, violating the contract for numeric ordering.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1229,
+    "isolation_attested": true,
+    "latency_seconds": 23.522,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 337,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-821d3a1b238549e58e728b2ee9811e78/attempt-1"
+  },
+  "job_id": "job-821d3a1b238549e58e728b2ee9811e78",
+  "packet_sha256": "6540ae03a23a83aa7158362e1611a2989ee836a995a1d3b5b04627f61cb45a58",
+  "review": {
+    "findings": [
+      {
+        "description": "The function does not accumulate quantities for repeated product IDs; it overwrites them instead of summing.",
+        "evidence": "Input [('a', 1), ('a', 2)] would yield {'a': 2} but the contract requires {'a': 3}.",
+        "file": "candidate.py",
+        "finding_id": "1",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Reject implementation: does not sum repeated product quantities.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

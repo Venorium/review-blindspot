@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "f1"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-f106c24267d24ac980b92481bd489e47",
+  "method": "external_judge",
+  "rationale": "Finding states that now == expires_at is reported active (<= instead of <), with the boundary input; same mechanism and violated rule as the planted defect. Finding f1: \"Function active incorrectly returns True when now equals expires_at; spec requires token to be inactive at or after expires_at.\".",
+  "schema_version": 1,
+  "submission_sha256": "2d00552812bda8985c9f7e690abcb7d320b4f3efdc906ca98440ea652ddaa1b9",
+  "target_detection": "detected"
+}

@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1273,
+    "isolation_attested": true,
+    "latency_seconds": 124.084,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 1876,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-a7aa3d52cca74b93b37ab91d82dde439/attempt-1"
+  },
+  "job_id": "job-a7aa3d52cca74b93b37ab91d82dde439",
+  "packet_sha256": "0cc7c0c83188912a3f4d75e36d81f6546d186747487948e9a19b024593bede2b",
+  "review": {
+    "findings": [],
+    "summary": "The implementation correctly implements the rounding logic specified: rounding to the nearest cent with half-cent ties rounded upward, using integer arithmetic to avoid floating-point issues.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1458,
+    "isolation_attested": true,
+    "latency_seconds": 60.466,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 2097,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-8c5259b45e394929ad5942dfd7209d6e/attempt-1"
+  },
+  "job_id": "job-8c5259b45e394929ad5942dfd7209d6e",
+  "packet_sha256": "4f0894a2d251cb75a8471389f037d9147a429a33bdff4a3450ab0faa33f0d48c",
+  "review": {
+    "findings": [
+      {
+        "description": "Consumes `records` twice in violation of the one-shot iterator requirement.",
+        "evidence": "Line 2 computes `total` by iterating `records`, fully exhausting it. Line 3 then iterates `records` again to build the output dict. If `records` is a generator or any single-pass iterator, line 3 will yield no items, resulting in an empty dictionary `{}` instead of the required mapping. The SPEC explicitly states that `records` 'may be a one-shot iterator such as a generator and must be consumed only once.'",
+        "file": "candidate.py",
+        "finding_id": "double-iteration",
+        "line_end": 3,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The function iterates over `records` twice, exhausting one-shot iterators before the dictionary comprehension can process them.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

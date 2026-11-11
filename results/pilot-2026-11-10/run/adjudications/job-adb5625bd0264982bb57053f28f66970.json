@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "defect-001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-adb5625bd0264982bb57053f28f66970",
+  "method": "external_judge",
+  "rationale": "Finding states // floors toward negative infinity instead of truncating toward zero for negative non-integral quotients; same mechanism. Finding defect-001: \"Using Python's // operator truncates toward negative infinity, not toward zero, causing incorrect results for negative dividends that are not exact multiples of the divisor.\".",
+  "schema_version": 1,
+  "submission_sha256": "8d0f5c2142fc749f8b52218aca926961f5112553c5bd653e35c6a61fa82c9d4c",
+  "target_detection": "detected"
+}

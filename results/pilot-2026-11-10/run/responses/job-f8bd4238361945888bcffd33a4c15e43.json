@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1345,
+    "isolation_attested": true,
+    "latency_seconds": 37.403,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 403,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-f8bd4238361945888bcffd33a4c15e43/attempt-1"
+  },
+  "job_id": "job-f8bd4238361945888bcffd33a4c15e43",
+  "packet_sha256": "91916c49807887ae174d4096c17bc53d3943e1c7ebfc6f821656f2cd86e5a7ff",
+  "review": {
+    "findings": [],
+    "summary": "The candidate implementation correctly uses a composite key of (tenant, record_id) to separate cache entries per tenant and record, ensuring that load is called only on a cache miss and the cached or loaded value is returned. No correctness defects are found within the specified input domain.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

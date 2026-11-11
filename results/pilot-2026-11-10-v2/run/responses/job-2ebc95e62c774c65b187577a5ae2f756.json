@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1385,
+    "isolation_attested": true,
+    "latency_seconds": 84.366,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 687,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-2ebc95e62c774c65b187577a5ae2f756/attempt-1"
+  },
+  "job_id": "job-2ebc95e62c774c65b187577a5ae2f756",
+  "packet_sha256": "4f0894a2d251cb75a8471389f037d9147a429a33bdff4a3450ab0faa33f0d48c",
+  "review": {
+    "findings": [
+      {
+        "description": "The implementation consumes the iterator twice – once in the sum() call and again in the dict comprehension – which results in an empty dictionary when records is a single-pass iterator such as a generator.",
+        "evidence": ">>> def gen():\n...     yield ('a', 1)\n...     yield ('b', 3)\n...\n>>> candidate.allocate(gen(), 100)\n{}  # Correct output should be {'a': 25, 'b': 75}",
+        "file": "candidate.py",
+        "finding_id": "ITERATOR_CONSUMPTION",
+        "line_end": 3,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate fails to handle single-pass iterators: it consumes the input iterator twice, leaving it exhausted for the dictionary comprehension and producing an empty mapping instead of the correct allocation.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

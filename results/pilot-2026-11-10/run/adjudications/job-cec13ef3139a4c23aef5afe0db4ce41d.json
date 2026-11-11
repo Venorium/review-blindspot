@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "defect-rounding-half-cent"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-cec13ef3139a4c23aef5afe0db4ce41d",
+  "method": "external_judge",
+  "rationale": "Finding states remainder == 5 is not rounded up (> 5 instead of >= 5), with a tie input; same mechanism. Finding defect-rounding-half-cent: \"Rounding logic fails for exact half-cent ties. The contract specifies that ties (remainder == 5) must be rounded upward, but the implementation only adds one cent when remainder > 5, leaving remainder == 5 unrounded.\".",
+  "schema_version": 1,
+  "submission_sha256": "ac9c0637f9be6fff09f13fa3941c41c1b2818e12dd2d71d4d55311c3a50530fa",
+  "target_detection": "detected"
+}

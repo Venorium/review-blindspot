@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1208,
+    "isolation_attested": true,
+    "latency_seconds": 22.024,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 569,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-a5c3d1585973410491d731e65b93d35f/attempt-1"
+  },
+  "job_id": "job-a5c3d1585973410491d731e65b93d35f",
+  "packet_sha256": "010982aed977e6d91d0e6630196623c0a798659ed55c979e7e50b376913207e9",
+  "review": {
+    "findings": [
+      {
+        "description": "Function does not raise ValueError for unrecognized tiers; returns 100 instead, violating the contract.",
+        "evidence": "return limits.get(tier, 100) returns 100 for any tier not in the dictionary, whereas the specification mandates that any tier other than 'basic' or 'premium' must raise ValueError.",
+        "file": "candidate.py",
+        "finding_id": "001",
+        "line_end": 3,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation returns 100 for any tier not explicitly handled, instead of raising ValueError as required by the contract.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1830,
+    "isolation_attested": true,
+    "latency_seconds": 20.565,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 616,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-8313a68ae06b45f4baa87fec750ae27b/attempt-1"
+  },
+  "job_id": "job-8313a68ae06b45f4baa87fec750ae27b",
+  "packet_sha256": "007d132edc505ce758f14f4edbd871dc84342ce0aa49030b768a2024a56c99ca",
+  "review": {
+    "findings": [
+      {
+        "description": "The cache is never cleared or updated when a SKU's price is changed, so subsequent calls to price() or quote() may return a stale value instead of the updated price.",
+        "evidence": "Spec requires that after update_price, all later reads of that SKU must reflect the new price. The code updates self._prices but leaves self._cache unchanged, so cached old prices persist.",
+        "file": "candidate.py",
+        "finding_id": "cache_invalid_on_update",
+        "line_end": 19,
+        "line_start": 16,
+        "severity": "high"
+      }
+    ],
+    "summary": "The candidate implementation fails to invalidate its cache when a SKU's price is updated, violating the contract that a SKU must be read from the underlying price table at most once between two updates of that SKU.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

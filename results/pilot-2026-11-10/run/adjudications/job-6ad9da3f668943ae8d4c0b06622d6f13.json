@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "summation_error"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-6ad9da3f668943ae8d4c0b06622d6f13",
+  "method": "external_judge",
+  "rationale": "Finding states repeated product quantities overwrite instead of summing, with a repeated-product input; same mechanism. Finding summation_error: \"The dictionary comprehension does not aggregate quantities for duplicate keys; it overwrites the value with the last encountered quantity for that key. The specification requires summing all quantities per product.\".",
+  "schema_version": 1,
+  "submission_sha256": "de3f20cd55be8c68b8418c18c1ed610b9401614315c505493c72bfbd57dbc0d8",
+  "target_detection": "detected"
+}

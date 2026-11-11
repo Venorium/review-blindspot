@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "CAND-001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-d82dcea95aa34fc68769dad04dc92004",
+  "method": "external_judge",
+  "rationale": "Finding states that the dict comprehension overwrites earlier items so the last item per key is returned; same mechanism. Finding CAND-001: \"The implementation uses a dict comprehension which replaces earlier items with later ones for duplicate keys, resulting in the last item being returned for each key. The specification requires returni\".",
+  "schema_version": 1,
+  "submission_sha256": "aa40ea17cadb3ae2cafaa6fc154a4177e81365b57a624b383f271d77e381a30f",
+  "target_detection": "detected"
+}

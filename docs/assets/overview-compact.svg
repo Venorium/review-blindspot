@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="320" viewBox="0 0 600 320" role="img" aria-labelledby="title desc">
+  <title id="title">Review Blind Spot — do AI reviewers miss the same bug?</title>
+  <desc id="desc">Measure faulty approvals, actual defect detection, rejected controls and shared misses with an offline Python toolkit and agent skill.</desc>
+  <rect width="600" height="320" rx="22" fill="#10232e"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="30" y="32" width="7" height="22" rx="3" fill="#72dfb6"/>
+    <text x="52" y="51" fill="#b8cfda" font-size="21" font-weight="600" letter-spacing="2">REVIEW BLIND SPOT</text>
+    <text x="30" y="124" fill="#f6f8f5" font-size="48" font-weight="700" letter-spacing="-1.5">Do AI reviewers miss</text>
+    <text x="30" y="180" fill="#72dfb6" font-size="48" font-weight="700" letter-spacing="-1.5">the same bug?</text>
+    <text x="32" y="231" fill="#b8cfda" font-size="23">Measure it. Keep reviews evidence-backed.</text>
+    <path d="M0 262H600" stroke="#2b4550"/>
+    <text x="30" y="298" fill="#dbe8eb" font-size="19" letter-spacing=".7">OFFLINE · OLLAMA · CODEX · CLAUDE CODE</text>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1300,
+    "isolation_attested": true,
+    "latency_seconds": 32.186,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 461,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-1144b591f4f44509a9f4bf32cea6eeaf/attempt-1"
+  },
+  "job_id": "job-1144b591f4f44509a9f4bf32cea6eeaf",
+  "packet_sha256": "559ff14e2f8cc7a428f34233fbb5f9c1dbac49e8a2d707d8ead8f701be437b78",
+  "review": {
+    "findings": [],
+    "summary": "The candidate implementation correctly enforces unique request IDs and appends new events as specified.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

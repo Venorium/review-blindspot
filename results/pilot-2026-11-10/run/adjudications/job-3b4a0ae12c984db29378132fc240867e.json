@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F1"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-3b4a0ae12c984db29378132fc240867e",
+  "method": "external_judge",
+  "rationale": "Finding states touching intervals are reported as overlapping (<= instead of <), with an endpoint-sharing input; same mechanism. Finding F1: \"The overlap check uses <= instead of <, so intervals that touch at the endpoint are considered overlapping, contrary to the specification.\".",
+  "schema_version": 1,
+  "submission_sha256": "06cf9777eb8fdecc2e1329d7c9a31f3ed07d95f73fc67273711560f0fb6b40eb",
+  "target_detection": "detected"
+}

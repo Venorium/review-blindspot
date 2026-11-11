@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "missing_utc_conversion"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-d2bc03bb7e554842b685c20287e81551",
+  "method": "external_judge",
+  "rationale": "Finding states the date is taken in the input offset without converting to UTC, with an offset that crosses midnight; same mechanism. Finding missing_utc_conversion: \"Fails to convert the parsed datetime to UTC before calling .date(). The contract explicitly requires returning the UTC calendar date, not the local date of the input offset.\".",
+  "schema_version": 1,
+  "submission_sha256": "b9265aa3ffa69c436b3c9ff6d5877d3f4592b803cc8590fb05a11868a8f79d32",
+  "target_detection": "detected"
+}

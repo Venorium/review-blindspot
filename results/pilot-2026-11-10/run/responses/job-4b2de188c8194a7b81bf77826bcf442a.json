@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1208,
+    "isolation_attested": true,
+    "latency_seconds": 118.239,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 4418,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-4b2de188c8194a7b81bf77826bcf442a/attempt-1"
+  },
+  "job_id": "job-4b2de188c8194a7b81bf77826bcf442a",
+  "packet_sha256": "ea72a2cdc1af213ef6316e4878ca20bd1210b076ffe44e7bb162da0a9ff1a165",
+  "review": {
+    "findings": [],
+    "summary": "The candidate correctly implements the spec by converting the version string to an integer for sorting, ensuring ascending numeric order. Python's `sorted` is stable, preserving input order for equal versions. It returns a new list without modifying the original data. The implementation fully satisfies the stated contract and passes the public tests.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

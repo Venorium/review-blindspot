@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "double-iteration"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-8c5259b45e394929ad5942dfd7209d6e",
+  "method": "external_judge",
+  "rationale": "Finding states that records is iterated twice (sum, then the comprehension), so a one-shot iterator yields an empty result; same mechanism. Finding double-iteration: \"Consumes `records` twice in violation of the one-shot iterator requirement.\".",
+  "schema_version": 1,
+  "submission_sha256": "b9cf2dcf522494a602cb004c93e3bb63cf1d1c139c078e29b343c691dfab15ec",
+  "target_detection": "detected"
+}

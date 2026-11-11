@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-d4e7444a1f7f4a34a8aa388244406a8a",
+  "method": "external_judge",
+  "rationale": "Finding states the cache is keyed by record_id only, so two tenants with the same record_id share an entry; same mechanism. Finding F001: \"Cache key does not incorporate tenant, leading to incorrect sharing of cached values between tenants.\".",
+  "schema_version": 1,
+  "submission_sha256": "1f2d7fc42b46fe535e04b1a9fc9ed470afcbde449a0309b3da57d484e7311717",
+  "target_detection": "detected"
+}

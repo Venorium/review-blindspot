@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1511,
+    "isolation_attested": true,
+    "latency_seconds": 196.376,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 6405,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-83fec576dd4f4b629ae8f31fa2b0ddc6/attempt-1"
+  },
+  "job_id": "job-83fec576dd4f4b629ae8f31fa2b0ddc6",
+  "packet_sha256": "b789142a9ffeae8e22c94472cee0ecd6d70c412c5d42d1c55fc1de7b1ad97f63",
+  "review": {
+    "findings": [],
+    "summary": "The candidate correctly implements the path resolution and traversal validation as specified. It rejects absolute paths, joins and normalizes the path using posixpath, and ensures the result equals or resides inside the base directory by checking for equality with base or a prefix of base followed by a slash. No correctness defects were found within the stated input domain.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

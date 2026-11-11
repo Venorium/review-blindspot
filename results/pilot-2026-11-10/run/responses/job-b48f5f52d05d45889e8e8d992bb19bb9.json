@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1124,
+    "isolation_attested": true,
+    "latency_seconds": 34.402,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 705,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-b48f5f52d05d45889e8e8d992bb19bb9/attempt-1"
+  },
+  "job_id": "job-b48f5f52d05d45889e8e8d992bb19bb9",
+  "packet_sha256": "9667d1ad82fa16e7ca300efa3b7482243eb299a25b1135f67d0a3f6148848f8f",
+  "review": {
+    "findings": [
+      {
+        "description": "Using Python's // operator performs floor division, which truncates toward negative infinity. The specification requires truncation toward zero for all signed integer dividends.",
+        "evidence": "For example, divide(-1, 3) returns -1 with n // d, but the correct result according to the spec is 0.",
+        "file": "candidate.py",
+        "finding_id": "001",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "critical"
+      }
+    ],
+    "summary": "Candidate implementation incorrectly truncates division toward negative infinity for negative dividends that are not evenly divisible by the positive divisor, violating the specification that requires truncation toward zero.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

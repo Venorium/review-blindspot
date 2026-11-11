@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1438,
+    "isolation_attested": true,
+    "latency_seconds": 430.767,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1378,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-0895c0ee6ea54cd7807ffb9e097afc84/attempt-1"
+  },
+  "job_id": "job-0895c0ee6ea54cd7807ffb9e097afc84",
+  "packet_sha256": "b492ef4ef71e65d20512de055b5072a9ddc9be822be459e218e895a8070048b1",
+  "review": {
+    "findings": [
+      {
+        "description": "The function only checks `path.startswith(base)` to determine if the resolved path is inside the base directory. This condition is insufficient because it also matches paths that share the base prefix but are not actually inside it, such as '/srv/uploads2/file.txt'. According to the specification, the resolved path must equal the base or start with the base followed by a slash; otherwise a ValueError should be raised.",
+        "evidence": "For base='/srv/uploads' and name='uploads2/file.txt', the function returns '/srv/uploads/uploads2/file.txt' instead of raising ValueError, which is incorrect. The check should be `path == base or path.startswith(base + '/')`.",
+        "file": "candidate.py",
+        "finding_id": "E001",
+        "line_end": 9,
+        "line_start": 8,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate fails to enforce that the resolved path lies inside the base directory by only checking path.startswith(base), which allows paths that merely share the base prefix (e.g., '/srv/uploads2/file.txt') to be accepted. This violates the contract requiring the result to be exactly base or to start with base followed by a slash.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

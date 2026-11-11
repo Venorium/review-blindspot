@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1918,
+    "isolation_attested": true,
+    "latency_seconds": 260.641,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 4170,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-dae88ad5c6fd42109c935097b58d8915/attempt-1"
+  },
+  "job_id": "job-dae88ad5c6fd42109c935097b58d8915",
+  "packet_sha256": "0d9b0229fcd2590aaf84f5f99e09cf4a0d4e228709f40054fd1f1be8ef7f3800",
+  "review": {
+    "findings": [
+      {
+        "description": "The function calls `sleep` even on the last attempt when a `TransientError` occurs, which violates the specification that the function should never sleep after the final failed call.",
+        "evidence": "If `attempts=1` and the first call raises `TransientError`, the code will execute `sleep(base_delay * 2 ** 0)` before raising the error, whereas the specification requires that it should re-raise the last `TransientError` immediately without sleeping.",
+        "file": "candidate.py",
+        "finding_id": "sleep_after_final_attempt",
+        "line_end": 12,
+        "line_start": 12,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation calls `sleep` even after the final attempt fails, which violates the requirement 'Never sleep after the final failed call'.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

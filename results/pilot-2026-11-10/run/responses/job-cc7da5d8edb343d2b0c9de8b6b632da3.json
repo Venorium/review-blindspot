@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1304,
+    "isolation_attested": true,
+    "latency_seconds": 180.055,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 4313,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-cc7da5d8edb343d2b0c9de8b6b632da3/attempt-1"
+  },
+  "job_id": "job-cc7da5d8edb343d2b0c9de8b6b632da3",
+  "packet_sha256": "3aa757e55595f59ab159c83ca9c3a8cb0c827b71812afbf655704c65f569c793",
+  "review": {
+    "findings": [
+      {
+        "description": "The implementation uses `remainder > 5` instead of `remainder >= 5`, which causes it to round down instead of up for exact half-cent ties (where the remainder is 5).",
+        "evidence": "calling `candidate.cents(5)` returns `0`, but the expected output is `1` according to the specification.",
+        "file": "candidate.py",
+        "finding_id": "tie_rounding_error",
+        "line_end": 3,
+        "line_start": 3,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation fails to correctly round up on exact half-cent ties (when the remainder is 5).",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

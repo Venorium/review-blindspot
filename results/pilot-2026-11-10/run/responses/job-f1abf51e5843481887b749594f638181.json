@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1406,
+    "isolation_attested": true,
+    "latency_seconds": 130.892,
+    "model_id": "ollama:qwen3.6:35b@07d35212591f",
+    "output_tokens": 2199,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-f1abf51e5843481887b749594f638181/attempt-1"
+  },
+  "job_id": "job-f1abf51e5843481887b749594f638181",
+  "packet_sha256": "5b71ab8662ed21706b8ae50acefb8557a67df78a34d80a68a4d9f90d7f9e16b6",
+  "review": {
+    "findings": [
+      {
+        "description": "Cache key omits the tenant identifier, causing different tenants to incorrectly share entries for the same record_id.",
+        "evidence": "The spec requires caching 'separately for each (tenant, record_id)'. The code uses only `record_id` as the dictionary key (`cache[record_id]`). Calling lookup(cache, 't1', 'r1', load) then lookup(cache, 't2', 'r1', load) will incorrectly return the cached value from the first call for the second tenant, violating tenant isolation and bypassing a required load(tenant, record_id) call.",
+        "file": "candidate.py",
+        "finding_id": "TENANT_SCOPE_VIOLATION",
+        "line_end": 4,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The candidate fails to scope cache entries by tenant, violating the contract requirement to cache results separately for each (tenant, record_id).",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

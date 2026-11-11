@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "defect-001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-0fe5db5c29924d8691b47a724d11e3dd",
+  "method": "external_judge",
+  "rationale": "Finding states earlier non-negative values are appended before a later negative value raises, leaving store mutated; same mechanism. Finding defect-001: \"append_batch appends elements before detecting a negative value, so a negative value after some positives leaves the store partially mutated, which is disallowed by the contract.\".",
+  "schema_version": 1,
+  "submission_sha256": "2e9731471e43c72acd701d692dbde95a347495d51c623ecc985695e847bdd14e",
+  "target_detection": "detected"
+}

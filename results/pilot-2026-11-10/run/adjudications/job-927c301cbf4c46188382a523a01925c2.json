@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "mutation_side_effect"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-927c301cbf4c46188382a523a01925c2",
+  "method": "external_judge",
+  "rationale": "Finding states the function returns the stored list itself, so caller mutation changes the record; same mechanism. Finding mutation_side_effect: \"The function returns a reference to the 'labels' list within the record. Any modification to the returned list (e.g., via .append() or .pop()) will directly mutate the original record, violating the requirement that 'cal\".",
+  "schema_version": 1,
+  "submission_sha256": "015cf758a825bca0f71a0baae3ca803fb2c7275b924a1e39bdaebf51f5b58308",
+  "target_detection": "detected"
+}

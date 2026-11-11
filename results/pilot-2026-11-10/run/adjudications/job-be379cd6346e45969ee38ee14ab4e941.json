@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "duplicate_check_mismatch"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-be379cd6346e45969ee38ee14ab4e941",
+  "method": "external_judge",
+  "rationale": "Finding states duplicates are detected by payload rather than request_id, with a triggering sequence; same mechanism. Finding duplicate_check_mismatch: \"The function incorrectly checks for duplicate payloads instead of request IDs, causing it to accept or reject events based on payload rather than the unique request ID as required.\".",
+  "schema_version": 1,
+  "submission_sha256": "324ede0c4578e26c75015e2b0006524726ac150515ef76566c77c8475d015cb3",
+  "target_detection": "detected"
+}

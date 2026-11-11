@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1328,
+    "isolation_attested": true,
+    "latency_seconds": 393.296,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 611,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-6c5e09f53be3434486684168df6d09fd/attempt-1"
+  },
+  "job_id": "job-6c5e09f53be3434486684168df6d09fd",
+  "packet_sha256": "95976b3da6542b5ecd6d98f3915d1938c7e095397110db938548b0f0ffc288da",
+  "review": {
+    "findings": [
+      {
+        "description": "The implementation sorts tickets by ascending priority and then reverses the list. This reverse operation breaks the stability guarantee required by the specification for tickets with equal priority, causing them to appear in reverse of their original order.",
+        "evidence": "For input [(\"t1\", 1), (\"t2\", 1), (\"t3\", 2)], the function returns [\"t3\", \"t2\", \"t1\"], whereas the specification requires [\"t3\", \"t1\", \"t2\"].",
+        "file": "candidate.py",
+        "finding_id": "STABLE_ORDER_01",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate code fails to preserve original relative order for tickets with equal priority.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

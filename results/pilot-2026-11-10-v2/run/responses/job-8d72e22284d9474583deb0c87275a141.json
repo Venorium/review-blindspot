@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1687,
+    "isolation_attested": true,
+    "latency_seconds": 145.25,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1178,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-8d72e22284d9474583deb0c87275a141/attempt-1"
+  },
+  "job_id": "job-8d72e22284d9474583deb0c87275a141",
+  "packet_sha256": "0d9b0229fcd2590aaf84f5f99e09cf4a0d4e228709f40054fd1f1be8ef7f3800",
+  "review": {
+    "findings": [
+      {
+        "description": "Sleeps even on the last retry attempt, contrary to specification that requires no sleep after the final failed call.",
+        "evidence": "For operation that raises TransientError on all attempts, e.g. candidate.call_with_retry(flaky(3), 3, sleeps.append, 1), the candidate sleeps three times ([1, 2, 4]) whereas the specification requires only two sleeps ([1, 2]) before re‑raising the last TransientError on the final attempt.",
+        "file": "candidate.py",
+        "finding_id": "FC001",
+        "line_end": 12,
+        "line_start": 12,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation violates retry delay contract by sleeping after the final failed attempt.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

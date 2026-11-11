@@ -1,0 +1,26 @@
+{
+  "frozen_files_removed": {
+    "research/ADJUDICATION.md": "6690fa39f1b94c534f89bafbe3c7f2cab73d8e449415ff42db2c990f7d408bcd",
+    "research/ARCHITECTURE.md": "25cda7e1412d8a7e0a36dba379dffbd3510a94cbba0049fa34e8f6f63186d9cf",
+    "research/DATA_CARD.md": "566d8f0d2b12bbe60d10d354f7ca3f4f7e6337bcd1df619b31b69b38006e4e1e",
+    "research/PLAN_GITHUB.md": "fa42de780434a699b48bd19850485862627caaf6b7c52b4bfa533e34893841e7",
+    "research/PREREGISTRATION_TEMPLATE.md": "9f63560c08a11b980e467ba8fdbe502c51de6f8ebbe05d8be14c73d7724a5e68",
+    "research/PROTOCOL.md": "42534d972829e024dd6a7ac10fda3138d34de9ba1619fe29c24fccc4b97f0b58",
+    "research/PUBLICATION.md": "ac9b7abe473035f54547dd5b08378f20e1c9b4a899bc073c8b77094acad6e6d8",
+    "research/RELATED_WORK.md": "18838eee8e7ce5f9a762254e2fb4638c08675f75699a93589d293462115eaeee",
+    "research/ROADMAP.md": "9776870bf643b0164c100cf2b1c57ea8b91fb0f4133b38cecae96ba06833e9d9",
+    "research/VISION.md": "efb0bc77b31c04d1758babf9627688c188106a8805bea354f02bfaa1c3dd51b4"
+  },
+  "manifest_fields_replaced": [
+    "packet_root"
+  ],
+  "original_manifest_sha256": "d6fec659681559b94c3a185c7bba6420295227fa758c9f98f3d74aaaee8325ba",
+  "reason": "Privacy and language: the local packet directory and frozen copies of French-language working documents (including an internal planning note) are not published. The English documents in research/ translate the protocol, rubric and data card that these copies contained.",
+  "redacted_at": "2026-11-11T19:52:24.380797+00:00",
+  "report_rebuilt": {
+    "metrics_identical": true,
+    "metrics_sha256": "39fe87aeb33a5880fcea225f1a38a2088965825375ed213631ce959e7c082ffb"
+  },
+  "schema_version": 1,
+  "unchanged": "responses, adjudications, integrity seals, transport records, frozen code, prompts, schemas, corpus"
+}

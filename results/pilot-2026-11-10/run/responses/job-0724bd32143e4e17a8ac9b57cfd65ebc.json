@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1189,
+    "isolation_attested": true,
+    "latency_seconds": 41.941,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 601,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-0724bd32143e4e17a8ac9b57cfd65ebc/attempt-1"
+  },
+  "job_id": "job-0724bd32143e4e17a8ac9b57cfd65ebc",
+  "packet_sha256": "e53597122e3a1798a04f0573d10e7ba2bd4883677ff01d23278665fbf1e7debb",
+  "review": {
+    "findings": [
+      {
+        "description": "Incorrect use of ``or`` causes default to be returned when the option value is falsy but present.",
+        "evidence": "candidate.setting({'x': 0}, 'x', 9) returns 9 instead of 0, and candidate.setting({'x': False}, 'x', True) returns True instead of False.",
+        "file": "candidate.py",
+        "finding_id": "falsy-value-handling",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The candidate implementation fails to return the stored value when the key exists with a falsy value such as None, False, 0, or an empty string, because it uses the ``or`` operator which substitutes the default for any falsy result. This violates the contract.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

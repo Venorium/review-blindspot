@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1288,
+    "isolation_attested": true,
+    "latency_seconds": 65.59,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 1310,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-309b7788c1b840adb4fefaa7051d3e6c/attempt-1"
+  },
+  "job_id": "job-309b7788c1b840adb4fefaa7051d3e6c",
+  "packet_sha256": "13b9ba9afa3bb36bdc3299f8e968ff62011334638c6c8a2b177b2d2a3fb48ec7",
+  "review": {
+    "findings": [],
+    "summary": "The implementation correctly handles the requirement to return the stored value when the key exists, even if the value is falsy (None, False, 0, or empty string), and only uses the default value when the key is absent.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1830,
+    "isolation_attested": true,
+    "latency_seconds": 348.923,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1182,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-17c9b40e66374b18ae58abb79be2a95f/attempt-1"
+  },
+  "job_id": "job-17c9b40e66374b18ae58abb79be2a95f",
+  "packet_sha256": "007d132edc505ce758f14f4edbd871dc84342ce0aa49030b768a2024a56c99ca",
+  "review": {
+    "findings": [
+      {
+        "description": "Cache entry is not cleared after update_price, so subsequent calls to price() or quote() may return an outdated value.",
+        "evidence": "Example:\n\n    catalog = candidate.Catalog({'a': 250})\n    catalog.update_price('a', 300)\n    catalog.update_price('a', 350)\n    print(catalog.price('a'))  # returns 300 instead of 350\n\nThis behavior contradicts the contract that \"every later price() or quote() call must reflect the new price.\"",
+        "file": "candidate.py",
+        "finding_id": "C001",
+        "line_end": 20,
+        "line_start": 16,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation fails to invalidate the cache when a SKU price is updated, causing stale values to be returned by subsequent price() or quote() calls, which violates the specification that all reads after an update must reflect the new price.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="454" viewBox="0 0 1200 454" role="img" aria-labelledby="title desc">
+<title id="title">Scripted demo: approval and detection are different outcomes</title>
+<desc id="desc">Counts from the bundled two-case scripted demonstration. No real model was evaluated. The same values are available in the linked example report and JSON.</desc>
+<rect width="1200" height="454" rx="20" fill="#f2f5f3"/>
+<g font-family="Segoe UI, Arial, sans-serif">
+<rect x="32" y="27" width="196" height="32" rx="16" fill="#eadbbf"/>
+<text x="48" y="49" font-size="17" font-weight="700" fill="#5d431e">SCRIPTED DEMO</text>
+<text x="245" y="49" font-size="18" fill="#465f6b">Pipeline illustration · no model evaluated</text>
+<text x="32" y="108" font-size="35" font-weight="700" fill="#10232e">What passed? What was actually detected?</text>
+<text x="370" y="164" text-anchor="middle" font-size="21" fill="#465f6b">Faulty approvals</text>
+<text x="667" y="164" text-anchor="middle" font-size="21" fill="#465f6b">Target detections</text>
+<text x="964" y="164" text-anchor="middle" font-size="21" fill="#465f6b">Controls rejected</text>
+<rect x="24" y="185" width="1152" height="92" rx="12" fill="#ffffff"/>
+<text x="44" y="224" font-size="23" font-weight="600" fill="#10232e">One reviewer</text>
+<text x="44" y="250" font-size="16" fill="#465f6b">solo_blind</text>
+<text x="370" y="245" text-anchor="middle" font-size="44" font-weight="600" fill="#173e49">1<tspan font-size="25" fill="#607580"> / 2</tspan></text>
+<text x="667" y="245" text-anchor="middle" font-size="44" font-weight="600" fill="#173e49">0<tspan font-size="25" fill="#607580"> / 2</tspan></text>
+<text x="964" y="245" text-anchor="middle" font-size="44" font-weight="600" fill="#173e49">1<tspan font-size="25" fill="#607580"> / 2</tspan></text>
+<rect x="24" y="290" width="1152" height="92" rx="12" fill="#ffffff"/>
+<text x="44" y="329" font-size="23" font-weight="600" fill="#10232e">Three reviewers</text>
+<text x="44" y="355" font-size="16" fill="#465f6b">panel_blind</text>
+<text x="370" y="350" text-anchor="middle" font-size="44" font-weight="600" fill="#173e49">0<tspan font-size="25" fill="#607580"> / 2</tspan></text>
+<text x="667" y="350" text-anchor="middle" font-size="44" font-weight="600" fill="#173e49">1<tspan font-size="25" fill="#607580"> / 2</tspan></text>
+<text x="964" y="350" text-anchor="middle" font-size="44" font-weight="600" fill="#173e49">1<tspan font-size="25" fill="#607580"> / 2</tspan></text>
+<text x="32" y="426" font-size="19" fill="#465f6b">Read all three measures together. A blocked candidate is not necessarily a detected defect.</text>
+</g></svg>

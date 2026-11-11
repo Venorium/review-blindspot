@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1295,
+    "isolation_attested": true,
+    "latency_seconds": 48.164,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 712,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-1af942859e7344d2944f24f2257d2e0b/attempt-1"
+  },
+  "job_id": "job-1af942859e7344d2944f24f2257d2e0b",
+  "packet_sha256": "3576f9ee42f995b493c67409be1e9eed137c605988c114a90fcf6d491f5aa305",
+  "review": {
+    "findings": [],
+    "summary": "Candidate implementation satisfies the contract: it updates state only for strictly greater versions, increments writes, returns the correct boolean, and leaves state unchanged for equal or older versions.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

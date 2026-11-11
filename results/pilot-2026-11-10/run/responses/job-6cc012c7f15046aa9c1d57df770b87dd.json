@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1162,
+    "isolation_attested": true,
+    "latency_seconds": 25.133,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 626,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-6cc012c7f15046aa9c1d57df770b87dd/attempt-1"
+  },
+  "job_id": "job-6cc012c7f15046aa9c1d57df770b87dd",
+  "packet_sha256": "e52154e6bb6816a7d52829659fb9ce4e343a95f0a60c2f0a378a57cb392fbdaf",
+  "review": {
+    "findings": [
+      {
+        "description": "The implementation returns `default` whenever `options.get(key)` evaluates to False, which incorrectly handles valid stored values such as 0, False, \"\", or None.",
+        "evidence": "Example: `candidate.setting({'x':0}, 'x', 9)` returns 9, but the contract requires it to return 0. Similarly, `candidate.setting({'x':False}, 'x', True)` returns True instead of False.",
+        "file": "candidate.py",
+        "finding_id": "falsy-key-value",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate incorrectly uses truthiness to select default, causing false negatives for legitimate falsy values.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

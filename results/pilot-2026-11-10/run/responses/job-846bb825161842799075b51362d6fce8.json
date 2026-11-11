@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1147,
+    "isolation_attested": true,
+    "latency_seconds": 43.227,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 672,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-846bb825161842799075b51362d6fce8/attempt-1"
+  },
+  "job_id": "job-846bb825161842799075b51362d6fce8",
+  "packet_sha256": "05e1cc5382e55ab81cb6324e2f6d0d98e112c70f6675611d9f7f756634b99b4b",
+  "review": {
+    "findings": [
+      {
+        "description": "Sorting key uses string comparison on the version value, which leads to incorrect ordering for multi-digit numeric versions.",
+        "evidence": "For input [{'version': '10'}, {'version': '2'}], the function returns the list in order ['10', '2'] because '10' < '2' lexicographically, whereas the contract requires numeric ascending order ['2', '10']. The correct implementation should convert the version to an integer: key=lambda e: int(e['version']).",
+        "file": "candidate.py",
+        "finding_id": "numeric-sort",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation does not correctly sort numeric version strings; it performs lexicographic sorting instead of numeric sorting, violating the contract.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

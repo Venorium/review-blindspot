@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "f1"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-f598ea963edb4a4384969aea45364aea",
+  "method": "external_judge",
+  "rationale": "Finding states the function returns the stored list itself, so caller mutation changes the record; same mechanism. Finding f1: \"The function returns the original list stored in record['labels'], causing external modifications to affect the original record.\".",
+  "schema_version": 1,
+  "submission_sha256": "20cacf9058dfb33304dd79dfaa23bb834aa60e20d5c24e30eea6bee3285ec189",
+  "target_detection": "detected"
+}

@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1182,
+    "isolation_attested": true,
+    "latency_seconds": 124.754,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1846,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-4a3325f27245436293e914ff7ff4fad3/attempt-1"
+  },
+  "job_id": "job-4a3325f27245436293e914ff7ff4fad3",
+  "packet_sha256": "592826f5dbb94a50ab995c667bdfee5ce76f8487be220bc9dcb948c7502a4a12",
+  "review": {
+    "findings": [],
+    "summary": "The candidate implementation satisfies the contract: it returns a new list of at most the last `limit` items without modifying the input, handling zero correctly.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

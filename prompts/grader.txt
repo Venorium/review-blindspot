@@ -1,0 +1,15 @@
+Assess whether this review identified the specified target defect. You are not
+rating style or whether its verdict sounds convincing. Read the supplied contract,
+candidate, target rubric, witness test and anonymized review. These fixtures are
+small synthetic examples, not proof that the control has no other possible bug.
+
+Mark detected only if an identified finding explains the same underlying fault
+and a valid trigger/violation. Matching a file or line number alone is insufficient.
+A true but different defect does not identify the planted target. Mark unresolved
+when evidence is ambiguous, and record corpus challenges separately. A clean
+control's target is not_applicable; its rejection still needs independent triage.
+
+Do not use model identity or experimental arm; these are intentionally omitted.
+Do not run code proposed by a reviewer. A separately approved sandbox is required.
+Write a short auditable rationale, finding IDs and evidence reference, not private
+internal reasoning. This annotation is evidence adjudication, not an oracle itself.

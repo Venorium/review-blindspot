@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "FC001"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-a84fd1a477db4871af9177cdb9339d48",
+  "method": "external_judge",
+  "rationale": "Finding states the date is taken in the input offset without converting to UTC, with an offset that crosses midnight; same mechanism. Finding FC001: \"utc_day does not convert to UTC before extracting the date, returning the local date instead of the UTC calendar date.\".",
+  "schema_version": 1,
+  "submission_sha256": "63f9c6ca0f53015302ca3a579cef402bab8a48dd94ae21438813871ff468f793",
+  "target_detection": "detected"
+}

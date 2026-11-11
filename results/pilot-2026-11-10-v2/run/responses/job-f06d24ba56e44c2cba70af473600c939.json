@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1929,
+    "isolation_attested": true,
+    "latency_seconds": 188.759,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 4470,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-f06d24ba56e44c2cba70af473600c939/attempt-1"
+  },
+  "job_id": "job-f06d24ba56e44c2cba70af473600c939",
+  "packet_sha256": "d6de3b4136082fd331accdfb173bf7809f11964bf3a09c9358a0a5e5d4a9ae21",
+  "review": {
+    "findings": [],
+    "summary": "Candidate implementation satisfies all specified behavior, including price retrieval, updating, quoting, error handling, and caching with read count constraints.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

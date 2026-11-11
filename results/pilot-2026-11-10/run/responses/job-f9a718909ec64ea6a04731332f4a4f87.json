@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1158,
+    "isolation_attested": true,
+    "latency_seconds": 70.672,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 420,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-f9a718909ec64ea6a04731332f4a4f87/attempt-1"
+  },
+  "job_id": "job-f9a718909ec64ea6a04731332f4a4f87",
+  "packet_sha256": "91a11c8b752a29bc7c976bce011967f93bdb96aa24267dccca44de95f4361b8c",
+  "review": {
+    "findings": [],
+    "summary": "The candidate implementation correctly returns True when now < expires_at and False otherwise, satisfying the contract that a token is active strictly before expires_at and inactive at or after it.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

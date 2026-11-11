@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1207,
+    "isolation_attested": true,
+    "latency_seconds": 16.526,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 400,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-1cb32c03889e4a58a906cf083b9522a7/attempt-1"
+  },
+  "job_id": "job-1cb32c03889e4a58a906cf083b9522a7",
+  "packet_sha256": "7a27ea3b4071c34a89ad5d068e3ddfb86e034b18da4c68eafa94f8e9556b7f45",
+  "review": {
+    "findings": [],
+    "summary": "candidate.py correctly implements quota(tier) per specification.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,9 @@
+arm_id,case_id,family_id,variant,repeat,gate,complete_decisive,target,reviewer_count
+panel_blind,c01,c01,correct,0,approve,True,not_applicable,3
+panel_blind,c01,c01,faulty,0,reject,True,detected,3
+panel_blind,c07,c07,correct,0,reject,True,not_applicable,3
+panel_blind,c07,c07,faulty,0,reject,True,missed,3
+solo_blind,c01,c01,correct,0,approve,True,not_applicable,1
+solo_blind,c01,c01,faulty,0,approve,True,missed,1
+solo_blind,c07,c07,correct,0,reject,True,not_applicable,1
+solo_blind,c07,c07,faulty,0,reject,True,missed,1

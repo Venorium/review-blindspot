@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "stability_violation"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-dafedd8f4b8f41ea999f00222d70adac",
+  "method": "external_judge",
+  "rationale": "Finding states that reversing the ascending sort with [::-1] inverts the order of equal-priority tickets; same mechanism. Finding stability_violation: \"The use of `[::-1]` to reverse the result of `sorted()` breaks the stability requirement. Python's `sorted()` is stable, but reversing the resulting list after the sort swaps the relative order of ele\".",
+  "schema_version": 1,
+  "submission_sha256": "f656ce5604541c0e03361a9094da7e45eaecd363fe11d7df703706dbfa25ef67",
+  "target_detection": "detected"
+}

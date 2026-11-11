@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "round_neg_defect"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-cac3b36968ae44e393b29e8ca645647d",
+  "method": "external_judge",
+  "rationale": "Finding states that adding 50 before floor division rounds negative halves toward zero, breaking refund/charge symmetry; same mechanism. Finding round_neg_defect: \"Unconditional addition of 50 before floor division causes incorrect rounding for negative products. The contract requires exact halves to be rounded away from zero and mandates percent_of(-x, p) == -p\".",
+  "schema_version": 1,
+  "submission_sha256": "57b2e27809216b2a2d9a21df3c8389e0649cde93a23bf8372581a6ab131b7e9d",
+  "target_detection": "detected"
+}

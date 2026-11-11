@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1298,
+    "isolation_attested": true,
+    "latency_seconds": 107.809,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 1508,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-8dc503099eec436a9ff44983261e235f/attempt-1"
+  },
+  "job_id": "job-8dc503099eec436a9ff44983261e235f",
+  "packet_sha256": "5c960e421630ee532cab7baac93209fa5b087f8dc81eea1c102577f6bbc6221d",
+  "review": {
+    "findings": [
+      {
+        "description": "When `limit` is 0, the slice `items[-0:]` is evaluated as `items[0:]`, which returns the entire list instead of an empty list as required by the specification.",
+        "evidence": "Calling `recent([1, 2, 3], 0)` returns `[1, 2, 3]`, but the specification requires it to return `[]`.",
+        "file": "candidate.py",
+        "finding_id": "zero_limit_bug",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "The implementation incorrectly returns the entire list when `limit` is 0, violating the requirement that zero should return an empty list.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

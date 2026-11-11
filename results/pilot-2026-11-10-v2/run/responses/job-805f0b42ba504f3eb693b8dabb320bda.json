@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1354,
+    "isolation_attested": true,
+    "latency_seconds": 314.077,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 4497,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-805f0b42ba504f3eb693b8dabb320bda/attempt-1"
+  },
+  "job_id": "job-805f0b42ba504f3eb693b8dabb320bda",
+  "packet_sha256": "62ca4d6c73e6ae522c4769f42a503c7a0711e32473fd4a9afa4c7d5c78a6b553",
+  "review": {
+    "findings": [],
+    "summary": "The candidate implementation satisfies the contract: it returns a new list with the first occurrence of each distinct key, preserving the order of first key appearance, and does not modify the input list.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "h08",
+  "family_id": "h08",
+  "title": "Business days from a weekend start",
+  "origin": "original_synthetic_v2",
+  "split": "evaluation_v2_2026_11",
+  "spec": "Implement add_business_days(start, n) for a datetime.date start and an integer n of at least 0. Business days are Monday to Friday; there are no holidays. If start falls on a Saturday or Sunday, first move forward to the following Monday. Then move forward n business days. Consequently n == 0 returns start itself on a weekday and the following Monday on a weekend, and Friday plus one business day is the next Monday.",
+  "target_defect": "An early return for n == 0 skips the weekend adjustment, so a weekend start with n == 0 returns the weekend date.",
+  "author_rationale": "Replace the day-by-day loop with constant-time arithmetic.",
+  "limitations": "Synthetic module written by the repository's AI engineering agent after the November 2026 development pilot saturated corpus v1, before any model reviewed it. Designed around omissions, cross-function effects and edge cases stated in the contract. Not a natural pull request; correct means conforming to the stated contract and supplied checks."
+}

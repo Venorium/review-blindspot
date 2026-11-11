@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "wrong_id_check"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; knew the targets)",
+  "job_id": "job-11e2cdeea8d84171886b0d647fb182ea",
+  "method": "external_judge",
+  "rationale": "Finding states duplicates are detected by payload rather than request_id, with a triggering sequence; same mechanism. Finding wrong_id_check: \"The function checks if the `payload` is already present in the `events` list instead of checking if the `request_id` is already present. This violates the specification that 'Different IDs may have identical payloads' an\".",
+  "schema_version": 1,
+  "submission_sha256": "9659d7cdfa774e06c262d16b6baa69b049cd216c35111002a540309793cbda74",
+  "target_detection": "detected"
+}

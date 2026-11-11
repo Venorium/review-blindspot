@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 2022,
+    "isolation_attested": true,
+    "latency_seconds": 358.421,
+    "model_id": "ollama:gemma4:26b@5571076f3d70",
+    "output_tokens": 2746,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-f1e6d6652d6f4654a015de59092eab94/attempt-1"
+  },
+  "job_id": "job-f1e6d6652d6f4654a015de59092eab94",
+  "packet_sha256": "0cf8a162afbaf6a3e4b38d6c23b1fd82d3b92d6af5ba45caab1678db532f15da",
+  "review": {
+    "findings": [
+      {
+        "description": "The transfer function modifies the accounts balances (lines 18-19) before calling ledger.record (line 20). If ledger.record raises a ValueError (e.g., when the memo exceeds 40 characters), the accounts are left modified, violating the requirement that accounts and the ledger must remain entirely unchanged when the ledger rejects the entry.",
+        "evidence": "accounts = {'a': 10, 'b': 10}; ledger = Ledger(); transfer(accounts, ledger, 'a', 'b', 5, 'a' * 41); # accounts is now {'a': 5, 'b': 15}, but should be {'a': 10, 'b': 10}",
+        "file": "candidate.py",
+        "finding_id": "atomicity_violation_on_ledger_failure",
+        "line_end": 20,
+        "line_start": 18,
+        "severity": "critical"
+      }
+    ],
+    "summary": "The transfer function violates the atomicity requirement: if the ledger rejects the entry (e.g., due to a long memo), the account balances are modified before the error is raised, leaving the accounts in an inconsistent state.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

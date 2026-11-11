@@ -1,0 +1,13 @@
+{
+  "evidence_reference": "grading packet rubric.json and test_witness.py; finding text in review.json; rubric research/ADJUDICATION.md",
+  "finding_ids": [
+    "F1"
+  ],
+  "grader_id": "claude-opus-5-5 (repository engineering agent; LLM; wrote corpus v2 and knew the targets)",
+  "job_id": "job-dec9bd2853c74e878e27c1bfcfb7138c",
+  "method": "external_judge",
+  "rationale": "Finding states that records is iterated twice (sum, then the comprehension), so a one-shot iterator yields an empty result; same mechanism. Finding F1: \"allocate consumes the records iterable twice: once for computing total and again for building the result dictionary. This exhausts one-shot iterators, causing incorrect empty results.\".",
+  "schema_version": 1,
+  "submission_sha256": "025c63af22425ff3fbf934f315058ffa61ad9491194b09dd942ce04520de58e2",
+  "target_detection": "detected"
+}

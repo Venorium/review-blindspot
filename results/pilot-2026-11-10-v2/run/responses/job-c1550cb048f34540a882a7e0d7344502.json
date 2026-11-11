@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1450,
+    "isolation_attested": true,
+    "latency_seconds": 238.671,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 1334,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-c1550cb048f34540a882a7e0d7344502/attempt-1"
+  },
+  "job_id": "job-c1550cb048f34540a882a7e0d7344502",
+  "packet_sha256": "b789142a9ffeae8e22c94472cee0ecd6d70c412c5d42d1c55fc1de7b1ad97f63",
+  "review": {
+    "findings": [],
+    "summary": "The candidate implementation satisfies all requirements of the specification without any detectable defects.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}

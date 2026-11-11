@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1147,
+    "isolation_attested": true,
+    "latency_seconds": 21.035,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 530,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-015dbe27ffc246328f2c24a835cf33bd/attempt-1"
+  },
+  "job_id": "job-015dbe27ffc246328f2c24a835cf33bd",
+  "packet_sha256": "05e1cc5382e55ab81cb6324e2f6d0d98e112c70f6675611d9f7f756634b99b4b",
+  "review": {
+    "findings": [
+      {
+        "description": "The sorting key converts the version to a string, leading to lexicographic ordering rather than numeric ordering. For example, {'version':'10'} is considered less than {'version':'2'} when sorted as strings, violating the contract that events should be sorted by ascending numeric version.",
+        "evidence": "Input: [{'version':'10'}, {'version':'2'}]\nExpected: [{'version':'2'}, {'version':'10'}]\nCandidate result: [{'version':'10'}, {'version':'2'}]",
+        "file": "candidate.py",
+        "finding_id": "F001",
+        "line_end": 2,
+        "line_start": 2,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate’s ordering key uses string comparison, causing incorrect ordering for numeric versions with multiple digits.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

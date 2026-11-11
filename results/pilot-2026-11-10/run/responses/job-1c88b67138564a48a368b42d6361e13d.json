@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1189,
+    "isolation_attested": true,
+    "latency_seconds": 56.808,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 546,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-1c88b67138564a48a368b42d6361e13d/attempt-1"
+  },
+  "job_id": "job-1c88b67138564a48a368b42d6361e13d",
+  "packet_sha256": "e53597122e3a1798a04f0573d10e7ba2bd4883677ff01d23278665fbf1e7debb",
+  "review": {
+    "findings": [
+      {
+        "description": "The implementation uses truthiness to decide whether to return the stored value or the default. This causes it to return the default when the key exists but its value is falsy (e.g., 0, False, None, or an empty string).",
+        "evidence": "Spec requires that the stored value is returned when the key exists, even if it is falsy. Candidate's line 2 uses `options.get(key) or default`, which returns `default` for any falsy value returned by `get`. For example, `setting({'x': 0}, 'x', 9)` incorrectly yields 9 instead of 0.",
+        "file": "candidate.py",
+        "finding_id": "FC-001",
+        "line_end": 2,
+        "line_start": 1,
+        "severity": "high"
+      }
+    ],
+    "summary": "Candidate implementation incorrectly handles falsy values for existing keys.",
+    "verdict": "request_changes"
+  },
+  "schema_version": 1
+}

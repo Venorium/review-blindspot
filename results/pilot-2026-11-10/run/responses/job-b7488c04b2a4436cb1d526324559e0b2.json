@@ -1,0 +1,21 @@
+{
+  "execution": {
+    "cost_usd": null,
+    "harness_id": "rbs-transport/0.1.0 ollama/0.40.14",
+    "input_tokens": 1187,
+    "isolation_attested": true,
+    "latency_seconds": 51.986,
+    "model_id": "ollama:gpt-oss:20b@17052f91a42e",
+    "output_tokens": 719,
+    "status": "ok",
+    "trace_reference": "transport/raw/job-b7488c04b2a4436cb1d526324559e0b2/attempt-1"
+  },
+  "job_id": "job-b7488c04b2a4436cb1d526324559e0b2",
+  "packet_sha256": "92660d8612ebef729b18aa1f3050e482d701878548ff1efb0c15f2919dd242ef",
+  "review": {
+    "findings": [],
+    "summary": "The candidate implementation correctly computes integer division truncated toward zero for arbitrary-size signed integers with a positive divisor, using only integer arithmetic as required by the specification.",
+    "verdict": "approve"
+  },
+  "schema_version": 1
+}
